@@ -50,3 +50,10 @@ shiny-chat-container {
   background-color: #121A3E;
   color: #E7EEFF;
 }
+.greeting-header {
+  text-align: center;
+}
+.greeting-header img {
+  display: inline-block;
+  object-fit: contain;
+}

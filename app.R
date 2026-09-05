@@ -19,20 +19,30 @@ store_location <- "data/ragnar.duckdb"
 
 greeting_dynamic <- Sys.getenv("GREETING_DYNAMIC", "no") == "yes"
 
+greeting_header <- paste0(
+  '<div class="greeting-header mb-3">',
+  '<a href="https://conf.posit.co/2026/" target="_blank" rel="noopener">',
+  '<img src="assets/posit-conf-header.png" alt="posit::conf(2026)" ',
+  'style="max-width:100%; max-height:150px; border-radius:8px">',
+  '</a></div>\n\n'
+)
+
 shiny::addResourcePath("assets", "assets")
 
 ui <- page_chat(
   title = "posit::conf(2026) Schedule Assistant",
   id = "chat",
   placeholder = "Ask about sessions, workshops, or build your schedule...",
-  theme = bs_theme(brand = TRUE),
+  # theme = bs_theme(brand = TRUE),
   sidebar = chat_sidebar(open = FALSE),
-  navbar_options = bslib::navbar_options(bg = "#419CF5", theme = "dark"),
-  footer = tags$head(tags$link(rel = "stylesheet", href = "assets/custom.css")),
+  # navbar_options = bslib::navbar_options(bg = "#419CF5", theme = "dark"),
+  # footer = tags$head(tags$link(rel = "stylesheet", href = "assets/custom.css")),
   greeting = if (!greeting_dynamic) {
-    shinychat::chat_greeting(
-      paste(readLines("greeting.md", warn = FALSE), collapse = "\n")
+    greeting_md <- paste(
+      readLines("greeting.md", warn = FALSE),
+      collapse = "\n"
     )
+    chat_greeting(paste0(greeting_header, greeting_md))
   }
 )
 
@@ -56,22 +66,26 @@ server <- function(input, output, session) {
         date = Sys.Date()
       )
     )
-    promises::then(
-      greeting_client$chat_async(
-        "Generate the greeting following your instructions."
-      ),
-      function(text) {
-        shinychat::chat_set_greeting("chat", shinychat::chat_greeting(text))
-      },
-      function(error) {
-        shinychat::chat_set_greeting(
-          "chat",
-          shinychat::chat_greeting(
-            "Welcome to posit::conf(2026)! What would you like to get out of the conference?"
-          )
-        )
+    greeting_stream <- coro::async_generator(function() {
+      yield(greeting_header)
+      stream <- greeting_client$stream_async(
+        paste(
+          "Generate the greeting now. Start directly with the greeting text. ",
+          "Do not restate, summarize, or refer to these instructions."
+        ),
+        stream = "content"
+      )
+      for (chunk in await_each(stream)) {
+        if (S7::S7_inherits(chunk, ellmer::ContentThinking)) {
+          next
+        }
+        if (S7::S7_inherits(chunk, ellmer::ContentText)) {
+          yield(chunk@text)
+        }
       }
-    )
+    })()
+
+    chat_set_greeting("chat", chat_greeting(greeting_stream))
   })
 
   store <- ragnar::ragnar_store_connect(store_location)
