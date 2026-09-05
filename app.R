@@ -8,13 +8,6 @@ options(
   shiny.autoreload.pattern = "\\.(r|htm|html|js|css|png|jpg|jpeg|gif|md)$"
 )
 
-if (FALSE) {
-  # For renv dependency detection
-  library(paws.common)
-  library(markdown)
-  library(promises)
-}
-
 store_location <- "data/ragnar.duckdb"
 
 greeting_dynamic <- Sys.getenv("GREETING_DYNAMIC", "no") == "yes"
