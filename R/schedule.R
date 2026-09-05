@@ -22,6 +22,24 @@ schedule_data <- function() {
       speakers = read("speakers"),
       locations = read("locations")
     )
+    # sched_date()/sched_clock() assume "YYYY-MM-DD HH:MM" local timestamps
+    time_pattern <- "^\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}"
+    for (name in c("talks", "sessions", "workshops", "events")) {
+      for (col in c("start_time_event_local", "end_time_event_local")) {
+        x <- data[[name]][[col]]
+        bad <- !is.na(x) & x != "" & !grepl(time_pattern, x)
+        if (any(bad)) {
+          stop(
+            "Unexpected timestamp format in ",
+            name,
+            "$",
+            col,
+            ": ",
+            paste(utils::head(x[bad], 3), collapse = ", ")
+          )
+        }
+      }
+    }
     record_ids <- unique(c(
       data$talks$record_id,
       data$sessions$record_id,
@@ -29,7 +47,9 @@ schedule_data <- function() {
       data$events$record_id
     ))
     if (length(intersect(record_ids, data$speakers$speaker_id))) {
-      stop("record_id and speaker_id values overlap; item lookups would be ambiguous")
+      stop(
+        "record_id and speaker_id values overlap; item lookups would be ambiguous"
+      )
     }
     .schedule_cache$data <- data
   }
@@ -59,7 +79,12 @@ sched_resolve_date <- function(date) {
   weekdays <- format(as.Date(days), "%A")
   i <- pmatch(tolower(date), tolower(weekdays))
   if (is.na(i)) {
-    stop("Unknown date '", date, "'. Valid days: ", paste(weekdays, collapse = ", "))
+    stop(
+      "Unknown date '",
+      date,
+      "'. Valid days: ",
+      paste(weekdays, collapse = ", ")
+    )
   }
   days[i]
 }
@@ -78,7 +103,9 @@ sched_match <- function(x, choices) {
     stop("Ambiguous value '", x, "'. Matches: ", paste(hit, collapse = ", "))
   }
   stop(
-    "Unknown value '", x, "'. Valid values: ",
+    "Unknown value '",
+    x,
+    "'. Valid values: ",
     paste(utils::head(choices, 20), collapse = ", ")
   )
 }

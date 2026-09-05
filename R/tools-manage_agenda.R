@@ -1,7 +1,8 @@
 manage_agenda <- function(action, id = NULL, agenda_ids) {
   action <- match.arg(action, c("add", "remove", "clear", "show"))
+  # isolate() avoids taking a reactive dependency in chat_server's observer
   agenda_get <- function() shiny::isolate(agenda_ids())
-  agenda_set <- function(value) shiny::isolate(agenda_ids(value))
+  agenda_set <- function(value) agenda_ids(value)
 
   if (action %in% c("add", "remove") && (is.null(id) || !nzchar(id))) {
     stop("Provide the schedule item id for action '", action, "'.")
@@ -18,7 +19,8 @@ manage_agenda <- function(action, id = NULL, agenda_ids) {
     desc <- agenda_item_desc(summary)
     current <- agenda_get()
     if (id %in% current) {
-      paste0(
+      title <- "Already in the agenda"
+      text <- paste0(
         desc,
         " is already in the agenda. ",
         length(current),
@@ -45,7 +47,8 @@ manage_agenda <- function(action, id = NULL, agenda_ids) {
         )
       }
       agenda_set(c(current, id))
-      paste0(
+      title <- "Added to the agenda"
+      text <- paste0(
         "Added ",
         desc,
         " to the agenda. ",
@@ -56,7 +59,8 @@ manage_agenda <- function(action, id = NULL, agenda_ids) {
   } else if (action == "remove") {
     current <- agenda_get()
     if (!id %in% current) {
-      paste0(
+      title <- "Not in the agenda"
+      text <- paste0(
         "That item is not in the agenda. ",
         length(current),
         " items total."
@@ -64,7 +68,8 @@ manage_agenda <- function(action, id = NULL, agenda_ids) {
     } else {
       summary <- sched_summary(resolve_item(id))
       agenda_set(setdiff(current, id))
-      paste0(
+      title <- "Removed from the agenda"
+      text <- paste0(
         "Removed ",
         agenda_item_desc(summary),
         " from the agenda. ",
@@ -75,10 +80,12 @@ manage_agenda <- function(action, id = NULL, agenda_ids) {
   } else if (action == "clear") {
     n <- length(agenda_get())
     agenda_set(character())
-    paste0("Cleared the agenda (", n, " items removed).")
+    title <- "Cleared the agenda"
+    text <- paste0("Cleared the agenda (", n, " items removed).")
   } else {
     items <- lapply(agenda_get(), function(i) sched_summary(resolve_item(i)))
-    if (!length(items)) {
+    title <- "Your agenda"
+    text <- if (!length(items)) {
       "Your agenda is empty."
     } else {
       paste0(
@@ -96,6 +103,16 @@ manage_agenda <- function(action, id = NULL, agenda_ids) {
       )
     }
   }
+
+  ellmer::ContentToolResult(
+    value = text,
+    extra = list(
+      display = shinychat::tool_result_display(
+        title = title,
+        value_preview = paste(length(agenda_get()), "items in agenda")
+      )
+    )
+  )
 }
 
 agenda_item_desc <- function(s) {
