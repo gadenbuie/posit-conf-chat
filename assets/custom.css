@@ -1,0 +1,52 @@
+shiny-chat-container {
+  --shiny-chat-btn-send-bg: #BBF81B;
+  --shiny-chat-btn-send-color: #030A5F;
+  --shiny-chat-btn-send-bg-hover: #030A5F;
+  --shiny-chat-btn-send-color-hover: #BBF81B;
+  --shiny-chat-btn-send-color-cancel: #C114C8;
+  --shiny-chat-footer-color: #909090;
+  --_user-message-bg: var(--shiny-chat-user-message-bg, rgba(var(--bs-primary-rgb, 0, 123, 194), 0.16));
+}
+:root shiny-chat-container .shiny-chat-suggestion-list .shiny-chat-suggestion-list-item {
+  background-color: #E1F1FF;
+  border: 1px solid transparent;
+  border-radius: 0.375rem;
+  color: #030A5F;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+}
+:root shiny-chat-container .shiny-chat-suggestion-list .shiny-chat-suggestion-list-item-body {
+  color: inherit;
+  font-weight: inherit;
+}
+:root shiny-chat-container .shiny-chat-suggestion-list .shiny-chat-suggestion-list-item:hover,
+:root shiny-chat-container .shiny-chat-suggestion-list .shiny-chat-suggestion-list-item:focus-visible {
+  background-color: #030A5F;
+  color: #FFFFFF;
+  border-color: #030A5F;
+}
+:root shiny-chat-container .shiny-chat-suggestion-list .shiny-chat-suggestion-list-item:hover *,
+:root shiny-chat-container .shiny-chat-suggestion-list .shiny-chat-suggestion-list-item:focus-visible * {
+  color: inherit;
+}
+:root shiny-chat-container .shiny-chat-suggestion-list .shiny-chat-suggestion-list-item:hover::after,
+:root shiny-chat-container .shiny-chat-suggestion-list .shiny-chat-suggestion-list-item:focus-visible::after {
+  color: #BBF81B;
+  fill: #BBF81B;
+}
+:root shiny-chat-container .shiny-chat-suggestion-list .shiny-chat-suggestion-list-item[data-last-clicked] {
+  background-color: #030A5F;
+  color: #BBF81B;
+  border-color: #030A5F;
+}
+.shiny-chat-layout {
+  background: var(--bs-body-bg) url("pixel-fade.svg") bottom center / 100% 90px no-repeat;
+}
+.shiny-chat-page-sidebar {
+  background-color: #E1F1FF;
+  color: #030A5F;
+}
+[data-bs-theme="dark"] .shiny-chat-page-sidebar {
+  background-color: #121A3E;
+  color: #E7EEFF;
+}

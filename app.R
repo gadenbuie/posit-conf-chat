@@ -17,10 +17,23 @@ if (FALSE) {
 
 store_location <- "data/ragnar.duckdb"
 
+greeting_dynamic <- Sys.getenv("GREETING_DYNAMIC", "no") == "yes"
+
+shiny::addResourcePath("assets", "assets")
+
 ui <- page_chat(
   title = "posit::conf(2026) Schedule Assistant",
   id = "chat",
-  placeholder = "Ask about sessions, workshops, or build your schedule..."
+  placeholder = "Ask about sessions, workshops, or build your schedule...",
+  theme = bs_theme(brand = TRUE),
+  sidebar = chat_sidebar(open = FALSE),
+  navbar_options = bslib::navbar_options(bg = "#419CF5", theme = "dark"),
+  footer = tags$head(tags$link(rel = "stylesheet", href = "assets/custom.css")),
+  greeting = if (!greeting_dynamic) {
+    shinychat::chat_greeting(
+      paste(readLines("greeting.md", warn = FALSE), collapse = "\n")
+    )
+  }
 )
 
 server <- function(input, output, session) {
@@ -33,6 +46,9 @@ server <- function(input, output, session) {
   )
 
   observeEvent(input$chat_greeting_requested, {
+    if (!greeting_dynamic) {
+      return()
+    }
     greeting_client <- chat_posit(
       model = "zai-org/GLM-5.3-Flash",
       system_prompt = ellmer::interpolate_file(

@@ -1,0 +1,66 @@
+color:
+  palette:
+    navy: "#030A5F"
+    lime: "#BBF81B"
+    magenta: "#EB4FEE"
+    purple: "#6B2F8E"
+    bright-blue: "#419CF5"
+    blue: "#0B70D5"
+    indigo: "#4D44AA"
+    pink: "#C114C8"
+    plum: "#7B0D84"
+    ice: "#F5FAFF"
+    faq-card: "#E0F0FF"
+    gray: "#909090"
+    black: "#151515"
+    white: "#FFFFFF"
+
+  foreground: navy
+  background: white
+  primary: blue
+  secondary: navy
+  success: "#2C7A4B"
+  info: bright-blue
+  warning: lime
+  danger: "#D0342C"
+  light: ice
+  dark: black
+
+typography:
+  fonts:
+    - family: Source Sans Pro
+      source: google
+      weight: [400, 600, 700]
+      style: [normal, italic]
+    - family: Open Sans
+      source: google
+      weight: [400, 500, 600, 700, 800]
+      style: [normal, italic]
+  base:
+    family: Source Sans Pro
+    size: 16px
+    line-height: 1.5
+  headings:
+    family: Open Sans
+    weight: 700
+    color: navy
+  monospace:
+    family: Source Code Pro
+    size: 0.9em
+
+meta:
+  name: "posit::conf(2026)"
+  link: https://conf.posit.co/2026/
+
+defaults:
+  shiny:
+    theme:
+      defaults:
+        font-size-base: 1rem
+        border-radius: 0.5rem
+        link-color: $brand-blue
+        link-hover-color: $brand-navy
+        navbar-bg: $brand-bright-blue
+        navbar-fg: $brand-white
+        navbar-link-fg: $brand-white
+        navbar-link-hover-fg: $brand-lime
