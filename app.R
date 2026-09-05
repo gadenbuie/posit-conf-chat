@@ -29,22 +29,38 @@ greeting_header <- paste0(
 
 shiny::addResourcePath("assets", "assets")
 
-ui <- page_chat(
-  title = "posit::conf(2026) Schedule Assistant",
-  id = "chat",
-  placeholder = "Ask about sessions, workshops, or build your schedule...",
-  # theme = bs_theme(brand = TRUE),
-  sidebar = chat_sidebar(open = FALSE),
-  # navbar_options = bslib::navbar_options(bg = "#419CF5", theme = "dark"),
-  # footer = tags$head(tags$link(rel = "stylesheet", href = "assets/custom.css")),
-  greeting = if (!greeting_dynamic) {
-    greeting_md <- paste(
-      readLines("greeting.md", warn = FALSE),
-      collapse = "\n"
-    )
-    chat_greeting(paste0(greeting_header, greeting_md))
-  }
-)
+default_theme <- Sys.getenv("APP_THEME", "conf")
+
+ui <- function(req) {
+  query <- shiny::parseQueryString(req$QUERY_STRING)
+  theme <- ifelse(
+    query$theme %||% "" %in% c("basic", "conf"),
+    query$theme,
+    default_theme
+  )
+  conf_theme <- theme == "conf"
+
+  page_chat(
+    title = "posit::conf(2026) Schedule Assistant",
+    id = "chat",
+    placeholder = "Ask about sessions, workshops, or build your schedule...",
+    theme = if (conf_theme) bs_theme(brand = TRUE) else page_chat_theme(),
+    sidebar = chat_sidebar(open = FALSE),
+    navbar_options = if (conf_theme) {
+      navbar_options(bg = "#419CF5", theme = "dark")
+    },
+    footer = if (conf_theme) {
+      tags$head(tags$link(rel = "stylesheet", href = "assets/custom.css"))
+    },
+    greeting = if (!greeting_dynamic) {
+      greeting_md <- paste(
+        readLines("greeting.md", warn = FALSE),
+        collapse = "\n"
+      )
+      chat_greeting(paste0(greeting_header, greeting_md))
+    }
+  )
+}
 
 server <- function(input, output, session) {
   client <- chat_posit(
