@@ -23,6 +23,25 @@ greeting_header <- paste0(
 
 shiny::addResourcePath("assets", "assets")
 
+# Re-register the ragnar search tool with an added `_intent` argument so
+# shinychat shows why the model called it (see the shinychat tool-ui vignette).
+search_tool_with_intent <- function(chat) {
+  search_tool <- chat$get_tools()[["search_schedule"]]
+  ellmer::tool(
+    function(text, `_intent` = NULL) search_tool(text = text),
+    name = search_tool@name,
+    description = search_tool@description,
+    arguments = list(
+      text = search_tool@arguments@properties$text,
+      `_intent` = ellmer::type_string(
+        "A short snippet used for display purposes to explain the call to the user.",
+        required = FALSE
+      )
+    ),
+    annotations = search_tool@annotations
+  )
+}
+
 default_theme <- Sys.getenv("APP_THEME", "conf")
 
 ui <- function(req) {
@@ -40,6 +59,13 @@ ui <- function(req) {
     placeholder = "Ask about sessions, workshops, or build your schedule...",
     theme = if (conf_theme) bs_theme(brand = TRUE) else page_chat_theme(),
     sidebar = chat_sidebar(open = FALSE),
+    pages_navbar = list(
+      nav_panel(
+        "On Now",
+        value = "on_now",
+        div(class = "p-3", uiOutput("on_now"))
+      )
+    ),
     drawer = chat_drawer(
       agenda_drawer_content(character()),
       title = "My Agenda",
@@ -114,15 +140,24 @@ server <- function(input, output, session) {
       "Use show_item() to present an item in detail,",
       "and query_schedule() for exact times, rooms, and tracks.",
       sep = "\n"
-    )
+    ),
+    name = "search_schedule",
+    title = "Searching the conf schedule"
   )
+  client$register_tool(search_tool_with_intent(client))
 
   agenda_ids <- reactiveVal(character())
 
   client$register_tool(list_schedule_options_tool)
   client$register_tool(query_schedule)
   client$register_tool(show_item_tool)
+  client$register_tool(on_now_tool)
   client$register_tool(agenda_tool(agenda_ids))
+
+  output$on_now <- renderUI({
+    invalidateLater(60000)
+    on_now_ui()
+  })
 
   observeEvent(agenda_ids(), {
     ids <- isolate(agenda_ids())

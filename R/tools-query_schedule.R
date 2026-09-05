@@ -1,4 +1,5 @@
 query_schedule_fn <- function(
+  `_intent` = NULL,
   date = NULL,
   from = NULL,
   to = NULL,
@@ -165,6 +166,10 @@ query_schedule <- ellmer::tool(
     "narrow results."
   ),
   arguments = list(
+    `_intent` = ellmer::type_string(
+      "A short snippet used for display purposes to explain the call to the user.",
+      required = FALSE
+    ),
     date = ellmer::type_string(
       "Conference day as an ISO date (YYYY-MM-DD) or weekday name, e.g. 'Tuesday'. Pass null to skip.",
       required = FALSE

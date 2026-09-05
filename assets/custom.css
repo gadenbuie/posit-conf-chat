@@ -57,3 +57,6 @@ shiny-chat-container {
   display: inline-block;
   object-fit: contain;
 }
+nav .shiny-chat-page-nav-link[aria-current="page"] {
+  color: #FFFFFF;
+}
