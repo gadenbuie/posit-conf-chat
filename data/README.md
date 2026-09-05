@@ -28,6 +28,7 @@ The raw Zuddl response is preserved in `data/raw/`. It is the source of truth fo
 | `data/derived/talk_sessions.csv` | One parent session block | Conference sessions that group the talks in `talks.csv` |
 | `data/derived/workshops.csv` | One workshop | Pre-conference workshops, both in-person and virtual |
 | `data/derived/events.csv` | One non-presentation event | Meals, receptions, and other event programming |
+| `data/ragnar.duckdb` | One talk, keynote, or workshop | Ragnar search store over `talks.csv` and `workshops.csv`; BM25 full-text search, no embeddings. Rebuilt by `data/posit-ragnar.R`. Query with `ragnar::ragnar_retrieve_bm25()`. |
 
 ## `schedule_records.csv`
 
