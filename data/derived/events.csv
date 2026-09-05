@@ -1,29 +1,66 @@
 "record_id","session_id","title","abstract","start_time_utc","end_time_utc","start_time_event_local","end_time_event_local","session_type","session_format","effective_location_name"
 "be012799-bf9f-4129-a293-5e3257ac5151","99919067-e9ac-41e3-b695-296d0ab96f9a","Lunch & Birds of a Feather Meetups","",2026-09-15 16:40:00,2026-09-15 18:00:00,"2026-09-15 11:40:00 CDT","2026-09-15 13:00:00 CDT","In-person","IN_PERSON","Hilton Americas Houston"
-"3b429b9f-a86e-4ee3-b55f-0c4ba51f5748","2ecc61ed-3949-4be8-8382-b3df443d7790","conf::rewind | 80s party!","<p>Connect with fellow attendees over the Spazzmatics (an iconic 80s cover band), get competitive at the retro arcade games,  and enjoy delicious food and drinks throughout.</p>
-<p><em>80's wear optional but encouraged!</em></p>
-",2026-09-16,2026-09-16 03:00:00,"2026-09-15 19:00:00 CDT","2026-09-15 22:00:00 CDT","In-person","IN_PERSON","Ballroom A-F"
-"e21dba88-51d6-4e7d-99ad-7620c548d17a","9e4881df-1efb-4b83-8a1e-31ff05c681f1","Lunch & Learn: Bridging R, Python, and Snowflake: AI-Assisted Workflows and Native MLOps with Positron","<p>Join us for an interactive Lunch &amp; Learn session demonstrating how Posit tools integrate with Snowflake’s data and AI capabilities to streamline full-lifecycle data science.</p>
-<p></p>
-<p><strong>Part 1: AI-Assisted Development with Positron, Snowflake Skills, and Cortex LLMs. </strong>Experience the next generation of data science workflows inside Positron, Posit's polyglot IDE. We will demonstrate how Posit Assistant combines with custom Snowflake skills and Cortex LLMs to help you query data, write optimized code, and leverage secure, enterprise-grade AI models, all without leaving your development environment.</p>
-<p></p>
-<p><strong>Part 2: End-to-End MLOps with snowflake-r and Snowflake's Model Registry. </strong>Take models from prototype to production using native R and Python tooling. We will walk through an end-to-end MLOps workflow leveraging the open-source snowflake-r community packages. Learn how to engineer features, train models, register versioned artifacts, and deploy them for scalable, in-database scoring, bringing your code directly to the data.</p>
-<p></p>
-<p><strong>Part 3: Reporting: What Posit Connect can do for you. </strong>After creating a model, vibecode a Shiny frontend and deploy it to Connect with one click!</p>
-<p>Whether you are looking to accelerate daily coding with integrated LLM assistants or establish robust, scalable MLOps pipelines across R and Python, this session offers practical patterns you can immediately apply to your team's stack.</p>
-<p></p>
-<p><strong>Key Takeaways for Attendees</strong></p>
-<ul>
-<li>How to leverage <strong>Posit Assistant</strong> in Positron with tailored <strong>Snowflake skills</strong> and <strong>Cortex LLMs</strong>.</li>
-<li>How to use <strong>snowflake-r packages</strong> to interact smoothly with Snowflake data pipelines.</li>
-<li>Best practices for managing features and registering models with <strong>Posit and Snowflake</strong></li>
-</ul>
-<p></p>
-",2026-09-15 16:45:00,2026-09-15 17:45:00,"2026-09-15 11:45:00 CDT","2026-09-15 12:45:00 CDT","In-person","IN_PERSON","Room 335"
+"3b429b9f-a86e-4ee3-b55f-0c4ba51f5748","2ecc61ed-3949-4be8-8382-b3df443d7790","conf::rewind | 80s party!","Connect with fellow attendees over the Spazzmatics (an iconic 80s cover
+band), get competitive at the retro arcade games, and enjoy delicious
+food and drinks throughout.
+
+*80's wear optional but encouraged!*",2026-09-16,2026-09-16 03:00:00,"2026-09-15 19:00:00 CDT","2026-09-15 22:00:00 CDT","In-person","IN_PERSON","Ballroom A-F"
+"e21dba88-51d6-4e7d-99ad-7620c548d17a","9e4881df-1efb-4b83-8a1e-31ff05c681f1","Lunch & Learn: Bridging R, Python, and Snowflake: AI-Assisted Workflows and Native MLOps with Positron","Join us for an interactive Lunch & Learn session demonstrating how Posit
+tools integrate with Snowflake’s data and AI capabilities to streamline
+full-lifecycle data science.
+
+**Part 1: AI-Assisted Development with Positron, Snowflake Skills, and
+Cortex LLMs.** Experience the next generation of data science workflows
+inside Positron, Posit's polyglot IDE. We will demonstrate how Posit
+Assistant combines with custom Snowflake skills and Cortex LLMs to help
+you query data, write optimized code, and leverage secure,
+enterprise-grade AI models, all without leaving your development
+environment.
+
+**Part 2: End-to-End MLOps with snowflake-r and Snowflake's Model
+Registry.** Take models from prototype to production using native R and
+Python tooling. We will walk through an end-to-end MLOps workflow
+leveraging the open-source snowflake-r community packages. Learn how to
+engineer features, train models, register versioned artifacts, and
+deploy them for scalable, in-database scoring, bringing your code
+directly to the data.
+
+**Part 3: Reporting: What Posit Connect can do for you.** After creating
+a model, vibecode a Shiny frontend and deploy it to Connect with one
+click!
+
+Whether you are looking to accelerate daily coding with integrated LLM
+assistants or establish robust, scalable MLOps pipelines across R and
+Python, this session offers practical patterns you can immediately apply
+to your team's stack.
+
+**Key Takeaways for Attendees**
+
+- How to leverage **Posit Assistant** in Positron with tailored
+  **Snowflake skills** and **Cortex LLMs**.
+- How to use **snowflake-r packages** to interact smoothly with
+  Snowflake data pipelines.
+- Best practices for managing features and registering models with
+  **Posit and Snowflake**",2026-09-15 16:45:00,2026-09-15 17:45:00,"2026-09-15 11:45:00 CDT","2026-09-15 12:45:00 CDT","In-person","IN_PERSON","Room 335"
 "a5a39584-a466-413e-94f0-2c82a33ddf62","7cba9f3e-bf6a-4200-875f-354ed2326832","Welcome Reception","",2026-09-14 22:00:00,2026-09-15,"2026-09-14 17:00:00 CDT","2026-09-14 19:00:00 CDT","In-person","IN_PERSON","Ballroom G & J"
 "eabd4945-f0eb-4f0f-901d-c8658fb7ec4b","854f7c62-b4eb-41e2-83cb-f28cd92db45e","Lunch & Birds of a Feather Meetups","",2026-09-16 16:40:00,2026-09-16 18:00:00,"2026-09-16 11:40:00 CDT","2026-09-16 13:00:00 CDT","In-person","IN_PERSON","Hilton Americas Houston"
-"afabacaa-e3b8-4abd-92b7-b20c82529d19","540e6520-37e9-4f75-9022-844101d448c4","Lunch & Learn with AWS: Using Positron & Amazon Sagemaker for Regulated Industries","<p>Traditional analysis work is spread across tools that aren’t always compatible. The data sits in a warehouse you reach through an extract. The model runs on another platform. The results end up as a screenshot in someone else's deck.</p>
-<p>Join us for a live walkthrough of how Positron, running natively on Amazon SageMaker, can act as a central hub for end-to-end analysis.</p>
-<p>Positron is a capable IDE for working through data science and analysis tasks. Posit Assistant, in this case backed by Amazon Bedrock, helps us get our bearings in a synthetic loan dataset, writing queries against Athena as we go. Since everything from the data to the foundational AI models are AWS native, nothing leaves the boundary your organization already trusts.</p>
-<p>Once we have our bearings on the data, we’ll focus on a single question. We’ll explore the data, train a model, keep a record of everything we tried, deploy the best model somewhere it can be called, and publish a report to Posit Connect that fetches the current numbers on a schedule. All from the comfort of Positron on SageMaker.</p>
-",2026-09-16 16:45:00,2026-09-16 17:45:00,"2026-09-16 11:45:00 CDT","2026-09-16 12:45:00 CDT","In-person","IN_PERSON","Room 335"
+"afabacaa-e3b8-4abd-92b7-b20c82529d19","540e6520-37e9-4f75-9022-844101d448c4","Lunch & Learn with AWS: Using Positron & Amazon Sagemaker for Regulated Industries","Traditional analysis work is spread across tools that aren’t always
+compatible. The data sits in a warehouse you reach through an extract.
+The model runs on another platform. The results end up as a screenshot
+in someone else's deck.
+
+Join us for a live walkthrough of how Positron, running natively on
+Amazon SageMaker, can act as a central hub for end-to-end analysis.
+
+Positron is a capable IDE for working through data science and analysis
+tasks. Posit Assistant, in this case backed by Amazon Bedrock, helps us
+get our bearings in a synthetic loan dataset, writing queries against
+Athena as we go. Since everything from the data to the foundational AI
+models are AWS native, nothing leaves the boundary your organization
+already trusts.
+
+Once we have our bearings on the data, we’ll focus on a single question.
+We’ll explore the data, train a model, keep a record of everything we
+tried, deploy the best model somewhere it can be called, and publish a
+report to Posit Connect that fetches the current numbers on a schedule.
+All from the comfort of Positron on SageMaker.",2026-09-16 16:45:00,2026-09-16 17:45:00,"2026-09-16 11:45:00 CDT","2026-09-16 12:45:00 CDT","In-person","IN_PERSON","Room 335"

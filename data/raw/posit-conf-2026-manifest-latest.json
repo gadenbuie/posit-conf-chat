@@ -10,6 +10,6 @@
   "record_count": 138,
   "unique_speaker_count": 142,
   "raw_sha256": "bb94928faec8ff0c87a0c30f48625de600cc648fab3a7390186d6b273fd74a44",
-  "schedule_content_sha256": "616934b1a4d95fbe001493a6e779ed9a96d45411c4768107125aa58e9cd1efca",
+  "schedule_content_sha256": "80a1e4252c2533fd674d9eb5ce839274a940766bf0a5faf22a5ba0e92e0de296",
   "raw_snapshot_file": "data/raw/posit-conf-2026-schedule-20260905T162856Z.json"
 }

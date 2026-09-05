@@ -21,6 +21,26 @@ is_valid_schedule <- function(schedule) {
     length(schedule$sessionDetails) > 0
 }
 
+html_to_markdown <- function(html) {
+  needs_conversion <- !is.na(html) & html != ""
+
+  html[needs_conversion] <- vapply(
+    html[needs_conversion],
+    function(x) {
+      converted <- system2(
+        "pandoc",
+        c("--from", "html", "--to", "gfm-raw_html"),
+        input = x,
+        stdout = TRUE
+      )
+      trimws(paste(converted, collapse = "\n"))
+    },
+    character(1)
+  )
+
+  html
+}
+
 fetch_schedule <- function(schedule_url) {
   tryCatch(
     {
@@ -262,6 +282,8 @@ schedule_records$end_time_event_local <- format(
   usetz = TRUE
 )
 
+schedule_records$abstract <- html_to_markdown(schedule_records$abstract)
+
 speaker_rows <- unlist(
   lapply(records, function(record) {
     if (length(record$speakers) == 0) {
@@ -312,6 +334,8 @@ speakers <- if (length(speaker_rows) > 0) {
     linkedin_url = character()
   )
 }
+
+speakers$biography <- html_to_markdown(speakers$biography)
 
 parent_session_ids <- unique(na.omit(schedule_records$parent_session_id))
 

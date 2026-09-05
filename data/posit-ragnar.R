@@ -24,12 +24,6 @@ speaker_list <- aggregate(
 )
 names(speaker_list)[2] <- "speakers"
 
-strip_html <- function(x) {
-  x <- gsub("<[^>]*>", " ", x)
-  x <- gsub("&nbsp;", " ", x, fixed = TRUE)
-  trimws(gsub("\\s+", " ", x))
-}
-
 format_sessions <- function(sessions) {
   glue::glue_data(
     sessions,
@@ -45,7 +39,7 @@ Abstract: {abstract}
 )---",
     .na = ""
   ) |>
-    strip_html()
+    trimws()
 }
 
 talk_sessions_df <- merge(talks, speaker_list, by = "record_id", all.x = TRUE)

@@ -10,7 +10,7 @@ The page uses a Zuddl schedule widget. The downloader:
 2. Falls back to loading the Sessions page with Chromote and observing its schedule API request when the saved URL fails or becomes stale.
 3. Saves the refreshed source URL for future runs.
 
-The raw Zuddl response is preserved in `data/raw/`. It is the source of truth for all derived CSV files.
+The raw Zuddl response is preserved in `data/raw/`. It is the source of truth for all derived CSV files. Rich-text fields arrive from the API as HTML; the downloader converts them to Markdown with `pandoc`, so the original HTML is only preserved in the raw snapshots.
 
 ## Outputs
 
@@ -48,7 +48,7 @@ Important columns:
 | `session_id` | Stable Zuddl ID for the session represented by the record |
 | `parent_session_id` | `session_id` of the parent session block; populated for constituent talks |
 | `title` | Session, talk, workshop, or event title |
-| `abstract` | Description or abstract, when supplied |
+| `abstract` | Description or abstract in Markdown, converted from source HTML by pandoc, when supplied |
 | `start_time_utc`, `end_time_utc` | Raw schedule times parsed in UTC |
 | `start_time_event_local`, `end_time_event_local` | The same times rendered in the conference time zone |
 | `session_type` | Broad display type, such as `Virtual` or `In-person` |
@@ -130,7 +130,7 @@ Use `schedule_records.csv` when an exact representation of the source schedule m
 | `speaker_order` | Display order within the session |
 | `first_name`, `last_name`, `full_name` | Speaker name |
 | `title_affiliation` | Role, organization, or affiliation supplied by Zuddl |
-| `biography` | Speaker biography, when supplied |
+| `biography` | Speaker biography in Markdown, converted from source HTML by pandoc, when supplied |
 | `image_url` | Speaker profile-image URL, when supplied |
 | `linkedin_url` | LinkedIn profile URL, when supplied |
 
