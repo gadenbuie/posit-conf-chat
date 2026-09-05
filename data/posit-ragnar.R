@@ -64,9 +64,9 @@ workshop_sessions_df$kind <- "workshop"
 workshop_sessions_df$track_title <- NA_character_
 
 chunks <- data.frame(
-  origin = c(talks$record_id, workshops$record_id),
+  origin = c(talk_sessions_df$record_id, workshop_sessions_df$record_id),
   hash = vapply(
-    c(talks$title, workshops$title),
+    c(talk_sessions_df$title, workshop_sessions_df$title),
     rlang::hash,
     character(1)
   ),
