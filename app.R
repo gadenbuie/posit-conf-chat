@@ -5,6 +5,7 @@ library(ragnar)
 library(shinychat)
 
 options(
+  shiny.autoload.r = TRUE,
   shiny.autoreload.pattern = "\\.(r|htm|html|js|css|png|jpg|jpeg|gif|md)$"
 )
 
@@ -39,6 +40,11 @@ ui <- function(req) {
     placeholder = "Ask about sessions, workshops, or build your schedule...",
     theme = if (conf_theme) bs_theme(brand = TRUE) else page_chat_theme(),
     sidebar = chat_sidebar(open = FALSE),
+    drawer = chat_drawer(
+      agenda_drawer_content(character()),
+      title = "My Agenda",
+      open = FALSE
+    ),
     navbar_options = if (conf_theme) {
       navbar_options(bg = "#419CF5", theme = "dark")
     },
@@ -104,10 +110,33 @@ server <- function(input, output, session) {
     paste(
       "posit::conf(2026) Schedule.",
       "",
-      "When presenting a summary of results from this tool, prefer using markdown tables.",
+      "Results include each item's record_id in the origin column.",
+      "Use show_item() to present an item in detail,",
+      "and query_schedule() for exact times, rooms, and tracks.",
       sep = "\n"
     )
   )
+
+  agenda_ids <- reactiveVal(character())
+
+  client$register_tool(list_schedule_options_tool)
+  client$register_tool(query_schedule)
+  client$register_tool(show_item_tool)
+  client$register_tool(agenda_tool(agenda_ids))
+
+  observeEvent(agenda_ids(), {
+    ids <- isolate(agenda_ids())
+    content <- agenda_drawer_content(ids)
+    if (length(ids)) {
+      chat_drawer_show("chat", content = content, title = "My Agenda")
+    } else {
+      chat_drawer_update("chat", content = content, title = "My Agenda")
+    }
+  })
+
+  observeEvent(input$agenda_remove, {
+    manage_agenda("remove", input$agenda_remove, agenda_ids = agenda_ids)
+  })
 
   chat_server("chat", client)
 }
