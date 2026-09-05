@@ -1,0 +1,8 @@
+{
+  "sessions_page_url": "https://conf.posit.co/2026/sessions/",
+  "schedule_api_url": "https://conf.posit.co/api/custom-widget/v2/schedule/1926157700/?dudaSiteId=d4d6e48c&userTimeZone=America%2FIndiana%2FKnox&eventId=23b93c83-b0f1-4250-af16-a7f0ca04196a",
+  "discovered_at_utc": "2026-09-05 16:32:45 UTC",
+  "event_id": "23b93c83-b0f1-4250-af16-a7f0ca04196a",
+  "event_title": "posit::conf(2026)",
+  "event_identifier": "2026"
+}
