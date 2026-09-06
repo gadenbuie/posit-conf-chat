@@ -100,7 +100,8 @@ manage_agenda <- function(action, id = NULL, agenda_ids, force = FALSE) {
     title <- "Cleared the agenda"
     text <- paste0("Cleared the agenda (", n, " items removed).")
   } else {
-    items <- lapply(agenda_get(), function(i) sched_summary(resolve_item(i)))
+    ids <- agenda_get()
+    items <- lapply(ids, function(i) sched_summary(resolve_item(i)))
     title <- "Your agenda"
     text <- if (!length(items)) {
       "Your agenda is empty."
@@ -111,8 +112,10 @@ manage_agenda <- function(action, id = NULL, agenda_ids, force = FALSE) {
         " items):\n",
         paste(
           vapply(
-            items,
-            function(s) paste0("- ", agenda_item_desc(s)),
+            seq_along(items),
+            function(i) {
+              paste0("- [", ids[i], "] ", agenda_item_desc(items[[i]]))
+            },
             character(1)
           ),
           collapse = "\n"
@@ -250,7 +253,9 @@ agenda_tool <- function(agenda_ids) {
       "Use 'remove' to take a saved item out of the agenda.",
       "Use 'clear' to empty the agenda entirely.",
       "Use 'show' to list the currently saved items;",
-      "this is mainly needed when you need the agenda's details to answer a question,",
+      "each item's record_id is shown in brackets,",
+      "so you can add, remove, show, or look them up directly.",
+      "This is mainly needed when you need the agenda's details to answer a question,",
       "since the attendee can already see the drawer themselves.",
       "Speakers cannot be added to the agenda directly; add their talk, session, workshop, or event instead."
     ),
