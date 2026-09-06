@@ -174,38 +174,24 @@ server <- function(input, output, session) {
     chat_drawer_show("chat", title = "My Agenda")
   })
 
-  home_tab <- "__home__"
-  tab_values <- c("on_now", "full_schedule")
-
   observeEvent(session$clientData$url_search, once = TRUE, {
-    query <- shiny::parseQueryString(session$clientData$url_search)
+    state <- query_state(
+      shiny::parseQueryString(session$clientData$url_search),
+      full_schedule_choices()
+    )
 
-    tab <- if (!is.null(query$tab) && query$tab %in% tab_values) {
-      query$tab
-    } else {
-      home_tab
+    bslib::nav_select("chat_page", state$tab, session = session)
+    if (!is.null(state$format)) {
+      updateRadioButtons(session, "schedule_format", selected = state$format)
     }
-    bslib::nav_select("chat_page", tab, session = session)
-
-    if (!is.null(query$format) && query$format %in% format_choices) {
-      updateRadioButtons(session, "schedule_format", selected = query$format)
+    if (!is.null(state$location)) {
+      updateSelectInput(session, "schedule_location", selected = state$location)
     }
-
-    choices <- full_schedule_choices()
-    if (
-      !is.null(query$location) &&
-        query$location %in% c("", choices$locations)
-    ) {
-      updateSelectInput(session, "schedule_location", selected = query$location)
-    }
-    if (
-      !is.null(query$speaker) &&
-        query$speaker %in% c("", choices$speakers)
-    ) {
+    if (!is.null(state$speaker)) {
       updateSelectizeInput(
         session,
         "schedule_speaker",
-        selected = query$speaker
+        selected = state$speaker
       )
     }
   })
@@ -220,16 +206,11 @@ server <- function(input, output, session) {
     {
       update_query_string(
         session,
-        c(
-          filter_query_values(
-            list(
-              tab = input$chat_page,
-              format = input$schedule_format %||% "all",
-              location = input$schedule_location %||% "",
-              speaker = input$schedule_speaker %||% ""
-            ),
-            list(tab = home_tab, format = "all", location = "", speaker = "")
-          )
+        state_query_values(
+          tab = input$chat_page,
+          format = input$schedule_format %||% "all",
+          location = input$schedule_location %||% "",
+          speaker = input$schedule_speaker %||% ""
         )
       )
     },
@@ -237,8 +218,7 @@ server <- function(input, output, session) {
   )
 
   observeEvent(input$agenda_restore, {
-    ids <- as.character(input$agenda_restore)
-    ids <- intersect(ids, schedule_ids())
+    ids <- valid_agenda_ids(input$agenda_restore)
     if (length(ids)) {
       agenda_ids(ids)
     }

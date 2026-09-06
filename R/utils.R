@@ -26,6 +26,11 @@ filter_query_values <- function(values, defaults) {
   values
 }
 
+# Keep only ids that still exist in the schedule.
+valid_agenda_ids <- function(ids) {
+  intersect(as.character(ids), schedule_ids())
+}
+
 # Re-register the ragnar search tool with an added `_intent` argument so
 # shinychat shows why the model called it (see the shinychat tool-ui vignette).
 search_tool_with_intent <- function(chat) {
