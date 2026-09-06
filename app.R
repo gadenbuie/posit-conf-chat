@@ -132,6 +132,13 @@ server <- function(input, output, session) {
     chat_set_greeting("chat", chat_greeting(greeting_stream))
   })
 
+  observe({
+    query <- shiny::parseQueryString(session$clientData$url_search)
+    if (!is.null(query$now)) {
+      session$userData$now_override <- query$now
+    }
+  })
+
   store <- ragnar::ragnar_store_connect(store_location)
   ragnar::ragnar_register_tool_retrieve(
     client,

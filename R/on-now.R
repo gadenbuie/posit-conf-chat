@@ -5,11 +5,10 @@ conf_tz <- "America/Chicago"
 conf_now <- function() {
   override <- getOption("positconf.now")
   session <- shiny::getDefaultReactiveDomain()
-  if (!is.null(session)) {
-    query <- shiny::parseQueryString(session$clientData$url_search)
-    if (!is.null(query$now)) {
-      override <- query$now
-    }
+  # now_override is captured from clientData$url_search by an observer in
+  # server(); userData is a plain env, safe to read outside reactive consumers
+  if (!is.null(session) && !is.null(session$userData$now_override)) {
+    override <- session$userData$now_override
   }
   if (!is.null(override) && nzchar(override)) {
     now <- as.POSIXct(
