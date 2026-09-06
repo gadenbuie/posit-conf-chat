@@ -76,6 +76,9 @@ nav .shiny-chat-page-nav-link[aria-current="page"] {
 }
 
 /* --- conf cards ------------------------------------------------------- */
+.shiny-chat-message .conf-card {
+  margin: 0.25rem;
+}
 .conf-chip-agenda {
   display: inline-flex;
   align-items: center;
@@ -183,6 +186,7 @@ nav .shiny-chat-page-nav-link[aria-current="page"] {
   text-decoration: underline;
   text-underline-offset: 3px;
 }
+
 
 .conf-session-talks {
   border-top: 1px solid
