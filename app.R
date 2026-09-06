@@ -151,7 +151,8 @@ server <- function(input, output, session) {
     model = "zai-org/GLM-5.3-Flash",
     system_prompt = ellmer::interpolate_file(
       "prompt-system.md",
-      date = Sys.Date()
+      date = Sys.Date(),
+      skills = skills_prompt()
     )
   )
 
@@ -215,6 +216,7 @@ server <- function(input, output, session) {
   agenda_ids <- reactiveVal(character())
 
   client$register_tool(list_schedule_options_tool)
+  client$register_tool(skills_tool())
   client$register_tool(query_schedule)
   client$register_tool(show_item_tool)
   client$register_tool(on_now_tool)

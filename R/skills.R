@@ -1,0 +1,126 @@
+skills_dir <- function() {
+  dir <- "skills"
+  if (!dir.exists(dir)) {
+    stop("Skills directory not found: ", file.path(getwd(), dir), call. = FALSE)
+  }
+  dir
+}
+
+skills_path <- function(skill, reference = NULL) {
+  if (!grepl("^[a-z0-9]+(-[a-z0-9]+)*$", skill)) {
+    stop(
+      "Invalid skill name: '",
+      skill,
+      "'. Use lowercase letters, numbers, and hyphens.",
+      call. = FALSE
+    )
+  }
+  path <- file.path(skills_dir(), skill)
+  if (!is.null(reference)) {
+    reference <- sub("^references/", "", reference)
+    if (!grepl("^[A-Za-z0-9_-]+(\\.md)?$", reference)) {
+      stop("Invalid reference file name: '", reference, "'.", call. = FALSE)
+    }
+    if (!grepl("\\.md$", reference)) {
+      reference <- paste0(reference, ".md")
+    }
+    path <- file.path(path, "references", reference)
+  } else {
+    path <- file.path(path, "SKILL.md")
+  }
+  if (!file.exists(path)) {
+    stop("Skill file not found: ", path, call. = FALSE)
+  }
+  path
+}
+
+skills_read <- function(skill, reference = NULL) {
+  frontmatter::read_front_matter(skills_path(skill, reference))$body
+}
+
+skills_list <- function() {
+  skill_dirs <- list.dirs(skills_dir(), recursive = FALSE)
+  purrr::map(skill_dirs, function(dir) {
+    path <- file.path(dir, "SKILL.md")
+    if (!file.exists(path)) {
+      return(NULL)
+    }
+    fm <- frontmatter::read_front_matter(path)
+    references <- list.files(
+      file.path(dir, "references"),
+      pattern = "\\.md$",
+      full.names = FALSE
+    )
+    list(
+      name = fm$data$name %||% basename(dir),
+      description = fm$data$description %||% "",
+      references = references
+    )
+  }) |>
+    purrr::compact()
+}
+
+skills_prompt <- function() {
+  skills <- skills_list()
+  if (length(skills) == 0) {
+    return("")
+  }
+  lines <- c()
+  for (skill in skills) {
+    lines <- c(
+      lines,
+      paste0("### ", skill$name),
+      "",
+      skill$description,
+      ""
+    )
+    if (length(skill$references) > 0) {
+      lines <- c(
+        lines,
+        paste0(
+          "Reference files: ",
+          paste(skill$references, collapse = ", ")
+        ),
+        ""
+      )
+    }
+  }
+  lines <- c(
+    lines,
+    paste0(
+      "Use the skill() tool to load a skill's instructions ",
+      "(argument `skill`), or to load a reference file ",
+      "(argument `reference`, the file name from the list above)."
+    ),
+    ""
+  )
+  paste(lines, collapse = "\n")
+}
+
+skills_tool <- function() {
+  ellmer::tool(
+    skills_read,
+    name = "skill",
+    description = paste0(
+      "Read the full instructions of an available skill, or one of its ",
+      "reference files. Load a skill before answering questions it covers; ",
+      "load only the reference files the task calls for."
+    ),
+    arguments = list(
+      skill = ellmer::type_string(
+        "The name of the skill to read, e.g. 'conf-general-info'."
+      ),
+      reference = ellmer::type_string(
+        paste(
+          "Optional: a reference document within the skill, e.g. 'faq',",
+          "'faq.md', or 'references/faq.md'.",
+          "Omit to read the skill's own instructions."
+        )
+      )
+    ),
+    annotations = ellmer::tool_annotations(
+      title = "Reading skill",
+      icon = bsicons::bs_icon("book")
+    )
+  )
+}
