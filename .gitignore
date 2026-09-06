@@ -1,3 +1,5 @@
 .renvignore
 data/ragnar.duckdb
 .posit/
+
+renv.lock
