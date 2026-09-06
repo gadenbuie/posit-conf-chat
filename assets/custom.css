@@ -242,6 +242,9 @@ nav .shiny-chat-page-nav-link:hover:not([aria-current="page"]) {
     no-repeat;
 }
 
+/* The frosted composer card lives in _brand.yml (defaults.shiny.theme.rules)
+   since it is only needed for the conf theme. */
+
 .shiny-chat-page-panel[data-page-value="on_now"] {
   background-color: var(--bslib-dashboard-main-bg);
   height: max-content;

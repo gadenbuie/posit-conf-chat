@@ -178,3 +178,18 @@ defaults:
         [data-bs-theme="dark"] .full-schedule-filters .control-label {
           color: $brand-lime;
         }
+
+        /* Frosted background behind the composer so the chat input and input
+           toolbar stay readable over the background artwork. Hugs the
+           composer box exactly — no padding offset. */
+        .shiny-chat-composer {
+          background: color-mix(in srgb, var(--bs-body-bg) 80%, transparent);
+          backdrop-filter: blur(6px);
+          -webkit-backdrop-filter: blur(6px);
+          border-radius: var(--bs-border-radius-lg, 0.75rem);
+
+          .shiny-chat-input-toolbar {
+            padding-left: 0.5em;
+            padding-bottom: 0.25em;
+          }
+        }

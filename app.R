@@ -7,7 +7,7 @@ library(purrr)
 
 options(
   shiny.autoload.r = TRUE,
-  shiny.autoreload.pattern = "\\.(r|htm|html|js|css|png|jpg|jpeg|gif|md)$",
+  shiny.autoreload.pattern = "\\.(r|htm|html|js|css|png|jpg|jpeg|gif|md|)$|_brand[.]yml$",
   shinychat.history_options.store_auto.quiet = TRUE
 )
 
@@ -64,6 +64,7 @@ ui <- function(req) {
       bslib::input_dark_mode()
     ),
     toolbar_input = bslib::toolbar(
+      align = "left",
       bslib::toolbar_input_select(
         "output_style",
         label = "Reply style",
