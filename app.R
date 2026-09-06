@@ -127,9 +127,11 @@ server <- function(input, output, session) {
 
   agenda_ids <- reactiveVal(character())
 
-  observeEvent(input$chat_greeting_requested, {
-    if (!greeting_dynamic) {
-      return()
+  greeting_cache <- NULL
+
+  generate_greeting <- function() {
+    if (!is.null(greeting_cache)) {
+      return(chat_greeting(greeting_cache))
     }
     greeting_client <- ellmer::chat(
       greeting_spec$name,
@@ -141,6 +143,7 @@ server <- function(input, output, session) {
     greeting_client$register_tool(on_now_tool)
     greeting_client$register_tool(show_agenda_tool(agenda_ids))
     greeting_stream <- coro::async_generator(function() {
+      collected <- greeting_header
       yield(greeting_header)
       stream <- greeting_client$stream_async(
         paste(
@@ -154,13 +157,16 @@ server <- function(input, output, session) {
           next
         }
         if (S7::S7_inherits(chunk, ellmer::ContentText)) {
+          collected <- paste0(collected, chunk@text)
           yield(chunk@text)
         }
       }
+      greeting_cache <<- collected
+      invisible()
     })()
 
-    chat_set_greeting("chat", chat_greeting(greeting_stream))
-  })
+    chat_greeting(greeting_stream)
+  }
 
   observe({
     query <- shiny::parseQueryString(session$clientData$url_search)
@@ -381,7 +387,11 @@ server <- function(input, output, session) {
     )
   })
 
-  chat_server("chat", client)
+  chat_server(
+    "chat",
+    client,
+    greeting = if (greeting_dynamic) generate_greeting
+  )
 }
 
 shinyApp(ui, server)
