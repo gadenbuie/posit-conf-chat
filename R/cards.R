@@ -194,11 +194,11 @@ card_speaker_list <- function(sp) {
     return(NULL)
   }
   rows <- if (inherits(sp, "data.frame")) {
-    lapply(seq_len(nrow(sp)), function(i) as.list(sp[i, , drop = FALSE]))
+    purrr::pmap(sp, ~ list(...))
   } else {
     list(sp)
   }
-  htmltools::tagList(lapply(rows, card_speaker_row))
+  htmltools::tagList(purrr::map(rows, card_speaker_row))
 }
 
 card_talk <- function(content) {
@@ -221,7 +221,10 @@ card_talk <- function(content) {
         },
         card_chip(item$track_title, "conf-chip-track")
       ),
-      htmltools::tags$h5(class = "card-title text-balance", card_value(item$title)),
+      htmltools::tags$h5(
+        class = "card-title text-balance",
+        card_value(item$title)
+      ),
       card_meta(
         sched_date(item$start_time_event_local),
         sched_clock(item$start_time_event_local),
@@ -236,41 +239,50 @@ card_talk <- function(content) {
 
 card_session <- function(content) {
   item <- content@item
-  talks <- schedule_data()$talks
-  children <- talks[
-    !is.na(talks$parent_session_id) &
-      talks$parent_session_id == item$session_id,
-    ,
-    drop = FALSE
-  ]
-  children <- children[order(children$start_time_event_local), , drop = FALSE]
-  talk_rows <- lapply(seq_len(nrow(children)), function(i) {
-    talk <- children[i, , drop = FALSE]
-    speaker_names <- unique(sched_speakers_for(talk$record_id)$full_name)
-    speaker_names <- speaker_names[
-      !is.na(speaker_names) & nzchar(speaker_names)
-    ]
-    htmltools::tags$div(
-      class = "conf-session-talk d-flex flex-column flex-sm-row gap-1 gap-sm-3 py-2",
+  session_id <- item$session_id
+  children <- schedule_data()$talks |>
+    dplyr::filter(
+      !is.na(parent_session_id),
+      parent_session_id == .env$session_id
+    ) |>
+    dplyr::arrange(start_time_event_local)
+  talk_rows <- purrr::pmap(
+    children,
+    function(
+      record_id,
+      title,
+      start_time_event_local,
+      end_time_event_local,
+      ...
+    ) {
+      speaker_names <- sched_speakers_for(record_id) |>
+        dplyr::pull(full_name) |>
+        unique()
+      speaker_names <- speaker_names[
+        !is.na(speaker_names) & nzchar(speaker_names)
+      ]
       htmltools::tags$div(
-        class = "conf-session-talk-time conf-muted small",
-        paste0(
-          clock12(sched_clock(talk$start_time_event_local)),
-          "\u2013",
-          clock12(sched_clock(talk$end_time_event_local))
-        )
-      ),
-      htmltools::tags$div(
-        htmltools::tags$strong(card_value(talk$title)),
-        if (length(speaker_names)) {
-          htmltools::tags$div(
-            class = "conf-muted small",
-            paste(speaker_names, collapse = " \u00b7 ")
+        class = "conf-session-talk d-flex flex-column flex-sm-row gap-1 gap-sm-3 py-2",
+        htmltools::tags$div(
+          class = "conf-session-talk-time conf-muted small",
+          paste0(
+            clock12(sched_clock(start_time_event_local)),
+            "\u2013",
+            clock12(sched_clock(end_time_event_local))
           )
-        }
+        ),
+        htmltools::tags$div(
+          htmltools::tags$strong(card_value(title)),
+          if (length(speaker_names)) {
+            htmltools::tags$div(
+              class = "conf-muted small",
+              paste(speaker_names, collapse = " \u00b7 ")
+            )
+          }
+        )
       )
-    )
-  })
+    }
+  )
   htmltools::tags$div(
     class = "card conf-card border-0 shadow-sm rounded-3 mb-2",
     style = "max-width: 640px",
@@ -281,7 +293,10 @@ card_session <- function(content) {
         card_chip("Session", "conf-chip-session"),
         card_chip(item$track_title, "conf-chip-track")
       ),
-      htmltools::tags$h5(class = "card-title text-balance", card_value(item$title)),
+      htmltools::tags$h5(
+        class = "card-title text-balance",
+        card_value(item$title)
+      ),
       card_meta(
         sched_date(item$start_time_event_local),
         sched_clock(item$start_time_event_local),
@@ -318,7 +333,10 @@ card_workshop <- function(content) {
         card_chip("Workshop", "conf-chip-workshop"),
         format_chip
       ),
-      htmltools::tags$h5(class = "card-title text-balance", card_value(item$title)),
+      htmltools::tags$h5(
+        class = "card-title text-balance",
+        card_value(item$title)
+      ),
       card_meta(
         sched_date(item$start_time_event_local),
         sched_clock(item$start_time_event_local),
@@ -342,7 +360,10 @@ card_event <- function(content) {
         class = "d-flex flex-wrap gap-2 mb-2",
         card_chip("Event", "conf-chip-event")
       ),
-      htmltools::tags$h5(class = "card-title text-balance", card_value(item$title)),
+      htmltools::tags$h5(
+        class = "card-title text-balance",
+        card_value(item$title)
+      ),
       card_meta(
         sched_date(item$start_time_event_local),
         sched_clock(item$start_time_event_local),

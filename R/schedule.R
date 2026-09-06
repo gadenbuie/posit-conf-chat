@@ -10,22 +10,22 @@ schedule_data <- function() {
         progress = FALSE
       )
     }
-    talks <- read("talks")
-    talks$is_keynote <- talks$is_keynote == "TRUE"
-    sessions <- read("talk_sessions")
-    sessions$talk_count <- as.integer(sessions$talk_count)
     data <- list(
-      talks = talks,
-      sessions = sessions,
+      talks = read("talks") |>
+        dplyr::mutate(is_keynote = is_keynote == "TRUE"),
+      sessions = read("talk_sessions") |>
+        dplyr::mutate(talk_count = as.integer(talk_count)),
       workshops = read("workshops"),
       events = read("events"),
-      speakers = read("speakers"),
-      locations = read("locations")
+      speakers = read("speakers")
     )
     # sched_date()/sched_clock() assume "YYYY-MM-DD HH:MM" local timestamps
     time_pattern <- "^\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}"
-    for (name in c("talks", "sessions", "workshops", "events")) {
-      for (col in c("start_time_event_local", "end_time_event_local")) {
+    tidyr::expand_grid(
+      name = c("talks", "sessions", "workshops", "events"),
+      col = c("start_time_event_local", "end_time_event_local")
+    ) |>
+      purrr::pwalk(function(name, col) {
         x <- data[[name]][[col]]
         bad <- !is.na(x) & x != "" & !grepl(time_pattern, x)
         if (any(bad)) {
@@ -38,15 +38,9 @@ schedule_data <- function() {
             paste(utils::head(x[bad], 3), collapse = ", ")
           )
         }
-      }
-    }
-    record_ids <- unique(c(
-      data$talks$record_id,
-      data$sessions$record_id,
-      data$workshops$record_id,
-      data$events$record_id
-    ))
-    if (length(intersect(record_ids, data$speakers$speaker_id))) {
+      })
+    record_ids <- sched_items(data = data)$id
+    if (any(record_ids %in% data$speakers$speaker_id)) {
       stop(
         "record_id and speaker_id values overlap; item lookups would be ambiguous"
       )
@@ -56,14 +50,45 @@ schedule_data <- function() {
   .schedule_cache$data
 }
 
+kind_labels <- c(
+  talks = "talk",
+  sessions = "session",
+  workshops = "workshop",
+  events = "event"
+)
+
+sched_items <- function(
+  kinds = c("talks", "sessions", "workshops", "events"),
+  track = FALSE,
+  data = NULL
+) {
+  if (is.null(data)) data <- schedule_data()
+  dplyr::bind_rows(purrr::map(kinds, function(name) {
+    df <- data[[name]]
+    dplyr::tibble(
+      id = df$record_id,
+      kind = unname(kind_labels[[name]]),
+      title = df$title,
+      date = sched_date(df$start_time_event_local),
+      start = sched_clock(df$start_time_event_local),
+      end = sched_clock(df$end_time_event_local),
+      location = df$effective_location_name,
+      track = if (track && name == "talks") df$track_title else NA_character_
+    )
+  }))
+}
+
+sched_speaker_names <- function(data = NULL) {
+  if (is.null(data)) data <- schedule_data()
+  data$speakers |>
+    dplyr::filter(!is.na(full_name), full_name != "") |>
+    dplyr::arrange(as.integer(speaker_order)) |>
+    dplyr::group_by(record_id) |>
+    dplyr::summarise(speakers = paste(full_name, collapse = ", "), .groups = "drop")
+}
+
 schedule_ids <- function() {
-  d <- schedule_data()
-  unique(c(
-    d$talks$record_id,
-    d$sessions$record_id,
-    d$workshops$record_id,
-    d$events$record_id
-  ))
+  unique(sched_items()$id)
 }
 
 sched_date <- function(x) substr(x, 1, 10)
@@ -71,14 +96,11 @@ sched_date <- function(x) substr(x, 1, 10)
 sched_clock <- function(x) substr(x, 12, 16)
 
 sched_days <- function() {
-  d <- schedule_data()
-  dates <- c(
-    sched_date(d$talks$start_time_event_local),
-    sched_date(d$sessions$start_time_event_local),
-    sched_date(d$workshops$start_time_event_local),
-    sched_date(d$events$start_time_event_local)
-  )
-  sort(unique(dates[dates != ""]))
+  sched_items() |>
+    dplyr::filter(!is.na(date), date != "") |>
+    dplyr::pull(date) |>
+    unique() |>
+    sort()
 }
 
 sched_resolve_date <- function(date) {
@@ -121,58 +143,40 @@ sched_match <- function(x, choices) {
 }
 
 sched_speakers_for <- function(record_id) {
-  d <- schedule_data()
-  sp <- d$speakers[d$speakers$record_id == record_id, , drop = FALSE]
-  if (nrow(sp)) {
-    sp <- sp[order(as.integer(sp$speaker_order)), , drop = FALSE]
-  }
-  sp
+  schedule_data()$speakers |>
+    dplyr::filter(record_id == .env$record_id) |>
+    dplyr::arrange(as.integer(speaker_order))
 }
 
 sched_sessions_by_speaker <- function(speaker_id) {
-  d <- schedule_data()
-  ids <- unique(d$speakers$record_id[d$speakers$speaker_id == speaker_id])
-  lapply(ids, function(id) sched_summary(resolve_item(id)))
+  ids <- schedule_data()$speakers |>
+    dplyr::filter(speaker_id == .env$speaker_id) |>
+    dplyr::pull(record_id) |>
+    unique()
+  purrr::map(ids, function(id) sched_summary(resolve_item(id)))
 }
 
 resolve_item <- function(id) {
   d <- schedule_data()
-  find <- function(df) which(df$record_id == id)
-  i <- find(d$talks)
-  if (length(i)) {
-    return(list(
-      kind = "talk",
-      item = as.list(d$talks[i[1], ]),
-      speakers = sched_speakers_for(id)
-    ))
+  sources <- list(
+    talk = d$talks,
+    session = d$sessions,
+    workshop = d$workshops,
+    event = d$events
+  )
+  for (kind in names(sources)) {
+    hit <- dplyr::filter(sources[[kind]], record_id == .env$id)
+    if (nrow(hit)) {
+      return(list(
+        kind = kind,
+        item = purrr::map(hit, 1),
+        speakers = sched_speakers_for(id)
+      ))
+    }
   }
-  i <- find(d$sessions)
-  if (length(i)) {
-    return(list(
-      kind = "session",
-      item = as.list(d$sessions[i[1], ]),
-      speakers = sched_speakers_for(id)
-    ))
-  }
-  i <- find(d$workshops)
-  if (length(i)) {
-    return(list(
-      kind = "workshop",
-      item = as.list(d$workshops[i[1], ]),
-      speakers = sched_speakers_for(id)
-    ))
-  }
-  i <- find(d$events)
-  if (length(i)) {
-    return(list(
-      kind = "event",
-      item = as.list(d$events[i[1], ]),
-      speakers = sched_speakers_for(id)
-    ))
-  }
-  sp <- d$speakers[d$speakers$speaker_id == id, , drop = FALSE]
+  sp <- dplyr::filter(d$speakers, speaker_id == .env$id)
   if (nrow(sp)) {
-    item <- lapply(sp, function(col) {
+    item <- purrr::map(sp, function(col) {
       col <- col[!is.na(col) & col != ""]
       if (length(col)) col[1] else NA_character_
     })
@@ -180,7 +184,7 @@ resolve_item <- function(id) {
     return(list(
       kind = "speaker",
       item = item,
-      speakers = sp[1, , drop = FALSE],
+      speakers = dplyr::slice(sp, 1),
       sessions = sched_sessions_by_speaker(id)
     ))
   }
@@ -206,7 +210,11 @@ sched_summary <- function(res) {
     start = sched_clock(item$start_time_event_local),
     end = sched_clock(item$end_time_event_local),
     location = item$effective_location_name,
-    speakers = if (nrow(res$speakers)) res$speakers$full_name else NULL
+    speakers = if (nrow(res$speakers)) {
+      dplyr::pull(res$speakers, full_name)
+    } else {
+      NULL
+    }
   )
   if (identical(res$kind, "talk")) {
     summary$track <- item$track_title

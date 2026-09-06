@@ -27,23 +27,14 @@ conf_now <- function() {
 }
 
 conf_bounds <- function() {
-  d <- schedule_data()
-  times <- c(
-    d$talks$start_time_event_local,
-    d$sessions$start_time_event_local,
-    d$workshops$start_time_event_local,
-    d$events$start_time_event_local
-  )
-  ends <- c(
-    d$talks$end_time_event_local,
-    d$sessions$end_time_event_local,
-    d$workshops$end_time_event_local,
-    d$events$end_time_event_local
-  )
+  items <- sched_items()
   parse <- function(x) {
     as.POSIXct(substr(x, 1, 16), format = "%Y-%m-%d %H:%M", tz = conf_tz)
   }
-  list(start = min(parse(times)), end = max(parse(ends)))
+  list(
+    start = min(parse(paste(items$date, items$start))),
+    end = max(parse(paste(items$date, items$end)))
+  )
 }
 
 # Talks, workshops, and events (not track sessions) happening at `now`,
@@ -57,56 +48,43 @@ schedule_status <- function(now = conf_now()) {
   date <- format(now, "%Y-%m-%d")
   time <- format(now, "%H:%M")
 
-  items <- function(df, kind) {
-    out <- data.frame(
-      id = df$record_id,
-      kind = kind,
-      title = df$title,
-      date = sched_date(df$start_time_event_local),
-      start = sched_clock(df$start_time_event_local),
-      end = sched_clock(df$end_time_event_local),
-      location = df$effective_location_name,
-      stringsAsFactors = FALSE
-    )
-    out$speakers <- vapply(
-      out$id,
-      function(id) {
-        sp <- sched_speakers_for(id)
-        if (nrow(sp)) paste(sp$full_name, collapse = ", ") else NA_character_
-      },
-      character(1)
-    )
-    out
-  }
-  granular <- rbind(
-    items(d$talks, "talk"),
-    items(d$workshops, "workshop"),
-    items(d$events, "event")
-  )
-  tracks <- rbind(
-    items(d$sessions, "session"),
-    items(d$workshops, "workshop"),
-    items(d$events, "event")
+  granular <- dplyr::bind_rows(
+    sched_items("talks", data = d),
+    sched_items("workshops", data = d),
+    sched_items("events", data = d)
+  ) |>
+    dplyr::left_join(sched_speaker_names(d), by = c("id" = "record_id"))
+  tracks <- dplyr::bind_rows(
+    sched_items("sessions", data = d),
+    sched_items("workshops", data = d),
+    sched_items("events", data = d)
   )
 
-  today <- granular[granular$date == date, , drop = FALSE]
-  on_now <- today[today$start <= time & today$end > time, , drop = FALSE]
-  on_now <- on_now[order(on_now$start, on_now$title), , drop = FALSE]
+  on_now <- granular |>
+    dplyr::filter(
+      date == .env$date,
+      start <= .env$time,
+      end > .env$time
+    ) |>
+    dplyr::arrange(start, title)
 
-  keynotes <- d$talks$record_id[d$talks$is_keynote %in% TRUE]
+  keynotes <- d$talks |>
+    dplyr::filter(is_keynote) |>
+    dplyr::pull(record_id)
   mid_track <- any(on_now$kind == "talk" & !on_now$id %in% keynotes)
   pool <- if (mid_track) {
     granular
   } else {
-    rbind(tracks, granular[granular$id %in% keynotes, , drop = FALSE])
+    dplyr::bind_rows(tracks, dplyr::filter(granular, id %in% keynotes))
   }
 
-  up_next <- pool[pool$date == date & pool$start > time, , drop = FALSE]
+  up_next <- pool |>
+    dplyr::filter(date == .env$date, start > .env$time)
   if (nrow(up_next)) {
-    starts <- utils::head(sort(unique(up_next$start)), 3)
     to_min <- function(x) {
       as.integer(substr(x, 1, 2)) * 60L + as.integer(substr(x, 4, 5))
     }
+    starts <- utils::head(sort(unique(up_next$start)), 3)
     keep <- starts[1]
     for (s in starts[-1]) {
       if (sum(up_next$start %in% keep) >= 4) {
@@ -117,12 +95,9 @@ schedule_status <- function(now = conf_now()) {
       }
       keep <- c(keep, s)
     }
-    up_next <- up_next[up_next$start %in% keep, , drop = FALSE]
-    up_next <- up_next[
-      order(up_next$start, up_next$location, up_next$title),
-      ,
-      drop = FALSE
-    ]
+    up_next <- up_next |>
+      dplyr::filter(start %in% keep) |>
+      dplyr::arrange(start, location, title)
   }
 
   list(now = now, on_now = on_now, up_next = up_next)
@@ -189,8 +164,10 @@ on_now_section <- function(title, items, empty) {
     class = "mb-4",
     htmltools::tags$h2(title),
     if (nrow(items)) {
-      locations <- vapply(items$location, card_value, character(1))
-      cards <- lapply(items$id, function(id) contents_shinychat(show_item(id)))
+      locations <- purrr::map_chr(items$location, card_value)
+      cards <- purrr::map(items$id, function(id) {
+        contents_shinychat(show_item(id))
+      })
       lapply(unique(locations), function(location) {
         htmltools::tagList(
           if (nzchar(location)) htmltools::tags$h3(location),

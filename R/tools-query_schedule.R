@@ -9,48 +9,34 @@ query_schedule_fn <- function(
   speaker = NULL
 ) {
   d <- schedule_data()
-  combine <- function(df, kind_name, track_col = NULL) {
-    out <- data.frame(
-      id = df$record_id,
-      kind = kind_name,
-      title = df$title,
-      date = sched_date(df$start_time_event_local),
-      start = sched_clock(df$start_time_event_local),
-      end = sched_clock(df$end_time_event_local),
-      location = df$effective_location_name,
-      track = if (is.null(track_col)) NA_character_ else df[[track_col]],
-      stringsAsFactors = FALSE
-    )
-    out
-  }
-  combined <- rbind(
-    combine(d$talks, "talk", "track_title"),
-    combine(d$sessions, "session"),
-    combine(d$workshops, "workshop"),
-    combine(d$events, "event")
+  combined <- dplyr::bind_rows(
+    sched_items("talks", track = TRUE, data = d),
+    sched_items("sessions", data = d),
+    sched_items("workshops", data = d),
+    sched_items("events", data = d)
   )
 
   filters <- c()
 
   if (!is.null(date)) {
     resolved <- sched_resolve_date(date)
-    combined <- combined[combined$date == resolved, , drop = FALSE]
+    combined <- dplyr::filter(combined, date == .env$resolved)
     filters <- c(filters, resolved)
   }
 
   if (!is.null(from) && !is.null(to) && from == to) {
-    combined <- combined[
-      combined$start <= from & combined$end > from,
-      ,
-      drop = FALSE
-    ]
+    combined <- dplyr::filter(
+      combined,
+      start <= .env$from,
+      end > .env$from
+    )
     filters <- c(filters, paste0("at ", from))
   } else {
     if (!is.null(from)) {
-      combined <- combined[combined$end > from, , drop = FALSE]
+      combined <- dplyr::filter(combined, end > .env$from)
     }
     if (!is.null(to)) {
-      combined <- combined[combined$start < to, , drop = FALSE]
+      combined <- dplyr::filter(combined, start < .env$to)
     }
     if (!is.null(from) || !is.null(to)) {
       filters <- c(
@@ -66,75 +52,52 @@ query_schedule_fn <- function(
 
   if (!is.null(track)) {
     matched <- sched_match(track, combined$track)
-    combined <- combined[
-      !is.na(combined$track) & combined$track == matched,
-      ,
-      drop = FALSE
-    ]
+    combined <- dplyr::filter(combined, !is.na(track), track == matched)
     filters <- c(filters, paste0("track: ", matched))
   }
 
   if (!is.null(room)) {
     matched <- sched_match(room, combined$location)
-    combined <- combined[
-      !is.na(combined$location) & combined$location == matched,
-      ,
-      drop = FALSE
-    ]
+    combined <- dplyr::filter(combined, !is.na(location), location == matched)
     filters <- c(filters, paste0("room: ", matched))
   }
 
   if (!is.null(kind)) {
-    combined <- combined[combined$kind == kind, , drop = FALSE]
+    combined <- dplyr::filter(combined, kind == .env$kind)
     filters <- c(filters, paste0("kind: ", kind))
   }
 
   if (!is.null(speaker)) {
     matched <- sched_match(speaker, d$speakers$full_name)
-    speaker_ids <- unique(d$speakers$speaker_id[
-      d$speakers$full_name == matched
-    ])
-    record_ids <- unique(d$speakers$record_id[
-      d$speakers$speaker_id %in% speaker_ids
-    ])
-    combined <- combined[combined$id %in% record_ids, , drop = FALSE]
+    speaker_ids <- d$speakers |>
+      dplyr::filter(full_name == matched) |>
+      dplyr::pull(speaker_id) |>
+      unique()
+    record_ids <- d$speakers |>
+      dplyr::filter(speaker_id %in% speaker_ids) |>
+      dplyr::pull(record_id) |>
+      unique()
+    combined <- dplyr::filter(combined, id %in% record_ids)
     filters <- c(filters, paste0("speaker: ", matched))
   }
 
-  combined <- combined[
-    order(combined$date, combined$start, combined$location, combined$title),
-    ,
-    drop = FALSE
-  ]
-
-  speakers <- vapply(
-    combined$id,
-    function(id) {
-      sp <- sched_speakers_for(id)
-      if (nrow(sp)) paste(sp$full_name, collapse = ", ") else NA_character_
-    },
-    character(1)
-  )
-  combined$speakers <- speakers
-
-  combined$track[is.na(combined$track) | combined$track == ""] <- NA
-  combined$speakers[is.na(combined$speakers) | combined$speakers == ""] <- NA
-  combined$location[is.na(combined$location) | combined$location == ""] <- NA
-
-  final <- combined[,
-    c(
-      "id",
-      "kind",
-      "title",
-      "date",
-      "start",
-      "end",
-      "location",
-      "track",
-      "speakers"
-    ),
-    drop = FALSE
-  ]
+  final <- combined |>
+    dplyr::arrange(date, start, location, title) |>
+    dplyr::left_join(sched_speaker_names(d), by = c("id" = "record_id")) |>
+    dplyr::mutate(
+      dplyr::across(c(track, location, speakers), \(x) dplyr::na_if(x, ""))
+    ) |>
+    dplyr::select(
+      id,
+      kind,
+      title,
+      date,
+      start,
+      end,
+      location,
+      track,
+      speakers
+    )
 
   ellmer::ContentToolResult(
     value = jsonlite::toJSON(final, auto_unbox = TRUE),

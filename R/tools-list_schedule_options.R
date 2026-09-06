@@ -1,83 +1,55 @@
 list_schedule_options <- function(type) {
   d <- schedule_data()
 
-  count_by_date <- function(df, date) {
-    sum(sched_date(df$start_time_event_local) == date)
-  }
-
   options_df <- switch(
     type,
-    days = {
-      dates <- sched_days()
-      data.frame(
-        date = dates,
-        weekday = format(as.Date(dates), "%A"),
-        talks = vapply(
-          dates,
-          function(x) count_by_date(d$talks, x),
-          integer(1)
-        ),
-        sessions = vapply(
-          dates,
-          function(x) count_by_date(d$sessions, x),
-          integer(1)
-        ),
-        workshops = vapply(
-          dates,
-          function(x) count_by_date(d$workshops, x),
-          integer(1)
-        ),
-        events = vapply(
-          dates,
-          function(x) count_by_date(d$events, x),
-          integer(1)
-        ),
-        row.names = NULL
-      )
-    },
-    tracks = {
-      s <- d$sessions[
-        order(
-          sched_date(d$sessions$start_time_event_local),
-          d$sessions$start_time_event_local
-        ),
-      ]
-      data.frame(
-        title = s$title,
-        date = sched_date(s$start_time_event_local),
-        start = sched_clock(s$start_time_event_local),
-        end = sched_clock(s$end_time_event_local),
-        room = s$effective_location_name,
-        talk_count = s$talk_count,
-        row.names = NULL
-      )
-    },
-    rooms = {
-      locs <- c(
-        d$talks$effective_location_name,
-        d$sessions$effective_location_name,
-        d$workshops$effective_location_name,
-        d$events$effective_location_name
-      )
-      locs <- locs[!is.na(locs) & locs != ""]
-      counts <- sort(table(locs), decreasing = TRUE)
-      data.frame(
-        room = names(counts),
-        items = as.integer(counts),
-        row.names = NULL
-      )
-    },
-    speakers = {
-      sp <- unique(d$speakers[c("speaker_id", "full_name")])
-      sp <- sp[order(sp$full_name), ]
-      data.frame(
-        speaker_id = sp$speaker_id,
-        name = sp$full_name,
-        sessions = as.integer(table(d$speakers$speaker_id)[sp$speaker_id]),
-        row.names = NULL
-      )
-    },
-    kinds = data.frame(
+    days = sched_items(
+      kinds = c("talks", "sessions", "workshops", "events"),
+      data = d
+    ) |>
+      dplyr::filter(!is.na(date), date != "") |>
+      dplyr::count(date, kind) |>
+      tidyr::complete(
+        date,
+        kind = c("talk", "session", "workshop", "event"),
+        fill = list(n = 0L)
+      ) |>
+      tidyr::pivot_wider(names_from = kind, values_from = n) |>
+      dplyr::transmute(
+        date,
+        weekday = format(as.Date(date), "%A"),
+        talks = as.integer(talk),
+        sessions = as.integer(session),
+        workshops = as.integer(workshop),
+        events = as.integer(event)
+      ),
+    tracks = d$sessions |>
+      dplyr::arrange(
+        sched_date(start_time_event_local),
+        start_time_event_local
+      ) |>
+      dplyr::transmute(
+        title,
+        date = sched_date(start_time_event_local),
+        start = sched_clock(start_time_event_local),
+        end = sched_clock(end_time_event_local),
+        room = effective_location_name,
+        talk_count
+      ),
+    rooms = sched_items(data = d) |>
+      dplyr::filter(!is.na(location), location != "") |>
+      dplyr::count(location, name = "items") |>
+      dplyr::arrange(dplyr::desc(items)) |>
+      dplyr::rename(room = location),
+    speakers = d$speakers |>
+      dplyr::distinct(speaker_id, full_name) |>
+      dplyr::arrange(full_name) |>
+      dplyr::rename(name = full_name) |>
+      dplyr::left_join(
+        d$speakers |> dplyr::count(speaker_id, name = "sessions"),
+        by = "speaker_id"
+      ),
+    kinds = dplyr::tibble(
       kind = c("talk", "session", "workshop", "event"),
       description = c(
         "Individual talks, including keynotes",
@@ -90,8 +62,7 @@ list_schedule_options <- function(type) {
         nrow(d$sessions),
         nrow(d$workshops),
         nrow(d$events)
-      ),
-      stringsAsFactors = FALSE
+      )
     )
   )
 
