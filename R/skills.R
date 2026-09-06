@@ -34,9 +34,11 @@ skills_path <- function(skill, reference = NULL) {
       path,
       if (!is.null(reference)) {
         paste0(
-          ". That reference file name may be wrong. Have you read the ",
-          "skill's own instructions first (call the skill tool with just ",
-          "the skill name)? It lists the exact reference file names."
+          ". That reference file name may be wrong. Load the skill's own ",
+          "instructions first with skill(\"",
+          skill,
+          "\") — no reference ",
+          "argument. They list the exact reference file names."
         )
       }
     )
