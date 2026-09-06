@@ -23,6 +23,35 @@ greeting_header <- paste0(
 
 shiny::addResourcePath("assets", "assets")
 
+update_query_string <- function(session, updates) {
+  query <- shiny::parseQueryString(session$clientData$url_search)
+  is_na <- vapply(updates, function(x) length(x) == 1 && is.na(x), logical(1))
+  query[names(updates)[is_na]] <- NULL
+  updates <- updates[!is_na]
+  query[names(updates)] <- updates
+  qs <- paste(
+    vapply(
+      names(query),
+      function(nm) {
+        paste0(
+          URLencode(nm, reserved = TRUE),
+          "=",
+          URLencode(query[[nm]], reserved = TRUE)
+        )
+      },
+      character(1)
+    ),
+    collapse = "&"
+  )
+  updateQueryString(paste0("?", qs), mode = "push", session = session)
+}
+
+filter_query_values <- function(values, defaults) {
+  is_default <- mapply(identical, values, defaults[names(values)])
+  values[is_default] <- NA_character_
+  values
+}
+
 # Re-register the ragnar search tool with an added `_intent` argument so
 # shinychat shows why the model called it (see the shinychat tool-ui vignette).
 search_tool_with_intent <- function(chat) {
@@ -57,7 +86,11 @@ ui <- function(req) {
     title = "posit::conf(2026) Schedule Assistant",
     id = "chat",
     placeholder = "Ask about sessions, workshops, or build your schedule...",
-    theme = if (conf_theme) bs_theme(brand = TRUE) else page_chat_theme(),
+    theme = if (conf_theme) {
+      bs_theme(brand = TRUE)
+    } else {
+      page_chat_theme(brand = FALSE)
+    },
     toolbar_global = bslib::toolbar(
       bslib::toolbar_input_button(
         "my_agenda",
@@ -100,9 +133,7 @@ ui <- function(req) {
     },
     footer = tags$head(
       tags$script(src = "assets/agenda.js"),
-      if (conf_theme) {
-        tags$link(rel = "stylesheet", href = "assets/custom.css")
-      }
+      tags$link(rel = "stylesheet", href = "assets/custom.css")
     ),
     history = history_options(store = "memory"),
     greeting = if (!greeting_dynamic) {
@@ -207,6 +238,68 @@ server <- function(input, output, session) {
     bslib::nav_select("chat_page", "__home__", session = session)
     chat_drawer_show("chat", title = "My Agenda")
   })
+
+  home_tab <- "__home__"
+  tab_values <- c("on_now", "full_schedule")
+
+  observeEvent(session$clientData$url_search, once = TRUE, {
+    query <- shiny::parseQueryString(session$clientData$url_search)
+
+    tab <- if (!is.null(query$tab) && query$tab %in% tab_values) {
+      query$tab
+    } else {
+      home_tab
+    }
+    bslib::nav_select("chat_page", tab, session = session)
+
+    if (!is.null(query$format) && query$format %in% format_choices) {
+      updateRadioButtons(session, "schedule_format", selected = query$format)
+    }
+
+    choices <- full_schedule_choices()
+    if (
+      !is.null(query$location) &&
+        query$location %in% c("", choices$locations)
+    ) {
+      updateSelectInput(session, "schedule_location", selected = query$location)
+    }
+    if (
+      !is.null(query$speaker) &&
+        query$speaker %in% c("", choices$speakers)
+    ) {
+      updateSelectizeInput(
+        session,
+        "schedule_speaker",
+        selected = query$speaker
+      )
+    }
+  })
+
+  observeEvent(
+    list(
+      input$chat_page,
+      input$schedule_format,
+      input$schedule_location,
+      input$schedule_speaker
+    ),
+    {
+      update_query_string(
+        session,
+        c(
+          filter_query_values(
+            list(
+              tab = input$chat_page,
+              format = input$schedule_format %||% "all",
+              location = input$schedule_location %||% "",
+              speaker = input$schedule_speaker %||% ""
+            ),
+            list(tab = home_tab, format = "all", location = "", speaker = "")
+          )
+        )
+      )
+    },
+    ignoreInit = TRUE
+  )
 
   observeEvent(input$agenda_restore, {
     ids <- as.character(input$agenda_restore)
