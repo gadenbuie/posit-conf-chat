@@ -86,7 +86,10 @@ card_chip <- function(label, modifier) {
   if (!nzchar(label)) {
     return(NULL)
   }
-  htmltools::tags$span(class = paste("conf-chip", modifier), label)
+  htmltools::tags$span(
+    class = paste("badge rounded-pill text-uppercase conf-chip", modifier),
+    label
+  )
 }
 
 card_meta <- function(date, start, end, location) {
@@ -99,7 +102,7 @@ card_meta <- function(date, start, end, location) {
     items <- c(
       items,
       list(htmltools::tags$span(
-        class = "conf-meta-item",
+        class = "d-inline-flex align-items-center gap-1 text-nowrap",
         icon_calendar,
         date
       ))
@@ -109,7 +112,7 @@ card_meta <- function(date, start, end, location) {
     items <- c(
       items,
       list(htmltools::tags$span(
-        class = "conf-meta-item",
+        class = "d-inline-flex align-items-center gap-1 text-nowrap",
         icon_clock,
         if (nzchar(end)) paste0(start, "\u2013", end) else start
       ))
@@ -119,7 +122,7 @@ card_meta <- function(date, start, end, location) {
     items <- c(
       items,
       list(htmltools::tags$span(
-        class = "conf-meta-item",
+        class = "d-inline-flex align-items-center gap-1 text-nowrap",
         icon_pin,
         location
       ))
@@ -128,7 +131,10 @@ card_meta <- function(date, start, end, location) {
   if (!length(items)) {
     return(NULL)
   }
-  htmltools::tags$div(class = "conf-meta", items)
+  htmltools::tags$div(
+    class = "conf-muted d-flex flex-wrap column-gap-3 row-gap-1 small mb-2",
+    items
+  )
 }
 
 card_md <- function(md) {
@@ -200,14 +206,14 @@ card_talk <- function(content) {
   is_keynote <- isTRUE(item$is_keynote)
   htmltools::tags$div(
     class = paste(
-      "card conf-card mb-2",
+      "card conf-card border-0 shadow-sm rounded-3 mb-2",
       if (is_keynote) "conf-card-keynote"
     ),
     style = "max-width: 640px",
     htmltools::tags$div(
       class = "card-body",
       htmltools::tags$div(
-        class = "conf-chip-row",
+        class = "d-flex flex-wrap gap-2 mb-2",
         if (is_keynote) {
           card_chip("Keynote", "conf-chip-keynote")
         } else {
@@ -215,7 +221,7 @@ card_talk <- function(content) {
         },
         card_chip(item$track_title, "conf-chip-track")
       ),
-      htmltools::tags$h5(class = "card-title", card_value(item$title)),
+      htmltools::tags$h5(class = "card-title text-balance", card_value(item$title)),
       card_meta(
         sched_date(item$start_time_event_local),
         sched_clock(item$start_time_event_local),
@@ -245,9 +251,9 @@ card_session <- function(content) {
       !is.na(speaker_names) & nzchar(speaker_names)
     ]
     htmltools::tags$div(
-      class = "conf-session-talk",
+      class = "conf-session-talk d-flex flex-column flex-sm-row gap-1 gap-sm-3 py-2",
       htmltools::tags$div(
-        class = "conf-session-talk-time",
+        class = "conf-session-talk-time conf-muted small",
         paste0(
           clock12(sched_clock(talk$start_time_event_local)),
           "\u2013",
@@ -255,11 +261,10 @@ card_session <- function(content) {
         )
       ),
       htmltools::tags$div(
-        class = "conf-session-talk-body",
         htmltools::tags$strong(card_value(talk$title)),
         if (length(speaker_names)) {
           htmltools::tags$div(
-            class = "conf-session-talk-speakers",
+            class = "conf-muted small",
             paste(speaker_names, collapse = " \u00b7 ")
           )
         }
@@ -267,16 +272,16 @@ card_session <- function(content) {
     )
   })
   htmltools::tags$div(
-    class = "card conf-card mb-2",
+    class = "card conf-card border-0 shadow-sm rounded-3 mb-2",
     style = "max-width: 640px",
     htmltools::tags$div(
       class = "card-body",
       htmltools::tags$div(
-        class = "conf-chip-row",
+        class = "d-flex flex-wrap gap-2 mb-2",
         card_chip("Session", "conf-chip-session"),
         card_chip(item$track_title, "conf-chip-track")
       ),
-      htmltools::tags$h5(class = "card-title", card_value(item$title)),
+      htmltools::tags$h5(class = "card-title text-balance", card_value(item$title)),
       card_meta(
         sched_date(item$start_time_event_local),
         sched_clock(item$start_time_event_local),
@@ -304,16 +309,16 @@ card_workshop <- function(content) {
     card_chip("In-person", "conf-chip-inperson")
   }
   htmltools::tags$div(
-    class = "card conf-card mb-2",
+    class = "card conf-card border-0 shadow-sm rounded-3 mb-2",
     style = "max-width: 640px",
     htmltools::tags$div(
       class = "card-body",
       htmltools::tags$div(
-        class = "conf-chip-row",
+        class = "d-flex flex-wrap gap-2 mb-2",
         card_chip("Workshop", "conf-chip-workshop"),
         format_chip
       ),
-      htmltools::tags$h5(class = "card-title", card_value(item$title)),
+      htmltools::tags$h5(class = "card-title text-balance", card_value(item$title)),
       card_meta(
         sched_date(item$start_time_event_local),
         sched_clock(item$start_time_event_local),
@@ -329,15 +334,15 @@ card_workshop <- function(content) {
 card_event <- function(content) {
   item <- content@item
   htmltools::tags$div(
-    class = "card conf-card mb-2",
+    class = "card conf-card border-0 shadow-sm rounded-3 mb-2",
     style = "max-width: 640px",
     htmltools::tags$div(
       class = "card-body",
       htmltools::tags$div(
-        class = "conf-chip-row",
+        class = "d-flex flex-wrap gap-2 mb-2",
         card_chip("Event", "conf-chip-event")
       ),
-      htmltools::tags$h5(class = "card-title", card_value(item$title)),
+      htmltools::tags$h5(class = "card-title text-balance", card_value(item$title)),
       card_meta(
         sched_date(item$start_time_event_local),
         sched_clock(item$start_time_event_local),
@@ -379,7 +384,7 @@ card_speaker <- function(content) {
     })
   }
   htmltools::tags$div(
-    class = "card conf-card mb-2",
+    class = "card conf-card border-0 shadow-sm rounded-3 mb-2",
     style = "max-width: 640px",
     htmltools::tags$div(
       class = "card-body",
