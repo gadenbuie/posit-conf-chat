@@ -11,14 +11,14 @@ options(
 
 store_location <- "data/ragnar.duckdb"
 
-greeting_dynamic <- Sys.getenv("GREETING_DYNAMIC", "no") == "yes"
+greeting_dynamic <- Sys.getenv("GREETING_DYNAMIC", "yes") == "yes"
 
 greeting_header <- paste0(
-  '<div class="greeting-header mb-3">',
+  '<p class="greeting-header mb-3">',
   '<a href="https://conf.posit.co/2026/" target="_blank" rel="noopener">',
   '<img src="assets/posit-conf-header.png" alt="posit::conf(2026)" ',
   'style="max-width:100%; max-height:150px; border-radius:8px">',
-  '</a></div>\n\n'
+  '</a></p>\n\n'
 )
 
 shiny::addResourcePath("assets", "assets")
@@ -158,6 +158,8 @@ server <- function(input, output, session) {
     system_prompt = system_prompt
   )
 
+  agenda_ids <- reactiveVal(character())
+
   observeEvent(input$chat_greeting_requested, {
     if (!greeting_dynamic) {
       return()
@@ -169,6 +171,8 @@ server <- function(input, output, session) {
         date = Sys.Date()
       )
     )
+    greeting_client$register_tool(on_now_tool)
+    greeting_client$register_tool(show_agenda_tool(agenda_ids))
     greeting_stream <- coro::async_generator(function() {
       yield(greeting_header)
       stream <- greeting_client$stream_async(
@@ -214,8 +218,6 @@ server <- function(input, output, session) {
     title = "Searching the conf schedule"
   )
   client$register_tool(search_tool_with_intent(client))
-
-  agenda_ids <- reactiveVal(character())
 
   client$register_tool(list_schedule_options_tool)
   client$register_tool(skills_tool())

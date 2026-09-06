@@ -181,6 +181,23 @@ agenda_conflict_advice <- function(new, conflicts) {
   }
 }
 
+show_agenda_tool <- function(agenda_ids) {
+  ellmer::tool(
+    function() manage_agenda("show", agenda_ids = agenda_ids),
+    name = "show_agenda",
+    description = paste(
+      "List the schedule items the attendee has saved in their agenda for",
+      "posit::conf(2026), with titles, dates, times, and locations.",
+      "Read-only: use manage_agenda() to change the agenda."
+    ),
+    arguments = list(),
+    annotations = ellmer::tool_annotations(
+      title = "Checking your agenda",
+      icon = bsicons::bs_icon("bookmark-star")
+    )
+  )
+}
+
 agenda_tool <- function(agenda_ids) {
   ellmer::tool(
     function(action, id) manage_agenda(action, id, agenda_ids = agenda_ids),
