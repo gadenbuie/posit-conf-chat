@@ -62,7 +62,7 @@ sched_items <- function(
   track = FALSE,
   data = NULL
 ) {
-  if (is.null(data)) data <- schedule_data()
+  data <- data %||% schedule_data()
   dplyr::bind_rows(purrr::map(kinds, function(name) {
     df <- data[[name]]
     dplyr::tibble(
@@ -79,12 +79,15 @@ sched_items <- function(
 }
 
 sched_speaker_names <- function(data = NULL) {
-  if (is.null(data)) data <- schedule_data()
+  data <- data %||% schedule_data()
   data$speakers |>
     dplyr::filter(!is.na(full_name), full_name != "") |>
     dplyr::arrange(as.integer(speaker_order)) |>
     dplyr::group_by(record_id) |>
-    dplyr::summarise(speakers = paste(full_name, collapse = ", "), .groups = "drop")
+    dplyr::summarise(
+      speakers = paste(full_name, collapse = ", "),
+      .groups = "drop"
+    )
 }
 
 schedule_ids <- function() {

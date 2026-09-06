@@ -115,8 +115,6 @@ query_schedule_fn <- function(
   )
 }
 
-`%||%` <- function(x, y) if (is.null(x)) y else x
-
 query_schedule <- ellmer::tool(
   query_schedule_fn,
   name = "query_schedule",
