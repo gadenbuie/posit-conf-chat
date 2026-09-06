@@ -5,6 +5,11 @@ library(ragnar)
 library(shinychat)
 library(purrr)
 
+if (FALSE) {
+  # for renv/Connect
+  library(brand.yml)
+}
+
 options(
   shiny.autoload.r = TRUE,
   shiny.autoreload.pattern = "\\.(r|htm|html|js|css|png|jpg|jpeg|gif|md|)$|_brand[.]yml$",
