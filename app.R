@@ -3,6 +3,7 @@ library(bslib)
 library(ellmer)
 library(ragnar)
 library(shinychat)
+library(purrr)
 
 options(
   shiny.autoload.r = TRUE,
@@ -25,12 +26,12 @@ shiny::addResourcePath("assets", "assets")
 
 update_query_string <- function(session, updates) {
   query <- shiny::parseQueryString(session$clientData$url_search)
-  is_na <- vapply(updates, function(x) length(x) == 1 && is.na(x), logical(1))
+  is_na <- map_lgl(updates, function(x) length(x) == 1 && is.na(x))
   query[names(updates)[is_na]] <- NULL
   updates <- updates[!is_na]
   query[names(updates)] <- updates
   qs <- paste(
-    vapply(
+    map_chr(
       names(query),
       function(nm) {
         paste0(
@@ -38,8 +39,7 @@ update_query_string <- function(session, updates) {
           "=",
           URLencode(query[[nm]], reserved = TRUE)
         )
-      },
-      character(1)
+      }
     ),
     collapse = "&"
   )
@@ -47,7 +47,7 @@ update_query_string <- function(session, updates) {
 }
 
 filter_query_values <- function(values, defaults) {
-  is_default <- mapply(identical, values, defaults[names(values)])
+  is_default <- map2_lgl(values, defaults[names(values)], identical)
   values[is_default] <- NA_character_
   values
 }
