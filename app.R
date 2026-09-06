@@ -147,13 +147,15 @@ ui <- function(req) {
 }
 
 server <- function(input, output, session) {
+  system_prompt <- ellmer::interpolate_file(
+    "prompt-system.md",
+    date = Sys.Date(),
+    skills = skills_prompt()
+  )
+
   client <- chat_posit(
     model = "zai-org/GLM-5.3-Flash",
-    system_prompt = ellmer::interpolate_file(
-      "prompt-system.md",
-      date = Sys.Date(),
-      skills = skills_prompt()
-    )
+    system_prompt = system_prompt
   )
 
   observeEvent(input$chat_greeting_requested, {
