@@ -112,9 +112,10 @@ skills_tool <- function() {
     name = "skill",
     description = paste0(
       "Read the full instructions of an available skill, or one of its ",
-      "reference files. Call it with just the skill name first; the ",
-      "skill's instructions list its reference files and when each one ",
-      "is relevant. Then load only the references the question calls for."
+      "reference files. ALWAYS call it WITHOUT `reference` first to load ",
+      "the skill's instructions; those instructions list the reference ",
+      "files and when each is relevant. Only after reading them may you ",
+      "load a reference by its exact name. Never guess a reference name."
     ),
     arguments = list(
       skill = ellmer::type_string(
