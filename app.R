@@ -14,6 +14,19 @@ store_location <- "data/ragnar.duckdb"
 
 greeting_dynamic <- Sys.getenv("GREETING_DYNAMIC", "no") == "yes"
 
+# Chat client configuration. Each spec resolves its provider and model from
+# the first env var that is set, falling back to the default shown.
+chat_spec <- env_chat_spec(
+  provider = "POSIT_CONF_PROVIDER",
+  model = "POSIT_CONF_MODEL"
+)
+
+# The greeting client falls back to the main chat env vars before defaults.
+greeting_spec <- env_chat_spec(
+  provider = c("POSIT_CONF_GREETING_PROVIDER", "POSIT_CONF_PROVIDER"),
+  model = c("POSIT_CONF_GREETING_MODEL", "POSIT_CONF_MODEL")
+)
+
 greeting_header <- paste0(
   '<p class="greeting-header mb-3">',
   '<a href="https://conf.posit.co/2026/" target="_blank" rel="noopener">',
@@ -107,8 +120,8 @@ server <- function(input, output, session) {
     skills = skills_prompt()
   )
 
-  client <- chat_posit(
-    model = "zai-org/GLM-5.3-Flash",
+  client <- ellmer::chat(
+    chat_spec$name,
     system_prompt = system_prompt
   )
 
@@ -118,8 +131,8 @@ server <- function(input, output, session) {
     if (!greeting_dynamic) {
       return()
     }
-    greeting_client <- chat_posit(
-      model = "zai-org/GLM-5.3-Flash",
+    greeting_client <- ellmer::chat(
+      greeting_spec$name,
       system_prompt = ellmer::interpolate_file(
         "prompt-greeting.md",
         date = Sys.Date()
