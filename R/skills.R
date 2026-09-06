@@ -29,7 +29,18 @@ skills_path <- function(skill, reference = NULL) {
     path <- file.path(path, "SKILL.md")
   }
   if (!file.exists(path)) {
-    stop("Skill file not found: ", path, call. = FALSE)
+    msg <- paste0(
+      "Skill file not found: ",
+      path,
+      if (!is.null(reference)) {
+        paste0(
+          ". That reference file name may be wrong. Have you read the ",
+          "skill's own instructions first (call the skill tool with just ",
+          "the skill name)? It lists the exact reference file names."
+        )
+      }
+    )
+    stop(msg, call. = FALSE)
   }
   path
 }
