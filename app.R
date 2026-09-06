@@ -58,8 +58,17 @@ ui <- function(req) {
     id = "chat",
     placeholder = "Ask about sessions, workshops, or build your schedule...",
     theme = if (conf_theme) bs_theme(brand = TRUE) else page_chat_theme(),
+    toolbar_global = bslib::toolbar(
+      bslib::toolbar_input_button(
+        "my_agenda",
+        "My Agenda",
+        icon = bsicons::bs_icon("bookmark-star-fill"),
+        tooltip = "Open your saved agenda"
+      ),
+      bslib::input_dark_mode()
+    ),
     sidebar = chat_sidebar(
-      open = TRUE,
+      open = FALSE,
       p(
         class = "mt-auto border-top pt-3 small",
         "We don't store your conversation history;",
@@ -196,6 +205,12 @@ server <- function(input, output, session) {
   output$on_now <- renderUI({
     invalidateLater(60000)
     on_now_ui()
+  })
+
+  observeEvent(input$my_agenda, {
+    # The page-chat root element is addressable as "<id>_page".
+    bslib::nav_select("chat_page", "__home__", session = session)
+    chat_drawer_show("chat", title = "My Agenda")
   })
 
   observeEvent(input$agenda_restore, {
