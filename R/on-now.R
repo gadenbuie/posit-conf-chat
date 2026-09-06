@@ -48,7 +48,9 @@ conf_bounds <- function() {
 }
 
 # Talks, workshops, and events (not track sessions) happening at `now`,
-# plus everything still to come today.
+# plus the next round: everything sharing the next start time today. If
+# that round is tiny (e.g. staggered lightning talks), merge following
+# start times within 30 minutes (up to 3) until the round fills out.
 schedule_status <- function(now = conf_now()) {
   d <- schedule_data()
   date <- format(now, "%Y-%m-%d")
@@ -84,7 +86,28 @@ schedule_status <- function(now = conf_now()) {
   on_now <- today[today$start <= time & today$end > time, , drop = FALSE]
   on_now <- on_now[order(on_now$start, on_now$title), , drop = FALSE]
   up_next <- today[today$start > time, , drop = FALSE]
-  up_next <- up_next[order(up_next$start, up_next$title), , drop = FALSE]
+  if (nrow(up_next)) {
+    starts <- utils::head(sort(unique(up_next$start)), 3)
+    to_min <- function(x) {
+      as.integer(substr(x, 1, 2)) * 60L + as.integer(substr(x, 4, 5))
+    }
+    keep <- starts[1]
+    for (s in starts[-1]) {
+      if (sum(up_next$start %in% keep) >= 4) {
+        break
+      }
+      if (to_min(s) - to_min(starts[1]) > 30) {
+        break
+      }
+      keep <- c(keep, s)
+    }
+    up_next <- up_next[up_next$start %in% keep, , drop = FALSE]
+    up_next <- up_next[
+      order(up_next$start, up_next$location, up_next$title),
+      ,
+      drop = FALSE
+    ]
+  }
 
   list(now = now, on_now = on_now, up_next = up_next)
 }
@@ -145,28 +168,19 @@ on_now_tool <- ellmer::tool(
   )
 )
 
-on_now_item <- function(item) {
-  meta <- paste(
-    c(
-      paste0(clock12(item$start), "\u2013", clock12(item$end)),
-      card_value(item$location),
-      card_value(item$speakers)
-    ),
-    collapse = " \u00b7 "
-  )
-  htmltools::tags$div(
-    class = "mb-3",
-    htmltools::tags$div(class = "fw-semibold", card_value(item$title)),
-    htmltools::tags$small(class = "text-muted", meta)
-  )
-}
-
 on_now_section <- function(title, items, empty) {
   htmltools::tags$section(
     class = "mb-4",
-    htmltools::tags$h5(title),
+    htmltools::tags$h2(title),
     if (nrow(items)) {
-      lapply(seq_len(nrow(items)), function(i) on_now_item(items[i, ]))
+      locations <- vapply(items$location, card_value, character(1))
+      cards <- lapply(items$id, function(id) contents_shinychat(show_item(id)))
+      lapply(unique(locations), function(location) {
+        htmltools::tagList(
+          if (nzchar(location)) htmltools::tags$h3(location),
+          cards[locations == location]
+        )
+      })
     } else {
       htmltools::tags$div(class = "text-muted fst-italic", empty)
     }
