@@ -4,7 +4,7 @@ ItemCardResult <- S7::new_class(
   properties = list(
     kind = S7::class_character,
     item = S7::class_list,
-    speakers = S7::class_any,
+    speakers = S7::class_list,
     sessions = S7::class_any,
     in_agenda = S7::class_logical
   )
@@ -15,6 +15,57 @@ ItemCardResult <- S7::new_class(
 assign("ItemCardResult", ItemCardResult, envir = globalenv())
 
 contents_shinychat <- shinychat::contents_shinychat
+
+# ItemCardResult is serialized into chat history, so only the fields the card
+# renderers actually read are kept.
+card_item_fields <- list(
+  talk = c(
+    "record_id",
+    "title",
+    "track_title",
+    "is_keynote",
+    "abstract",
+    "start_time_event_local",
+    "end_time_event_local",
+    "effective_location_name"
+  ),
+  session = c(
+    "record_id",
+    "session_id",
+    "title",
+    "track_title",
+    "start_time_event_local",
+    "end_time_event_local",
+    "effective_location_name"
+  ),
+  workshop = c(
+    "record_id",
+    "title",
+    "session_format",
+    "abstract",
+    "start_time_event_local",
+    "end_time_event_local",
+    "effective_location_name"
+  ),
+  event = c(
+    "record_id",
+    "title",
+    "abstract",
+    "start_time_event_local",
+    "end_time_event_local",
+    "effective_location_name"
+  ),
+  speaker = c("full_name", "image_url", "title_affiliation", "biography")
+)
+
+card_item <- function(kind, item) {
+  item[intersect(card_item_fields[[kind]], names(item))]
+}
+
+card_speakers <- function(speakers) {
+  cols <- c("full_name", "image_url", "linkedin_url", "title_affiliation")
+  purrr::pmap(dplyr::select(speakers, dplyr::any_of(cols)), list)
+}
 
 agenda_badge <- function(id) {
   htmltools::tags$button(
@@ -262,16 +313,11 @@ card_speaker_row <- function(sp) {
   }
 }
 
-card_speaker_list <- function(sp) {
-  if (is.null(sp) || !nrow(sp)) {
+card_speaker_list <- function(speakers) {
+  if (!length(speakers)) {
     return(NULL)
   }
-  rows <- if (inherits(sp, "data.frame")) {
-    purrr::pmap(sp, ~ list(...))
-  } else {
-    list(sp)
-  }
-  htmltools::tagList(purrr::map(rows, card_speaker_row))
+  htmltools::tagList(purrr::map(speakers, card_speaker_row))
 }
 
 card_talk <- function(content) {

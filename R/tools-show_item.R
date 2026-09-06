@@ -3,8 +3,8 @@ show_item <- function(id, in_agenda = FALSE) {
   ItemCardResult(
     value = jsonlite::toJSON(sched_summary(res), auto_unbox = TRUE),
     kind = res$kind,
-    item = res$item,
-    speakers = res$speakers,
+    item = card_item(res$kind, res$item),
+    speakers = card_speakers(res$speakers),
     sessions = if (identical(res$kind, "speaker")) res$sessions else NULL,
     in_agenda = isTRUE(in_agenda)
   )
