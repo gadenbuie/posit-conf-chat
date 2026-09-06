@@ -96,7 +96,11 @@ schedule_status <- function(now = conf_now()) {
 
   keynotes <- d$talks$record_id[d$talks$is_keynote %in% TRUE]
   mid_track <- any(on_now$kind == "talk" & !on_now$id %in% keynotes)
-  pool <- if (mid_track) granular else tracks
+  pool <- if (mid_track) {
+    granular
+  } else {
+    rbind(tracks, granular[granular$id %in% keynotes, , drop = FALSE])
+  }
 
   up_next <- pool[pool$date == date & pool$start > time, , drop = FALSE]
   if (nrow(up_next)) {
