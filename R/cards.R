@@ -183,7 +183,12 @@ card_talk <- function(content) {
 card_session <- function(content) {
   item <- content@item
   talks <- schedule_data()$talks
-  children <- talks[talks$parent_session_id == item$session_id, , drop = FALSE]
+  children <- talks[
+    !is.na(talks$parent_session_id) &
+      talks$parent_session_id == item$session_id,
+    ,
+    drop = FALSE
+  ]
   children <- children[order(children$start_time_event_local), , drop = FALSE]
   talk_rows <- lapply(seq_len(nrow(children)), function(i) {
     talk <- children[i, , drop = FALSE]

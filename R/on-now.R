@@ -51,13 +51,15 @@ conf_bounds <- function() {
 # plus the next round: everything sharing the next start time today. If
 # that round is tiny (e.g. staggered lightning talks), merge following
 # start times within 30 minutes (up to 3) until the round fills out.
+# Unless a track talk is currently on, the round is shown at track
+# session granularity rather than as individual talks.
 schedule_status <- function(now = conf_now()) {
   d <- schedule_data()
   date <- format(now, "%Y-%m-%d")
   time <- format(now, "%H:%M")
 
   items <- function(df, kind) {
-    data.frame(
+    out <- data.frame(
       id = df$record_id,
       kind = kind,
       title = df$title,
@@ -67,25 +69,36 @@ schedule_status <- function(now = conf_now()) {
       location = df$effective_location_name,
       stringsAsFactors = FALSE
     )
+    out$speakers <- vapply(
+      out$id,
+      function(id) {
+        sp <- sched_speakers_for(id)
+        if (nrow(sp)) paste(sp$full_name, collapse = ", ") else NA_character_
+      },
+      character(1)
+    )
+    out
   }
-  all <- rbind(
+  granular <- rbind(
     items(d$talks, "talk"),
     items(d$workshops, "workshop"),
     items(d$events, "event")
   )
-  all$speakers <- vapply(
-    all$id,
-    function(id) {
-      sp <- sched_speakers_for(id)
-      if (nrow(sp)) paste(sp$full_name, collapse = ", ") else NA_character_
-    },
-    character(1)
+  tracks <- rbind(
+    items(d$sessions, "session"),
+    items(d$workshops, "workshop"),
+    items(d$events, "event")
   )
 
-  today <- all[all$date == date, , drop = FALSE]
+  today <- granular[granular$date == date, , drop = FALSE]
   on_now <- today[today$start <= time & today$end > time, , drop = FALSE]
   on_now <- on_now[order(on_now$start, on_now$title), , drop = FALSE]
-  up_next <- today[today$start > time, , drop = FALSE]
+
+  keynotes <- d$talks$record_id[d$talks$is_keynote %in% TRUE]
+  mid_track <- any(on_now$kind == "talk" & !on_now$id %in% keynotes)
+  pool <- if (mid_track) granular else tracks
+
+  up_next <- pool[pool$date == date & pool$start > time, , drop = FALSE]
   if (nrow(up_next)) {
     starts <- utils::head(sort(unique(up_next$start)), 3)
     to_min <- function(x) {
