@@ -74,9 +74,12 @@ ui <- function(req) {
     navbar_options = if (conf_theme) {
       navbar_options(bg = "#419CF5", theme = "dark")
     },
-    footer = if (conf_theme) {
-      tags$head(tags$link(rel = "stylesheet", href = "assets/custom.css"))
-    },
+    footer = tags$head(
+      tags$script(src = "assets/agenda.js"),
+      if (conf_theme) {
+        tags$link(rel = "stylesheet", href = "assets/custom.css")
+      }
+    ),
     greeting = if (!greeting_dynamic) {
       greeting_md <- paste(
         readLines("greeting.md", warn = FALSE),
@@ -159,8 +162,17 @@ server <- function(input, output, session) {
     on_now_ui()
   })
 
+  observeEvent(input$agenda_restore, {
+    ids <- as.character(input$agenda_restore)
+    ids <- intersect(ids, schedule_ids())
+    if (length(ids)) {
+      agenda_ids(ids)
+    }
+  })
+
   observeEvent(agenda_ids(), {
     ids <- isolate(agenda_ids())
+    session$sendCustomMessage("agenda_save", as.list(ids))
     content <- agenda_drawer_content(ids)
     if (length(ids)) {
       chat_drawer_show("chat", content = content, title = "My Agenda")

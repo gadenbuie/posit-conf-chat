@@ -56,6 +56,16 @@ schedule_data <- function() {
   .schedule_cache$data
 }
 
+schedule_ids <- function() {
+  d <- schedule_data()
+  unique(c(
+    d$talks$record_id,
+    d$sessions$record_id,
+    d$workshops$record_id,
+    d$events$record_id
+  ))
+}
+
 sched_date <- function(x) substr(x, 1, 10)
 
 sched_clock <- function(x) substr(x, 12, 16)
