@@ -81,6 +81,11 @@ defaults:
           --brand-faq-card: #{$brand-faq-card};
           --brand-session-fg: #{$brand-session-fg};
           --brand-event-bg: #{$brand-event-bg};
+          --brand-nav-link-hover-bg: color-mix(
+            in srgb,
+            #{$brand-navy} 18%,
+            transparent
+          );
           --chat-bg-image: url("pixel-fade.svg");
         }
 

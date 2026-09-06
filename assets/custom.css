@@ -67,12 +67,8 @@ nav .shiny-chat-page-nav-link[aria-current="page"] {
   color: var(--brand-white, var(--bs-white));
 }
 nav .shiny-chat-page-nav-link:hover:not([aria-current="page"]) {
-  background-color: color-mix(
-    in srgb,
-    var(--brand-navy, #212529) 18%,
-    transparent
-  );
-  color: var(--brand-white, var(--bs-white));
+  background-color: var(--brand-nav-link-hover-bg, transparent);
+  color: var(--brand-white, inherit);
 }
 
 .greeting-header {
