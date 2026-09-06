@@ -58,7 +58,15 @@ ui <- function(req) {
     id = "chat",
     placeholder = "Ask about sessions, workshops, or build your schedule...",
     theme = if (conf_theme) bs_theme(brand = TRUE) else page_chat_theme(),
-    sidebar = chat_sidebar(open = FALSE),
+    sidebar = chat_sidebar(
+      open = TRUE,
+      p(
+        class = "mt-auto border-top pt-3 small",
+        "We don't store your conversation history;",
+        "it resets in a new app session.",
+        "Your agenda is saved in your browser."
+      )
+    ),
     pages_navbar = list(
       nav_panel(
         "On Now",
@@ -80,6 +88,7 @@ ui <- function(req) {
         tags$link(rel = "stylesheet", href = "assets/custom.css")
       }
     ),
+    history = history_options(store = "memory"),
     greeting = if (!greeting_dynamic) {
       greeting_md <- paste(
         readLines("greeting.md", warn = FALSE),
