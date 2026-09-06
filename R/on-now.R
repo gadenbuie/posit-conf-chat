@@ -159,14 +159,16 @@ on_now_tool <- ellmer::tool(
   )
 )
 
-on_now_section <- function(title, items, empty) {
+on_now_section <- function(title, items, empty, in_agenda = character()) {
   htmltools::tags$section(
     class = "mb-4",
     htmltools::tags$h2(title),
     if (nrow(items)) {
+      items <- items |>
+        dplyr::arrange(id %in% .env$in_agenda == FALSE, start, title)
       locations <- purrr::map_chr(items$location, card_value)
       cards <- purrr::map(items$id, function(id) {
-        contents_shinychat(show_item(id))
+        contents_shinychat(show_item(id, in_agenda = id %in% in_agenda))
       })
       lapply(unique(locations), function(location) {
         htmltools::tagList(
@@ -180,7 +182,11 @@ on_now_section <- function(title, items, empty) {
   )
 }
 
-on_now_ui <- function(status = schedule_status(), bounds = conf_bounds()) {
+on_now_ui <- function(
+  status = schedule_status(),
+  bounds = conf_bounds(),
+  in_agenda = character()
+) {
   if (status$now < bounds$start) {
     days <- as.numeric(difftime(bounds$start, status$now, units = "days"))
     return(htmltools::tags$div(
@@ -204,12 +210,14 @@ on_now_ui <- function(status = schedule_status(), bounds = conf_bounds()) {
     on_now_section(
       "On Now",
       status$on_now,
-      "Nothing scheduled at this exact moment."
+      "Nothing scheduled at this exact moment.",
+      in_agenda = in_agenda
     ),
     on_now_section(
       "Up Next",
       status$up_next,
-      "Nothing else scheduled today."
+      "Nothing else scheduled today.",
+      in_agenda = in_agenda
     )
   )
 }

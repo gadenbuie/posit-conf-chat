@@ -111,7 +111,12 @@ full_schedule_sidebar <- function() {
   )
 }
 
-full_schedule_ui <- function(fmt = "all", location = "", speaker = "") {
+full_schedule_ui <- function(
+  fmt = "all",
+  location = "",
+  speaker = "",
+  in_agenda = character()
+) {
   items <- full_schedule_items()
   allowed <- format_allowed(fmt)
   items <- items |>
@@ -142,7 +147,7 @@ full_schedule_ui <- function(fmt = "all", location = "", speaker = "") {
       title = card_date(day),
       value = day,
       purrr::map(day_items$id, function(id) {
-        contents_shinychat(show_item(id))
+        contents_shinychat(show_item(id, in_agenda = id %in% in_agenda))
       })
     )
   })

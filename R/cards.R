@@ -5,14 +5,24 @@ ItemCardResult <- S7::new_class(
     kind = S7::class_character,
     item = S7::class_list,
     speakers = S7::class_any,
-    sessions = S7::class_any
+    sessions = S7::class_any,
+    in_agenda = S7::class_logical
   )
 )
 
 contents_shinychat <- shinychat::contents_shinychat
 
+agenda_badge <- function() {
+  htmltools::tags$span(
+    class = "badge rounded-pill text-uppercase conf-chip conf-chip-agenda ms-auto",
+    title = "On your agenda",
+    icon_check_circle,
+    "On your agenda"
+  )
+}
+
 S7::method(contents_shinychat, ItemCardResult) <- function(content) {
-  switch(
+  card <- switch(
     content@kind,
     talk = card_talk(content),
     session = card_session(content),
@@ -21,6 +31,12 @@ S7::method(contents_shinychat, ItemCardResult) <- function(content) {
     speaker = card_speaker(content),
     stop("Unknown card kind: ", content@kind)
   )
+  if (isTRUE(content@in_agenda)) {
+    card <- htmltools::tagQuery(card)$find(
+      ".d-flex.flex-wrap.gap-2.mb-2"
+    )$append(agenda_badge())$allTags()
+  }
+  card
 }
 
 card_value <- function(x) {
@@ -79,6 +95,9 @@ icon_clock <- conf_icon(
 )
 icon_pin <- conf_icon(
   '<path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/>'
+)
+icon_check_circle <- conf_icon(
+  '<circle cx="12" cy="12" r="10"/><path d="m8 12 3 3 5-6"/>'
 )
 
 card_chip <- function(label, modifier) {
@@ -209,7 +228,7 @@ card_talk <- function(content) {
       "card conf-card border-0 shadow-sm rounded-3 mb-2",
       if (is_keynote) "conf-card-keynote"
     ),
-    
+
     htmltools::tags$div(
       class = "card-body",
       htmltools::tags$div(
@@ -285,7 +304,7 @@ card_session <- function(content) {
   )
   htmltools::tags$div(
     class = "card conf-card border-0 shadow-sm rounded-3 mb-2",
-    
+
     htmltools::tags$div(
       class = "card-body",
       htmltools::tags$div(
@@ -325,7 +344,7 @@ card_workshop <- function(content) {
   }
   htmltools::tags$div(
     class = "card conf-card border-0 shadow-sm rounded-3 mb-2",
-    
+
     htmltools::tags$div(
       class = "card-body",
       htmltools::tags$div(
@@ -353,7 +372,7 @@ card_event <- function(content) {
   item <- content@item
   htmltools::tags$div(
     class = "card conf-card border-0 shadow-sm rounded-3 mb-2",
-    
+
     htmltools::tags$div(
       class = "card-body",
       htmltools::tags$div(
@@ -406,7 +425,7 @@ card_speaker <- function(content) {
   }
   htmltools::tags$div(
     class = "card conf-card border-0 shadow-sm rounded-3 mb-2",
-    
+
     htmltools::tags$div(
       class = "card-body",
       if (nzchar(image)) {

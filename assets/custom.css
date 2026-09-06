@@ -76,6 +76,19 @@ nav .shiny-chat-page-nav-link[aria-current="page"] {
 }
 
 /* --- conf cards ------------------------------------------------------- */
+.conf-chip-agenda {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: var(--brand-pink, var(--bs-secondary));
+  color: var(--brand-white, var(--bs-white));
+  white-space: nowrap;
+}
+.conf-chip-agenda .conf-icon {
+  width: 13px;
+  height: 13px;
+  opacity: 1;
+}
 .conf-chip {
   font-family: "Open Sans", sans-serif;
   font-size: 0.6875rem;

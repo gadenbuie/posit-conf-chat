@@ -228,14 +228,15 @@ server <- function(input, output, session) {
 
   output$on_now <- renderUI({
     invalidateLater(60000)
-    on_now_ui()
+    on_now_ui(in_agenda = agenda_ids())
   })
 
   output$full_schedule <- renderUI({
     full_schedule_ui(
       fmt = input$schedule_format %||% "all",
       location = input$schedule_location %||% "",
-      speaker = input$schedule_speaker %||% ""
+      speaker = input$schedule_speaker %||% "",
+      in_agenda = agenda_ids()
     )
   })
 
