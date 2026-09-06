@@ -7,7 +7,8 @@ library(purrr)
 
 options(
   shiny.autoload.r = TRUE,
-  shiny.autoreload.pattern = "\\.(r|htm|html|js|css|png|jpg|jpeg|gif|md)$"
+  shiny.autoreload.pattern = "\\.(r|htm|html|js|css|png|jpg|jpeg|gif|md)$",
+  shinychat.history_options.store_auto.quiet = TRUE
 )
 
 store_location <- "data/ragnar.duckdb"
