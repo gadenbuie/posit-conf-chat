@@ -81,7 +81,22 @@ defaults:
           --brand-faq-card: #{$brand-faq-card};
           --brand-session-fg: #{$brand-session-fg};
           --brand-event-bg: #{$brand-event-bg};
+          --chat-bg-image: url("pixel-fade.svg");
         }
+
+        shiny-chat-container {
+          --shiny-chat-btn-send-bg: var(--brand-lime, #ffc107);
+          --shiny-chat-btn-send-color: var(--brand-navy, var(--bs-dark, #212529));
+          --shiny-chat-btn-send-bg-hover: var(--brand-navy, var(--bs-dark, #212529));
+          --shiny-chat-btn-send-color-hover: var(--brand-lime, #ffc107);
+          --shiny-chat-btn-send-color-cancel: var(--brand-pink, #d63384);
+          --shiny-chat-footer-color: var(--brand-gray, var(--bs-gray-500));
+          --_user-message-bg: var(
+            --shiny-chat-user-message-bg,
+            rgba(var(--bs-primary-rgb, 0, 123, 194), 0.16)
+          );
+        }
+
         [data-bs-theme="dark"] shiny-chat-container .shiny-chat-suggestion-list .shiny-chat-suggestion-list-item {
           background-color: #22306B;
           color: #CFE3FF;
