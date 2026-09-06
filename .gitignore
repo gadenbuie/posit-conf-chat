@@ -1,4 +1,5 @@
 .renvignore
+*.wal
 data/ragnar.duckdb
 .posit/
 
