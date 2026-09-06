@@ -157,73 +157,15 @@ server <- function(input, output, session) {
     chat_drawer_show("chat", title = "My Agenda")
   })
 
-  agenda_toast_title <- function(id) {
-    tryCatch(sched_summary(resolve_item(id))$title, error = function(e) id)
-  }
-
   observeEvent(input$agenda_add, {
     id <- input$agenda_add
     tryCatch(
       {
         conflicts <- agenda_conflicts_for(id, agenda_ids)
         manage_agenda("add", id, agenda_ids = agenda_ids, force = TRUE)
-        if (length(conflicts)) {
-          bslib::show_toast(
-            bslib::toast(
-              tags$div(
-                tags$p(
-                  "Added",
-                  tags$b(agenda_toast_title(id)),
-                  "to your agenda."
-                ),
-                tags$p(
-                  "Heads up!",
-                  purrr::map(conflicts, agenda_conflict_phrase)
-                ),
-                bslib::toolbar_input_button(
-                  "agenda_show_from_toast",
-                  "Show agenda",
-                  icon = bsicons::bs_icon("bookmark-star-fill"),
-                  show_label = TRUE,
-                  tooltip = FALSE,
-                  border = TRUE
-                )
-              ),
-              header = "Added with a conflict",
-              icon = bsicons::bs_icon("exclamation-triangle-fill"),
-              type = "warning",
-              duration_s = NA
-            )
-          )
-        } else {
-          bslib::show_toast(
-            bslib::toast(
-              tags$span("Added", tags$b(agenda_toast_title(id))),
-              header = "Agenda updated",
-              icon = bsicons::bs_icon("bookmark-plus-fill"),
-              type = "success"
-            )
-          )
-        }
+        toast_agenda_added(id, conflicts)
       },
-      error = function(e) {
-        bslib::show_toast(
-          bslib::toast(
-            tags$div(
-              e$message,
-              bslib::toolbar_input_button(
-                "agenda_show_from_toast",
-                "Show agenda",
-                icon = bsicons::bs_icon("bookmark-star-fill")
-              )
-            ),
-            header = "Couldn't add to agenda",
-            icon = bsicons::bs_icon("exclamation-triangle-fill"),
-            type = "warning",
-            duration_s = NA
-          )
-        )
-      }
+      error = toast_agenda_add_error
     )
   })
 
@@ -315,14 +257,7 @@ server <- function(input, output, session) {
 
   observeEvent(input$agenda_remove, {
     manage_agenda("remove", input$agenda_remove, agenda_ids = agenda_ids)
-    bslib::show_toast(
-      bslib::toast(
-        tags$span("Removed", tags$b(agenda_toast_title(input$agenda_remove))),
-        header = "Agenda updated",
-        icon = bsicons::bs_icon("bookmark-x-fill"),
-        type = "secondary"
-      )
-    )
+    toast_agenda_removed(input$agenda_remove)
   })
 
   chat_server(
