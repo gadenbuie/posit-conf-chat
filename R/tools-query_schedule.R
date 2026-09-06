@@ -123,45 +123,47 @@ query_schedule <- ellmer::tool(
     "track, room, kind, or speaker. Use this for questions like 'what's happening",
     "Tuesday at 2pm', 'what's in Ballroom H & K', or 'which talks are in the Agents,",
     "context, MCP track' -- anything where you need exact times, rooms, or tracks",
-    "rather than a full-text search. All arguments are optional; combine them to",
-    "narrow results."
+    "rather than a full-text search. Only `_intent` is required; all other",
+    # Fixed in tidyverse/ellmer#1135 but might still exist for OpenRouter/others
+    "arguments are optional. IMPORTANT: the schema may list arguments as",
+    "required, but only `_intent` is -- OMIT any other argument you don't need",
+    "(do not pass null or empty strings) and combine the rest to narrow results."
   ),
   arguments = list(
     `_intent` = ellmer::type_string(
-      "A short snippet used for display purposes to explain the call to the user.",
-      required = FALSE
+      "A short snippet used for display purposes to explain the call to the user."
     ),
     date = ellmer::type_string(
-      "Conference day as an ISO date (YYYY-MM-DD) or weekday name, e.g. 'Tuesday'. Pass null to skip.",
+      "Conference day as an ISO date (YYYY-MM-DD) or weekday name, e.g. 'Tuesday'.",
       required = FALSE
     ),
     from = ellmer::type_string(
-      "Start of a time window in 24-hour conference-local time, 'HH:MM'. Pass null to skip.",
+      "Start of a time window in 24-hour conference-local time, 'HH:MM'.",
       required = FALSE
     ),
     to = ellmer::type_string(
       paste(
         "End of a time window in 24-hour conference-local time, 'HH:MM'. A record",
         "matches if it overlaps the window. Pass the same value for from and to to",
-        "find what's happening at that exact time. Pass null to skip."
+        "find what's happening at that exact time."
       ),
       required = FALSE
     ),
     track = ellmer::type_string(
-      "Track (session block) title, e.g. 'Agents, context, MCP'. Use list_schedule_options(type = 'tracks') for exact titles. Pass null to skip.",
+      "Track (session block) title, e.g. 'Agents, context, MCP'. Use list_schedule_options(type = 'tracks') for exact titles.",
       required = FALSE
     ),
     room = ellmer::type_string(
-      "Room name. Use list_schedule_options(type = 'rooms') for exact names. Pass null to skip.",
+      "Room name. Use list_schedule_options(type = 'rooms') for exact names.",
       required = FALSE
     ),
     kind = ellmer::type_enum(
       values = c("talk", "session", "workshop", "event"),
-      description = "Item kind. 'talk' includes keynotes. Pass null to skip.",
+      description = "Item kind. 'talk' includes keynotes.",
       required = FALSE
     ),
     speaker = ellmer::type_string(
-      "Speaker full name. Use list_schedule_options(type = 'speakers') for exact names. Pass null to skip.",
+      "Speaker full name. Use list_schedule_options(type = 'speakers') for exact names.",
       required = FALSE
     )
   ),
