@@ -103,10 +103,30 @@ schedule_status <- function(now = conf_now()) {
   list(now = now, on_now = on_now, up_next = up_next)
 }
 
-on_now <- function() {
-  status <- schedule_status()
-  bounds <- conf_bounds()
+# The next moment at which schedule_status() output can change: the nearest
+# future start or end of any scheduled item. NULL once the conf has ended.
+schedule_next_change <- function(now = conf_now()) {
+  items <- dplyr::bind_rows(
+    sched_items("talks"),
+    sched_items("workshops"),
+    sched_items("events"),
+    sched_items("sessions")
+  )
+  parse <- function(x) {
+    as.POSIXct(substr(x, 1, 16), format = "%Y-%m-%d %H:%M", tz = conf_tz)
+  }
+  times <- c(
+    parse(paste(items$date, items$start)),
+    parse(paste(items$date, items$end))
+  )
+  future <- times[times > now]
+  if (!length(future)) {
+    return(NULL)
+  }
+  min(future)
+}
 
+on_now_json <- function(status = schedule_status(), bounds = conf_bounds()) {
   note <- NULL
   if (status$now < bounds$start) {
     note <- paste(
@@ -119,17 +139,23 @@ on_now <- function() {
     note <- "Nothing is scheduled at this exact moment."
   }
 
-  ellmer::ContentToolResult(
-    value = jsonlite::toJSON(
-      list(
-        now = format(status$now, "%Y-%m-%d %H:%M %Z"),
-        note = note,
-        on_now = status$on_now
-      ),
-      auto_unbox = TRUE,
-      null = "null",
-      na = "null"
+  jsonlite::toJSON(
+    list(
+      now = format(status$now, "%Y-%m-%d %H:%M %Z"),
+      note = note,
+      on_now = status$on_now
     ),
+    auto_unbox = TRUE,
+    null = "null",
+    na = "null"
+  )
+}
+
+on_now <- function() {
+  status <- schedule_status()
+
+  ellmer::ContentToolResult(
+    value = on_now_json(status),
     extra = list(
       display = shinychat::tool_result_display(
         title = "Checked what's on now",

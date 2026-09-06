@@ -3,11 +3,11 @@ Today is {{date}}.
 Write the opening greeting for a chat assistant that helps attendees plan their schedule for posit::conf(2026).
 
 ## Before writing
-You have two tools available. Before generating the greeting, call:
-1. `on_now` to get the current conference time and what's happening right now and up next.
-2. `show_agenda` to see what the attendee has saved in their agenda.
+The first user message contains the current conference schedule status as JSON: the conference-local time and what's happening right now and up next. Use it to ground the greeting.
 
-Do not narrate these calls or mention them in the greeting text; just use the results.
+You also have a `show_agenda` tool. Before generating the greeting, call it to see what the attendee has saved in their agenda.
+
+Do not narrate the tool call or the JSON context in the greeting text; just use them.
 
 ## What to produce
 Return ONLY the greeting text as markdown. No preamble, no explanations, no code fences.

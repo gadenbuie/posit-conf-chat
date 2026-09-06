@@ -40,9 +40,14 @@ new_agent_client <- function(spec, system_prompt, store_location, agenda_ids) {
   client
 }
 
-new_greeting_client <- function(spec, system_prompt, agenda_ids) {
+# `context` is injected as a user turn ahead of the generate request, so the
+# system prompt stays stable and cacheable across sessions.
+new_greeting_client <- function(spec, system_prompt, context, agenda_ids) {
   client <- new_chat_client(spec, system_prompt)
-  client$register_tool(on_now_tool)
+  client$set_turns(list(ellmer::Turn(
+    "user",
+    list(ellmer::ContentText(context))
+  )))
   client$register_tool(show_agenda_tool(agenda_ids))
   client
 }
@@ -52,16 +57,33 @@ static_greeting <- function() {
   chat_greeting(paste0(greeting_header, greeting_md))
 }
 
-# Returns a function that generates the greeting once per session, streaming
-# from the greeting model, and serves the cached result on later calls.
+# Returns a function that generates the greeting by streaming from the
+# greeting model, then caches it until the schedule changes (the next session
+# start or end), at which point the next call regenerates it.
 greeting_generator <- function(spec, system_prompt, agenda_ids) {
   greeting_cache <- NULL
+  cache_expires <- NULL
 
   function() {
-    if (!is.null(greeting_cache)) {
+    if (
+      !is.null(greeting_cache) &&
+        (is.null(cache_expires) || conf_now() < cache_expires)
+    ) {
       return(chat_greeting(greeting_cache))
     }
-    greeting_client <- new_greeting_client(spec, system_prompt, agenda_ids)
+    status <- schedule_status()
+    cache_expires <<- schedule_next_change(status$now)
+    context <- paste(
+      "Here is the current conference schedule status as JSON:",
+      as.character(on_now_json(status)),
+      sep = "\n\n"
+    )
+    greeting_client <- new_greeting_client(
+      spec,
+      system_prompt,
+      context,
+      agenda_ids
+    )
     greeting_stream <- coro::async_generator(function() {
       collected <- greeting_header
       yield(greeting_header)
