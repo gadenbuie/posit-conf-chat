@@ -168,7 +168,11 @@ on_now_section <- function(title, items, empty, in_agenda = character()) {
         dplyr::arrange(id %in% .env$in_agenda == FALSE, start, title)
       locations <- purrr::map_chr(items$location, card_value)
       cards <- purrr::map(items$id, function(id) {
-        contents_shinychat(show_item(id, in_agenda = id %in% in_agenda))
+        card_with_agenda_controls(
+          contents_shinychat(show_item(id, in_agenda = id %in% in_agenda)),
+          id,
+          id %in% in_agenda
+        )
       })
       lapply(unique(locations), function(location) {
         htmltools::tagList(

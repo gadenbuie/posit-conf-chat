@@ -12,13 +12,49 @@ ItemCardResult <- S7::new_class(
 
 contents_shinychat <- shinychat::contents_shinychat
 
-agenda_badge <- function() {
-  htmltools::tags$span(
-    class = "badge rounded-pill text-uppercase conf-chip conf-chip-agenda ms-auto",
-    title = "On your agenda",
-    icon_check_circle,
-    "On your agenda"
+agenda_badge <- function(id) {
+  htmltools::tags$button(
+    class = "btn badge rounded-pill text-uppercase conf-chip conf-chip-agenda ms-auto",
+    type = "button",
+    title = "Remove from your agenda",
+    onclick = sprintf(
+      "Shiny.setInputValue('agenda_remove', '%s', {priority: 'event'})",
+      id
+    ),
+    htmltools::tags$span(
+      class = "conf-chip-agenda-state conf-chip-agenda-on",
+      icon_check_circle,
+      "On your agenda"
+    ),
+    htmltools::tags$span(
+      class = "conf-chip-agenda-state conf-chip-agenda-remove",
+      icon_minus_circle,
+      "Remove"
+    )
   )
+}
+
+agenda_add_button <- function(id) {
+  htmltools::tags$button(
+    class = "btn badge rounded-pill text-uppercase conf-chip conf-chip-agenda-outline ms-auto",
+    type = "button",
+    title = "Add to your agenda",
+    onclick = sprintf(
+      "Shiny.setInputValue('agenda_add', '%s', {priority: 'event'})",
+      id
+    ),
+    bsicons::bs_icon("plus-circle"),
+    "Add to agenda"
+  )
+}
+
+card_with_agenda_controls <- function(card, id, in_agenda) {
+  if (isTRUE(in_agenda)) {
+    return(card)
+  }
+  htmltools::tagQuery(card)$find(
+    ".d-flex.flex-wrap.gap-2.mb-2"
+  )$append(agenda_add_button(id))$allTags()
 }
 
 S7::method(contents_shinychat, ItemCardResult) <- function(content) {
@@ -34,7 +70,7 @@ S7::method(contents_shinychat, ItemCardResult) <- function(content) {
   if (isTRUE(content@in_agenda)) {
     card <- htmltools::tagQuery(card)$find(
       ".d-flex.flex-wrap.gap-2.mb-2"
-    )$append(agenda_badge())$allTags()
+    )$append(agenda_badge(content@item$record_id))$allTags()
   }
   card
 }
@@ -98,6 +134,9 @@ icon_pin <- conf_icon(
 )
 icon_check_circle <- conf_icon(
   '<circle cx="12" cy="12" r="10"/><path d="m8 12 3 3 5-6"/>'
+)
+icon_minus_circle <- conf_icon(
+  '<circle cx="12" cy="12" r="10"/><path d="M8 12h8"/>'
 )
 
 card_chip <- function(label, modifier) {

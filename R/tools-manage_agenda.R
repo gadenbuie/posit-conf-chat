@@ -1,4 +1,11 @@
-manage_agenda <- function(action, id = NULL, agenda_ids) {
+agenda_conflict_error <- function(message) {
+  structure(
+    list(message = message),
+    class = c("agenda_conflict", "error", "condition")
+  )
+}
+
+manage_agenda <- function(action, id = NULL, agenda_ids, force = FALSE) {
   action <- match.arg(action, c("add", "remove", "clear", "show"))
   # isolate() avoids taking a reactive dependency in chat_server's observer
   agenda_get <- function() shiny::isolate(agenda_ids())
@@ -31,8 +38,8 @@ manage_agenda <- function(action, id = NULL, agenda_ids) {
         function(other) agenda_overlap(summary, other),
         lapply(current, function(i) sched_summary(resolve_item(i)))
       )
-      if (length(conflicts)) {
-        stop(
+      if (length(conflicts) && !force) {
+        stop(agenda_conflict_error(paste0(
           "Can't add ",
           desc,
           ": it overlaps with ",
@@ -44,7 +51,7 @@ manage_agenda <- function(action, id = NULL, agenda_ids) {
           if (length(conflicts) == 1) "is" else "are",
           " already in the agenda. ",
           agenda_conflict_advice(summary, conflicts)
-        )
+        )))
       }
       agenda_set(c(current, id))
       title <- "Added to the agenda"
@@ -53,7 +60,17 @@ manage_agenda <- function(action, id = NULL, agenda_ids) {
         desc,
         " to the agenda. ",
         length(current) + 1,
-        " items total."
+        " items total.",
+        if (length(conflicts)) {
+          paste0(
+            " Note: it overlaps with ",
+            paste(
+              vapply(conflicts, agenda_item_desc, character(1)),
+              collapse = ", "
+            ),
+            ", which is already in your agenda."
+          )
+        }
       )
     }
   } else if (action == "remove") {
@@ -112,6 +129,29 @@ manage_agenda <- function(action, id = NULL, agenda_ids) {
         value_preview = paste(length(agenda_get()), "items in agenda")
       )
     )
+  )
+}
+
+agenda_conflicts_for <- function(id, agenda_ids) {
+  summary <- sched_summary(resolve_item(id))
+  Filter(
+    function(other) agenda_overlap(summary, other),
+    lapply(agenda_ids(), function(i) sched_summary(resolve_item(i)))
+  )
+}
+
+agenda_conflict_phrase <- function(s) {
+  htmltools::tags$span(
+    "You already have ",
+    htmltools::tags$b(s$title),
+    " on your agenda for ",
+    paste0(s$date, " ", s$start, "\u2013", s$end),
+    if (!is.na(s$location) && nzchar(s$location)) {
+      paste0(" in ", s$location)
+    } else {
+      ""
+    },
+    "."
   )
 }
 

@@ -147,7 +147,11 @@ full_schedule_ui <- function(
       title = card_date(day),
       value = day,
       purrr::map(day_items$id, function(id) {
-        contents_shinychat(show_item(id, in_agenda = id %in% in_agenda))
+        card_with_agenda_controls(
+          contents_shinychat(show_item(id, in_agenda = id %in% in_agenda)),
+          id,
+          id %in% in_agenda
+        )
       })
     )
   })
