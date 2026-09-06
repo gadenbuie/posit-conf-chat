@@ -53,7 +53,10 @@ new_greeting_client <- function(spec, system_prompt, context, agenda_ids) {
 }
 
 static_greeting <- function() {
-  greeting_md <- paste(readLines("greeting.md", warn = FALSE), collapse = "\n")
+  greeting_md <- paste(
+    readLines(file.path("prompts", "greeting-static.md"), warn = FALSE),
+    collapse = "\n"
+  )
   chat_greeting(paste0(greeting_header, greeting_md))
 }
 

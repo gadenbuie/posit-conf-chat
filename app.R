@@ -63,6 +63,15 @@ ui <- function(req) {
       ),
       bslib::input_dark_mode()
     ),
+    toolbar_input = bslib::toolbar(
+      bslib::toolbar_input_select(
+        "output_style",
+        label = "Reply style",
+        choices = output_styles,
+        selected = default_output_style,
+        icon = bsicons::bs_icon("chat-quote")
+      )
+    ),
     sidebar = chat_sidebar(
       open = FALSE,
       p(
@@ -96,6 +105,7 @@ ui <- function(req) {
     },
     footer = tags$head(
       tags$script(src = "assets/agenda.js"),
+      tags$script(src = "assets/prompt-style.js"),
       tags$script(src = "assets/collapsible-abstract.js"),
       tags$link(rel = "stylesheet", href = "assets/custom.css")
     ),
@@ -109,12 +119,12 @@ server <- function(input, output, session) {
 
   # Create ellmer clients (see R/client.R) ----
   system_prompt <- ellmer::interpolate_file(
-    "prompt-system.md",
+    file.path("prompts", "system.md"),
     date = Sys.Date(),
     skills = skills_prompt()
   )
   greeting_prompt <- ellmer::interpolate_file(
-    "prompt-greeting.md",
+    file.path("prompts", "greeting.md"),
     date = Sys.Date()
   )
 
@@ -248,11 +258,49 @@ server <- function(input, output, session) {
 
   # Chat ----
 
-  chat_server(
+  chat <- chat_server(
     "chat",
     client,
     greeting = if (greeting_dynamic) generate_greeting
   )
+
+  # Output style ----
+
+  current_style <- reactiveVal(default_output_style)
+
+  # Taking chat$status() here also re-fires this observer when streaming
+  # ends, applying a style change that was attempted mid-stream.
+  observeEvent(input$output_style, {
+    if (chat$status() != "idle") {
+      return()
+    }
+    slug <- input$output_style
+    # No-op when the change came from a history restore matching the UI to
+    # the conversation, or when the value didn't actually change.
+    if (identical(slug, current_style())) {
+      return()
+    }
+    current_style(slug)
+    apply_prompt_style(chat$client, slug)
+  })
+
+  observe({
+    session$sendCustomMessage(
+      "prompt_style_disabled",
+      chat$status() == "streaming"
+    )
+  })
+
+  chat$history$on_save(function(values) {
+    values$output_style <- isolate(current_style())
+    values
+  })
+
+  chat$history$on_restore(function(values) {
+    style <- values$output_style %||% default_output_style
+    current_style(style)
+    bslib::update_toolbar_input_select("output_style", selected = style)
+  })
 }
 
 shinyApp(ui, server)
