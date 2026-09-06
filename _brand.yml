@@ -11,6 +11,9 @@ color:
     plum: "#7B0D84"
     ice: "#F5FAFF"
     faq-card: "#E0F0FF"
+    muted: "#4A5578"
+    session-fg: "#F3E8FF"
+    event-bg: "#E9E9E9"
     red: "#D0342C"
     orange: "#FF8A3D"
     yellow: "#FFD43B"
@@ -73,3 +76,85 @@ defaults:
         navbar-fg: $brand-white
         navbar-link-fg: $brand-white
         navbar-link-hover-fg: $brand-lime
+      rules: |
+        :root {
+          --brand-faq-card: #{$brand-faq-card};
+          --brand-session-fg: #{$brand-session-fg};
+          --brand-event-bg: #{$brand-event-bg};
+        }
+        [data-bs-theme="dark"] shiny-chat-container .shiny-chat-suggestion-list .shiny-chat-suggestion-list-item {
+          background-color: #22306B;
+          color: #CFE3FF;
+        }
+
+        [data-bs-theme="dark"] .shiny-chat-page-sidebar {
+          background-color: #121A3E;
+          color: #E7EEFF;
+        }
+
+        [data-bs-theme="dark"] {
+          --bs-heading-color: #E7EEFF;
+          --bs-link-color: $brand-cyan;
+          --bs-link-hover-color: #8FC3F9;
+        }
+
+        .conf-card-keynote {
+          color: #E7EEFF;
+        }
+
+        .conf-card-keynote .conf-muted,
+        .conf-card-keynote .text-muted {
+          color: #9DB4E4 !important;
+        }
+
+        .conf-card-keynote .conf-chip-track {
+          box-shadow: inset 0 0 0 1px rgba(187, 248, 27, 0.55);
+        }
+
+        .conf-card-keynote .conf-session-talks,
+        .conf-card-keynote .conf-session-talk+.conf-session-talk {
+          border-top-color: rgba(231, 238, 255, 0.16);
+        }
+
+        [data-bs-theme="dark"] .conf-card:not(.conf-card-keynote) {
+          background: #1A2142;
+          color: #E7EEFF;
+        }
+
+        [data-bs-theme="dark"] .conf-card:not(.conf-card-keynote) .conf-muted {
+          color: #9DB4E4;
+        }
+
+        [data-bs-theme="dark"] .conf-card:not(.conf-card-keynote) .conf-session-talks,
+        [data-bs-theme="dark"] .conf-card:not(.conf-card-keynote) .conf-session-talk+.conf-session-talk {
+          border-top-color: rgba(231, 238, 255, 0.14);
+        }
+
+        [data-bs-theme="dark"] .conf-chip-talk {
+          background: #22306B;
+          color: #CFE3FF;
+        }
+
+        [data-bs-theme="dark"] .conf-chip-event,
+        [data-bs-theme="dark"] .conf-chip-inperson {
+          background: #2A3358;
+          color: #E7EEFF;
+        }
+
+        [data-bs-theme="dark"] .conf-chip-track {
+          color: #AEB8F5;
+          box-shadow: inset 0 0 0 1px #AEB8F5;
+        }
+
+        [data-bs-theme="dark"] .conf-muted {
+          color: #9DB4E4;
+        }
+
+        [data-bs-theme="dark"] .conf-card-keynote {
+          background: #0A1450;
+          border-color: rgba(187, 248, 27, 0.3);
+        }
+
+        [data-bs-theme="dark"] .full-schedule-filters .control-label {
+          color: $brand-lime;
+        }
