@@ -135,15 +135,15 @@ DuckDB caches and scores prior query-response pairs for selective reuse.
 The system can be deployed on Posit Connect or run locally, illustrating
 a reproducible workflow for interactive, AI-assisted documentation.
 Presented by: Aliza Samad and Sofia Lendahl.",2026-09-15 20:20:00,2026-09-15 20:40:00,"2026-09-15 15:20:00 CDT","2026-09-15 15:40:00 CDT","Virtual","HYBRID","SCHEDULE",,"Ballroom G & J","a73dc105-039e-467b-9047-b8f37bb0f1ba","UPCOMING"
-"d74fecd4-6133-4c31-aab5-014cf2c09166","c67adf38-93bc-4911-b8d3-44d14f4e2533","e6a9a754-554b-40b3-bc07-8832232817ac","Scaling Reports: Template → Package → App","Farmers need to understand their soil data to guide management
-decisions, but advisors often lack time or coding expertise to generate
-interpretive reports that make the data actionable. To deliver
-multilingual, customizable soil health reports at scale, we 1) created a
-parameterized Quarto template, 2) expanded it into {soils}, an R package
-for technical users, and 3) developed Dirt Data Reports, a Shiny app for
-non-coders. From template to package to app, we’ll share lessons from
-building complementary tools that increase access to soil health
-insights and support real-world impact.",2026-09-15 20:40:00,2026-09-15 21:00:00,"2026-09-15 15:40:00 CDT","2026-09-15 16:00:00 CDT","Virtual","HYBRID","SCHEDULE",,"Ballroom H & K","0522ae00-7c31-4f8c-ab7a-b668a7ee0a59","UPCOMING"
+"d74fecd4-6133-4c31-aab5-014cf2c09166","c67adf38-93bc-4911-b8d3-44d14f4e2533","e6a9a754-554b-40b3-bc07-8832232817ac","Template → Package → App: Meeting Users Where They're At","We built a reporting workflow to help farmers turn complex soil health
+data into useful management decisions. What started as a Quarto template
+for one specific project became the {soils} R package for other coders,
+and eventually Dirt Data Reports, a Shiny app for people who don't code.
+This talk is about what we learned while lowering barriers at each step.
+Building for the user means choosing the right level of flexibility,
+abstraction, and complexity for the people you're trying to reach. The
+goal isn't to create one perfect tool; it's to meet users where they're
+at.",2026-09-15 20:40:00,2026-09-15 21:00:00,"2026-09-15 15:40:00 CDT","2026-09-15 16:00:00 CDT","Virtual","HYBRID","SCHEDULE",,"Ballroom H & K","0522ae00-7c31-4f8c-ab7a-b668a7ee0a59","UPCOMING"
 "fd5c7d36-1e4b-47ac-9adf-0f2777210937","e5c06a46-7ed3-4cfa-bda9-4776c3400241","5c29a877-e940-4df6-8961-909757f83285","SQL Without Writing SQL: dbplyr for Serious Shiny Apps","You don't need to be an SQL expert or a DBA to build high-performance
 Shiny apps on large datasets. With dbplyr, you can write familiar dplyr
 code while it translates your pipelines into optimized SQL behind the
