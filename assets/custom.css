@@ -60,3 +60,185 @@ shiny-chat-container {
 nav .shiny-chat-page-nav-link[aria-current="page"] {
   color: #FFFFFF;
 }
+
+/* --- conf cards ------------------------------------------------------- */
+.conf-card {
+  border: none;
+  border-radius: 12px;
+  box-shadow:
+    0 1px 2px rgba(3, 10, 95, 0.06),
+    0 10px 28px -14px rgba(3, 10, 95, 0.25);
+}
+.conf-card .card-body {
+  padding: 1.1rem 1.25rem;
+}
+.conf-card .card-title {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.3;
+  text-wrap: balance;
+  margin-bottom: 0.5rem;
+}
+.conf-card p:last-child {
+  margin-bottom: 0;
+}
+
+.conf-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+  margin-bottom: 0.625rem;
+}
+.conf-chip {
+  display: inline-flex;
+  align-items: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  line-height: 1;
+  padding: 0.3rem 0.6rem;
+  border-radius: 999px;
+}
+.conf-chip-keynote { background: #030A5F; color: #BBF81B; }
+.conf-chip-talk { background: #E1F1FF; color: #030A5F; }
+.conf-chip-session { background: #6B2F8E; color: #F3E8FF; }
+.conf-chip-workshop { background: #0B70D5; color: #FFFFFF; }
+.conf-chip-event { background: #E9E9E9; color: #151515; }
+.conf-chip-track {
+  background: transparent;
+  color: #4D44AA;
+  box-shadow: inset 0 0 0 1px #4D44AA;
+  text-transform: none;
+  letter-spacing: 0.02em;
+  font-weight: 600;
+}
+.conf-chip-virtual { background: #419CF5; color: #030A5F; }
+.conf-chip-inperson { background: #E9E9E9; color: #151515; }
+
+.conf-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1rem;
+  font-size: 0.8125rem;
+  color: #4A5578;
+  margin-bottom: 0.625rem;
+}
+.conf-meta-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  white-space: nowrap;
+}
+.conf-icon {
+  width: 13px;
+  height: 13px;
+  flex-shrink: 0;
+  opacity: 0.75;
+}
+
+.conf-session-talks {
+  border-top: 1px solid rgba(3, 10, 95, 0.1);
+  margin-top: 0.25rem;
+}
+.conf-session-talk {
+  display: flex;
+  gap: 0.875rem;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid rgba(3, 10, 95, 0.08);
+}
+.conf-session-talk:last-child {
+  border-bottom: none;
+  padding-bottom: 0.15rem;
+}
+.conf-session-talk-time {
+  flex: 0 0 8.25rem;
+  font-size: 0.8125rem;
+  font-variant-numeric: tabular-nums;
+  color: #4A5578;
+  padding-top: 0.1rem;
+}
+.conf-session-talk-body strong {
+  font-weight: 600;
+  line-height: 1.35;
+}
+.conf-session-talk-speakers {
+  font-size: 0.8125rem;
+  color: #4A5578;
+}
+
+/* Keynote: navy surface, lime accents */
+.conf-card-keynote {
+  background: #030A5F;
+  color: #E7EEFF;
+}
+.conf-card-keynote .card-title {
+  color: #FFFFFF;
+}
+.conf-card-keynote .conf-meta,
+.conf-card-keynote .text-muted,
+.conf-card-keynote .conf-session-talk-time,
+.conf-card-keynote .conf-session-talk-speakers {
+  color: #9DB4E4 !important;
+}
+.conf-card-keynote .conf-chip-track {
+  color: #BBF81B;
+  box-shadow: inset 0 0 0 1px rgba(187, 248, 27, 0.55);
+}
+.conf-card-keynote a {
+  color: #BBF81B;
+}
+.conf-card-keynote .conf-session-talks {
+  border-top-color: rgba(231, 238, 255, 0.18);
+}
+.conf-card-keynote .conf-session-talk {
+  border-bottom-color: rgba(231, 238, 255, 0.14);
+}
+
+[data-bs-theme="dark"] .conf-card:not(.conf-card-keynote) {
+  background: #1A2142;
+  color: #E7EEFF;
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.4),
+    0 10px 28px -14px rgba(0, 0, 0, 0.6);
+}
+[data-bs-theme="dark"] .conf-card:not(.conf-card-keynote) .card-title {
+  color: #FFFFFF;
+}
+[data-bs-theme="dark"] .conf-card:not(.conf-card-keynote) .conf-meta,
+[data-bs-theme="dark"] .conf-card:not(.conf-card-keynote) .conf-session-talk-time,
+[data-bs-theme="dark"] .conf-card:not(.conf-card-keynote) .conf-session-talk-speakers {
+  color: #9DB4E4;
+}
+[data-bs-theme="dark"] .conf-chip-talk { background: #22306B; color: #CFE3FF; }
+[data-bs-theme="dark"] .conf-chip-event,
+[data-bs-theme="dark"] .conf-chip-inperson { background: #2A3358; color: #E7EEFF; }
+[data-bs-theme="dark"] .conf-chip-track { color: #AEB8F5; box-shadow: inset 0 0 0 1px #AEB8F5; }
+[data-bs-theme="dark"] .conf-card:not(.conf-card-keynote) .conf-session-talks {
+  border-top-color: rgba(231, 238, 255, 0.16);
+}
+[data-bs-theme="dark"] .conf-card:not(.conf-card-keynote) .conf-session-talk {
+  border-bottom-color: rgba(231, 238, 255, 0.12);
+}
+
+@media (max-width: 480px) {
+  .conf-session-talk {
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+  .conf-session-talk-time {
+    flex: none;
+  }
+}
+
+.conf-speaker-link {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+.conf-speaker-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}

@@ -61,28 +61,74 @@ card_date <- function(date) {
   trimws(format(as.Date(date), "%A, %B %e"))
 }
 
+conf_icon <- function(paths) {
+  htmltools::HTML(paste0(
+    '<svg class="conf-icon" viewBox="0 0 24 24" fill="none" ',
+    'stroke="currentColor" stroke-width="2" stroke-linecap="round" ',
+    'stroke-linejoin="round" aria-hidden="true">',
+    paths,
+    "</svg>"
+  ))
+}
+
+icon_calendar <- conf_icon(
+  '<rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/>'
+)
+icon_clock <- conf_icon(
+  '<circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>'
+)
+icon_pin <- conf_icon(
+  '<path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/>'
+)
+
+card_chip <- function(label, modifier) {
+  label <- card_value(label)
+  if (!nzchar(label)) {
+    return(NULL)
+  }
+  htmltools::tags$span(class = paste("conf-chip", modifier), label)
+}
+
 card_meta <- function(date, start, end, location) {
   date <- card_value(date)
   start <- clock12(start)
   end <- clock12(end)
   location <- card_value(location)
-  parts <- character()
+  items <- list()
   if (nzchar(date)) {
-    parts <- c(parts, date)
+    items <- c(
+      items,
+      list(htmltools::tags$span(
+        class = "conf-meta-item",
+        icon_calendar,
+        date
+      ))
+    )
   }
   if (nzchar(start)) {
-    parts <- c(parts, if (nzchar(end)) paste0(start, "\u2013", end) else start)
+    items <- c(
+      items,
+      list(htmltools::tags$span(
+        class = "conf-meta-item",
+        icon_clock,
+        if (nzchar(end)) paste0(start, "\u2013", end) else start
+      ))
+    )
   }
   if (nzchar(location)) {
-    parts <- c(parts, location)
+    items <- c(
+      items,
+      list(htmltools::tags$span(
+        class = "conf-meta-item",
+        icon_pin,
+        location
+      ))
+    )
   }
-  if (!length(parts)) {
+  if (!length(items)) {
     return(NULL)
   }
-  htmltools::tags$div(
-    class = "text-muted small mb-2",
-    htmltools::HTML(paste(parts, collapse = " &middot; "))
-  )
+  htmltools::tags$div(class = "conf-meta", items)
 }
 
 card_md <- function(md) {
@@ -97,7 +143,7 @@ card_speaker_row <- function(sp) {
   name <- card_value(sp$full_name)
   image <- card_value(sp$image_url)
   linkedin <- card_value(sp$linkedin_url)
-  body <- htmltools::tagList(
+  body <- htmltools::tags$div(
     htmltools::tags$div(
       htmltools::tags$strong(name),
       if (nzchar(card_value(sp$title_affiliation))) {
@@ -105,18 +151,19 @@ card_speaker_row <- function(sp) {
           class = "text-muted",
           card_value(sp$title_affiliation)
         ))
-      }
-    ),
-    if (nzchar(linkedin)) {
-      htmltools::tags$small(
-        htmltools::tags$a(
-          href = linkedin,
-          target = "_blank",
-          rel = "noopener",
-          "LinkedIn"
+      },
+      if (nzchar(linkedin)) {
+        htmltools::tags$div(
+          htmltools::tags$a(
+            class = "conf-speaker-link",
+            href = linkedin,
+            target = "_blank",
+            rel = "noopener",
+            "LinkedIn"
+          )
         )
-      )
-    }
+      }
+    )
   )
   if (nzchar(image)) {
     htmltools::tags$div(
@@ -150,30 +197,31 @@ card_speaker_list <- function(sp) {
 
 card_talk <- function(content) {
   item <- content@item
+  is_keynote <- isTRUE(item$is_keynote)
   htmltools::tags$div(
-    class = "card shadow-sm mb-2",
+    class = paste(
+      "card conf-card mb-2",
+      if (is_keynote) "conf-card-keynote"
+    ),
     style = "max-width: 640px",
     htmltools::tags$div(
       class = "card-body",
-      htmltools::tags$h5(
-        class = "card-title",
-        card_value(item$title),
-        if (isTRUE(item$is_keynote)) {
-          htmltools::tags$span(class = "badge text-bg-warning ms-2", "Keynote")
-        }
+      htmltools::tags$div(
+        class = "conf-chip-row",
+        if (is_keynote) {
+          card_chip("Keynote", "conf-chip-keynote")
+        } else {
+          card_chip("Talk", "conf-chip-talk")
+        },
+        card_chip(item$track_title, "conf-chip-track")
       ),
+      htmltools::tags$h5(class = "card-title", card_value(item$title)),
       card_meta(
         sched_date(item$start_time_event_local),
         sched_clock(item$start_time_event_local),
         sched_clock(item$end_time_event_local),
         item$effective_location_name
       ),
-      if (nzchar(card_value(item$track_title))) {
-        htmltools::tags$div(
-          class = "text-muted small mb-2",
-          paste("Track:", item$track_title)
-        )
-      },
       card_md(item$abstract),
       card_speaker_list(content@speakers)
     )
@@ -197,29 +245,37 @@ card_session <- function(content) {
       !is.na(speaker_names) & nzchar(speaker_names)
     ]
     htmltools::tags$div(
-      class = "mb-2",
-      htmltools::tags$strong(card_value(talk$title)),
+      class = "conf-session-talk",
       htmltools::tags$div(
-        class = "text-muted small",
-        paste(
-          c(
-            paste0(
-              clock12(sched_clock(talk$start_time_event_local)),
-              "\u2013",
-              clock12(sched_clock(talk$end_time_event_local))
-            ),
-            speaker_names
-          ),
-          collapse = " \u00b7 "
+        class = "conf-session-talk-time",
+        paste0(
+          clock12(sched_clock(talk$start_time_event_local)),
+          "\u2013",
+          clock12(sched_clock(talk$end_time_event_local))
         )
+      ),
+      htmltools::tags$div(
+        class = "conf-session-talk-body",
+        htmltools::tags$strong(card_value(talk$title)),
+        if (length(speaker_names)) {
+          htmltools::tags$div(
+            class = "conf-session-talk-speakers",
+            paste(speaker_names, collapse = " \u00b7 ")
+          )
+        }
       )
     )
   })
   htmltools::tags$div(
-    class = "card shadow-sm mb-2",
+    class = "card conf-card mb-2",
     style = "max-width: 640px",
     htmltools::tags$div(
       class = "card-body",
+      htmltools::tags$div(
+        class = "conf-chip-row",
+        card_chip("Session", "conf-chip-session"),
+        card_chip(item$track_title, "conf-chip-track")
+      ),
       htmltools::tags$h5(class = "card-title", card_value(item$title)),
       card_meta(
         sched_date(item$start_time_event_local),
@@ -228,7 +284,7 @@ card_session <- function(content) {
         item$effective_location_name
       ),
       if (length(talk_rows)) {
-        htmltools::tagList(talk_rows)
+        htmltools::tags$div(class = "conf-session-talks", talk_rows)
       } else {
         htmltools::tags$div(
           class = "text-muted fst-italic",
@@ -242,18 +298,22 @@ card_session <- function(content) {
 card_workshop <- function(content) {
   item <- content@item
   format <- card_value(item$session_format)
-  badge <- if (identical(format, "VIRTUAL")) {
-    htmltools::tags$span(class = "badge text-bg-info mb-2", "Virtual")
+  format_chip <- if (identical(format, "VIRTUAL")) {
+    card_chip("Virtual", "conf-chip-virtual")
   } else {
-    htmltools::tags$span(class = "badge text-bg-secondary mb-2", "In-person")
+    card_chip("In-person", "conf-chip-inperson")
   }
   htmltools::tags$div(
-    class = "card shadow-sm mb-2",
+    class = "card conf-card mb-2",
     style = "max-width: 640px",
     htmltools::tags$div(
       class = "card-body",
+      htmltools::tags$div(
+        class = "conf-chip-row",
+        card_chip("Workshop", "conf-chip-workshop"),
+        format_chip
+      ),
       htmltools::tags$h5(class = "card-title", card_value(item$title)),
-      badge,
       card_meta(
         sched_date(item$start_time_event_local),
         sched_clock(item$start_time_event_local),
@@ -269,10 +329,14 @@ card_workshop <- function(content) {
 card_event <- function(content) {
   item <- content@item
   htmltools::tags$div(
-    class = "card shadow-sm mb-2",
+    class = "card conf-card mb-2",
     style = "max-width: 640px",
     htmltools::tags$div(
       class = "card-body",
+      htmltools::tags$div(
+        class = "conf-chip-row",
+        card_chip("Event", "conf-chip-event")
+      ),
       htmltools::tags$h5(class = "card-title", card_value(item$title)),
       card_meta(
         sched_date(item$start_time_event_local),
@@ -315,7 +379,7 @@ card_speaker <- function(content) {
     })
   }
   htmltools::tags$div(
-    class = "card shadow-sm mb-2",
+    class = "card conf-card mb-2",
     style = "max-width: 640px",
     htmltools::tags$div(
       class = "card-body",
