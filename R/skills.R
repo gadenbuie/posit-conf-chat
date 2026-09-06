@@ -46,9 +46,6 @@ skills_path <- function(skill, reference = NULL) {
 }
 
 skills_read <- function(skill, reference = NULL) {
-  cli::cli_inform(
-    "Reading skill {skill} with reference {reference %||% 'none'}"
-  )
   sk <- frontmatter::read_front_matter(skills_path(skill, reference))
   ellmer::ContentToolResult(
     value = sk$body,
