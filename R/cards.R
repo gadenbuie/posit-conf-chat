@@ -10,6 +10,10 @@ ItemCardResult <- S7::new_class(
   )
 )
 
+# See R/prompt-style.R: ellmer::contents_replay() can only resolve this class
+# from globalenv(), not from shiny's app env.
+assign("ItemCardResult", ItemCardResult, envir = globalenv())
+
 contents_shinychat <- shinychat::contents_shinychat
 
 agenda_badge <- function(id) {

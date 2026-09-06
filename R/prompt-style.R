@@ -15,6 +15,12 @@ ContentPromptStyle <- S7::new_class(
   )
 )
 
+# shiny sources R/ into a child of globalenv(), but ellmer::contents_replay()
+# resolves non-package S7 classes by name from shinychat's namespace, whose
+# parent chain reaches globalenv() but never descends into the app env. The
+# class must be visible there for saved history to replay.
+assign("ContentPromptStyle", ContentPromptStyle, envir = globalenv())
+
 output_styles <- c(
   "Friendly" = "friendly",
   "Pirate" = "pirate",
