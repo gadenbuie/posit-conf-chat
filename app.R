@@ -86,21 +86,7 @@ ui <- function(req) {
         "Full Schedule",
         value = "full_schedule",
         content_width = "100%",
-        HTML(
-          r"(
-<object
-    data="assets/schedule.pdf"
-    type="application/pdf"
-    width="100%"
-    height="800"
->
-    <p class="text-center m-5">
-        Your browser can’t display the schedule PDF.<br>
-        <a href="https://irp.cdn-website.com/d4d6e48c/files/uploaded/PST-Conf26-AgendaAtAGlance-preConf-v5.pdf" target="_blank" rel="noopener">View the Schedule at a Glance</a>.
-    </p>
-</object>
-        )"
-        )
+        div(class = "p-3", uiOutput("full_schedule"))
       )
     ),
     drawer = chat_drawer(
@@ -205,6 +191,10 @@ server <- function(input, output, session) {
   output$on_now <- renderUI({
     invalidateLater(60000)
     on_now_ui()
+  })
+
+  output$full_schedule <- renderUI({
+    full_schedule_ui()
   })
 
   observeEvent(input$my_agenda, {

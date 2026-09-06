@@ -209,7 +209,7 @@ card_talk <- function(content) {
       "card conf-card border-0 shadow-sm rounded-3 mb-2",
       if (is_keynote) "conf-card-keynote"
     ),
-    style = "max-width: 640px",
+    
     htmltools::tags$div(
       class = "card-body",
       htmltools::tags$div(
@@ -285,7 +285,7 @@ card_session <- function(content) {
   )
   htmltools::tags$div(
     class = "card conf-card border-0 shadow-sm rounded-3 mb-2",
-    style = "max-width: 640px",
+    
     htmltools::tags$div(
       class = "card-body",
       htmltools::tags$div(
@@ -325,7 +325,7 @@ card_workshop <- function(content) {
   }
   htmltools::tags$div(
     class = "card conf-card border-0 shadow-sm rounded-3 mb-2",
-    style = "max-width: 640px",
+    
     htmltools::tags$div(
       class = "card-body",
       htmltools::tags$div(
@@ -353,7 +353,7 @@ card_event <- function(content) {
   item <- content@item
   htmltools::tags$div(
     class = "card conf-card border-0 shadow-sm rounded-3 mb-2",
-    style = "max-width: 640px",
+    
     htmltools::tags$div(
       class = "card-body",
       htmltools::tags$div(
@@ -406,7 +406,7 @@ card_speaker <- function(content) {
   }
   htmltools::tags$div(
     class = "card conf-card border-0 shadow-sm rounded-3 mb-2",
-    style = "max-width: 640px",
+    
     htmltools::tags$div(
       class = "card-body",
       if (nzchar(image)) {
