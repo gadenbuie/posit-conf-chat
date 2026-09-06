@@ -203,6 +203,17 @@ card_md <- function(md) {
   htmltools::HTML(commonmark::markdown_html(md))
 }
 
+card_abstract <- function(md, lines = 2) {
+  md <- card_value(md)
+  if (!nzchar(md)) {
+    return(NULL)
+  }
+  htmltools::tag(
+    "collapsible-abstract",
+    list(text = md, lines = lines)
+  )
+}
+
 card_speaker_row <- function(sp) {
   name <- card_value(sp$full_name)
   image <- card_value(sp$image_url)
@@ -289,7 +300,7 @@ card_talk <- function(content) {
         sched_clock(item$end_time_event_local),
         item$effective_location_name
       ),
-      card_md(item$abstract),
+      card_abstract(item$abstract),
       card_speaker_list(content@speakers)
     )
   )
@@ -401,7 +412,7 @@ card_workshop <- function(content) {
         sched_clock(item$end_time_event_local),
         item$effective_location_name
       ),
-      card_md(item$abstract),
+      card_abstract(item$abstract),
       card_speaker_list(content@speakers)
     )
   )
@@ -428,7 +439,7 @@ card_event <- function(content) {
         sched_clock(item$end_time_event_local),
         item$effective_location_name
       ),
-      card_md(item$abstract),
+      card_abstract(item$abstract),
       card_speaker_list(content@speakers)
     )
   )

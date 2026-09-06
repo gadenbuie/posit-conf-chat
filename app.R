@@ -133,6 +133,7 @@ ui <- function(req) {
     },
     footer = tags$head(
       tags$script(src = "assets/agenda.js"),
+      tags$script(src = "assets/collapsible-abstract.js"),
       tags$link(rel = "stylesheet", href = "assets/custom.css")
     ),
     history = history_options(store = "memory"),
