@@ -83,8 +83,7 @@ ui <- function(req) {
       open = FALSE,
       p(
         class = "mt-auto border-top pt-3 small",
-        "We don't store your conversation history;",
-        "it resets in a new app session.",
+        "We don't keep your conversation history between sessions.",
         "Your agenda is saved in your browser."
       )
     ),
