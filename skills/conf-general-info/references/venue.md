@@ -1,3 +1,7 @@
+---
+learned-about: venue details
+---
+
 # posit::conf(2026) Venue Reference: Venue & Lobby
 
 Venue: Hilton Americas-Houston (1600 Lamar St, Houston, TX 77010)

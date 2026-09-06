@@ -1,3 +1,7 @@
+---
+learned-about: conf Code of Conduct
+---
+
 # posit::conf Code of Conduct
 
 Posit Software, PBC — September 28, 2023. Full text: https://posit.co/code-of-conduct/

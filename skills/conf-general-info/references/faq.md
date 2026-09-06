@@ -1,3 +1,7 @@
+---
+learned-about: frequently asked questions
+---
+
 # posit::conf(2026) FAQ
 
 ## General

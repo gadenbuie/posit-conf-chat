@@ -1,3 +1,7 @@
+---
+learned-about: the conf virtual experience
+---
+
 # posit::conf(2026) Quick Reference: Virtual Experience & Platform FAQs
 
 ## Platform, Browser Requirements & Login Access

@@ -1,3 +1,7 @@
+---
+learned-about: on-site extras
+---
+
 # posit::conf(2026) Quick Reference: On-Site Extras
 
 ## Photography & Lanyard Color-Coding System

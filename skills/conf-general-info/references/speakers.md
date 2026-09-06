@@ -1,3 +1,7 @@
+---
+learned-about: speaker details
+---
+
 # posit::conf(2026) Quick Reference: Speakers
 
 ## AV Equipment & Slide Specifications

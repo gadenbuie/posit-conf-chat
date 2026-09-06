@@ -1,5 +1,6 @@
 ---
 name: conf-general-info
+learned-about: "posit::conf info"
 description: Answers general questions about posit::conf(2026) that are not about the session schedule — pricing, registration, discounts, scholarships, refunds, workshops policy, venue and travel, accessibility, the virtual experience, and the code of conduct. Use when the attendee asks about costs, deadlines, policies, or logistics like the hotel, meals, badges, the mobile app, or the virtual portal. Do not use for session, talk, keynote, track, or speaker scheduling questions.
 ---
 

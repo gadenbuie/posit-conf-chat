@@ -1,3 +1,7 @@
+---
+learned-about: conf pricing
+---
+
 # posit::conf(2026) Pricing
 
 ## In-person passes

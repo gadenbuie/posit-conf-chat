@@ -35,7 +35,21 @@ skills_path <- function(skill, reference = NULL) {
 }
 
 skills_read <- function(skill, reference = NULL) {
-  frontmatter::read_front_matter(skills_path(skill, reference))$body
+  sk <- frontmatter::read_front_matter(skills_path(skill, reference))
+  ellmer::ContentToolResult(
+    value = sk$body,
+    extra = list(
+      display = tool_result_display(
+        title = if (!is.null(sk$data[["learned-about"]])) {
+          sprintf("Learned about %s", sk$data[["learned-about"]])
+        } else {
+          "Learned from skill"
+        },
+        show_request = FALSE,
+        markdown = sk$body
+      )
+    )
+  )
 }
 
 skills_list <- function() {
@@ -119,7 +133,7 @@ skills_tool <- function() {
       )
     ),
     annotations = ellmer::tool_annotations(
-      title = "Reading skill",
+      title = "Learning...",
       icon = bsicons::bs_icon("book")
     )
   )
