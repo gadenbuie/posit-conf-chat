@@ -158,7 +158,18 @@ nav .shiny-chat-page-nav-link[aria-current="page"] {
   border-color: rgba(187, 248, 27, 0.3);
 }
 
+/* ---- Tweaks and Fixes ---- */
 .shiny-chat-page-panel[data-page-value="on_now"] {
     background-color: var(--bslib-dashboard-main-bg);
     height: max-content;
+    min-height: 100%;
+}
+
+#chat-sidebar[aria-hidden="false"] + .shiny-chat-page-main .shiny-chat-wrapper {
+    padding-inline: 1em;
+}
+
+.shiny-chat-layout[data-drawer-open] .shiny-chat-wrapper {
+    padding-left: 1em;
+    padding-right: 0;
 }
