@@ -35,6 +35,9 @@ skills_path <- function(skill, reference = NULL) {
 }
 
 skills_read <- function(skill, reference = NULL) {
+  cli::cli_inform(
+    "Reading skill {skill} with reference {reference %||% 'none'}"
+  )
   sk <- frontmatter::read_front_matter(skills_path(skill, reference))
   ellmer::ContentToolResult(
     value = sk$body,
@@ -98,8 +101,9 @@ skills_tool <- function() {
     name = "skill",
     description = paste0(
       "Read the full instructions of an available skill, or one of its ",
-      "reference files. Load a skill before answering questions it covers; ",
-      "load only the reference files the task calls for."
+      "reference files. Call it with just the skill name first; the ",
+      "skill's instructions list its reference files and when each one ",
+      "is relevant. Then load only the references the question calls for."
     ),
     arguments = list(
       skill = ellmer::type_string(
@@ -107,9 +111,9 @@ skills_tool <- function() {
       ),
       reference = ellmer::type_string(
         paste(
-          "Optional: a reference document within the skill, e.g. 'faq',",
-          "'faq.md', or 'references/faq.md'.",
-          "Omit to read the skill's own instructions."
+          "Optional: a reference document within the skill, using the",
+          "name given in the skill's instructions. Omit to read the",
+          "skill's own instructions; you must load those first."
         )
       )
     ),
