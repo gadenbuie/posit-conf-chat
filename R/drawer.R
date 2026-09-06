@@ -8,8 +8,13 @@ agenda_drawer_content <- function(ids) {
       htmltools::tags$em("\u201cAdd the Quarto workshop to my agenda.\u201d")
     ))
   }
-  rows <- lapply(ids, function(id) {
-    s <- sched_summary(resolve_item(id))
+  summaries <- lapply(ids, function(id) sched_summary(resolve_item(id)))
+  summaries <- summaries[order(
+    vapply(summaries, function(s) s$date, character(1)),
+    vapply(summaries, function(s) s$start, character(1))
+  )]
+  rows <- lapply(summaries, function(s) {
+    id <- s$id
     when <- paste(
       trimws(format(as.Date(s$date), "%a, %b %e")),
       paste0(s$start, "\u2013", s$end)
