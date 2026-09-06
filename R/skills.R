@@ -88,26 +88,7 @@ skills_prompt <- function() {
       skill$description,
       ""
     )
-    if (length(skill$references) > 0) {
-      lines <- c(
-        lines,
-        paste0(
-          "Reference files: ",
-          paste(skill$references, collapse = ", ")
-        ),
-        ""
-      )
-    }
   }
-  lines <- c(
-    lines,
-    paste0(
-      "Use the skill() tool to load a skill's instructions ",
-      "(argument `skill`), or to load a reference file ",
-      "(argument `reference`, the file name from the list above)."
-    ),
-    ""
-  )
   paste(lines, collapse = "\n")
 }
 

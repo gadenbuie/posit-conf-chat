@@ -16,6 +16,8 @@ Answer general conference questions from the reference files below. Only use the
 - Register: https://conf.posit.co/2026/registration
 - Website: https://conf.posit.co/2026
 - Registration Desk: main conference foyer (follow Posit signage); check in with your confirmation email/QR code or photo ID. Route all registration, payment, and ticket questions here.
+- Discord server: there is an official Posit Conference Discord — invitation links go out in the registration confirmation email and inside the event portal; it has #conf-help / #troubleshooting channels for access issues.
+- Mobile app: the conference mobile app is available to registered attendees (download instructions by email) and has the full agenda, session Q&A, and the venue map.
 - Wi-Fi: credentials are printed on attendee badges.
 - Workshop materials: https://github.com/posit-conf-2026/ (posted before the workshops begin).
 
