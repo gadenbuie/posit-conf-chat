@@ -39,4 +39,5 @@ Load the relevant file on demand — don't read all of them for every question:
 - **Registration and payment mechanics** (payment methods, invoices, receipts, POs, W-9s, taxes/VAT, upgrades, transfer details, ticket status): don't try to answer these. Explain that the Registration Desk or conf@posit.co handles them and point the attendee there.
 - For refund, transfer, or workshop-switch requests, describe the policy and the contact email or desk; don't attempt to make changes.
 - For schedule, session, talk, keynote, or speaker questions, use the scheduling tools instead — this skill is only for general conference questions.
+- Answer only the question the attendee asked. The references contain a lot of adjacent facts — don't volunteer extras they didn't request, and don't pad short answers with related tidbits.
 - Keep answers short and friendly; link to the relevant conf.posit.co page when useful.
