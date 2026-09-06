@@ -114,7 +114,8 @@ skills_tool <- function() {
           "Optional: a reference document within the skill, using the",
           "name given in the skill's instructions. Omit to read the",
           "skill's own instructions; you must load those first."
-        )
+        ),
+        required = FALSE
       )
     ),
     annotations = ellmer::tool_annotations(
