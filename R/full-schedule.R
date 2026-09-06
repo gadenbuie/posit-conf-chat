@@ -83,27 +83,30 @@ full_schedule_sidebar <- function() {
   choices <- full_schedule_choices()
   bslib::sidebar(
     width = 280,
-    radioButtons(
-      "schedule_format",
-      "Format",
-      choices = format_choices,
-      selected = "all"
-    ),
-    conditionalPanel(
-      condition = "input.schedule_format != 'virtual'",
-      selectInput(
-        "schedule_location",
-        "Location",
-        choices = c("All" = "", choices$locations),
-        selected = ""
+    div(
+      class = "full-schedule-filters",
+      radioButtons(
+        "schedule_format",
+        "Format",
+        choices = format_choices,
+        selected = "all"
+      ),
+      conditionalPanel(
+        condition = "input.schedule_format != 'virtual'",
+        selectInput(
+          "schedule_location",
+          "Location",
+          choices = c("All" = "", choices$locations),
+          selected = ""
+        )
+      ),
+      selectizeInput(
+        "schedule_speaker",
+        "Speaker",
+        choices = c("All" = "", choices$speakers),
+        selected = "",
+        options = list(placeholder = "All speakers")
       )
-    ),
-    selectizeInput(
-      "schedule_speaker",
-      "Speaker",
-      choices = c("All" = "", choices$speakers),
-      selected = "",
-      options = list(placeholder = "All speakers")
     )
   )
 }
