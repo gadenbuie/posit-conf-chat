@@ -305,7 +305,11 @@ server <- function(input, output, session) {
   chat$history$on_restore(function(values) {
     style <- values$output_style %||% default_output_style
     current_style(style)
-    bslib::update_toolbar_input_select("output_style", selected = style)
+    bslib::update_toolbar_input_select(
+      "output_style",
+      choices = output_styles,
+      selected = style
+    )
   })
 }
 
