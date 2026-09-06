@@ -130,12 +130,7 @@ server <- function(input, output, session) {
     agenda_ids
   )
 
-  observe({
-    query <- shiny::parseQueryString(session$clientData$url_search)
-    if (!is.null(query$now)) {
-      session$userData$now_override <- query$now
-    }
-  })
+  # Schedule outputs ----
 
   output$on_now <- renderUI({
     invalidateLater(60000)
@@ -151,27 +146,13 @@ server <- function(input, output, session) {
     )
   })
 
-  observeEvent(input$my_agenda, {
-    # The page-chat root element is addressable as "<id>_page".
-    bslib::nav_select("chat_page", "__home__", session = session)
-    chat_drawer_show("chat", title = "My Agenda")
-  })
+  # URL query string state ----
 
-  observeEvent(input$agenda_add, {
-    id <- input$agenda_add
-    tryCatch(
-      {
-        conflicts <- agenda_conflicts_for(id, agenda_ids)
-        manage_agenda("add", id, agenda_ids = agenda_ids, force = TRUE)
-        toast_agenda_added(id, conflicts)
-      },
-      error = toast_agenda_add_error
-    )
-  })
-
-  observeEvent(input$agenda_show_from_toast, {
-    bslib::nav_select("chat_page", "__home__", session = session)
-    chat_drawer_show("chat", title = "My Agenda")
+  observe({
+    query <- shiny::parseQueryString(session$clientData$url_search)
+    if (!is.null(query$now)) {
+      session$userData$now_override <- query$now
+    }
   })
 
   observeEvent(session$clientData$url_search, once = TRUE, {
@@ -217,6 +198,31 @@ server <- function(input, output, session) {
     ignoreInit = TRUE
   )
 
+  # Agenda ----
+
+  observeEvent(input$my_agenda, {
+    # The page-chat root element is addressable as "<id>_page".
+    bslib::nav_select("chat_page", "__home__", session = session)
+    chat_drawer_show("chat", title = "My Agenda")
+  })
+
+  observeEvent(input$agenda_add, {
+    id <- input$agenda_add
+    tryCatch(
+      {
+        conflicts <- agenda_conflicts_for(id, agenda_ids)
+        manage_agenda("add", id, agenda_ids = agenda_ids, force = TRUE)
+        toast_agenda_added(id, conflicts)
+      },
+      error = toast_agenda_add_error
+    )
+  })
+
+  observeEvent(input$agenda_show_from_toast, {
+    bslib::nav_select("chat_page", "__home__", session = session)
+    chat_drawer_show("chat", title = "My Agenda")
+  })
+
   observeEvent(input$agenda_restore, {
     ids <- valid_agenda_ids(input$agenda_restore)
     if (length(ids)) {
@@ -239,6 +245,8 @@ server <- function(input, output, session) {
     manage_agenda("remove", input$agenda_remove, agenda_ids = agenda_ids)
     toast_agenda_removed(input$agenda_remove)
   })
+
+  # Chat ----
 
   chat_server(
     "chat",
