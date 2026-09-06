@@ -86,6 +86,7 @@ ui <- function(req) {
         "Full Schedule",
         value = "full_schedule",
         content_width = "100%",
+        sidebar = full_schedule_sidebar(),
         div(class = "p-3", uiOutput("full_schedule"))
       )
     ),
@@ -194,7 +195,11 @@ server <- function(input, output, session) {
   })
 
   output$full_schedule <- renderUI({
-    full_schedule_ui()
+    full_schedule_ui(
+      fmt = input$schedule_format %||% "all",
+      location = input$schedule_location %||% "",
+      speaker = input$schedule_speaker %||% ""
+    )
   })
 
   observeEvent(input$my_agenda, {
