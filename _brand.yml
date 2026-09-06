@@ -15,8 +15,12 @@ color:
     black: "#151515"
     white: "#FFFFFF"
 
-  foreground: navy
-  background: white
+  foreground:
+    light: navy
+    dark: "#E7EEFF"
+  background:
+    light: white
+    dark: "#0D1128"
   primary: blue
   secondary: navy
   success: "#2C7A4B"
