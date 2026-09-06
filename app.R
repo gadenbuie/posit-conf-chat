@@ -19,21 +19,17 @@ greeting_dynamic <- Sys.getenv("GREETING_DYNAMIC", "no") == "yes"
 # the first env var that is set, falling back to the default shown.
 chat_spec <- env_chat_spec(
   provider = "POSIT_CONF_PROVIDER",
-  model = "POSIT_CONF_MODEL"
+  model = "POSIT_CONF_MODEL",
+  default_provider = "posit",
+  default_model = "zai-org/GLM-5.3-Flash"
 )
 
 # The greeting client falls back to the main chat env vars before defaults.
 greeting_spec <- env_chat_spec(
   provider = c("POSIT_CONF_GREETING_PROVIDER", "POSIT_CONF_PROVIDER"),
-  model = c("POSIT_CONF_GREETING_MODEL", "POSIT_CONF_MODEL")
-)
-
-greeting_header <- paste0(
-  '<p class="greeting-header mb-3">',
-  '<a href="https://conf.posit.co/2026/" target="_blank" rel="noopener">',
-  '<img src="assets/posit-conf-header.png" alt="posit::conf(2026)" ',
-  'style="max-width:100%; max-height:150px; border-radius:8px">',
-  '</a></p>\n\n'
+  model = c("POSIT_CONF_GREETING_MODEL", "POSIT_CONF_MODEL"),
+  default_provider = "posit",
+  default_model = "zai-org/GLM-5.3-Flash"
 )
 
 shiny::addResourcePath("assets", "assets")
@@ -104,70 +100,35 @@ ui <- function(req) {
       tags$link(rel = "stylesheet", href = "assets/custom.css")
     ),
     history = history_options(store = "memory"),
-    greeting = if (!greeting_dynamic) {
-      greeting_md <- paste(
-        readLines("greeting.md", warn = FALSE),
-        collapse = "\n"
-      )
-      chat_greeting(paste0(greeting_header, greeting_md))
-    }
+    greeting = if (!greeting_dynamic) static_greeting()
   )
 }
 
 server <- function(input, output, session) {
+  agenda_ids <- reactiveVal(character())
+
+  # Create ellmer clients (see R/client.R) ----
   system_prompt <- ellmer::interpolate_file(
     "prompt-system.md",
     date = Sys.Date(),
     skills = skills_prompt()
   )
-
-  client <- ellmer::chat(
-    chat_spec$name,
-    system_prompt = system_prompt
+  greeting_prompt <- ellmer::interpolate_file(
+    "prompt-greeting.md",
+    date = Sys.Date()
   )
 
-  agenda_ids <- reactiveVal(character())
-
-  greeting_cache <- NULL
-
-  generate_greeting <- function() {
-    if (!is.null(greeting_cache)) {
-      return(chat_greeting(greeting_cache))
-    }
-    greeting_client <- ellmer::chat(
-      greeting_spec$name,
-      system_prompt = ellmer::interpolate_file(
-        "prompt-greeting.md",
-        date = Sys.Date()
-      )
-    )
-    greeting_client$register_tool(on_now_tool)
-    greeting_client$register_tool(show_agenda_tool(agenda_ids))
-    greeting_stream <- coro::async_generator(function() {
-      collected <- greeting_header
-      yield(greeting_header)
-      stream <- greeting_client$stream_async(
-        paste(
-          "Generate the greeting now. Start directly with the greeting text. ",
-          "Do not restate, summarize, or refer to these instructions."
-        ),
-        stream = "content"
-      )
-      for (chunk in await_each(stream)) {
-        if (S7::S7_inherits(chunk, ellmer::ContentThinking)) {
-          next
-        }
-        if (S7::S7_inherits(chunk, ellmer::ContentText)) {
-          collected <- paste0(collected, chunk@text)
-          yield(chunk@text)
-        }
-      }
-      greeting_cache <<- collected
-      invisible()
-    })()
-
-    chat_greeting(greeting_stream)
-  }
+  client <- new_agent_client(
+    chat_spec,
+    system_prompt,
+    store_location,
+    agenda_ids
+  )
+  generate_greeting <- greeting_generator(
+    greeting_spec,
+    greeting_prompt,
+    agenda_ids
+  )
 
   observe({
     query <- shiny::parseQueryString(session$clientData$url_search)
@@ -175,30 +136,6 @@ server <- function(input, output, session) {
       session$userData$now_override <- query$now
     }
   })
-
-  store <- ragnar::ragnar_store_connect(store_location)
-  ragnar::ragnar_register_tool_retrieve(
-    client,
-    store,
-    paste(
-      "posit::conf(2026) Schedule.",
-      "",
-      "Results include each item's record_id in the origin column.",
-      "Use show_item() to present an item in detail,",
-      "and query_schedule() for exact times, rooms, and tracks.",
-      sep = "\n"
-    ),
-    name = "search_schedule",
-    title = "Searching the conf schedule"
-  )
-  client$register_tool(search_tool_with_intent(client))
-
-  client$register_tool(list_schedule_options_tool)
-  client$register_tool(skills_tool())
-  client$register_tool(query_schedule)
-  client$register_tool(show_item_tool)
-  client$register_tool(on_now_tool)
-  client$register_tool(agenda_tool(agenda_ids))
 
   output$on_now <- renderUI({
     invalidateLater(60000)
