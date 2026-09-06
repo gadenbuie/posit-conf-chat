@@ -72,6 +72,26 @@ ui <- function(req) {
         "On Now",
         value = "on_now",
         div(class = "p-3", uiOutput("on_now"))
+      ),
+      chat_nav_panel(
+        "Full Schedule",
+        value = "full_schedule",
+        content_width = "100%",
+        HTML(
+          r"(
+<object
+    data="assets/schedule.pdf"
+    type="application/pdf"
+    width="100%"
+    height="800"
+>
+    <p class="text-center m-5">
+        Your browser can’t display the schedule PDF.<br>
+        <a href="https://irp.cdn-website.com/d4d6e48c/files/uploaded/PST-Conf26-AgendaAtAGlance-preConf-v5.pdf" target="_blank" rel="noopener">View the Schedule at a Glance</a>.
+    </p>
+</object>
+        )"
+        )
       )
     ),
     drawer = chat_drawer(
