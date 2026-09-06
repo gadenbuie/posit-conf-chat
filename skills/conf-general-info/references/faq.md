@@ -47,7 +47,7 @@ Details:
 
 - Call for papers: closed (it ran January 15 – February 20).
 - Accepted speakers get waived registration.
-- Selected speakers may get needs-based travel assistance (flights, accommodations, and possibly child/elder care). This is a speaker program only, not an attendee service.
+- Selected speakers may get needs-based travel assistance (flights and accommodations; other needs case-by-case). This is a speaker program only, not an attendee service.
 
 ## Registration
 
@@ -81,4 +81,4 @@ Details:
 
 - The negotiated conference hotel rate ($279/night) booking deadline has passed (August 24); contact the Hilton Americas-Houston directly for availability.
 - See [venue.md](venue.md) for airports, parking, badge pickup, Wi-Fi, meals, and evening events.
-- No childcare is offered this year (and no attendee care services of any kind; the speaker-only travel assistance program above does not apply).
+- No childcare is offered this year.
