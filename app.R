@@ -66,7 +66,8 @@ ui <- function(req) {
         icon = bsicons::bs_icon("bookmark-star-fill"),
         tooltip = "Open your saved agenda"
       ),
-      bslib::input_dark_mode()
+      bslib::input_dark_mode(),
+      about_trigger()
     ),
     toolbar_input = bslib::toolbar(
       align = "left",
@@ -220,6 +221,10 @@ server <- function(input, output, session) {
     # The page-chat root element is addressable as "<id>_page".
     bslib::nav_select("chat_page", "__home__", session = session)
     chat_drawer_show("chat", title = "My Agenda")
+  })
+
+  observeEvent(input$about, {
+    bslib::show_offcanvas(about_offcanvas(), session = session)
   })
 
   observeEvent(input$agenda_add, {
