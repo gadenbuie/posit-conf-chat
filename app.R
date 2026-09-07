@@ -315,6 +315,8 @@ server <- function(input, output, session) {
       selected = style
     )
   })
+
+  register_slash_commands(chat, current_style)
 }
 
 shinyApp(ui, server)
