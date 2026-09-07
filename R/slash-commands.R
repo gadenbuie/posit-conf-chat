@@ -88,6 +88,15 @@ register_slash_commands <- function(chat, current_style) {
     },
     echo = FALSE
   )
+
+  chat$slash_command(
+    "new",
+    "Start a new conversation",
+    function() {
+      chat$clear(greeting = TRUE)
+    },
+    echo = FALSE
+  )
 }
 
 style_slug_from_text <- function(text, current_slug) {
