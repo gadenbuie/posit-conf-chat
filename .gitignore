@@ -1,6 +1,5 @@
 .renvignore
 *.wal
-data/ragnar.duckdb
 .posit/
 
 renv.lock
