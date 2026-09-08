@@ -6,8 +6,9 @@ greeting_header <- paste0(
   '</a></p>\n\n'
 )
 
-new_chat_client <- function(spec, system_prompt) {
-  ellmer::chat(spec$name, system_prompt = system_prompt)
+new_chat_client <- function(spec, system_prompt, api_args = NULL) {
+  api_args <- api_args %||% env_json("POSIT_CONF_API_ARGS") %||% list()
+  ellmer::chat(spec$name, system_prompt = system_prompt, api_args = api_args)
 }
 
 new_agent_client <- function(spec, system_prompt, store_location, agenda_ids) {
@@ -43,7 +44,14 @@ new_agent_client <- function(spec, system_prompt, store_location, agenda_ids) {
 # `context` is injected as a user turn ahead of the generate request, so the
 # system prompt stays stable and cacheable across sessions.
 new_greeting_client <- function(spec, system_prompt, context, agenda_ids) {
-  client <- new_chat_client(spec, system_prompt)
+  client <- new_chat_client(
+    spec,
+    system_prompt,
+    api_args = env_json(
+      "POSIT_CONF_GREETING_API_ARGS",
+      "POSIT_CONF_API_ARGS"
+    )
+  )
   client$set_turns(list(ellmer::Turn(
     "user",
     list(ellmer::ContentText(context))

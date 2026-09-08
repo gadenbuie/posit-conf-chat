@@ -12,6 +12,14 @@ env_var_first <- function(names, default = NULL) {
   do.call(env_var, c(as.list(names), list(default = default)))
 }
 
+env_json <- function(..., default = NULL) {
+  json <- env_var(..., default = default)
+  if (is.null(json)) {
+    return(NULL)
+  }
+  jsonlite::fromJSON(json, simplifyDataFrame = FALSE)
+}
+
 env_chat_spec <- function(
   provider,
   model,
