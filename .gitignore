@@ -1,5 +1,3 @@
 .renvignore
 *.wal
 .posit/
-
-renv.lock

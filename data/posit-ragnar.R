@@ -87,3 +87,5 @@ store <- ragnar_store_create(
 
 ragnar_store_insert(store, chunks)
 ragnar_store_build_index(store, type = "fts")
+
+DBI::dbDisconnect(store@con)
