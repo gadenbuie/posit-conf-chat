@@ -87,6 +87,36 @@
         "RemoteSha": "1.7-6"
       }
     },
+    "PKI": {
+      "Source": "CRAN",
+      "Repository": "https://cloud.r-project.org",
+      "description": {
+        "Package": "PKI",
+        "Version": "0.1-15",
+        "Title": "Public Key Infrastucture for R Based on the X.509 Standard",
+        "Authors@R": "person(\"Simon\", \"Urbanek\", role=c(\"aut\",\"cre\",\"cph\"), email=\"Simon.Urbanek@r-project.org\", comment=c(\"https://urbanek.nz\", ORCID=\"0000-0003-2297-1732\"))",
+        "Maintainer": "Simon Urbanek <Simon.Urbanek@r-project.org>",
+        "Depends": "R (>= 2.9.0), base64enc",
+        "Enhances": "gmp",
+        "Description": "Public Key Infrastucture functions such as verifying certificates, RSA encription and signing which can be used to build PKI infrastructure and perform cryptographic tasks.",
+        "License": "GPL-2 | GPL-3 | file LICENSE",
+        "URL": "http://www.rforge.net/PKI",
+        "SystemRequirements": "OpenSSL library and headers (openssl-dev or\nsimilar)",
+        "NeedsCompilation": "yes",
+        "Packaged": "2025-08-19 06:20:08 UTC; rforge",
+        "Author": "Simon Urbanek [aut, cre, cph] (https://urbanek.nz, ORCID:\n    <https://orcid.org/0000-0003-2297-1732>)",
+        "Repository": "CRAN",
+        "Date/Publication": "2025-08-19 08:30:19 UTC",
+        "Built": "R 4.6.0; aarch64-apple-darwin23; 2026-04-25 19:11:17 UTC; unix",
+        "Archs": "PKI.so.dSYM",
+        "RemoteType": "standard",
+        "RemotePkgRef": "PKI",
+        "RemoteRef": "PKI",
+        "RemoteRepos": "https://cloud.r-project.org",
+        "RemotePkgPlatform": "aarch64-apple-darwin23",
+        "RemoteSha": "0.1-15"
+      }
+    },
     "R6": {
       "Source": "CRAN",
       "Repository": "https://cloud.r-project.org",
@@ -1391,6 +1421,41 @@
         "RemoteSha": "1.3.0"
       }
     },
+    "jose": {
+      "Source": "CRAN",
+      "Repository": "https://cloud.r-project.org",
+      "description": {
+        "Package": "jose",
+        "Type": "Package",
+        "Title": "JavaScript Object Signing and Encryption",
+        "Version": "2.0.0",
+        "Authors@R": "person(\"Jeroen\", \"Ooms\", role = c(\"aut\", \"cre\"), \n    email = \"jeroenooms@gmail.com\", comment = c(ORCID = \"0000-0002-4035-0289\"))",
+        "Description": "Read and write JSON Web Keys (JWK, rfc7517), generate and verify JSON\n    Web Signatures (JWS, rfc7515) and encode/decode JSON Web Tokens (JWT, rfc7519)\n    <https://datatracker.ietf.org/wg/jose/documents/>. These standards provide \n    modern signing and encryption formats that are natively supported by browsers\n    via the JavaScript WebCryptoAPI <https://www.w3.org/TR/webcrypto/#jose>, \n    and used by services like OAuth 2.0, LetsEncrypt, and Github Apps.",
+        "License": "MIT + file LICENSE",
+        "URL": "https://r-lib.r-universe.dev/jose",
+        "BugReports": "https://github.com/r-lib/jose/issues",
+        "Depends": "openssl (>= 1.2.1)",
+        "Imports": "jsonlite",
+        "RoxygenNote": "7.3.3.9000",
+        "VignetteBuilder": "knitr",
+        "Suggests": "spelling, testthat, knitr, rmarkdown",
+        "Encoding": "UTF-8",
+        "Language": "en-US",
+        "NeedsCompilation": "no",
+        "Packaged": "2026-04-21 21:15:42 UTC; jeroen",
+        "Author": "Jeroen Ooms [aut, cre] (ORCID: <https://orcid.org/0000-0002-4035-0289>)",
+        "Maintainer": "Jeroen Ooms <jeroenooms@gmail.com>",
+        "Repository": "CRAN",
+        "Date/Publication": "2026-04-22 06:40:03 UTC",
+        "Built": "R 4.6.0; ; 2026-04-26 02:29:16 UTC; unix",
+        "RemoteType": "standard",
+        "RemotePkgRef": "jose",
+        "RemoteRef": "jose",
+        "RemoteRepos": "https://cloud.r-project.org",
+        "RemotePkgPlatform": "aarch64-apple-darwin23",
+        "RemoteSha": "2.0.0"
+      }
+    },
     "jquerylib": {
       "Source": "CRAN",
       "Repository": "https://cloud.r-project.org",
@@ -1831,6 +1896,40 @@
         "Date/Publication": "2026-04-08 09:00:02 UTC",
         "Built": "R 4.6.0; aarch64-apple-darwin23; 2026-04-25 21:01:51 UTC; unix",
         "Archs": "otelsdk.so.dSYM"
+      }
+    },
+    "packrat": {
+      "Source": "CRAN",
+      "Repository": "https://cloud.r-project.org",
+      "description": {
+        "Type": "Package",
+        "Package": "packrat",
+        "Title": "A Dependency Management System for Projects and their R Package\nDependencies",
+        "Version": "0.9.3",
+        "Authors@R": "c(\n    person(\"Aron\", \"Atkins\", , \"aron@posit.co\", role = c(\"aut\", \"cre\")),\n    person(\"Toph\", \"Allen\", role = \"aut\"),\n    person(\"Kevin\", \"Ushey\", role = \"aut\"),\n    person(\"Jonathan\", \"McPherson\", role = \"aut\"),\n    person(\"Joe\", \"Cheng\", role = \"aut\"),\n    person(\"JJ\", \"Allaire\", role = \"aut\"),\n    person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\"))\n  )",
+        "Description": "Manage the R packages your project depends on in an isolated,\n    portable, and reproducible way.",
+        "License": "GPL-2",
+        "URL": "https://github.com/rstudio/packrat",
+        "BugReports": "https://github.com/rstudio/packrat/issues",
+        "Depends": "R (>= 3.0.0)",
+        "Imports": "tools, utils",
+        "Suggests": "devtools, httr, knitr, mockery, rmarkdown, testthat (>=\n3.0.0), webfakes, withr",
+        "Config/testthat/edition": "3",
+        "Encoding": "UTF-8",
+        "RoxygenNote": "7.3.2",
+        "NeedsCompilation": "no",
+        "Packaged": "2025-06-16 19:37:19 UTC; aron",
+        "Author": "Aron Atkins [aut, cre],\n  Toph Allen [aut],\n  Kevin Ushey [aut],\n  Jonathan McPherson [aut],\n  Joe Cheng [aut],\n  JJ Allaire [aut],\n  Posit Software, PBC [cph, fnd]",
+        "Maintainer": "Aron Atkins <aron@posit.co>",
+        "Repository": "CRAN",
+        "Date/Publication": "2025-06-16 20:00:02 UTC",
+        "Built": "R 4.6.0; ; 2026-04-25 17:41:47 UTC; unix",
+        "RemoteType": "standard",
+        "RemotePkgRef": "packrat",
+        "RemoteRef": "packrat",
+        "RemoteRepos": "https://cloud.r-project.org",
+        "RemotePkgPlatform": "aarch64-apple-darwin23",
+        "RemoteSha": "0.9.3"
       }
     },
     "pillar": {
@@ -2316,6 +2415,69 @@
         "Built": "R 4.6.0; ; 2026-04-25 15:48:39 UTC; unix"
       }
     },
+    "rsconnect": {
+      "Source": "CRAN",
+      "Repository": "https://cloud.r-project.org",
+      "description": {
+        "Type": "Package",
+        "Package": "rsconnect",
+        "Title": "Deploy Docs, Apps, and APIs to 'Posit Connect', 'shinyapps.io',\nand 'RPubs'",
+        "Version": "1.10.0",
+        "Authors@R": "c(\n    person(\"Aron\", \"Atkins\", , \"aron@posit.co\", role = c(\"aut\", \"cre\")),\n    person(\"Toph\", \"Allen\", role = \"aut\"),\n    person(\"Hadley\", \"Wickham\", role = \"aut\"),\n    person(\"Jonathan\", \"McPherson\", role = \"aut\"),\n    person(\"JJ\", \"Allaire\", role = \"aut\"),\n    person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\"))\n  )",
+        "Description": "Programmatic deployment interface for 'RPubs',\n    'shinyapps.io', and 'Posit Connect'. Supported content types include R\n    Markdown documents, Shiny applications, Plumber APIs, plots, and\n    static web content.",
+        "License": "GPL-2",
+        "URL": "https://rstudio.github.io/rsconnect/,\nhttps://github.com/rstudio/rsconnect",
+        "BugReports": "https://github.com/rstudio/rsconnect/issues",
+        "Depends": "R (>= 3.5.0)",
+        "Imports": "cli, curl (>= 7.0.0), digest, httr2, jsonlite, lifecycle,\nopenssl (>= 2.0.0), PKI, packrat (>= 0.6), renv (>= 1.0.0),\nrlang (>= 1.0.0), rstudioapi (>= 0.18.0), snowflakeauth, tools,\nyaml (>= 2.1.5), utils",
+        "Suggests": "Biobase, BiocManager, foreign, knitr, MASS, plumber (>=\n0.3.2), quarto, reticulate, rmarkdown (>= 1.1), shiny, testthat\n(>= 3.1.9), webfakes, withr",
+        "VignetteBuilder": "knitr, rmarkdown",
+        "Config/Needs/website": "tidyverse/tidytemplate",
+        "Config/testthat/edition": "3",
+        "Config/testthat/parallel": "true",
+        "Config/Python/Note": "Python <= 3.10 requires tomllib package for\npyproject.toml parsing",
+        "Encoding": "UTF-8",
+        "Config/roxygen2/version": "8.0.0",
+        "NeedsCompilation": "no",
+        "Packaged": "2026-06-08 19:16:41 UTC; aron",
+        "Author": "Aron Atkins [aut, cre],\n  Toph Allen [aut],\n  Hadley Wickham [aut],\n  Jonathan McPherson [aut],\n  JJ Allaire [aut],\n  Posit Software, PBC [cph, fnd]",
+        "Maintainer": "Aron Atkins <aron@posit.co>",
+        "Repository": "CRAN",
+        "Date/Publication": "2026-06-08 19:50:02 UTC",
+        "Built": "R 4.6.0; ; 2026-06-08 22:17:28 UTC; unix"
+      }
+    },
+    "rstudioapi": {
+      "Source": "CRAN",
+      "Repository": "https://cloud.r-project.org",
+      "description": {
+        "Package": "rstudioapi",
+        "Title": "Safely Access the RStudio API",
+        "Description": "Access the RStudio API (if available) and provide informative error\n    messages when it's not.",
+        "Version": "0.19.0",
+        "Authors@R": "c(\n    person(\"Kevin\", \"Ushey\", role = c(\"aut\", \"cre\"), email = \"kevin@rstudio.com\"),\n    person(\"JJ\", \"Allaire\", role = c(\"aut\"), email = \"jj@posit.co\"),\n    person(\"Hadley\", \"Wickham\", role = c(\"aut\"), email = \"hadley@posit.co\"),\n    person(\"Gary\", \"Ritchie\", role = c(\"aut\"), email = \"gary@posit.co\"),\n    person(family = \"RStudio\", role = \"cph\")\n    )",
+        "Maintainer": "Kevin Ushey <kevin@rstudio.com>",
+        "License": "MIT + file LICENSE",
+        "URL": "https://rstudio.github.io/rstudioapi/,\nhttps://github.com/rstudio/rstudioapi",
+        "BugReports": "https://github.com/rstudio/rstudioapi/issues",
+        "Suggests": "testthat, knitr, rmarkdown, clipr, covr, curl, jsonlite, R6,\nwithr",
+        "VignetteBuilder": "knitr",
+        "Encoding": "UTF-8",
+        "Config/roxygen2/version": "8.0.0",
+        "NeedsCompilation": "no",
+        "Packaged": "2026-06-11 21:44:33 UTC; kevin",
+        "Author": "Kevin Ushey [aut, cre],\n  JJ Allaire [aut],\n  Hadley Wickham [aut],\n  Gary Ritchie [aut],\n  RStudio [cph]",
+        "Repository": "CRAN",
+        "Date/Publication": "2026-06-11 23:10:02 UTC",
+        "Built": "R 4.6.0; ; 2026-06-12 01:39:39 UTC; unix",
+        "RemoteType": "standard",
+        "RemotePkgRef": "rstudioapi",
+        "RemoteRef": "rstudioapi",
+        "RemoteRepos": "https://cloud.r-project.org",
+        "RemotePkgPlatform": "aarch64-apple-darwin23",
+        "RemoteSha": "0.19.0"
+      }
+    },
     "rvest": {
       "Source": "CRAN",
       "Repository": "https://cloud.r-project.org",
@@ -2374,13 +2536,7 @@
         "Repository": "CRAN",
         "Date/Publication": "2025-04-11 19:50:02 UTC",
         "Built": "R 4.6.0; aarch64-apple-darwin23; 2026-04-26 02:19:08 UTC; unix",
-        "Archs": "sass.so.dSYM",
-        "RemoteType": "standard",
-        "RemotePkgRef": "sass",
-        "RemoteRef": "sass",
-        "RemoteRepos": "https://cloud.r-project.org",
-        "RemotePkgPlatform": "aarch64-apple-darwin23",
-        "RemoteSha": "0.4.10"
+        "Archs": "sass.so.dSYM"
       }
     },
     "selectr": {
@@ -2479,20 +2635,52 @@
         "RemoteHost": "api.github.com",
         "RemoteRepo": "shinychat",
         "RemoteUsername": "posit-dev",
-        "RemotePkgRef": "posit-dev/shinychat/pkg-r",
+        "RemotePkgRef": "posit-dev/shinychat",
         "RemoteRef": "HEAD",
-        "RemoteSha": "20b8fd72c0bd6b3956b0a4ed765037accdca2cd8",
+        "RemoteSha": "a8445ce230388329fe06d80fdd947fb99e4d98f4",
         "RemoteSubdir": "pkg-r",
         "GithubRepo": "shinychat",
         "GithubUsername": "posit-dev",
         "GithubRef": "HEAD",
-        "GithubSHA1": "20b8fd72c0bd6b3956b0a4ed765037accdca2cd8",
+        "GithubSHA1": "a8445ce230388329fe06d80fdd947fb99e4d98f4",
         "GithubSubdir": "pkg-r",
         "NeedsCompilation": "no",
-        "Packaged": "2026-09-08 18:58:18 UTC; garrick",
+        "Packaged": "2026-09-08 20:59:31 UTC; garrick",
         "Author": "Joe Cheng [aut],\n  Carson Sievert [aut],\n  Garrick Aden-Buie [aut, cre] (ORCID:\n    <https://orcid.org/0000-0002-7111-0077>),\n  Barret Schloerke [aut] (ORCID: <https://orcid.org/0000-0001-9986-114X>),\n  Posit Software, PBC [cph, fnd] (ROR: <https://ror.org/03wc8by49>)",
         "Maintainer": "Garrick Aden-Buie <garrick@adenbuie.com>",
-        "Built": "R 4.6.1; ; 2026-09-08 18:58:19 UTC; unix"
+        "Built": "R 4.6.1; ; 2026-09-08 20:59:32 UTC; unix"
+      }
+    },
+    "snowflakeauth": {
+      "Source": "CRAN",
+      "Repository": "https://cloud.r-project.org",
+      "description": {
+        "Package": "snowflakeauth",
+        "Title": "Authentication Helpers for 'Snowflake'",
+        "Version": "0.2.2",
+        "Authors@R": "c(\n    person(\"Aaron\", \"Jacobs\", , \"aaron.jacobs@posit.co\", role = c(\"aut\")),\n    person(\"E. David\", \"Aja\", , \"david@posit.co\", role = c(\"aut\", \"cre\")),\n    person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\"))\n  )",
+        "Description": "Authentication helpers for 'Snowflake'.\n    It provides compatibility with authentication approaches supported\n    by the 'Snowflake Connector for Python' <https://pypi.org/project/snowflake-connector-python>\n    and the 'Snowflake CLI' <https://pypi.org/project/snowflake-cli>.",
+        "License": "MIT + file LICENSE",
+        "Encoding": "UTF-8",
+        "Imports": "cli, curl, jsonlite, RcppTOML, rlang, jose, openssl",
+        "Suggests": "httpuv, keyring, testthat (>= 3.0.0), withr",
+        "RoxygenNote": "7.3.2",
+        "Config/testthat/edition": "3",
+        "URL": "https://posit-dev.github.io/snowflakeauth/,\nhttps://github.com/posit-dev/snowflakeauth",
+        "BugReports": "https://github.com/posit-dev/snowflakeauth/issues",
+        "NeedsCompilation": "no",
+        "Packaged": "2026-02-24 17:45:53 UTC; edavidaja",
+        "Author": "Aaron Jacobs [aut],\n  E. David Aja [aut, cre],\n  Posit Software, PBC [cph, fnd]",
+        "Maintainer": "E. David Aja <david@posit.co>",
+        "Repository": "CRAN",
+        "Date/Publication": "2026-02-25 06:30:23 UTC",
+        "Built": "R 4.6.0; ; 2026-04-26 03:44:05 UTC; unix",
+        "RemoteType": "standard",
+        "RemotePkgRef": "snowflakeauth",
+        "RemoteRef": "snowflakeauth",
+        "RemoteRepos": "https://cloud.r-project.org",
+        "RemotePkgPlatform": "aarch64-apple-darwin23",
+        "RemoteSha": "0.2.2"
       }
     },
     "sourcetools": {
@@ -3278,7 +3466,7 @@
       "checksum": "80e60a9b4fc36149e12005567932d8a9"
     },
     "renv.lock": {
-      "checksum": "94e49a0509d7808f7eeccf7ba0f1c4e0"
+      "checksum": "5885d4e2f54ca9db8b2cc3e3bf3affdd"
     },
     "skills/conf-general-info/references/code-of-conduct.md": {
       "checksum": "8aaf4744d0c385a5bdf09766f949b097"
