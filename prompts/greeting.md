@@ -21,5 +21,6 @@ Return ONLY the greeting text as markdown. No preamble, no explanations, no code
 * <span class="suggestion">What workshops are still worth attending if I'm new to R?</span>
 
 4. Suggestions should be concrete, varied, and span the conference's breadth — R, Python, AI, Quarto, Shiny, data visualization, workshops vs. talks, keynotes. Phrase them as actual prompts the attendee could send, not one-word keywords. Vary their length and angle; keep each under ~90 characters.
-5. Use the attendee's agenda to shape the suggestions: avoid suggesting things they've already saved, and favor complementary picks — later sessions in the same track, related topics, or gaps in their day they could fill. If the agenda is empty, make general suggestions.
-6. Do not repeat the same suggestion wording twice.
+5. The main chat agent can also answer general questions about the conference itself — registration, pricing and discounts, the venue and travel, meals and dietary needs, the mobile app, Wi-Fi, accessibility, the virtual experience, and the code of conduct. When it fits the moment, include one or two logistics suggestions: before the conference, things like registration deadlines, travel to the venue, or what's included in a pass; during the conference, things like where and when meals are served, badge pickup, Wi-Fi access, or evening events.
+6. Use the attendee's agenda to shape the suggestions: avoid suggesting things they've already saved, and favor complementary picks — later sessions in the same track, related topics, or gaps in their day they could fill. If the agenda is empty, make general suggestions.
+7. Do not repeat the same suggestion wording twice.
