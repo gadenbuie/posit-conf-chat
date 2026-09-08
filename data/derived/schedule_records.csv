@@ -33,7 +33,7 @@ pipelines. Compose modules and let data-driven optimization tune for
 you. With coding agents making it easier than ever to port innovations
 across languages, R's AI story has never been stronger. Stay in an
 ecosystem you love and bring agents with you.",2026-09-15 18:20:00,2026-09-15 18:40:00,"2026-09-15 13:20:00 CDT","2026-09-15 13:40:00 CDT","Virtual","HYBRID","SCHEDULE",,"Ballroom A-F","a94f5251-3484-4b8e-90df-fbc15b0cf375","UPCOMING"
-"e1335772-02d0-4988-b282-056c09b07f32","9cf9f47e-0f42-49f3-ad9e-346ca879d4a9","59aa2a5a-0cb8-42ff-af1f-4cb8f37afc06","Demography in the Age of Policy Uncertainty","This talk showcases a dashboard that creates demographic projections for
+"e1335772-02d0-4988-b282-056c09b07f32","9cf9f47e-0f42-49f3-ad9e-346ca879d4a9","59aa2a5a-0cb8-42ff-af1f-4cb8f37afc06","Public Policy in the Age of Demographic Uncertainty","This talk showcases a dashboard that creates demographic projections for
 regions across the United State of America to help drive impactful
 policies aimed at creating better human outcomes. The tool leverages the
 power of spatial statistics in R, Shiny, and the Apache Arrow ecosystem
@@ -213,12 +213,11 @@ Research suggests assistants don’t respond “neutrally”: how you ask and
 even cues about who is asking can shift what the model says. In this
 session, we’ll explore what that looks like with Posit’s AI tools that
 draw on IDE context. We’ll run simple “paired prompts”: same problem,
-different asker and ask-style, then compare their agreement, confidence,
-and whether the assistant challenges assumptions or amplifies them. This
-talk is about using LLMs as a learning partner: asking for explanations
-so the model helps you understand, not just produce. Bring curiosity,
-your critical thinking, and a healthy suspicion of anything that agrees
-with you a little too easily.",2026-09-15 15:40:00,2026-09-15 16:00:00,"2026-09-15 10:40:00 CDT","2026-09-15 11:00:00 CDT","Virtual","HYBRID","SCHEDULE",,"Ballroom A-F","a94f5251-3484-4b8e-90df-fbc15b0cf375","UPCOMING"
+different asker then compare their agreement, and whether the assistant
+challenges assumptions or amplifies them. This talk is about using LLMs
+while involving the user, and bringing in the decision-making before the
+result. Bring curiosity, your critical thinking, and a healthy suspicion
+of anything that agrees with you a little too easily. ",2026-09-15 15:40:00,2026-09-15 16:00:00,"2026-09-15 10:40:00 CDT","2026-09-15 11:00:00 CDT","Virtual","HYBRID","SCHEDULE",,"Ballroom A-F","a94f5251-3484-4b8e-90df-fbc15b0cf375","UPCOMING"
 "1bc8ece1-fe9f-424a-a03e-e3b4e817b569","5d0d911b-aa4c-49c1-9ce0-b0775304c7d3","c4c79545-0600-4574-a56d-bad847aedcb8","Shiny design: Where humans and AI disagree","AI can generate Shiny dashboards, grade visual quality from screenshots,
 and tweak their own code. But do they actually like the same designs
 people do? We pitted automated visual scores against blind human
@@ -303,15 +302,24 @@ notebooks fit naturally into analytics projects, focusing both on code
 features—pytest compatibility and its Python script format—and editor
 features, including a VS Code extension, LLM support, and Quarto
 integration.",2026-09-15 16:00:00,2026-09-15 16:20:00,"2026-09-15 11:00:00 CDT","2026-09-15 11:20:00 CDT","Virtual","HYBRID","SCHEDULE",,"Ballroom G & J","a73dc105-039e-467b-9047-b8f37bb0f1ba","UPCOMING"
-"242be2a0-83d7-4eb4-b302-f395e749dc6d","a630e867-f319-45f1-a992-521f961e9c80","360f73e3-f86c-48fb-acfa-0070bcb50ed6","Notebooks and Beyond: Mapping the Data Science Interface Spectrum","Data science rarely happens in a single tool anymore. Between the
-terminal, IDEs, notebooks, and now AI-driven interfaces, the question
-isn't which tool wins, but where each one actually fits. This talk aims
-to map that spectrum: the speed of the command line, the structure of
-IDEs like Positron, reactive notebooks like Marimo, and the newer
-prompt-driven canvas spaces. Along the way, I'll look at how these
-environments complement each other in practice, where AI tools genuinely
-help versus where they just add noise, and why reproducible code needs
-to stay the source of truth no matter which interface you're working in.",2026-09-15 15:20:00,2026-09-15 15:40:00,"2026-09-15 10:20:00 CDT","2026-09-15 10:40:00 CDT","Virtual","HYBRID","SCHEDULE",,"Ballroom G & J","a73dc105-039e-467b-9047-b8f37bb0f1ba","UPCOMING"
+"242be2a0-83d7-4eb4-b302-f395e749dc6d","a630e867-f319-45f1-a992-521f961e9c80","360f73e3-f86c-48fb-acfa-0070bcb50ed6","The modern tool builder: CLIs, agents, and PEP 723","Being able to write R or Python scripts is an incredibly useful skill,
+allowing you to automate nearly any task imaginable. However, with a bit
+of extra effort, those brittle scripts can be transformed into robust,
+reusable tools. In particular, tools that you can run from the command
+line or that can be run by coding agents. Future-you will thank you for
+making the extra effort.
+
+In this talk, we will explore why you should graduate from writing
+scripts to building tools, particularly command-line interfaces (CLIs).
+
+CLIs have been around for over 50 years. Thanks to the rise of coding
+agents, being able to understand and use the command line is now more
+important than ever. I'd say there are three reasons for this. First,
+coding agents rely on CLI tools such as find, grep, and git (and maybe
+yours!). Second, some coding agents, such as Claude Code, are themselves
+CLI tools that you can incorporate into your scripts. Third, agents are
+actually really good at helping you to build your own tools, so if you
+use them there's really no excuse anymore.",2026-09-15 15:20:00,2026-09-15 15:40:00,"2026-09-15 10:20:00 CDT","2026-09-15 10:40:00 CDT","Virtual","HYBRID","SCHEDULE",,"Ballroom G & J","a73dc105-039e-467b-9047-b8f37bb0f1ba","UPCOMING"
 "47a3e8b1-82b1-4403-935a-75b4c8412235","9cb21f80-8acc-481b-9717-07e7553931a9","6e2e84ec-d307-483d-ab7a-e68b54ec2abb","Positron and the Three Bears: Teaching Python with Positron","For polyglot data science, RStudio is too specific, VS Code is too
 general, but Positron is just right. However, it’s not without friction.
 With two years of experience teaching Python with Positron, I’ll discuss
@@ -641,6 +649,47 @@ to your team's stack.
   Snowflake data pipelines.
 - Best practices for managing features and registering models with
   **Posit and Snowflake**",2026-09-15 16:45:00,2026-09-15 17:45:00,"2026-09-15 11:45:00 CDT","2026-09-15 12:45:00 CDT","In-person","IN_PERSON","IN_PERSON",,"Room 335","947e110f-829a-4f3b-acc8-fdbf2b5720ee","UPCOMING"
+"66be6e95-f78d-4527-98c2-d1e85800483a","7bdf8b92-4238-4894-b839-d7f704720c4f",,"No bad vibes: Building agents you can trust","",2026-09-15 19:40:00,2026-09-15 21:00:00,"2026-09-15 14:40:00 CDT","2026-09-15 16:00:00 CDT","Virtual","HYBRID","STAGE","Lanier Ballroom A-F","Ballroom A-F","a94f5251-3484-4b8e-90df-fbc15b0cf375","UPCOMING"
+"e6a1282c-eaa6-47a3-ae6d-ab4c5e540469","4f07df25-21e1-45b0-a9a9-d0bca9b3a92f","7bdf8b92-4238-4894-b839-d7f704720c4f","data-dict & data-diff: two tools supporting AI-human data science collaboration","Abstract coming soon!",2026-09-15 19:40:00,2026-09-15 20:00:00,"2026-09-15 14:40:00 CDT","2026-09-15 15:00:00 CDT","Virtual","HYBRID","SCHEDULE",,"Ballroom A-F","a94f5251-3484-4b8e-90df-fbc15b0cf375","UPCOMING"
+"412a4001-b1bc-4903-99b0-3f7c1494f716","94529b20-42e4-482f-8ec8-1eaf57105e3b","7bdf8b92-4238-4894-b839-d7f704720c4f","The Shiny AI Stack: shinychat, querychat, and the LLM Plumbing Beneath","LLM-powered chat is becoming a core pattern in modern Shiny apps, but
+building a good chat experience (i.e., streaming, history, file
+attachments, editing, cancellation, etc) — is harder than it looks. In
+this talk, we'll tour the Shiny AI stack: shinychat's new
+getting-started API, which gives you a polished chat UI with all of
+these niceties out of the box, and the lower-level plumbing beneath it
+(ellmer and chatlas) that handles the connection to the LLM. We'll also
+see how these building blocks power domain-specific applications like
+querychat, and why they're designed to be general enough for essentially
+any LLM-powered Shiny app. Examples in R, with Python equivalents
+available for everything we'll cover.",2026-09-15 20:00:00,2026-09-15 20:20:00,"2026-09-15 15:00:00 CDT","2026-09-15 15:20:00 CDT","Virtual","HYBRID","SCHEDULE",,"Ballroom A-F","a94f5251-3484-4b8e-90df-fbc15b0cf375","UPCOMING"
+"f1eed246-0b04-464e-9156-395084c5ce6f","20c217be-1474-4c94-a11f-1d98aafcabe0","7bdf8b92-4238-4894-b839-d7f704720c4f","AI Agents for Data Science: Posit Assistant, Commons, and Beyond","Last year at posit::conf, we at Posit unveiled two new data science
+agents: Positron Assistant and Databot. Your feedback was loud and
+clear: having two Posit agents was confusing. So this year we’re back
+with three new Posit agents!
+
+In all seriousness, last year’s two agents merged their strengths to
+become Posit Assistant, which is now available in both Positron and
+RStudio, on the desktop and in Posit Workbench, and supports lots of
+different LLM providers and models. I’ll explain why we think the design
+choices we made in Posit Assistant make it the best agent for both data
+work and for coding.
+
+I’ll give you an up close look at Commons, which lets you create
+data-oriented AI agents for others in your organization to use, and
+includes our latest ideas for making data agents as trustworthy as
+possible, even for non-experts.
+
+And finally, I’ll give you a sneak peek at \[REDACTED\], our most
+AI-forward data science tool yet.",2026-09-15 20:20:00,2026-09-15 20:40:00,"2026-09-15 15:20:00 CDT","2026-09-15 15:40:00 CDT","Virtual","HYBRID","SCHEDULE",,"Ballroom A-F","a94f5251-3484-4b8e-90df-fbc15b0cf375","UPCOMING"
+"d6c9a20f-1789-47b3-93bb-bd09b211a99e","84bc571b-d3d7-4fea-ae69-9a811ab24930","7bdf8b92-4238-4894-b839-d7f704720c4f","AI Governance in Posit Team: getting trustworthy results from agentic helpers","AI agents like Posit Assistant, pi, Claude Code, and Codex are here to
+stay. Ensuring the results you deliver are trustworthy when agents do
+some of the work can be daunting. In this talk, we’ll explore how
+Governance done well is not bureaucracy but is empowering for the
+individual as well as the organization, offer some useful definitions of
+Risk and Compliance, and take a tour through emerging governance
+capabilities including open source desktop agentic tools, Posit.AI Pass
+Zero Data Retention access to curated models, and upcoming Posit Team
+features for putting supervision and guardrails around your agents.",2026-09-15 20:40:00,2026-09-15 21:00:00,"2026-09-15 15:40:00 CDT","2026-09-15 16:00:00 CDT","Virtual","HYBRID","SCHEDULE",,"Ballroom A-F","a94f5251-3484-4b8e-90df-fbc15b0cf375","UPCOMING"
 "39f6c8e4-ed13-46f9-9fcc-3d8dcee577f5","52de90f1-dbe1-47a6-8eb2-462056d3663c",,"Getting Started with Positron: An AI-Ready Polyglot Workflow for Data Science","This virtual three hour workshop provides a quick start for R and Python
 users who are curious about Positron, Posit’s new AI-ready polyglot code
 editor for data science. Here, you will learn how to use Positron’s time
@@ -1010,7 +1059,7 @@ Positron and the LLMs we will use during class.",2026-09-14 21:00:00,2026-09-15,
   notebook together in one environment.\
   I hope this talk gives you a new way to think about the tools you use
   every day, and the confidence to try the ones you don't.",2026-09-14 15:30:00,2026-09-14 17:00:00,"2026-09-14 10:30:00 CDT","2026-09-14 12:00:00 CDT","Virtual","VIRTUAL","STAGE","Virtual Day",,,"UPCOMING"
-"e829d8fd-7b30-4df0-b9a1-18010dee499c","7f3a8575-439f-440e-9424-ea158c9499a3","a6722b88-32c1-445c-9f6a-3a99b5678f97","Do This Instead: 5 Powerful and Empowering Alternatives to Common Charts","Even in “good” charts, it’s easy to miss or misinterpret key patterns in
+"e829d8fd-7b30-4df0-b9a1-18010dee499c","7f3a8575-439f-440e-9424-ea158c9499a3","a6722b88-32c1-445c-9f6a-3a99b5678f97","Do This Instead: 4 Alternatives to Common Charts","Even in “good” charts, it’s easy to miss or misinterpret key patterns in
 the data. Common best practices — continuous color scales, equally
 spaced gridlines, month-level aggregation, etc — leave critical leaps
 from numbers to meaning up to visual perception and unexamined

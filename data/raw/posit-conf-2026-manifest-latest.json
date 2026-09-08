@@ -1,5 +1,5 @@
 {
-  "retrieved_at_utc": "2026-09-06 18:42:09 UTC",
+  "retrieved_at_utc": "2026-09-08 20:26:59 UTC",
   "sessions_page_url": "https://conf.posit.co/2026/sessions/",
   "schedule_api_url": "https://conf.posit.co/api/custom-widget/v2/schedule/1926157700/?dudaSiteId=d4d6e48c&userTimeZone=America%2FIndiana%2FKnox&eventId=23b93c83-b0f1-4250-af16-a7f0ca04196a",
   "event_id": "23b93c83-b0f1-4250-af16-a7f0ca04196a",
@@ -7,8 +7,8 @@
   "event_identifier": "2026",
   "event_timezone": "America/Indiana/Knox",
   "event_updated_at": "2026-08-27T16:18:28.68712Z",
-  "record_count": 138,
-  "unique_speaker_count": 142,
-  "raw_sha256": "1b3efc04f57bfc8cc7dde0e63ce013dd7f3b0128e7536961a548d2b471961a45",
-  "schedule_content_sha256": "6b894efb852dc11951e32d99dd63ba81ac31866e40a8a961e72a5cc3bcff328d"
+  "record_count": 143,
+  "unique_speaker_count": 145,
+  "raw_sha256": "fd884825d64c44b6135c726540d0dfe4bf6cf387131b41e4912e604543293c63",
+  "schedule_content_sha256": "b20234dfb3a0a3c2fbfbb2fa9cd09e646a8abf5ef08d7b0b2a0a5bebb98196b3"
 }
