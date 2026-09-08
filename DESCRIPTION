@@ -16,6 +16,8 @@ Imports:
     frontmatter,
     htmltools,
     jsonlite,
+    otel,
+    otelsdk,
     purrr,
     ragnar,
     readr,

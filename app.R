@@ -8,6 +8,8 @@ library(purrr)
 if (FALSE) {
   # for renv/Connect
   library(brand.yml)
+  library(otel)
+  library(otelsdk)
 }
 
 options(
