@@ -1,9 +1,6 @@
 greeting_header <- paste0(
-  '<p class="greeting-header mb-3">',
-  '<a href="https://conf.posit.co/2026/" target="_blank" rel="noopener">',
-  '<img src="assets/posit-conf-header.png" alt="posit::conf(2026)" ',
-  'style="max-width:100%; max-height:150px; border-radius:8px">',
-  '</a></p>\n\n'
+  '[![posit::conf(2026)](assets/posit-conf-header.png)]',
+  '(https://conf.posit.co/2026/)'
 )
 
 new_chat_client <- function(spec, system_prompt, api_args = NULL) {
