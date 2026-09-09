@@ -118,7 +118,8 @@ ui <- function(req) {
       tags$link(rel = "stylesheet", href = "assets/custom.css")
     ),
     history = history_options(store = "memory"),
-    greeting = if (!greeting_dynamic) static_greeting()
+    greeting = if (!greeting_dynamic) static_greeting(),
+    show_thinking_after_s = 5
   )
 }
 
