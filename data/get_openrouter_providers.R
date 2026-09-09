@@ -4,7 +4,7 @@
 # Falls back to OPENROUTER_MODEL if no argument is passed.
 
 library(httr2)
-library(jsonlite)
+library(jsonlite, warn.conflicts = FALSE)
 
 model_slug <- commandArgs(trailingOnly = TRUE)[1]
 if (is.na(model_slug) || !nzchar(model_slug)) {
@@ -13,6 +13,10 @@ if (is.na(model_slug) || !nzchar(model_slug)) {
 if (!nzchar(model_slug)) {
   stop("Pass a model slug as an argument or set OPENROUTER_MODEL")
 }
+
+# Providers at least this fast all feel the same in a chat UI, so past this
+# point extra speed isn't worth paying for and price decides.
+SPEED_GOOD_ENOUGH <- 1.5
 
 page_url <- paste0("https://openrouter.ai/", model_slug)
 endpoints_url <- paste0(
@@ -94,16 +98,28 @@ quant <- vapply(
 
 providers$quantization <- quant
 
+# Composite score: latency hurts UX more than low TPS, so it gets 2x weight.
+# Each is normalized against the median so units don't matter; missing
+# latency is treated as worst-case, missing TPS as slowest.
+lat_med <- median(providers$latency_s, na.rm = TRUE)
+tps_med <- median(providers$tps, na.rm = TRUE)
+latency_penalty <- providers$latency_s / lat_med
+latency_penalty[is.na(latency_penalty)] <-
+  max(providers$latency_s, na.rm = TRUE) / lat_med
+tps_penalty <- tps_med / providers$tps
+tps_penalty[is.na(tps_penalty)] <- tps_med / min(providers$tps, na.rm = TRUE)
+providers$speed <- 2 * latency_penalty + tps_penalty
+
 providers <- providers[
   order(
     providers$privacy != "Private",
-    providers$price_out,
-    -replace(providers$tps, is.na(providers$tps), 0)
+    providers$speed,
+    providers$price_out
   ),
 ]
 
 cat(sprintf(
-  "%-15s %-9s %8s %8s %7s %6s %7s  %-6s\n",
+  "%-15s %-9s %8s %8s %7s %6s %7s %6s  %-6s\n",
   "provider",
   "privacy",
   "in$/M",
@@ -111,12 +127,13 @@ cat(sprintf(
   "lat_s",
   "tps",
   "uptime",
+  "speed",
   "quant"
 ))
 for (i in seq_len(nrow(providers))) {
   p <- providers[i, ]
   cat(sprintf(
-    "%-15s %-9s %8.4f %8.4f %7.2f %6.0f %7.1f%%  %-6s\n",
+    "%-15s %-9s %8.4f %8.4f %7.2f %6.0f %7.1f%% %6.2f  %-6s\n",
     p$provider,
     p$privacy,
     p$price_in,
@@ -124,6 +141,7 @@ for (i in seq_len(nrow(providers))) {
     p$latency_s,
     p$tps,
     p$uptime_pct,
+    p$speed,
     p$quantization
   ))
 }
@@ -131,13 +149,16 @@ for (i in seq_len(nrow(providers))) {
 private <- providers[
   providers$privacy == "Private" & !is.na(providers$price_out),
 ]
-cheapest <- private[private$price_out == min(private$price_out), ]
-cheapest <- cheapest[order(-replace(cheapest$tps, is.na(cheapest$tps), 0)), ]
+adequate <- private[private$speed <= SPEED_GOOD_ENOUGH, ]
+if (nrow(adequate) == 0) {
+  adequate <- private[private$speed == min(private$speed), ]
+}
+recommend <- adequate[order(adequate$price_out, adequate$speed), ]
 
 slug <- function(x) gsub("[^a-z0-9]", "", tolower(x))
-order_slugs <- slug(cheapest$provider)
+order_slugs <- slug(recommend$provider)
 
-cat("\nCheapest private providers, throughput-sorted:\n")
+cat("\nRecommended private providers (good-enough speed, then cheapest):\n")
 cat('  "order": [', paste0('"', order_slugs, '"', collapse = ", "), "]\n")
 cat(
   '  POSIT_CONF_API_ARGS=\'{"provider":{"order":[',
