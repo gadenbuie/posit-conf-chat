@@ -145,19 +145,22 @@ card_value <- function(x) {
 }
 
 clock12 <- function(x) {
-  x <- card_value(x)
-  if (!nzchar(x)) {
-    return("")
-  }
-  parts <- strsplit(x, ":", fixed = TRUE)[[1]]
-  hour <- as.integer(parts[1])
-  minute <- if (length(parts) > 1) parts[2] else "00"
-  meridiem <- if (hour < 12) "AM" else "PM"
-  hour12 <- hour %% 12
-  if (hour12 == 0) {
-    hour12 <- 12
-  }
-  sprintf("%d:%s %s", hour12, minute, meridiem)
+  ok <- !is.na(x) & nzchar(x)
+  parts <- strsplit(x[ok], ":", fixed = TRUE)
+  hour <- vapply(parts, function(p) as.integer(p[1]), integer(1))
+  minute <- vapply(
+    parts,
+    function(p) if (length(p) > 1) p[2] else "00",
+    character(1)
+  )
+  out <- character(length(x))
+  out[ok] <- sprintf(
+    "%d:%s %s",
+    ifelse(hour %% 12 == 0, 12, hour %% 12),
+    minute,
+    ifelse(hour < 12, "AM", "PM")
+  )
+  out
 }
 
 card_date <- function(date) {

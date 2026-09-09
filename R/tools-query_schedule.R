@@ -1,3 +1,15 @@
+fmt_when <- function(date, start, end) {
+  d <- ifelse(
+    is.na(date) | !nzchar(date),
+    "",
+    format(as.Date(date), "%a %b %e")
+  )
+  s <- clock12(start)
+  e <- clock12(end)
+  t <- ifelse(s == "", "", ifelse(e == "", s, paste0(s, "\u2013", e)))
+  trimws(paste(d, t))
+}
+
 query_schedule_fn <- function(
   `_intent` = NULL,
   date = NULL,
@@ -99,6 +111,16 @@ query_schedule_fn <- function(
       speakers
     )
 
+  results_table <- final |>
+    dplyr::transmute(
+      Kind = tools::toTitleCase(kind),
+      Title = title,
+      When = fmt_when(date, start, end),
+      Where = location,
+      Track = track,
+      Speakers = speakers
+    )
+
   ellmer::ContentToolResult(
     value = jsonlite::toJSON(final, auto_unbox = TRUE),
     extra = list(
@@ -109,7 +131,12 @@ query_schedule_fn <- function(
           paste(filters, collapse = "; ")
         } else {
           "all schedule items"
-        }
+        },
+        markdown = df_to_markdown_table(results_table),
+        show_request = FALSE,
+        open = TRUE,
+        full_screen = TRUE,
+        open_style = "framed"
       )
     )
   )

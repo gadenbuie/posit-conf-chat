@@ -49,3 +49,39 @@ search_tool_with_intent <- function(chat) {
     annotations = search_tool@annotations
   )
 }
+
+df_to_markdown_table <- function(df) {
+  if (nrow(df) == 0) {
+    return("_No results._")
+  }
+  esc <- function(x) {
+    x <- as.character(x)
+    x[is.na(x)] <- ""
+    gsub("|", "\\|", x, fixed = TRUE)
+  }
+  cols <- lapply(df, esc)
+  row <- function(i) {
+    paste0(
+      "| ",
+      paste(
+        vapply(cols, function(col) col[[i]], character(1)),
+        collapse = " | "
+      ),
+      " |"
+    )
+  }
+  header <- paste0(
+    "| ",
+    paste(vapply(names(df), esc, character(1)), collapse = " | "),
+    " |"
+  )
+  separator <- paste0(
+    "| ",
+    paste(rep("---", length(cols)), collapse = " | "),
+    " |"
+  )
+  paste(
+    c(header, separator, vapply(seq_len(nrow(df)), row, character(1))),
+    collapse = "\n"
+  )
+}
