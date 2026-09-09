@@ -19,6 +19,9 @@ new_agent_client <- function(spec, system_prompt, store_location, agenda_ids) {
       "posit::conf(2026) Schedule.",
       "",
       "Results include each item's record_id in the origin column.",
+      "Each result ends with a Citations section containing a ready-made",
+      "<shiny-aside> tag per item; attach these tags to your answer as",
+      "described in the system prompt.",
       "Use show_item() to present an item in detail,",
       "and query_schedule() for exact times, rooms, and tracks.",
       sep = "\n"
