@@ -71,9 +71,10 @@ attach_search_citations <- function(result) {
     as.character(result),
     paste0(
       "## Citations\n\n",
-      "Attach each item's aside tag to your reply right after the sentence or ",
-      "bullet that discusses that item. Copy the tags exactly as written, use ",
-      "each one at most once per reply, and don't mention the tags to the attendee.\n\n",
+      "Attach each item's aside tag inline at the end of the sentence or ",
+      "bullet that discusses that item. Keep each tag on a single line and ",
+      "copy it exactly as written, use each one at most once per reply, and ",
+      "don't mention the tags to the attendee.\n\n",
       paste(asides, collapse = "\n\n")
     ),
     sep = "\n\n"
@@ -90,27 +91,30 @@ item_citation_aside <- function(id) {
   if (!nzchar(label)) {
     return(NULL)
   }
+  meta <- sched_summary_line_md(list(
+    kind = res$kind,
+    date = sched_date(item$start_time_event_local),
+    start = sched_clock(item$start_time_event_local),
+    end = sched_clock(item$end_time_event_local),
+    location = item$effective_location_name,
+    speakers = dplyr::pull(res$speakers, full_name),
+    track = item$track_title
+  ))
+  abstract <- collapse_spaces(excerpt_text(card_value(item$abstract), 280))
   body <- paste(
-    c(
-      paste0("**", label, "**"),
-      sched_summary_line_md(list(
-        kind = res$kind,
-        date = sched_date(item$start_time_event_local),
-        start = sched_clock(item$start_time_event_local),
-        end = sched_clock(item$end_time_event_local),
-        location = item$effective_location_name,
-        speakers = dplyr::pull(res$speakers, full_name),
-        track = item$track_title
-      )),
-      excerpt_text(card_value(item$abstract), 280)
-    ),
-    collapse = "\n\n"
+    c(paste0("**", label, "**"), meta, abstract),
+    collapse = " \u00b7 "
   )
+  body <- collapse_spaces(body)
   sprintf(
-    '<shiny-aside label="%s">\n%s\n</shiny-aside>',
+    '<shiny-aside label="%s">%s</shiny-aside>',
     htmltools::htmlEscape(label, attribute = TRUE),
     body
   )
+}
+
+collapse_spaces <- function(x) {
+  gsub("\\s+", " ", x)
 }
 
 excerpt_text <- function(x, max_chars) {
