@@ -1,3 +1,4 @@
 .renvignore
 *.wal
 .posit/
+scripts/
