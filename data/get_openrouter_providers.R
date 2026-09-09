@@ -1,11 +1,19 @@
-# Fetches provider pricing, speed, and privacy data for GLM-5.3-Flash from
-# OpenRouter to inform provider `order` choices in POSIT_CONF_API_ARGS.
-# Run: Rscript data/get_glm_providers.R
+# Fetches OpenRouter provider pricing, speed, and privacy data for a model
+# to inform provider `order` choices in POSIT_CONF_API_ARGS.
+# Run: Rscript data/get_openrouter_providers.R <model-slug>
+# Falls back to OPENROUTER_MODEL if no argument is passed.
 
 library(httr2)
 library(jsonlite)
 
-model_slug <- "z-ai/glm-5.3-flash"
+model_slug <- commandArgs(trailingOnly = TRUE)[1]
+if (is.na(model_slug) || !nzchar(model_slug)) {
+  model_slug <- Sys.getenv("OPENROUTER_MODEL", "z-ai/glm-5.3-flash")
+}
+if (!nzchar(model_slug)) {
+  stop("Pass a model slug as an argument or set OPENROUTER_MODEL")
+}
+
 page_url <- paste0("https://openrouter.ai/", model_slug)
 endpoints_url <- paste0(
   "https://openrouter.ai/api/v1/models/",
