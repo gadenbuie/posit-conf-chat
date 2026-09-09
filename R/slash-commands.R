@@ -50,6 +50,23 @@ register_slash_commands <- function(chat, current_style) {
   )
 
   chat$slash_command(
+    "interview",
+    "Get interviewed about your interests to build your agenda",
+    function(content) {
+      extra <- trimws(content@user_text)
+      if (nzchar(extra)) {
+        content@text <- sprintf(
+          "Load the interview skill and proceed. The attendee adds: \u201c%s\u201d",
+          extra
+        )
+      } else {
+        content@text <- "Load the interview skill and proceed."
+      }
+      respond_to_command(chat, content)
+    }
+  )
+
+  chat$slash_command(
     "style",
     sprintf(
       "Switch the reply style: %s",
@@ -122,5 +139,5 @@ style_slug_from_text <- function(text, current_slug) {
 }
 
 respond_to_command <- function(chat, content) {
-  chat$append(chat$client$stream(content))
+  chat$append(chat$client$stream(content, stream = "content"))
 }
