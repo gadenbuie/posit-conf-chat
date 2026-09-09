@@ -7,6 +7,9 @@ skills_dir <- function() {
 }
 
 skills_path <- function(skill, reference = NULL) {
+  if (identical(reference, "")) {
+    reference <- NULL
+  }
   if (!grepl("^[a-z0-9]+(-[a-z0-9]+)*$", skill)) {
     stop(
       "Invalid skill name: '",
