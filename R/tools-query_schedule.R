@@ -134,7 +134,6 @@ query_schedule_fn <- function(
         },
         markdown = df_to_markdown_table(results_table),
         show_request = FALSE,
-        open = TRUE,
         full_screen = TRUE,
         open_style = "framed"
       )
