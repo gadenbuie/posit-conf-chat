@@ -2617,7 +2617,7 @@
       "description": {
         "Package": "shinychat",
         "Title": "Chat UI Component for 'shiny'",
-        "Version": "0.4.0.9000",
+        "Version": "0.5.0",
         "Authors@R": "c(\n    person(\"Joe\", \"Cheng\", , \"joe@posit.co\", role = \"aut\"),\n    person(\"Carson\", \"Sievert\", , \"carson@posit.co\", role = \"aut\"),\n    person(\"Garrick\", \"Aden-Buie\", , \"garrick@adenbuie.com\", role = c(\"aut\", \"cre\"),\n           comment = c(ORCID = \"0000-0002-7111-0077\")),\n    person(\"Barret\", \"Schloerke\", , \"barret@posit.co\", role = \"aut\",\n           comment = c(ORCID = \"0000-0001-9986-114X\")),\n    person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\"),\n           comment = c(ROR = \"03wc8by49\"))\n  )",
         "Description": "Provides a scrolling chat interface with multiline input,\n    suitable for creating chatbot apps based on Large Language Models\n    (LLMs). Designed to work particularly well with the 'ellmer' R package\n    for calling LLMs.",
         "License": "MIT + file LICENSE",
@@ -2635,20 +2635,20 @@
         "RemoteHost": "api.github.com",
         "RemoteRepo": "shinychat",
         "RemoteUsername": "posit-dev",
-        "RemotePkgRef": "posit-dev/shinychat",
-        "RemoteRef": "HEAD",
-        "RemoteSha": "a8445ce230388329fe06d80fdd947fb99e4d98f4",
+        "RemotePkgRef": "posit-dev/shinychat/pkg-r@rc-v0.5.0",
+        "RemoteRef": "rc-v0.5.0",
+        "RemoteSha": "1f2b21ed833e3c730a7ae44118850086fc2e2625",
         "RemoteSubdir": "pkg-r",
         "GithubRepo": "shinychat",
         "GithubUsername": "posit-dev",
-        "GithubRef": "HEAD",
-        "GithubSHA1": "a8445ce230388329fe06d80fdd947fb99e4d98f4",
+        "GithubRef": "rc-v0.5.0",
+        "GithubSHA1": "1f2b21ed833e3c730a7ae44118850086fc2e2625",
         "GithubSubdir": "pkg-r",
         "NeedsCompilation": "no",
-        "Packaged": "2026-09-08 20:59:31 UTC; garrick",
+        "Packaged": "2026-09-09 15:56:42 UTC; garrick",
         "Author": "Joe Cheng [aut],\n  Carson Sievert [aut],\n  Garrick Aden-Buie [aut, cre] (ORCID:\n    <https://orcid.org/0000-0002-7111-0077>),\n  Barret Schloerke [aut] (ORCID: <https://orcid.org/0000-0001-9986-114X>),\n  Posit Software, PBC [cph, fnd] (ROR: <https://ror.org/03wc8by49>)",
         "Maintainer": "Garrick Aden-Buie <garrick@adenbuie.com>",
-        "Built": "R 4.6.1; ; 2026-09-08 20:59:32 UTC; unix"
+        "Built": "R 4.6.1; ; 2026-09-09 15:56:43 UTC; unix"
       }
     },
     "snowflakeauth": {
@@ -3331,7 +3331,7 @@
       "checksum": "db0043aa3bdb1e851a4a2c34e1d86d77"
     },
     "app.R": {
-      "checksum": "91394f94f2d3aa45f4b8c8e952fdc1ab"
+      "checksum": "a7bc71717103541d2a13e58abe559566"
     },
     "assets/agenda.js": {
       "checksum": "d848f355ed938349ebd42028eec52b3c"
@@ -3382,7 +3382,7 @@
       "checksum": "79e378e5899920c0bb764b9d15321877"
     },
     "prompts/greeting.md": {
-      "checksum": "7490a914b920deed4270d97286352a05"
+      "checksum": "7e5685250794971af7df16a6ffd57f25"
     },
     "prompts/style-concise.md": {
       "checksum": "046c6e0886b7736086534d2ec875858f"
@@ -3403,7 +3403,7 @@
       "checksum": "e820ad503c995f9a2541e232005d5a53"
     },
     "prompts/system.md": {
-      "checksum": "4de6ecf519d1c0477b82d26e3527db2d"
+      "checksum": "7e99d44a1b55e4b655358b06a89a55e2"
     },
     "R/aaa.R": {
       "checksum": "85cf34df98b909bd6efcf3e08dc207dc"
@@ -3439,10 +3439,10 @@
       "checksum": "4701ca913cbe6a5eb8b0a5cb0eecfe9a"
     },
     "R/skills.R": {
-      "checksum": "e6ca8f5e91c0105f095afdeed533e035"
+      "checksum": "673856f51082beccb4af4236674c6a68"
     },
     "R/slash-commands.R": {
-      "checksum": "148ea7cae5b8f989139b8726dd4e57ef"
+      "checksum": "f3dede2371e979560c334c4b53aff6bd"
     },
     "R/toasts.R": {
       "checksum": "f9f0e6894d45c9060c2122646fc43c88"
@@ -3466,7 +3466,7 @@
       "checksum": "80e60a9b4fc36149e12005567932d8a9"
     },
     "renv.lock": {
-      "checksum": "5885d4e2f54ca9db8b2cc3e3bf3affdd"
+      "checksum": "ad78c300f4d5347671b5f6011d608550"
     },
     "skills/conf-general-info/references/code-of-conduct.md": {
       "checksum": "8aaf4744d0c385a5bdf09766f949b097"
@@ -3491,6 +3491,9 @@
     },
     "skills/conf-general-info/SKILL.md": {
       "checksum": "9297d02aac498f29fdd62203d72431ad"
+    },
+    "skills/interview/SKILL.md": {
+      "checksum": "a39ca0f0bdb4f266fa7d797b986d3586"
     }
   },
   "users": null
