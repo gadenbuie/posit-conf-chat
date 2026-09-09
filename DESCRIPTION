@@ -23,7 +23,7 @@ Imports:
     readr,
     S7,
     shiny,
-    shinychat (>= 0.4.0.9000),
+    shinychat (>= 0.5.0),
     tidyr
 Remotes:
     posit-dev/shinychat/pkg-r@rc-v0.5.0,

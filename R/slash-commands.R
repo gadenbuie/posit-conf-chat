@@ -93,7 +93,7 @@ register_slash_commands <- function(chat, current_style) {
     "new",
     "Start a new conversation",
     function() {
-      chat$clear(greeting = TRUE)
+      chat$new_chat(greeting = TRUE)
     },
     echo = FALSE
   )
