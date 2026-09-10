@@ -176,11 +176,11 @@ query_schedule <- ellmer::tool(
       required = FALSE
     ),
     track = ellmer::type_string(
-      "Track (session block) title, e.g. 'Agents, context, MCP'. Use list_schedule_options(type = 'tracks') for exact titles.",
+      "Track (session block) title, e.g. 'Agents, context, MCP'. Call query_schedule(kind = 'session') to list exact titles.",
       required = FALSE
     ),
     room = ellmer::type_string(
-      "Room name. Use list_schedule_options(type = 'rooms') for exact names.",
+      "Room name, as listed in the system prompt. Matched case-insensitively; a unique partial name also works.",
       required = FALSE
     ),
     kind = ellmer::type_enum(
@@ -189,7 +189,7 @@ query_schedule <- ellmer::tool(
       required = FALSE
     ),
     speaker = ellmer::type_string(
-      "Speaker full name. Use list_schedule_options(type = 'speakers') for exact names.",
+      "Speaker name. Matched case-insensitively; a unique partial name such as a last name also works.",
       required = FALSE
     )
   ),

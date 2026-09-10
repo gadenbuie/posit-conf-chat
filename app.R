@@ -130,7 +130,17 @@ server <- function(input, output, session) {
   system_prompt <- ellmer::interpolate_file(
     file.path("prompts", "system.md"),
     date = Sys.Date(),
-    skills = skills_prompt()
+    skills = skills_prompt(),
+    rooms = paste(
+      sort(unique(
+        dplyr::filter(
+          sched_items(data = schedule_data()),
+          !is.na(location),
+          location != ""
+        )$location
+      )),
+      collapse = ", "
+    )
   )
   greeting_prompt <- ellmer::interpolate_file(
     file.path("prompts", "greeting.md"),

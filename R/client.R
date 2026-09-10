@@ -31,7 +31,6 @@ new_agent_client <- function(spec, system_prompt, store_location, agenda_ids) {
   )
   client$register_tool(search_tool_with_intent(client))
 
-  client$register_tool(list_schedule_options_tool)
   client$register_tool(skills_tool())
   client$register_tool(query_schedule)
   client$register_tool(show_item_tool)

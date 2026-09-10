@@ -21,9 +21,8 @@ register_slash_commands <- function(chat, current_style) {
     function(content) {
       content@text <- sprintf(
         paste(
-          "Find the speaker named \u201c%s\u201d using search_schedule or",
-          "list_schedule_options, then use show_item() with their speaker_id",
-          "to display their card. If the name is ambiguous, ask which speaker",
+          "Use show_item() with the speaker name \u201c%s\u201d to display their card.",
+          "If the name is ambiguous or unknown, ask which speaker",
           "was meant before showing a card."
         ),
         content@user_text

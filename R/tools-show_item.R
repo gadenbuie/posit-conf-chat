@@ -89,10 +89,10 @@ sched_summary_line_md <- function(s) {
 show_item_tool <- ellmer::tool(
   function(id) show_item(id),
   name = "show_item",
-  description = "Display a rich detail card for a schedule item to the user: a talk, keynote, track session, workshop, event, or speaker. The id must come from query_schedule(), list_schedule_options(), or the full-text search tool. Talks, sessions, workshops, and events are identified by record_id; speakers are identified by speaker_id. The tool also returns the item's details (title, date, time, location, speakers, abstract) in plain markdown, so you can answer follow-up questions about the item without calling another tool.",
+  description = "Display a rich detail card for a schedule item to the user: a talk, keynote, track session, workshop, event, or speaker. The id is a record_id (talk/session/workshop/event), a speaker_id (speaker), or the item's title or the speaker's full name; a unique partial match is accepted and ambiguous matches return an error listing the options. The tool also returns the item's details (title, date, time, location, speakers, abstract) in plain markdown, so you can answer follow-up questions about the item without calling another tool.",
   arguments = list(
     id = ellmer::type_string(
-      "Schedule item id: record_id for a talk/session/workshop/event, speaker_id for a speaker."
+      "Schedule item id: record_id for a talk/session/workshop/event, speaker_id for a speaker, or a title or speaker name."
     )
   ),
   annotations = ellmer::tool_annotations(

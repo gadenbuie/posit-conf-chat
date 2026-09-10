@@ -141,7 +141,7 @@ sched_match <- function(x, choices) {
     "Unknown value '",
     x,
     "'. Valid values: ",
-    paste(utils::head(choices, 20), collapse = ", ")
+    paste(utils::head(choices, 10), collapse = ", ")
   )
 }
 
@@ -159,6 +159,28 @@ sched_sessions_by_speaker <- function(speaker_id) {
   purrr::map(ids, function(id) sched_summary(resolve_item(id)))
 }
 
+record_result <- function(kind, row) {
+  list(
+    kind = kind,
+    item = purrr::map(row, 1),
+    speakers = sched_speakers_for(row$record_id)
+  )
+}
+
+speaker_result <- function(sp) {
+  item <- purrr::map(sp, function(col) {
+    col <- col[!is.na(col) & col != ""]
+    if (length(col)) col[1] else NA_character_
+  })
+  item$record_id <- NULL
+  list(
+    kind = "speaker",
+    item = item,
+    speakers = sp,
+    sessions = sched_sessions_by_speaker(sp$speaker_id)
+  )
+}
+
 resolve_item <- function(id) {
   d <- schedule_data()
   sources <- list(
@@ -170,28 +192,54 @@ resolve_item <- function(id) {
   for (kind in names(sources)) {
     hit <- dplyr::filter(sources[[kind]], record_id == .env$id)
     if (nrow(hit)) {
-      return(list(
-        kind = kind,
-        item = purrr::map(hit, 1),
-        speakers = sched_speakers_for(id)
-      ))
+      return(record_result(kind, hit[1, ]))
     }
   }
   sp <- dplyr::filter(d$speakers, speaker_id == .env$id)
   if (nrow(sp)) {
-    item <- purrr::map(sp, function(col) {
-      col <- col[!is.na(col) & col != ""]
-      if (length(col)) col[1] else NA_character_
-    })
-    item$record_id <- NULL
-    return(list(
-      kind = "speaker",
-      item = item,
-      speakers = dplyr::slice(sp, 1),
-      sessions = sched_sessions_by_speaker(id)
-    ))
+    return(speaker_result(dplyr::slice(sp, 1)))
   }
-  stop("Unknown schedule item id: ", id)
+
+  candidates <- dplyr::bind_rows(
+    !!!c(
+      purrr::imap(sources, function(df, kind) {
+        dplyr::transmute(
+          df,
+          kind = .env$kind,
+          id = record_id,
+          name = title
+        )
+      }),
+      list(dplyr::transmute(
+        dplyr::distinct(d$speakers, speaker_id, full_name),
+        kind = "speaker",
+        id = speaker_id,
+        name = full_name
+      ))
+    )
+  ) |>
+    dplyr::filter(!is.na(name), name != "")
+
+  matched <- sched_match(id, candidates$name)
+  hits <- dplyr::filter(candidates, name == matched)
+  if (nrow(hits) > 1) {
+    stop(
+      "Ambiguous schedule item '",
+      id,
+      "'. Matches: ",
+      paste0(hits$kind, " \u2018", hits$name, "\u2019", collapse = ", ")
+    )
+  }
+  hit <- hits[1, ]
+  if (identical(hit$kind, "speaker")) {
+    sp <- dplyr::filter(d$speakers, speaker_id == hit$id)
+    speaker_result(dplyr::slice(sp, 1))
+  } else {
+    record_result(
+      hit$kind,
+      dplyr::filter(sources[[hit$kind]], record_id == hit$id)
+    )
+  }
 }
 
 sched_summary <- function(res) {
