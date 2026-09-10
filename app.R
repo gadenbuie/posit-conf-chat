@@ -111,11 +111,14 @@ ui <- function(req) {
     navbar_options = if (conf_theme) {
       navbar_options(bg = "#419CF5", theme = "dark")
     },
-    footer = tags$head(
-      tags$script(src = "assets/agenda.js"),
-      tags$script(src = "assets/prompt-style.js"),
-      tags$script(src = "assets/collapsible-abstract.js"),
-      tags$link(rel = "stylesheet", href = "assets/custom.css")
+    footer = tagList(
+      useBusyIndicators(),
+      tags$head(
+        tags$script(src = "assets/agenda.js"),
+        tags$script(src = "assets/prompt-style.js"),
+        tags$script(src = "assets/collapsible-abstract.js"),
+        tags$link(rel = "stylesheet", href = "assets/custom.css")
+      )
     ),
     history = history_options(store = "memory"),
     greeting = if (!greeting_dynamic) static_greeting(),
