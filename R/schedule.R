@@ -11,8 +11,7 @@ schedule_data <- function() {
       )
     }
     data <- list(
-      talks = read("talks") |>
-        dplyr::mutate(is_keynote = is_keynote == "TRUE"),
+      talks = read("talks"),
       sessions = read("talk_sessions") |>
         dplyr::mutate(talk_count = as.integer(talk_count)),
       workshops = read("workshops"),
@@ -51,7 +50,6 @@ schedule_data <- function() {
 }
 
 kind_labels <- c(
-  talks = "talk",
   sessions = "session",
   workshops = "workshop",
   events = "event"
@@ -67,7 +65,7 @@ sched_items <- function(
     df <- data[[name]]
     dplyr::tibble(
       id = df$record_id,
-      kind = unname(kind_labels[[name]]),
+      kind = if (name == "talks") df$kind else unname(kind_labels[[name]]),
       title = df$title,
       date = sched_date(df$start_time_event_local),
       start = sched_clock(df$start_time_event_local),
@@ -160,6 +158,9 @@ sched_sessions_by_speaker <- function(speaker_id) {
 }
 
 record_result <- function(kind, row) {
+  if (identical(kind, "talk") && isTRUE(row$kind == "keynote")) {
+    kind <- "keynote"
+  }
   list(
     kind = kind,
     item = purrr::map(row, 1),
@@ -267,9 +268,8 @@ sched_summary <- function(res) {
       NULL
     }
   )
-  if (identical(res$kind, "talk")) {
+  if (res$kind %in% c("talk", "keynote")) {
     summary$track <- item$track_title
-    summary$is_keynote <- isTRUE(item$is_keynote)
   }
   summary
 }

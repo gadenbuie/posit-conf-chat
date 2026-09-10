@@ -43,13 +43,8 @@ Abstract: {abstract}
 }
 
 talk_sessions_df <- merge(talks, speaker_list, by = "record_id", all.x = TRUE)
-talk_sessions_df$kind <- ifelse(
-  talk_sessions_df$is_keynote,
-  "keynote",
-  "talk"
-)
 talk_sessions_df$track_title <- ifelse(
-  talk_sessions_df$is_keynote,
+  talk_sessions_df$kind == "keynote",
   "Keynote",
   talk_sessions_df$track_title
 )

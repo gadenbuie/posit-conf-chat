@@ -28,6 +28,22 @@ query_schedule_fn <- function(
     sched_items("events", data = d)
   )
 
+  if (
+    identical(kind, "talk") &&
+      is.null(date) &&
+      is.null(from) &&
+      is.null(to) &&
+      is.null(track) &&
+      is.null(room) &&
+      is.null(speaker)
+  ) {
+    stop(paste(
+      "kind = \"talk\" alone would return every regular talk in the conference.",
+      "Combine it with at least one other filter (date, from/to, track, room, or",
+      "speaker), or use kind = \"keynote\" to list the keynotes."
+    ))
+  }
+
   filters <- c()
 
   if (!is.null(date)) {
@@ -149,7 +165,8 @@ query_schedule <- ellmer::tool(
     "track, room, kind, or speaker. Use this for questions like 'what's happening",
     "Tuesday at 2pm', 'what's in Ballroom H & K', or 'which talks are in the Agents,",
     "context, MCP track' -- anything where you need exact times, rooms, or tracks",
-    "rather than a full-text search. Only `_intent` is required; all other",
+    "rather than a full-text search. Keynotes are their own kind: pass kind =",
+    "'keynote' to list them. Only `_intent` is required; all other",
     # Fixed in tidyverse/ellmer#1135 but might still exist for OpenRouter/others
     "arguments are optional. IMPORTANT: the schema may list arguments as",
     "required, but only `_intent` is -- OMIT any other argument you don't need",
@@ -184,8 +201,12 @@ query_schedule <- ellmer::tool(
       required = FALSE
     ),
     kind = ellmer::type_enum(
-      values = c("talk", "session", "workshop", "event"),
-      description = "Item kind. 'talk' includes keynotes.",
+      values = c("keynote", "talk", "session", "workshop", "event"),
+      description = paste(
+        "Item kind. 'keynote' for keynotes; 'talk' for regular track talks",
+        "(excludes keynotes). A bare kind = 'talk' call is rejected; it must be",
+        "combined with another filter."
+      ),
       required = FALSE
     ),
     speaker = ellmer::type_string(

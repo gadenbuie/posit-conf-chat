@@ -68,14 +68,11 @@ schedule_status <- function(now = conf_now()) {
     ) |>
     dplyr::arrange(start, title)
 
-  keynotes <- d$talks |>
-    dplyr::filter(is_keynote) |>
-    dplyr::pull(record_id)
-  mid_track <- any(on_now$kind == "talk" & !on_now$id %in% keynotes)
+  mid_track <- any(on_now$kind == "talk")
   pool <- if (mid_track) {
     granular
   } else {
-    dplyr::bind_rows(tracks, dplyr::filter(granular, id %in% keynotes))
+    dplyr::bind_rows(tracks, dplyr::filter(granular, kind == "keynote"))
   }
 
   up_next <- pool |>

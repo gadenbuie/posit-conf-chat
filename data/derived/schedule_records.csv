@@ -176,15 +176,18 @@ replace repetitive ui and server code with simple function calls, and
 how to extend shinyfilters for their own use cases.",2026-09-15 18:15:00,2026-09-15 18:20:00,"2026-09-15 13:15:00 CDT","2026-09-15 13:20:00 CDT","Virtual","HYBRID","SCHEDULE",,"Ballroom L & I","28e89ca6-8a47-43a9-b4ae-a3ee04e71a58","UPCOMING"
 "6c8ab3f2-7be0-47e5-b884-8dd79c1ebf31","78979efc-d061-4759-9161-cb3e44be1085","c4c79545-0600-4574-a56d-bad847aedcb8","Beyond Bootstrap: Building Custom Shiny UI Packages with AI","Shiny developers have long been limited to Bootstrap and a handful of
 pre-built UI frameworks. But what if you could use Material UI, Ant
-Design, or any modern react.js web framework you love? This talk
-demonstrates how AI can generate production-ready R packages that wrap
-your favorite UI frameworks for Shiny. We'll walk through using AI to
-translate JavaScript components into R bindings, handle dependencies,
-and create idiomatic interfaces—no JavaScript expertise required. You'll
-see live examples, learn effective prompting patterns, and discover how
-to maintain AI-generated packages. Whether you want Material Design or
-Web Components, AI makes it possible to bring any UI framework into your
-Shiny apps.",2026-09-15 15:20:00,2026-09-15 15:40:00,"2026-09-15 10:20:00 CDT","2026-09-15 10:40:00 CDT","Virtual","HYBRID","SCHEDULE",,"Ballroom H & K","0522ae00-7c31-4f8c-ab7a-b668a7ee0a59","UPCOMING"
+Design, or any modern react.js web framework you love?\
+\
+This talk demonstrates how AI can generate production-ready R packages
+that wrap your favorite UI frameworks for Shiny. We'll walk through
+using AI to translate JavaScript components into R bindings, handle
+dependencies, and create idiomatic interfaces—no JavaScript expertise
+required.\
+\
+You'll see live examples, learn effective prompting patterns, and
+discover how to maintain AI-generated packages. Whether you want
+Material Design or Web Components, AI makes it possible to bring any UI
+framework into your Shiny apps.",2026-09-15 15:20:00,2026-09-15 15:40:00,"2026-09-15 10:20:00 CDT","2026-09-15 10:40:00 CDT","Virtual","HYBRID","SCHEDULE",,"Ballroom H & K","0522ae00-7c31-4f8c-ab7a-b668a7ee0a59","UPCOMING"
 "ee11f76d-cd71-41bb-999e-5d1286dfb3bc","43d37c45-dfce-461b-a08b-76c8aa330788","360f73e3-f86c-48fb-acfa-0070bcb50ed6","Quarto Notebooks and Literate Programming in Positron","Quarto Notebooks, a new Positron feature, give you access to Jupyter's
 literate programming features without losing any of the benefits of
 working with plain text for editing, versioning, and collaborating. They
@@ -291,17 +294,16 @@ of LLM system design: chats, workflows, agents, and multi-agent systems.
 You'll leave with a better understanding of agentic design patterns and
 how to try them out for yourself.",2026-09-15 15:20:00,2026-09-15 15:40:00,"2026-09-15 10:20:00 CDT","2026-09-15 10:40:00 CDT","Virtual","HYBRID","SCHEDULE",,"Ballroom A-F","a94f5251-3484-4b8e-90df-fbc15b0cf375","UPCOMING"
 "687b887e-339a-429a-bd72-aa60682abcd2","9d001917-4982-4e58-ad40-198d7429acb4",,"Lightning Talks","",2026-09-15 18:00:00,2026-09-15 19:05:00,"2026-09-15 13:00:00 CDT","2026-09-15 14:05:00 CDT","Virtual","HYBRID","STAGE","Lanier Ballroom L&I","Ballroom L & I","28e89ca6-8a47-43a9-b4ae-a3ee04e71a58","UPCOMING"
-"30b6efea-19cc-4ec2-88ee-49f1dcece04b","43b5b092-a29a-4820-b0ae-8cf1015e37db","360f73e3-f86c-48fb-acfa-0070bcb50ed6","Better Notebooks with Marimo: Reproducible Data Science Workflows","Interactive notebooks are foundational in applied data science, but they
-introduce their own problems: out-of-order execution, difficult storage
-formats, and input-output mixing. Marimo is a modern Python notebook
-system that tackles these problems head-on. Reactive execution ensures
-reproducibility, its script-based format works well with version control
-and a broader Python codebase, and its outputs stay separate from
-inputs. But Marimo offers even more. This talk will show how Marimo
-notebooks fit naturally into analytics projects, focusing both on code
-features—pytest compatibility and its Python script format—and editor
-features, including a VS Code extension, LLM support, and Quarto
-integration.",2026-09-15 16:00:00,2026-09-15 16:20:00,"2026-09-15 11:00:00 CDT","2026-09-15 11:20:00 CDT","Virtual","HYBRID","SCHEDULE",,"Ballroom G & J","a73dc105-039e-467b-9047-b8f37bb0f1ba","UPCOMING"
+"30b6efea-19cc-4ec2-88ee-49f1dcece04b","43b5b092-a29a-4820-b0ae-8cf1015e37db","360f73e3-f86c-48fb-acfa-0070bcb50ed6","Better Python Notebooks with Marimo","Interactive notebooks are foundational to applied data science, but
+notebook-based workflows can be plagued by out-of-order execution,
+difficult storage formats, and unwanted input-output mixing. Marimo is a
+modern, batteries-included Python notebook system that tackles these
+problems head-on, and this talk will discuss how some of Marimo’s core
+features make notebook workflows safer and more productive. We’ll
+highlight features that make notebooks both safer to use and fit more
+naturally into data science workflow, from Marimo’s reactive execution
+model to its script-based format and native support for sandboxed
+environments.",2026-09-15 16:00:00,2026-09-15 16:20:00,"2026-09-15 11:00:00 CDT","2026-09-15 11:20:00 CDT","Virtual","HYBRID","SCHEDULE",,"Ballroom G & J","a73dc105-039e-467b-9047-b8f37bb0f1ba","UPCOMING"
 "242be2a0-83d7-4eb4-b302-f395e749dc6d","a630e867-f319-45f1-a992-521f961e9c80","360f73e3-f86c-48fb-acfa-0070bcb50ed6","The modern tool builder: CLIs, agents, and PEP 723","Being able to write R or Python scripts is an incredibly useful skill,
 allowing you to automate nearly any task imaginable. However, with a bit
 of extra effort, those brittle scripts can be transformed into robust,
@@ -596,7 +598,7 @@ correct, transparent, and reproducible.
 
 9:55 - 10:05am \| Building the Future of Data Science and AI with Posit
 and AWS",2026-09-15 14:00:00,2026-09-15 15:05:00,"2026-09-15 09:00:00 CDT","2026-09-15 10:05:00 CDT","Virtual","HYBRID","STAGE","Lanier Ballroom A-F","Ballroom A-F","a94f5251-3484-4b8e-90df-fbc15b0cf375","UPCOMING"
-"be012799-bf9f-4129-a293-5e3257ac5151","99919067-e9ac-41e3-b695-296d0ab96f9a",,"Lunch & Birds of a Feather Meetups","",2026-09-15 16:40:00,2026-09-15 18:00:00,"2026-09-15 11:40:00 CDT","2026-09-15 13:00:00 CDT","In-person","IN_PERSON","IN_PERSON",,"Hilton Americas Houston","a6d13886-0264-4d78-9336-7f83d74d6f3a","UPCOMING"
+"be012799-bf9f-4129-a293-5e3257ac5151","99919067-e9ac-41e3-b695-296d0ab96f9a",,"Lunch & Birds of a Feather Meetups","",2026-09-15 16:40:00,2026-09-15 18:00:00,"2026-09-15 11:40:00 CDT","2026-09-15 13:00:00 CDT","In-person","IN_PERSON","IN_PERSON",,"Ballroom A-F","a94f5251-3484-4b8e-90df-fbc15b0cf375","UPCOMING"
 "3b429b9f-a86e-4ee3-b55f-0c4ba51f5748","2ecc61ed-3949-4be8-8382-b3df443d7790",,"conf::rewind | 80s party!","Connect with fellow attendees over the Spazzmatics (an iconic 80s cover
 band), get competitive at the retro arcade games, and enjoy delicious
 food and drinks throughout.
@@ -903,7 +905,7 @@ This workshop will be a good fit for you as long as you have a basic
 familiarity with at least one of R or Python. No installation is
 necessary. Posit will provide a cloud environment equipped with both
 Positron and the LLMs we will use during class.",2026-09-14 21:00:00,2026-09-15,"2026-09-14 16:00:00 CDT","2026-09-14 19:00:00 CDT","Virtual","VIRTUAL",,,,,"UPCOMING"
-"a5a39584-a466-413e-94f0-2c82a33ddf62","7cba9f3e-bf6a-4200-875f-354ed2326832",,"Welcome Reception","",2026-09-14 22:00:00,2026-09-15,"2026-09-14 17:00:00 CDT","2026-09-14 19:00:00 CDT","In-person","IN_PERSON","IN_PERSON",,"Ballroom G & J","a73dc105-039e-467b-9047-b8f37bb0f1ba","UPCOMING"
+"a5a39584-a466-413e-94f0-2c82a33ddf62","7cba9f3e-bf6a-4200-875f-354ed2326832",,"Welcome Reception","",2026-09-14 22:00:00,2026-09-15,"2026-09-14 17:00:00 CDT","2026-09-14 19:00:00 CDT","In-person","IN_PERSON","IN_PERSON",,"Level 4 Foyer","1af83929-b960-47bd-b127-895efc934a55","UPCOMING"
 "8318c228-cd16-457e-8d71-0d7c6b4c63f4","5d3bca06-5433-4ca0-812c-ab38af83b8c3",,"Virtual Session: Modeling","This virtual session will have 4 20-minute talks!
 
 - **AI/ML SOS IDK \| Olivia Hebner and Kathryn Cronquist \| Summit**\
@@ -957,7 +959,7 @@ Positron and the LLMs we will use during class.",2026-09-14 21:00:00,2026-09-15,
   auditability, combining sparse text features with domain feature
   engineering. Attendees will learn a practical approach for modeling
   clinical text and strategies for augmenting statistical models with
-  rule-based logic.",2026-09-14 18:00:00,2026-09-14 19:40:00,"2026-09-14 13:00:00 CDT","2026-09-14 14:40:00 CDT","Virtual","VIRTUAL","STAGE","Virtual Day",,,"UPCOMING"
+  rule-based logic.",2026-09-14 18:00:00,2026-09-14 19:40:00,"2026-09-14 13:00:00 CDT","2026-09-14 14:40:00 CDT","Virtual","VIRTUAL","STAGE","Virtual Day (Sept 14)",,,"UPCOMING"
 "4ab3d5b8-3730-4d22-8967-18e7e45d0a53","2a02dcc4-1558-4fdd-8b22-cab617386953",,"Virtual Session: Practical Workflows","There are 3 20-minute talks in this session!
 
 - **Let Your LLM Surprise You: Inbox Insights with ellmer and Posit
@@ -999,7 +1001,7 @@ Positron and the LLMs we will use during class.",2026-09-14 21:00:00,2026-09-15,
   interactive data explorer and kernel-aware AI assistant live right
   inside your notebook workflow. We'll demo the full loop live:
   exploring data, visualizing it, and sharing results out to
-  stakeholders.",2026-09-14 19:50:00,2026-09-14 21:00:00,"2026-09-14 14:50:00 CDT","2026-09-14 16:00:00 CDT","Virtual","VIRTUAL","STAGE","Virtual Day",,,"UPCOMING"
+  stakeholders.",2026-09-14 19:50:00,2026-09-14 21:00:00,"2026-09-14 14:50:00 CDT","2026-09-14 16:00:00 CDT","Virtual","VIRTUAL","STAGE","Virtual Day (Sept 14)",,,"UPCOMING"
 "0cc5ef54-9cb6-4fa0-b15f-c5321d37ee73","3f25102c-9320-4b12-a20f-8aead576b6ba",,"Virtual Session: Quarto, R + Python","This virtual session will have 4 20-minute talks!
 
 - **I Didn't Abandon R—I Added Python: My Story of Growing Without
@@ -1058,7 +1060,7 @@ Positron and the LLMs we will use during class.",2026-09-14 21:00:00,2026-09-15,
   intersection, bringing the literate program and the interactive
   notebook together in one environment.\
   I hope this talk gives you a new way to think about the tools you use
-  every day, and the confidence to try the ones you don't.",2026-09-14 15:30:00,2026-09-14 17:00:00,"2026-09-14 10:30:00 CDT","2026-09-14 12:00:00 CDT","Virtual","VIRTUAL","STAGE","Virtual Day",,,"UPCOMING"
+  every day, and the confidence to try the ones you don't.",2026-09-14 15:30:00,2026-09-14 17:00:00,"2026-09-14 10:30:00 CDT","2026-09-14 12:00:00 CDT","Virtual","VIRTUAL","STAGE","Virtual Day (Sept 14)",,,"UPCOMING"
 "e829d8fd-7b30-4df0-b9a1-18010dee499c","7f3a8575-439f-440e-9424-ea158c9499a3","a6722b88-32c1-445c-9f6a-3a99b5678f97","Do This Instead: 4 Alternatives to Common Charts","Even in “good” charts, it’s easy to miss or misinterpret key patterns in
 the data. Common best practices — continuous color scales, equally
 spaced gridlines, month-level aggregation, etc — leave critical leaps
@@ -1617,7 +1619,7 @@ hidden from view in parallel disciplines, and the way we share our
 findings. Along the way, we will discuss practical tips for building and
 curating the context needed for data work and how this process is part
 of what keeps our field fundamentally creative and human. ",2026-09-16 14:00:00,2026-09-16 15:00:00,"2026-09-16 09:00:00 CDT","2026-09-16 10:00:00 CDT","Virtual","HYBRID","STAGE","Lanier Ballroom A-F","Ballroom A-F","a94f5251-3484-4b8e-90df-fbc15b0cf375","UPCOMING"
-"eabd4945-f0eb-4f0f-901d-c8658fb7ec4b","854f7c62-b4eb-41e2-83cb-f28cd92db45e",,"Lunch & Birds of a Feather Meetups","",2026-09-16 16:40:00,2026-09-16 18:00:00,"2026-09-16 11:40:00 CDT","2026-09-16 13:00:00 CDT","In-person","IN_PERSON","IN_PERSON",,"Hilton Americas Houston","a6d13886-0264-4d78-9336-7f83d74d6f3a","UPCOMING"
+"eabd4945-f0eb-4f0f-901d-c8658fb7ec4b","854f7c62-b4eb-41e2-83cb-f28cd92db45e",,"Lunch & Birds of a Feather Meetups","",2026-09-16 16:40:00,2026-09-16 18:00:00,"2026-09-16 11:40:00 CDT","2026-09-16 13:00:00 CDT","In-person","IN_PERSON","IN_PERSON",,"Ballroom A-F","a94f5251-3484-4b8e-90df-fbc15b0cf375","UPCOMING"
 "afabacaa-e3b8-4abd-92b7-b20c82529d19","540e6520-37e9-4f75-9022-844101d448c4",,"Lunch & Learn with AWS: Using Positron & Amazon Sagemaker for Regulated Industries","Traditional analysis work is spread across tools that aren’t always
 compatible. The data sits in a warehouse you reach through an extract.
 The model runs on another platform. The results end up as a screenshot

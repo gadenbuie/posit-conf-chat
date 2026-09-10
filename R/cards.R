@@ -23,7 +23,14 @@ card_item_fields <- list(
     "record_id",
     "title",
     "track_title",
-    "is_keynote",
+    "abstract",
+    "start_time_event_local",
+    "end_time_event_local",
+    "effective_location_name"
+  ),
+  keynote = c(
+    "record_id",
+    "title",
     "abstract",
     "start_time_event_local",
     "end_time_event_local",
@@ -116,6 +123,7 @@ S7::method(contents_shinychat, ItemCardResult) <- function(content) {
   card <- switch(
     content@kind,
     talk = card_talk(content),
+    keynote = card_talk(content),
     session = card_session(content),
     workshop = card_workshop(content),
     event = card_event(content),
@@ -325,7 +333,7 @@ card_speaker_list <- function(speakers) {
 
 card_talk <- function(content) {
   item <- content@item
-  is_keynote <- isTRUE(item$is_keynote)
+  is_keynote <- identical(content@kind, "keynote")
   htmltools::tags$div(
     class = paste(
       "card conf-card border-0 shadow-sm rounded-3 mb-2",

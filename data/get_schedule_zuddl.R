@@ -348,7 +348,6 @@ presentations <- schedule_records |>
       venue == "STAGE" ~ "talk_session",
       .default = "event"
     ),
-    is_keynote = presentation_kind == "keynote",
     effective_location_name = coalesce(
       na_if(location_name, ""),
       track_location_name
@@ -452,8 +451,7 @@ talks_columns <- c(
   "track_location_id",
   "track_location_name",
   "effective_location_name",
-  "effective_session_format",
-  "is_keynote"
+  "effective_session_format"
 )
 
 program_columns <- c(
@@ -505,7 +503,7 @@ dir.create(
 )
 
 write.csv(
-  select(talks, all_of(talks_columns)),
+  select(talks, all_of(talks_columns), kind = presentation_kind),
   file.path(output_dir, "derived", "talks.csv"),
   row.names = FALSE,
   na = ""

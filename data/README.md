@@ -96,7 +96,7 @@ Additional parent-derived columns include:
 | `track_location_id`, `track_location_name` | Parent session block room/location |
 | `effective_location_name` | Record-level room when available; otherwise inherited from the parent session block |
 | `effective_session_format` | Record-level format when available; otherwise inherited from the parent session block |
-| `is_keynote` | `TRUE` for keynote records, which have no parent session block |
+| `kind` | `talk` for individual track talks, `keynote` for keynotes (which have no parent session block) |
 
 Use `talks.csv` for most talk-oriented analysis. Join `speakers.csv` on `record_id` to attach speakers, and `talk_sessions.csv` on `parent_session_id` = `session_id` to attach the full session row.
 

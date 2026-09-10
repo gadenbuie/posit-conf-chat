@@ -4,7 +4,9 @@ full_schedule_items <- function() {
   d <- schedule_data()
   standalone <- d$talks |>
     dplyr::filter(
-      is_keynote | is.na(parent_session_id) | parent_session_id == ""
+      kind == "keynote" |
+        is.na(parent_session_id) |
+        parent_session_id == ""
     )
   items <- dplyr::bind_rows(
     sched_items(c("sessions", "workshops", "events"), data = d),

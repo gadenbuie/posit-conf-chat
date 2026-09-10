@@ -44,7 +44,7 @@ sched_summary_md <- function(res) {
       track = item$track_title
     ))
   )
-  if (identical(res$kind, "talk") && isTRUE(item$is_keynote)) {
+  if (identical(res$kind, "keynote")) {
     lines <- paste0("Keynote\n\n", paste(lines, collapse = "\n\n"))
   }
   abstract <- card_value(item$abstract)

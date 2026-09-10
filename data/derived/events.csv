@@ -1,5 +1,5 @@
 "record_id","session_id","title","abstract","start_time_utc","end_time_utc","start_time_event_local","end_time_event_local","session_type","session_format","effective_location_name"
-"be012799-bf9f-4129-a293-5e3257ac5151","99919067-e9ac-41e3-b695-296d0ab96f9a","Lunch & Birds of a Feather Meetups","",2026-09-15 16:40:00,2026-09-15 18:00:00,"2026-09-15 11:40:00 CDT","2026-09-15 13:00:00 CDT","In-person","IN_PERSON","Hilton Americas Houston"
+"be012799-bf9f-4129-a293-5e3257ac5151","99919067-e9ac-41e3-b695-296d0ab96f9a","Lunch & Birds of a Feather Meetups","",2026-09-15 16:40:00,2026-09-15 18:00:00,"2026-09-15 11:40:00 CDT","2026-09-15 13:00:00 CDT","In-person","IN_PERSON","Ballroom A-F"
 "3b429b9f-a86e-4ee3-b55f-0c4ba51f5748","2ecc61ed-3949-4be8-8382-b3df443d7790","conf::rewind | 80s party!","Connect with fellow attendees over the Spazzmatics (an iconic 80s cover
 band), get competitive at the retro arcade games, and enjoy delicious
 food and drinks throughout.
@@ -42,8 +42,8 @@ to your team's stack.
   Snowflake data pipelines.
 - Best practices for managing features and registering models with
   **Posit and Snowflake**",2026-09-15 16:45:00,2026-09-15 17:45:00,"2026-09-15 11:45:00 CDT","2026-09-15 12:45:00 CDT","In-person","IN_PERSON","Room 335"
-"a5a39584-a466-413e-94f0-2c82a33ddf62","7cba9f3e-bf6a-4200-875f-354ed2326832","Welcome Reception","",2026-09-14 22:00:00,2026-09-15,"2026-09-14 17:00:00 CDT","2026-09-14 19:00:00 CDT","In-person","IN_PERSON","Ballroom G & J"
-"eabd4945-f0eb-4f0f-901d-c8658fb7ec4b","854f7c62-b4eb-41e2-83cb-f28cd92db45e","Lunch & Birds of a Feather Meetups","",2026-09-16 16:40:00,2026-09-16 18:00:00,"2026-09-16 11:40:00 CDT","2026-09-16 13:00:00 CDT","In-person","IN_PERSON","Hilton Americas Houston"
+"a5a39584-a466-413e-94f0-2c82a33ddf62","7cba9f3e-bf6a-4200-875f-354ed2326832","Welcome Reception","",2026-09-14 22:00:00,2026-09-15,"2026-09-14 17:00:00 CDT","2026-09-14 19:00:00 CDT","In-person","IN_PERSON","Level 4 Foyer"
+"eabd4945-f0eb-4f0f-901d-c8658fb7ec4b","854f7c62-b4eb-41e2-83cb-f28cd92db45e","Lunch & Birds of a Feather Meetups","",2026-09-16 16:40:00,2026-09-16 18:00:00,"2026-09-16 11:40:00 CDT","2026-09-16 13:00:00 CDT","In-person","IN_PERSON","Ballroom A-F"
 "afabacaa-e3b8-4abd-92b7-b20c82529d19","540e6520-37e9-4f75-9022-844101d448c4","Lunch & Learn with AWS: Using Positron & Amazon Sagemaker for Regulated Industries","Traditional analysis work is spread across tools that aren’t always
 compatible. The data sits in a warehouse you reach through an extract.
 The model runs on another platform. The results end up as a screenshot
