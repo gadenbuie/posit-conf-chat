@@ -26,6 +26,7 @@ Imports:
     shinychat (>= 0.5.0),
     tidyr
 Remotes:
+    posit-dev/brand-yml/pkg-r,
     posit-dev/shinychat/pkg-r,
     tidyverse/ellmer@fix/posit-tools-optional-args
 Config/Needs/data: chromote, here, httr2, jsonlite
