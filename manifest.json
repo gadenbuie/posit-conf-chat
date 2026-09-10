@@ -419,12 +419,12 @@
       }
     },
     "brand.yml": {
-      "Source": "github",
-      "Repository": null,
+      "Source": "CRAN",
+      "Repository": "https://cloud.r-project.org",
       "description": {
         "Package": "brand.yml",
         "Title": "Unified Branding with a Simple YAML File",
-        "Version": "0.1.0.9000",
+        "Version": "0.1.0",
         "Authors@R": "c(\n    person(\"Garrick\", \"Aden-Buie\", , \"garrick@posit.co\", role = c(\"aut\", \"cre\"),\n           comment = c(ORCID = \"0000-0002-7111-0077\")),\n    person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\"),\n           comment = c(ROR = \"03wc8by49\"))\n  )",
         "Description": "Read and process 'brand.yml' 'YAML' files. 'brand.yml' is a\n    simple, portable 'YAML' file that codifies your company's brand\n    guidelines into a format that can be used by 'Quarto', 'Shiny' and 'R'\n    tooling to create branded outputs. Maintain unified, branded theming\n    for web applications to printed reports to dashboards and\n    presentations with a consistent look and feel.",
         "License": "MIT + file LICENSE",
@@ -437,26 +437,14 @@
         "Config/testthat/edition": "3",
         "Config/testthat/parallel": "true",
         "Encoding": "UTF-8",
-        "Roxygen": "list(markdown = TRUE)",
         "RoxygenNote": "7.3.3",
-        "RemoteType": "github",
-        "RemoteHost": "api.github.com",
-        "RemoteRepo": "brand-yml",
-        "RemoteUsername": "posit-dev",
-        "RemotePkgRef": "posit-dev/brand-yml#120",
-        "RemotePull": "120",
-        "RemoteSha": "4f216cacc4b03e45a0e7beef6542d428f46df1f9",
-        "RemoteSubdir": "pkg-r",
-        "GithubRepo": "brand-yml",
-        "GithubUsername": "posit-dev",
-        "GitHubPull": "120",
-        "GithubSHA1": "4f216cacc4b03e45a0e7beef6542d428f46df1f9",
-        "GithubSubdir": "pkg-r",
         "NeedsCompilation": "no",
-        "Packaged": "2026-08-12 19:05:11 UTC; garrick",
+        "Packaged": "2025-11-03 17:23:28 UTC; garrick",
         "Author": "Garrick Aden-Buie [aut, cre] (ORCID:\n    <https://orcid.org/0000-0002-7111-0077>),\n  Posit Software, PBC [cph, fnd] (ROR: <https://ror.org/03wc8by49>)",
         "Maintainer": "Garrick Aden-Buie <garrick@posit.co>",
-        "Built": "R 4.6.1; ; 2026-08-12 19:05:12 UTC; unix"
+        "Repository": "CRAN",
+        "Date/Publication": "2025-11-06 10:40:02 UTC",
+        "Built": "R 4.6.0; ; 2026-04-25 17:14:12 UTC; unix"
       }
     },
     "bsicons": {
@@ -493,12 +481,12 @@
       }
     },
     "bslib": {
-      "Source": "github",
-      "Repository": null,
+      "Source": "CRAN",
+      "Repository": "https://cloud.r-project.org",
       "description": {
         "Package": "bslib",
         "Title": "Custom 'Bootstrap' 'Sass' Themes for 'shiny' and 'rmarkdown'",
-        "Version": "0.12.0.9000",
+        "Version": "0.12.0",
         "Authors@R": "c(\n    person(\"Carson\", \"Sievert\", , \"carson@posit.co\", role = c(\"aut\", \"cre\"),\n           comment = c(ORCID = \"0000-0002-4958-2844\")),\n    person(\"Joe\", \"Cheng\", , \"joe@posit.co\", role = \"aut\"),\n    person(\"Garrick\", \"Aden-Buie\", , \"garrick@posit.co\", role = \"aut\",\n           comment = c(ORCID = \"0000-0002-7111-0077\")),\n    person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\")),\n    person(, \"Bootstrap contributors\", role = \"ctb\",\n           comment = \"Bootstrap library\"),\n    person(, \"Twitter, Inc\", role = \"cph\",\n           comment = \"Bootstrap library\"),\n    person(\"Javi\", \"Aguilar\", role = c(\"ctb\", \"cph\"),\n           comment = \"Bootstrap colorpicker library\"),\n    person(\"Thomas\", \"Park\", role = c(\"ctb\", \"cph\"),\n           comment = \"Bootswatch library\"),\n    person(, \"PayPal\", role = c(\"ctb\", \"cph\"),\n           comment = \"Bootstrap accessibility plugin\")\n  )",
         "Description": "Simplifies custom 'CSS' styling of both 'shiny' and\n    'rmarkdown' via 'Bootstrap' 'Sass'. Supports 'Bootstrap' 3, 4 and 5 as\n    well as their various 'Bootswatch' themes. An interactive widget is\n    also provided for previewing themes in real time.",
         "License": "MIT + file LICENSE",
@@ -510,29 +498,19 @@
         "Config/Needs/deploy": "BH, chiflights22, colourpicker, commonmark, cpp11,\ncpsievert/chiflights22, cpsievert/histoslider, dplyr, DT,\nggplot2, ggridges, gt, hexbin, histoslider, htmlwidgets,\nlattice, leaflet, lubridate, markdown, modelr, plotly,\nreactable, reshape2, rprojroot, rsconnect, rstudio/shiny,\nscales, styler, tibble",
         "Config/Needs/routine": "chromote, desc, renv",
         "Config/Needs/website": "brio, crosstalk, dplyr, DT, ggplot2, glue,\nhtmlwidgets, leaflet, lorem, palmerpenguins, plotly, purrr,\nrprojroot, rstudio/htmltools, scales, stringr, tidyr, webshot2",
-        "Config/roxygen2/version": "8.1.0",
+        "Config/roxygen2/version": "8.0.0",
         "Config/testthat/edition": "3",
         "Config/testthat/parallel": "true",
         "Config/testthat/start-first": "zzzz-bs-sass, fonts, zzz-precompile,\ntheme-*, rmd-*",
         "Encoding": "UTF-8",
-        "Roxygen": "list(markdown = TRUE)",
         "Collate": "'accordion.R' 'breakpoints.R' 'bs-current-theme.R'\n'bs-dependencies.R' 'bs-global.R' 'bs-remove.R'\n'bs-theme-layers.R' 'bs-theme-preset-bootswatch.R'\n'bs-theme-preset-brand.R' 'bs-theme-preset-builtin.R'\n'bs-theme-preset.R' 'utils.R' 'bs-theme-preview.R'\n'bs-theme-update.R' 'bs-theme.R' 'bslib-package.R' 'buttons.R'\n'card.R' 'deprecated.R' 'files.R' 'fill.R' 'imports.R'\n'input-code-editor.R' 'input-dark-mode.R' 'input-submit.R'\n'input-switch.R' 'layout.R' 'nav-items.R' 'nav-update.R'\n'navbar_options.R' 'navs-legacy.R' 'navs.R' 'offcanvas.R'\n'onLoad.R' 'page.R' 'popover.R' 'precompiled.R' 'print.R'\n'shiny-devmode.R' 'sidebar.R' 'staticimports.R' 'toast.R'\n'toolbar.R' 'tooltip.R' 'utils-deps.R' 'utils-shiny.R'\n'utils-tags.R' 'value-box.R' 'version-default.R' 'versions.R'",
-        "RemoteType": "github",
-        "RemoteHost": "api.github.com",
-        "RemoteRepo": "bslib",
-        "RemoteUsername": "rstudio",
-        "RemotePkgRef": "rstudio/bslib",
-        "RemoteRef": "HEAD",
-        "RemoteSha": "97aa1abc262bff3fdfab686d4206a45fe7276ad6",
-        "GithubRepo": "bslib",
-        "GithubUsername": "rstudio",
-        "GithubRef": "HEAD",
-        "GithubSHA1": "97aa1abc262bff3fdfab686d4206a45fe7276ad6",
         "NeedsCompilation": "no",
-        "Packaged": "2026-08-13 15:02:11 UTC; garrick",
+        "Packaged": "2026-08-03 22:55:38 UTC; cpsievert",
         "Author": "Carson Sievert [aut, cre] (ORCID:\n    <https://orcid.org/0000-0002-4958-2844>),\n  Joe Cheng [aut],\n  Garrick Aden-Buie [aut] (ORCID:\n    <https://orcid.org/0000-0002-7111-0077>),\n  Posit Software, PBC [cph, fnd],\n  Bootstrap contributors [ctb] (Bootstrap library),\n  Twitter, Inc [cph] (Bootstrap library),\n  Javi Aguilar [ctb, cph] (Bootstrap colorpicker library),\n  Thomas Park [ctb, cph] (Bootswatch library),\n  PayPal [ctb, cph] (Bootstrap accessibility plugin)",
         "Maintainer": "Carson Sievert <carson@posit.co>",
-        "Built": "R 4.6.1; ; 2026-08-13 15:02:13 UTC; unix"
+        "Repository": "CRAN",
+        "Date/Publication": "2026-08-04 00:40:02 UTC",
+        "Built": "R 4.6.1; ; 2026-08-04 04:11:06 UTC; unix"
       }
     },
     "cachem": {
@@ -981,16 +959,16 @@
         "RemoteUsername": "tidyverse",
         "RemotePkgRef": "tidyverse/ellmer@fix/posit-tools-optional-args",
         "RemoteRef": "fix/posit-tools-optional-args",
-        "RemoteSha": "b882cc94298135328131bf2d193407aa6d42ae67",
+        "RemoteSha": "18ef6e760145b46dcc7a0b47b511b9d5b8d04615",
         "GithubRepo": "ellmer",
         "GithubUsername": "tidyverse",
         "GithubRef": "fix/posit-tools-optional-args",
-        "GithubSHA1": "b882cc94298135328131bf2d193407aa6d42ae67",
+        "GithubSHA1": "18ef6e760145b46dcc7a0b47b511b9d5b8d04615",
         "NeedsCompilation": "no",
-        "Packaged": "2026-09-07 19:48:04 UTC; garrick",
+        "Packaged": "2026-09-09 19:03:10 UTC; garrick",
         "Author": "Hadley Wickham [aut, cre] (ORCID:\n    <https://orcid.org/0000-0003-4757-117X>),\n  Joe Cheng [aut],\n  Aaron Jacobs [aut],\n  Garrick Aden-Buie [aut] (ORCID:\n    <https://orcid.org/0000-0002-7111-0077>),\n  Barret Schloerke [aut] (ORCID: <https://orcid.org/0000-0001-9986-114X>),\n  Posit Software, PBC [cph, fnd] (ROR: <https://ror.org/03wc8by49>)",
         "Maintainer": "Hadley Wickham <hadley@posit.co>",
-        "Built": "R 4.6.1; ; 2026-09-07 19:48:05 UTC; unix"
+        "Built": "R 4.6.1; ; 2026-09-09 19:03:11 UTC; unix"
       }
     },
     "fastmap": {
@@ -1270,16 +1248,16 @@
       }
     },
     "htmltools": {
-      "Source": "github",
-      "Repository": null,
+      "Source": "CRAN",
+      "Repository": "https://cloud.r-project.org",
       "description": {
         "Type": "Package",
         "Package": "htmltools",
         "Title": "Tools for HTML",
-        "Version": "0.5.9.9000",
+        "Version": "0.5.9",
         "Authors@R": "c(\n    person(\"Joe\", \"Cheng\", , \"joe@posit.co\", role = \"aut\"),\n    person(\"Carson\", \"Sievert\", , \"carson@posit.co\", role = c(\"aut\", \"cre\"),\n           comment = c(ORCID = \"0000-0002-4958-2844\")),\n    person(\"Barret\", \"Schloerke\", , \"barret@posit.co\", role = \"aut\",\n           comment = c(ORCID = \"0000-0001-9986-114X\")),\n    person(\"Winston\", \"Chang\", , \"winston@posit.co\", role = \"aut\",\n           comment = c(ORCID = \"0000-0002-1576-2126\")),\n    person(\"Yihui\", \"Xie\", , \"yihui@posit.co\", role = \"aut\"),\n    person(\"Jeff\", \"Allen\", role = \"aut\"),\n    person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\"))\n  )",
         "Description": "Tools for HTML generation and output.",
-        "License": "MIT + file LICENSE",
+        "License": "GPL (>= 2)",
         "URL": "https://github.com/rstudio/htmltools,\nhttps://rstudio.github.io/htmltools/",
         "BugReports": "https://github.com/rstudio/htmltools/issues",
         "Depends": "R (>= 2.14.1)",
@@ -1288,26 +1266,17 @@
         "Enhances": "knitr",
         "Config/Needs/check": "knitr",
         "Config/Needs/website": "rstudio/quillt, bench",
-        "Config/roxygen2/version": "8.0.0",
         "Encoding": "UTF-8",
-        "Roxygen": "list(markdown = TRUE)",
+        "RoxygenNote": "7.3.3",
         "Collate": "'colors.R' 'fill.R' 'html_dependency.R' 'html_escape.R'\n'html_print.R' 'htmltools-package.R' 'images.R' 'known_tags.R'\n'selector.R' 'staticimports.R' 'tag_query.R' 'utils.R' 'tags.R'\n'template.R'",
-        "RemoteType": "github",
-        "RemoteHost": "api.github.com",
-        "RemoteRepo": "htmltools",
-        "RemoteUsername": "rstudio",
-        "RemotePkgRef": "rstudio/htmltools@main",
-        "RemoteRef": "main",
-        "RemoteSha": "5135d17923ab80b3599da1f335d5d33eb9aa63a3",
-        "GithubRepo": "htmltools",
-        "GithubUsername": "rstudio",
-        "GithubRef": "main",
-        "GithubSHA1": "5135d17923ab80b3599da1f335d5d33eb9aa63a3",
         "NeedsCompilation": "yes",
-        "Packaged": "2026-07-01 17:23:13 UTC; garrick",
+        "Packaged": "2025-12-02 23:32:55 UTC; cpsievert",
         "Author": "Joe Cheng [aut],\n  Carson Sievert [aut, cre] (ORCID:\n    <https://orcid.org/0000-0002-4958-2844>),\n  Barret Schloerke [aut] (ORCID: <https://orcid.org/0000-0001-9986-114X>),\n  Winston Chang [aut] (ORCID: <https://orcid.org/0000-0002-1576-2126>),\n  Yihui Xie [aut],\n  Jeff Allen [aut],\n  Posit Software, PBC [cph, fnd]",
         "Maintainer": "Carson Sievert <carson@posit.co>",
-        "Built": "R 4.6.0; aarch64-apple-darwin23; 2026-07-01 17:23:14 UTC; unix"
+        "Repository": "CRAN",
+        "Date/Publication": "2025-12-04 11:50:09 UTC",
+        "Built": "R 4.6.0; aarch64-apple-darwin23; 2026-04-25 23:13:58 UTC; unix",
+        "Archs": "htmltools.so.dSYM"
       }
     },
     "httpuv": {
@@ -2572,43 +2541,33 @@
       }
     },
     "shiny": {
-      "Source": "github",
-      "Repository": null,
+      "Source": "CRAN",
+      "Repository": "https://cloud.r-project.org",
       "description": {
         "Type": "Package",
         "Package": "shiny",
         "Title": "Web Application Framework for R",
-        "Version": "1.14.0.9000",
+        "Version": "1.14.0",
         "Authors@R": "c(\n    person(\"Winston\", \"Chang\", , \"winston@posit.co\", role = \"aut\",\n           comment = c(ORCID = \"0000-0002-1576-2126\")),\n    person(\"Joe\", \"Cheng\", , \"joe@posit.co\", role = \"aut\"),\n    person(\"JJ\", \"Allaire\", , \"jj@posit.co\", role = \"aut\"),\n    person(\"Carson\", \"Sievert\", , \"carson@posit.co\", role = c(\"aut\", \"cre\"),\n           comment = c(ORCID = \"0000-0002-4958-2844\")),\n    person(\"Barret\", \"Schloerke\", , \"barret@posit.co\", role = \"aut\",\n           comment = c(ORCID = \"0000-0001-9986-114X\")),\n    person(\"Garrick\", \"Aden-Buie\", , \"garrick@adenbuie.com\", role = \"aut\",\n           comment = c(ORCID = \"0000-0002-7111-0077\")),\n    person(\"Yihui\", \"Xie\", , \"yihui@posit.co\", role = \"aut\"),\n    person(\"Jeff\", \"Allen\", role = \"aut\"),\n    person(\"Jonathan\", \"McPherson\", , \"jonathan@posit.co\", role = \"aut\"),\n    person(\"Alan\", \"Dipert\", role = \"aut\"),\n    person(\"Barbara\", \"Borges\", role = \"aut\"),\n    person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\"),\n           comment = c(ROR = \"03wc8by49\")),\n    person(, \"jQuery Foundation\", role = \"cph\",\n           comment = \"jQuery library and jQuery UI library\"),\n    person(, \"jQuery contributors\", role = c(\"ctb\", \"cph\"),\n           comment = \"jQuery library; authors listed in inst/www/shared/jquery-AUTHORS.txt\"),\n    person(, \"jQuery UI contributors\", role = c(\"ctb\", \"cph\"),\n           comment = \"jQuery UI library; authors listed in inst/www/shared/jqueryui/AUTHORS.txt\"),\n    person(\"Mark\", \"Otto\", role = \"ctb\",\n           comment = \"Bootstrap library\"),\n    person(\"Jacob\", \"Thornton\", role = \"ctb\",\n           comment = \"Bootstrap library\"),\n    person(, \"Bootstrap contributors\", role = \"ctb\",\n           comment = \"Bootstrap library\"),\n    person(, \"Twitter, Inc\", role = \"cph\",\n           comment = \"Bootstrap library\"),\n    person(\"Prem Nawaz\", \"Khan\", role = \"ctb\",\n           comment = \"Bootstrap accessibility plugin\"),\n    person(\"Victor\", \"Tsaran\", role = \"ctb\",\n           comment = \"Bootstrap accessibility plugin\"),\n    person(\"Dennis\", \"Lembree\", role = \"ctb\",\n           comment = \"Bootstrap accessibility plugin\"),\n    person(\"Srinivasu\", \"Chakravarthula\", role = \"ctb\",\n           comment = \"Bootstrap accessibility plugin\"),\n    person(\"Cathy\", \"O'Connor\", role = \"ctb\",\n           comment = \"Bootstrap accessibility plugin\"),\n    person(, \"PayPal, Inc\", role = \"cph\",\n           comment = \"Bootstrap accessibility plugin\"),\n    person(\"Stefan\", \"Petre\", role = c(\"ctb\", \"cph\"),\n           comment = \"Bootstrap-datepicker library\"),\n    person(\"Andrew\", \"Rowls\", role = c(\"ctb\", \"cph\"),\n           comment = \"Bootstrap-datepicker library\"),\n    person(\"Brian\", \"Reavis\", role = c(\"ctb\", \"cph\"),\n           comment = \"selectize.js library\"),\n    person(\"Salmen\", \"Bejaoui\", role = c(\"ctb\", \"cph\"),\n           comment = \"selectize-plugin-a11y library\"),\n    person(\"Denis\", \"Ineshin\", role = c(\"ctb\", \"cph\"),\n           comment = \"ion.rangeSlider library\"),\n    person(\"Sami\", \"Samhuri\", role = c(\"ctb\", \"cph\"),\n           comment = \"Javascript strftime library\"),\n    person(, \"SpryMedia Limited\", role = c(\"ctb\", \"cph\"),\n           comment = \"DataTables library\"),\n    person(\"Ivan\", \"Sagalaev\", role = c(\"ctb\", \"cph\"),\n           comment = \"highlight.js library\"),\n    person(\"R Core Team\", role = c(\"ctb\", \"cph\"),\n           comment = \"tar implementation from R\")\n  )",
         "Description": "Makes it incredibly easy to build interactive web\n    applications with R. Automatic \"reactive\" binding between inputs and\n    outputs and extensive prebuilt widgets make it possible to build\n    beautiful, responsive, and powerful applications with minimal effort.",
         "License": "MIT + file LICENSE",
         "URL": "https://shiny.posit.co/, https://github.com/rstudio/shiny",
         "BugReports": "https://github.com/rstudio/shiny/issues",
         "Depends": "methods, R (>= 3.1.2)",
-        "Imports": "bslib (>= 0.6.0), cachem (>= 1.1.0), cli, commonmark (>=\n2.0.0), fastmap (>= 1.1.1), fontawesome (>= 0.4.0), glue (>=\n1.3.2), grDevices, htmltools (>= 0.5.4), httpuv (>= 1.5.2),\njsonlite (>= 0.9.16), later (>= 1.0.0), lifecycle (>= 0.2.0),\nmime (>= 0.3), otel, promises (>= 1.5.0), R6 (>= 2.0), rlang\n(>= 0.4.10), sourcetools, tools, utils, watcher (>= 0.2.0),\nwithr, xtable",
-        "Suggests": "Cairo (>= 1.5-5), coro (>= 1.1.0), datasets, DT, dygraphs,\nfuture, ggplot2, knitr (>= 1.6), magrittr, markdown, mirai,\notelsdk (>= 0.2.0), ragg, reactlog (>= 1.0.0), rmarkdown, sass,\nshinytest2, showtext, testthat (>= 3.2.1), yaml",
+        "Imports": "bslib (>= 0.6.0), cachem (>= 1.1.0), cli, commonmark (>=\n2.0.0), fastmap (>= 1.1.1), fontawesome (>= 0.4.0), glue (>=\n1.3.2), grDevices, htmltools (>= 0.5.4), httpuv (>= 1.5.2),\njsonlite (>= 0.9.16), later (>= 1.0.0), lifecycle (>= 0.2.0),\nmime (>= 0.3), otel, promises (>= 1.5.0), R6 (>= 2.0), rlang\n(>= 0.4.10), sourcetools, tools, utils, withr, xtable",
+        "Suggests": "Cairo (>= 1.5-5), coro (>= 1.1.0), datasets, DT, dygraphs,\nfuture, ggplot2, knitr (>= 1.6), magrittr, markdown, mirai,\notelsdk (>= 0.2.0), ragg, reactlog (>= 1.0.0), rmarkdown, sass,\nshinytest2, showtext, testthat (>= 3.2.1), watcher, yaml",
         "Config/Needs/check": "shinyjs",
-        "Config/roxygen2/version": "8.1.0",
+        "Config/roxygen2/version": "8.0.0",
         "Config/testthat/edition": "3",
         "Encoding": "UTF-8",
-        "Roxygen": "list(markdown = TRUE)",
         "Collate": "'app-handle.R' 'globals.R' 'app-state.R' 'app_template.R'\n'bind-cache.R' 'bind-event.R' 'bookmark-state-local.R'\n'bookmark-state.R' 'bootstrap-deprecated.R'\n'bootstrap-layout.R' 'conditions.R' 'map.R' 'utils.R'\n'bootstrap.R' 'busy-indicators-spinners.R' 'busy-indicators.R'\n'cache-utils.R' 'deprecated.R' 'devmode.R' 'diagnose.R'\n'extended-task.R' 'fileupload.R' 'graph.R' 'reactives.R'\n'reactive-domains.R' 'history.R' 'hooks.R' 'html-deps.R'\n'image-interact-opts.R' 'image-interact.R' 'imageutils.R'\n'input-action.R' 'input-checkbox.R' 'input-checkboxgroup.R'\n'input-date.R' 'input-daterange.R' 'input-file.R'\n'input-numeric.R' 'input-password.R' 'input-radiobuttons.R'\n'input-select.R' 'input-slider.R' 'input-submit.R'\n'input-text.R' 'input-textarea.R' 'input-utils.R'\n'insert-tab.R' 'insert-ui.R' 'jqueryui.R' 'knitr.R'\n'middleware-shiny.R' 'middleware.R' 'timer.R' 'shiny.R'\n'mock-session.R' 'modal.R' 'modules.R' 'notifications.R'\n'otel-attr-srcref.R' 'otel-collect.R' 'otel-enable.R'\n'otel-error.R' 'otel-label.R' 'otel-reactive-update.R'\n'otel-session.R' 'otel-shiny.R' 'otel-with.R' 'priorityqueue.R'\n'progress.R' 'react.R' 'reexports.R' 'render-cached-plot.R'\n'render-plot.R' 'render-table.R' 'run-url.R' 'runapp.R'\n'serializers.R' 'server-input-handlers.R'\n'server-resource-paths.R' 'server.R' 'shiny-options.R'\n'shiny-package.R' 'shinyapp.R' 'shinyui.R' 'shinywrappers.R'\n'showcase.R' 'snapshot.R' 'staticimports.R' 'tar.R'\n'test-export.R' 'test-server.R' 'test.R' 'update-input.R'\n'utils-lang.R' 'utils-tags.R' 'version_bs_date_picker.R'\n'version_ion_range_slider.R' 'version_jquery.R'\n'version_jqueryui.R' 'version_selectize.R' 'version_strftime.R'\n'viewer.R'",
-        "RemoteType": "github",
-        "RemoteHost": "api.github.com",
-        "RemoteRepo": "shiny",
-        "RemoteUsername": "rstudio",
-        "RemotePkgRef": "rstudio/shiny",
-        "RemoteRef": "HEAD",
-        "RemoteSha": "d19095f4b3dd2b699406db2693c487fb38bd2d4a",
-        "GithubRepo": "shiny",
-        "GithubUsername": "rstudio",
-        "GithubRef": "HEAD",
-        "GithubSHA1": "d19095f4b3dd2b699406db2693c487fb38bd2d4a",
         "NeedsCompilation": "no",
-        "Packaged": "2026-08-20 14:18:57 UTC; garrick",
+        "Packaged": "2026-06-18 18:59:37 UTC; cpsievert",
         "Author": "Winston Chang [aut] (ORCID: <https://orcid.org/0000-0002-1576-2126>),\n  Joe Cheng [aut],\n  JJ Allaire [aut],\n  Carson Sievert [aut, cre] (ORCID:\n    <https://orcid.org/0000-0002-4958-2844>),\n  Barret Schloerke [aut] (ORCID: <https://orcid.org/0000-0001-9986-114X>),\n  Garrick Aden-Buie [aut] (ORCID:\n    <https://orcid.org/0000-0002-7111-0077>),\n  Yihui Xie [aut],\n  Jeff Allen [aut],\n  Jonathan McPherson [aut],\n  Alan Dipert [aut],\n  Barbara Borges [aut],\n  Posit Software, PBC [cph, fnd] (ROR: <https://ror.org/03wc8by49>),\n  jQuery Foundation [cph] (jQuery library and jQuery UI library),\n  jQuery contributors [ctb, cph] (jQuery library; authors listed in\n    inst/www/shared/jquery-AUTHORS.txt),\n  jQuery UI contributors [ctb, cph] (jQuery UI library; authors listed in\n    inst/www/shared/jqueryui/AUTHORS.txt),\n  Mark Otto [ctb] (Bootstrap library),\n  Jacob Thornton [ctb] (Bootstrap library),\n  Bootstrap contributors [ctb] (Bootstrap library),\n  Twitter, Inc [cph] (Bootstrap library),\n  Prem Nawaz Khan [ctb] (Bootstrap accessibility plugin),\n  Victor Tsaran [ctb] (Bootstrap accessibility plugin),\n  Dennis Lembree [ctb] (Bootstrap accessibility plugin),\n  Srinivasu Chakravarthula [ctb] (Bootstrap accessibility plugin),\n  Cathy O'Connor [ctb] (Bootstrap accessibility plugin),\n  PayPal, Inc [cph] (Bootstrap accessibility plugin),\n  Stefan Petre [ctb, cph] (Bootstrap-datepicker library),\n  Andrew Rowls [ctb, cph] (Bootstrap-datepicker library),\n  Brian Reavis [ctb, cph] (selectize.js library),\n  Salmen Bejaoui [ctb, cph] (selectize-plugin-a11y library),\n  Denis Ineshin [ctb, cph] (ion.rangeSlider library),\n  Sami Samhuri [ctb, cph] (Javascript strftime library),\n  SpryMedia Limited [ctb, cph] (DataTables library),\n  Ivan Sagalaev [ctb, cph] (highlight.js library),\n  R Core Team [ctb, cph] (tar implementation from R)",
         "Maintainer": "Carson Sievert <carson@posit.co>",
-        "Built": "R 4.6.1; ; 2026-08-20 14:18:59 UTC; unix"
+        "Repository": "CRAN",
+        "Date/Publication": "2026-06-21 14:10:08 UTC",
+        "Built": "R 4.6.0; ; 2026-06-21 15:41:33 UTC; unix"
       }
     },
     "shinychat": {
@@ -2635,20 +2594,20 @@
         "RemoteHost": "api.github.com",
         "RemoteRepo": "shinychat",
         "RemoteUsername": "posit-dev",
-        "RemotePkgRef": "posit-dev/shinychat/pkg-r@rc-v0.5.0",
-        "RemoteRef": "rc-v0.5.0",
-        "RemoteSha": "1f2b21ed833e3c730a7ae44118850086fc2e2625",
+        "RemotePkgRef": "posit-dev/shinychat/pkg-r",
+        "RemoteRef": "HEAD",
+        "RemoteSha": "826c799994c32611629236bbc73516dbc14ff2ab",
         "RemoteSubdir": "pkg-r",
         "GithubRepo": "shinychat",
         "GithubUsername": "posit-dev",
-        "GithubRef": "rc-v0.5.0",
-        "GithubSHA1": "1f2b21ed833e3c730a7ae44118850086fc2e2625",
+        "GithubRef": "HEAD",
+        "GithubSHA1": "826c799994c32611629236bbc73516dbc14ff2ab",
         "GithubSubdir": "pkg-r",
         "NeedsCompilation": "no",
-        "Packaged": "2026-09-09 15:56:42 UTC; garrick",
+        "Packaged": "2026-09-10 12:27:33 UTC; garrick",
         "Author": "Joe Cheng [aut],\n  Carson Sievert [aut],\n  Garrick Aden-Buie [aut, cre] (ORCID:\n    <https://orcid.org/0000-0002-7111-0077>),\n  Barret Schloerke [aut] (ORCID: <https://orcid.org/0000-0001-9986-114X>),\n  Posit Software, PBC [cph, fnd] (ROR: <https://ror.org/03wc8by49>)",
         "Maintainer": "Garrick Aden-Buie <garrick@adenbuie.com>",
-        "Built": "R 4.6.1; ; 2026-09-09 15:56:43 UTC; unix"
+        "Built": "R 4.6.1; ; 2026-09-10 12:27:34 UTC; unix"
       }
     },
     "snowflakeauth": {
@@ -3101,46 +3060,6 @@
         "Archs": "vroom.so.dSYM"
       }
     },
-    "watcher": {
-      "Source": "CRAN",
-      "Repository": "https://cloud.r-project.org",
-      "description": {
-        "Type": "Package",
-        "Package": "watcher",
-        "Title": "Watch the File System for Changes",
-        "Version": "0.2.0",
-        "Authors@R": "c(\n    person(\"Charlie\", \"Gao\", , \"charlie.gao@posit.co\", role = c(\"aut\", \"cre\"),\n           comment = c(ORCID = \"0000-0002-0750-061X\")),\n    person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\"),\n           comment = c(ROR = \"03wc8by49\")),\n    person(\"Enrico M.\", \"Crisostomo\", role = \"cph\",\n           comment = \"libfswatch library\"),\n    person(\"Alan\", \"Dipert\", role = \"cph\",\n           comment = \"libfswatch library\")\n  )",
-        "Description": "R binding for 'libfswatch', a file system monitoring library.\n    Watch files, or directories recursively, for changes in the\n    background.  Log activity, or call an R function, upon every change\n    event.",
-        "License": "MIT + file LICENSE",
-        "URL": "https://watcher.r-lib.org, https://github.com/r-lib/watcher",
-        "BugReports": "https://github.com/r-lib/watcher/issues",
-        "Depends": "R (>= 3.5)",
-        "Imports": "later, R6, rlang",
-        "Suggests": "testthat (>= 3.0.0)",
-        "Biarch": "true",
-        "Config/Needs/website": "tidyverse/tidytemplate",
-        "Config/roxygen2/markdown": "TRUE",
-        "Config/roxygen2/version": "8.0.0",
-        "Config/testthat/edition": "3",
-        "Config/usethis/last-upkeep": "2025-04-23",
-        "Encoding": "UTF-8",
-        "SystemRequirements": "'libfswatch' (optional, bundled copy compiled\notherwise)",
-        "NeedsCompilation": "yes",
-        "Packaged": "2026-06-22 07:45:09 UTC; cg334",
-        "Author": "Charlie Gao [aut, cre] (ORCID: <https://orcid.org/0000-0002-0750-061X>),\n  Posit Software, PBC [cph, fnd] (ROR: <https://ror.org/03wc8by49>),\n  Enrico M. Crisostomo [cph] (libfswatch library),\n  Alan Dipert [cph] (libfswatch library)",
-        "Maintainer": "Charlie Gao <charlie.gao@posit.co>",
-        "Repository": "CRAN",
-        "Date/Publication": "2026-06-22 08:10:02 UTC",
-        "Built": "R 4.6.0; aarch64-apple-darwin23; 2026-06-22 12:24:38 UTC; unix",
-        "RemoteType": "standard",
-        "RemoteRef": "watcher",
-        "RemotePkgRef": "watcher",
-        "RemoteRepos": "https://cloud.r-project.org",
-        "RemoteReposName": "CRAN",
-        "RemotePkgPlatform": "source",
-        "RemoteSha": "0.2.0"
-      }
-    },
     "withr": {
       "Source": "CRAN",
       "Repository": "https://cloud.r-project.org",
@@ -3331,7 +3250,7 @@
       "checksum": "db0043aa3bdb1e851a4a2c34e1d86d77"
     },
     "app.R": {
-      "checksum": "a7bc71717103541d2a13e58abe559566"
+      "checksum": "93c3ce5f60c826c3745496313333e6b4"
     },
     "assets/agenda.js": {
       "checksum": "d848f355ed938349ebd42028eec52b3c"
@@ -3340,7 +3259,7 @@
       "checksum": "37032734a22d403c0398432d24149196"
     },
     "assets/custom.css": {
-      "checksum": "01814c4783ebf8f136321e0a6b2cdfa3"
+      "checksum": "62062fca9359afc3f1ddfa8a785fb913"
     },
     "assets/generate-pixel-fade.py": {
       "checksum": "9e66e5b6d020015a19df03ee2c65e0a9"
@@ -3403,7 +3322,7 @@
       "checksum": "e820ad503c995f9a2541e232005d5a53"
     },
     "prompts/system.md": {
-      "checksum": "7e99d44a1b55e4b655358b06a89a55e2"
+      "checksum": "db9f73652fccbff5f855cd43c64acdbf"
     },
     "R/aaa.R": {
       "checksum": "85cf34df98b909bd6efcf3e08dc207dc"
@@ -3412,10 +3331,10 @@
       "checksum": "75ae7f39c9f9794fdf1510756f88e671"
     },
     "R/cards.R": {
-      "checksum": "f737cb9d955021f86389afe6f449e348"
+      "checksum": "daf149d8b7b4466016bda8a704a91c23"
     },
     "R/client.R": {
-      "checksum": "adb8b7764f385bd87e97c65a494f7d81"
+      "checksum": "4732a50f377bab62e673acf77c3a465e"
     },
     "R/drawer.R": {
       "checksum": "a12a925819db4e5ae7ff9ae08bfd9a9c"
@@ -3436,37 +3355,34 @@
       "checksum": "407c56a486cf79c37701722971555ec2"
     },
     "R/schedule.R": {
-      "checksum": "4701ca913cbe6a5eb8b0a5cb0eecfe9a"
+      "checksum": "68858bb95a4106389c7ae5a9a0e35f05"
     },
     "R/skills.R": {
       "checksum": "673856f51082beccb4af4236674c6a68"
     },
     "R/slash-commands.R": {
-      "checksum": "f3dede2371e979560c334c4b53aff6bd"
+      "checksum": "d391c7cad598c80ad7b0bb5468071df5"
     },
     "R/toasts.R": {
       "checksum": "f9f0e6894d45c9060c2122646fc43c88"
-    },
-    "R/tools-list_schedule_options.R": {
-      "checksum": "3946934753aa322507c3021bf58b78c6"
     },
     "R/tools-manage_agenda.R": {
       "checksum": "a5feff677cbd5f08b2a0c537ed4a6d12"
     },
     "R/tools-query_schedule.R": {
-      "checksum": "b1fd50e4314ea90e5da644df8348b926"
+      "checksum": "dfea9ca3c3aa60d85a8eda4c81d1d7aa"
     },
     "R/tools-show_item.R": {
-      "checksum": "38fbe6bde1f76f0fb99dabbd03fab1f9"
+      "checksum": "a0422775d6a8ca646e32afcee05d73d6"
     },
     "R/utils.R": {
-      "checksum": "d4163638b5fa1eac8eab46fae616d250"
+      "checksum": "d2b7ad36896e932bba767307875bebb5"
     },
     "README.md": {
-      "checksum": "80e60a9b4fc36149e12005567932d8a9"
+      "checksum": "34d4c99c4a257ee67e38ad0bd6f9a8c1"
     },
     "renv.lock": {
-      "checksum": "ad78c300f4d5347671b5f6011d608550"
+      "checksum": "d9803847345e3940541c0940c417ffc1"
     },
     "skills/conf-general-info/references/code-of-conduct.md": {
       "checksum": "8aaf4744d0c385a5bdf09766f949b097"

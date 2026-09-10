@@ -58,6 +58,15 @@ POSIT_CONF_API_ARGS={"provider":{"order":["modal", "baseten", "z-ai","novita","r
 OPENROUTER_API_KEY=...
 ```
 
+#### OpenTelemetry
+
+```
+OTEL_TRACES_EXPORTER="http/protobuf"
+OTEL_EXPORTER_OTLP_ENDPOINT="https://logfire-us.pydantic.dev"
+OTEL_EXPORTER_OTLP_HEADERS="Authorization=<YOUR-WRITE-TOKEN>"
+OTEL_SERVICE_NAME="posit-conf-chat"
+```
+
 ### Data
 
 The app reads from `data/ragnar.duckdb`, a prebuilt search store over the
