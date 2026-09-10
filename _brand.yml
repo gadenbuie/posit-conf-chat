@@ -23,12 +23,8 @@ color:
     black: "#151515"
     white: "#FFFFFF"
 
-  foreground:
-    light: navy
-    dark: "#E7EEFF"
-  background:
-    light: white
-    dark: "#0D1128"
+  foreground: navy
+  background: white
   primary: blue
   secondary: navy
   success: "#2C7A4B"
@@ -113,8 +109,10 @@ defaults:
         }
 
         [data-bs-theme="dark"] {
+          --bs-body-color: #E7EEFF;
+          --bs-body-bg: #0D1128;
           --bs-heading-color: #E7EEFF;
-          --bs-link-color: $brand-cyan;
+          --bs-link-color: #{$brand-cyan};
           --bs-link-hover-color: #8FC3F9;
         }
 
