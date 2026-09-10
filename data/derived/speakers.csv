@@ -1,10 +1,108 @@
 "record_id","session_id","speaker_id","account_id","speaker_order","first_name","last_name","full_name","title_affiliation","biography","image_url","linkedin_url"
+"5a180dca-1066-447a-8cf1-cb0f4283de98","8f5f8944-1162-403c-a1db-630773982de4","f4a4a62c-877d-4992-ba48-3707be33057d","b1d099ed-b0a0-432f-beec-d048790d72af",1,"James","Wade","James Wade","Dow",,,
+"5a180dca-1066-447a-8cf1-cb0f4283de98","8f5f8944-1162-403c-a1db-630773982de4","049168dc-3bdf-4c92-a9dd-fa0e6bf1db09","8032aa09-18f0-4a2e-be31-1d4b812d1a1c",1,"Neal","Richardson","Neal Richardson","Posit",,,
+"5a180dca-1066-447a-8cf1-cb0f4283de98","8f5f8944-1162-403c-a1db-630773982de4","7398d970-b801-4a01-b5c8-c190ee9d2cff","618bf387-495c-4780-ad5d-ae83f1b82f76",1,"Winston","Chang","Winston Chang","Posit",,,
+"5a180dca-1066-447a-8cf1-cb0f4283de98","8f5f8944-1162-403c-a1db-630773982de4","7913ef88-228a-4b3f-8ae8-37c159f972a4","d38e5814-1a31-4b6e-8698-fd937723a6f6",1,"sharon","wang","sharon wang","engineering manager, posit","","https://img.zuddl.com/775c4eef-fe87-43d2-9147-bdb95d19ffb9","https://www.linkedin.com/in/sharon--wang"
 "7f15b16a-b04f-47fa-9b10-5f03de306506","90cce9cc-a61e-489e-bb26-d937b7190e46","c3184c22-67e6-4c79-a993-cf670f4665d5","beddac2f-0aa5-4ef0-a31f-f526d3ddf853",1,"Mine","Cetinkaya-Rundel","Mine Cetinkaya-Rundel","Posit",,,
+"f1b1ef68-462d-46bc-8979-3054a16ced11","6e2e84ec-d307-483d-ab7a-e68b54ec2abb","ea0b3209-f354-485b-b621-1a40efa1b3ee","a3fd313b-0e4b-46bc-b0a6-f444656d894f",1,"Christian","Martinez","Christian Martinez","City University of New York (CUNY)","","https://img.zuddl.com/f64b3a95-c290-4eb6-bdbb-efb3b6f494b2","https://www.linkedin.com/in/christian-a-martinez/"
+"f1b1ef68-462d-46bc-8979-3054a16ced11","6e2e84ec-d307-483d-ab7a-e68b54ec2abb","88d2f703-1321-468f-8950-dc7e80367af5","a16e8588-415f-4c4b-ac5a-755c6f2d307f",1,"Derrick ","Cogburn","Derrick  Cogburn","Professor and Executive Director, American University","Derrick L. Cogburn is a Full Professor at American University's School
+of International Service (SIS), where he is housed in the Department of
+Environment, Development & Health. Dr. Cogburn holds a joint appointment
+in the Kogod School of Business in the Department of Information
+Technology & Analytics. He holds a UNESCO Associate Chair on
+Transnational Challenges and Governance and directs both the Institute
+on Disability and Public Policy (IDPP) and the Internet Governance Lab
+(IGL). He also co-chairs the Global Academic Network for the Center for
+AI and Digital Policy (CAIDP).
+
+Dr. Cogburn's research applies computational methods—including text
+mining, machine learning, social network analysis, and
+retrieval-augmented generation—to international human rights and
+disability policy. His current work focuses on UN human rights
+monitoring mechanisms, particularly the Universal Periodic Review (UPR)
+and the Convention on the Rights of Persons with Disabilities (CRPD)
+treaty body processes. His applied work includes the CRPD Data
+Dashboard, a policy analytics platform developed with IDPP and Praxis
+Analytics AI, funded by the National Science Foundation through American
+University's Translating Research into Action Center (TRAC). He recently
+presented the dashboard at CRPD COSP-19 at the United Nations in New
+York, where his side event connected broader human rights accountability
+mechanisms to the CRPD treaty framework.
+
+At American University, Dr. Cogburn teaches graduate courses in text
+analytics and AI policy, including ITEC/SIS 724: Large-Scale Text
+Analysis. In this course, he trains students to become bilingual R and
+Python programmers using Positron as their IDE and Quarto documents as
+their primary deliverable format. His pedagogical approach integrates
+prompt engineering from week two—not as an afterthought—with GitHub
+Copilot and Positron Assistant available from day one. He has found that
+students without prior programming experience often achieve stronger
+bilingual fluency than those who arrive with a single-language
+background, a counterintuitive finding that shapes his teaching
+philosophy. He has developed a new course for fall 2026 SIS 750 Applied
+AI for Global Challenges. 
+
+Dr. Cogburn is currently developing a new graduate certificate at SIS
+titled ""Global Challenges and Applied AI,"" anchored by his existing
+cross-listed courses and connected to IDPP, IGL, the UNESCO Chair, and
+CAIDP. He also runs Praxis Analytics AI, a consulting practice focused
+on applied computational social science and AI development for policy
+research, small businesses, and non-profit organizations.
+
+Prior to joining American University, Dr. Cogburn held faculty positions
+in the Schools of Information at Syracuse University and the University
+of Michigan. He is a graduate of Howard University and the University of
+Oklahoma.
+
+His professional identity is captured in three words: Scholar. Teacher.
+Sailor.","https://img.zuddl.com/f8e3ad9d-7d17-42c0-b782-b7e7ad136816","https://www.linkedin.com/in/dcogburn/"
+"f1b1ef68-462d-46bc-8979-3054a16ced11","6e2e84ec-d307-483d-ab7a-e68b54ec2abb","353293ed-e28f-4693-b7cc-876221c96fdd","307e2c0f-6512-41a4-a1ea-0f2243b1e675",1,"Marc","Dotson","Marc Dotson","Utah State University",,,
+"f1b1ef68-462d-46bc-8979-3054a16ced11","6e2e84ec-d307-483d-ab7a-e68b54ec2abb","c3184c22-67e6-4c79-a993-cf670f4665d5","beddac2f-0aa5-4ef0-a31f-f526d3ddf853",1,"Mine","Cetinkaya-Rundel","Mine Cetinkaya-Rundel","Posit",,,
 "13c1ac15-5244-4a96-88e5-dde436468f8b","f5d9b2d2-09d7-4d56-9cb2-2025daaca4f4","7913ef88-228a-4b3f-8ae8-37c159f972a4","d38e5814-1a31-4b6e-8698-fd937723a6f6",1,"sharon","wang","sharon wang","engineering manager, posit","","https://img.zuddl.com/775c4eef-fe87-43d2-9147-bdb95d19ffb9","https://www.linkedin.com/in/sharon--wang"
 "6ed87c5b-348b-404b-a19f-0392d4123489","75d5ff32-6ce2-439e-9ffb-85f43a5eca0f","f4a4a62c-877d-4992-ba48-3707be33057d","b1d099ed-b0a0-432f-beec-d048790d72af",1,"James","Wade","James Wade","Dow",,,
 "e1335772-02d0-4988-b282-056c09b07f32","9cf9f47e-0f42-49f3-ad9e-346ca879d4a9","88a0da5f-6d8b-4769-8217-fc39fb432a4f","3a545211-f6bf-4920-99d6-3e6a10185202",1,"Aditya ","Gadkari","Aditya  Gadkari","Technical Manager, ECOnorthwest","","https://img.zuddl.com/fa9c0178-67cb-4fec-a8db-56a7885a8419","https://www.linkedin.com/in/aditya-gadkari/"
 "5bfee72a-5df6-46b3-9c5f-e83ee734fcaa","9a1df9f6-1285-4eb4-aba9-c9979acec58f","049168dc-3bdf-4c92-a9dd-fa0e6bf1db09","8032aa09-18f0-4a2e-be31-1d4b812d1a1c",1,"Neal","Richardson","Neal Richardson","Posit",,,
 "6cc8186d-079b-4805-8ee2-e406fa38f1e7","738135c6-e8a7-4f79-bd56-b4c9e525f2e9","8e035abe-d3bc-45eb-84ff-b5063f3ca0fe","c250eb73-68fa-4ecd-ac71-67bc46651c18",1,"Kelsey","Chalmers","Kelsey Chalmers","The Lown Institute",,,
+"4c2f7f68-a78e-4be4-98ec-d30fe9bc3571","e6a9a754-554b-40b3-bc07-8832232817ac","0b0670ce-c3dd-4fd7-9de0-9eb1e8f59083","ef928cfa-8f25-4e66-bac3-a86c97751633",1,"Jadey ","Ryan","Jadey  Ryan","Data Scientist, Washington State Department of Agriculture","Jadey Ryan is a Data Scientist at the Washington State Department of
+Agriculture, where she manages data, builds automated reporting
+workflows, and develops decision support tools using R, Quarto, and
+Shiny. Her work supports the Washington Soil Health Initiative and
+focuses on making complex data more accessible and actionable for
+agricultural and environmental applications.","https://img.zuddl.com/15a354f5-661e-40cc-8b14-7929e2ffd29c","https://www.linkedin.com/in/jadey-ryan/"
+"4c2f7f68-a78e-4be4-98ec-d30fe9bc3571","e6a9a754-554b-40b3-bc07-8832232817ac","367a7157-c2cd-43e2-bb00-f10335d1b5a5","4c706703-d69f-4da4-8350-50b4b77abee5",1,"John Paul ","Helveston","John Paul  Helveston","Associate Professor, The George Washington University","John Paul (JP) is an Associate Professor at George Washington University
+in the Department of Engineering Management and Systems Engineering. His
+research focuses on understanding how consumer preferences, market
+dynamics, and policy affect the emergence and adoption of low-carbon
+technologies, such as electric vehicles and renewable energy
+technologies. He also studies the critical relationship between the US
+and China in developing and mass producing these technologies. He has
+expertise in exploratory data analysis, data visualization, reproducible
+workflows, choice modeling, conjoint analysis, survey design,
+interview-based research methods, the R programming language, China, and
+the global electric vehicle industry. He speaks fluent Mandarin Chinese
+and has conducted extensive fieldwork in China. John holds a Ph.D. and
+M.S. in Engineering and Public Policy from Carnegie Mellon University
+and a B.S. in Engineering Science and Mechanics (ESM) from Virginia
+Tech.","https://img.zuddl.com/7ed05057-0666-4a94-b50a-53edaffa840a","https://www.linkedin.com/in/jhelvy"
+"4c2f7f68-a78e-4be4-98ec-d30fe9bc3571","e6a9a754-554b-40b3-bc07-8832232817ac","a68654b9-529f-4734-9db5-362f7983965d","b5b1fa94-ab5a-4adf-bee1-366734a25834",1,"Malosree","Maitra","Malosree Maitra","Canadian Institutes of Health Research","","",
+"4c2f7f68-a78e-4be4-98ec-d30fe9bc3571","e6a9a754-554b-40b3-bc07-8832232817ac","0f092dbc-67d5-4c08-8492-966e8469f5f7","d5494928-c6c5-44fe-8a66-a6cf9cbce57d",1,"Tanya","Shapiro","Tanya Shapiro","IndieVisual",,,
+"4c2f7f68-a78e-4be4-98ec-d30fe9bc3571","e6a9a754-554b-40b3-bc07-8832232817ac","f086a2f4-7d7b-4c47-9551-924fb430d294","321954aa-8501-4e93-b799-62fac8e77be4",1,"blake ","abbenante","blake  abbenante","Sr Director, Data Product, Suffolk Construction","","https://img.zuddl.com/1470673a-bfd0-4a75-879e-2d56ef73086a","https://www.linkedin.com/in/abbenante/"
+"862b4361-9391-4139-b9cb-975dd0f8b168","e2a92817-4550-43ea-bb57-97c6a3643b3b","95380fca-6523-4bc2-9e4a-1238659306ae","402eef78-a32c-437c-bcff-848e3d10b341",1,"Aliza","Samad","Aliza Samad","AI/ML Research Associate, NASA","Hi! I recently graduated from the University of California, Santa
+Barbara with a B.S. in Statistics and Data Science. I've been working on
+AI applications and tools with NASA for the past 1.5 years. I love
+learning about machine learning techniques and the latest in AI
+innovation. My other interests include hiking, reading, and music!\
+\
+Feel free to connect with me!","https://img.zuddl.com/8f12ed5d-af96-4c90-ba0b-abd2d1eef5ff","https://www.linkedin.com/in/aliza-samad/"
+"862b4361-9391-4139-b9cb-975dd0f8b168","e2a92817-4550-43ea-bb57-97c6a3643b3b","a6e9f8d4-b962-479d-a1da-7396c5733906","12e609d5-cced-496b-b477-df912ef3a983",1,"Becca ","Krouse","Becca  Krouse","Data Scientist, GSK","Becca Krouse is a data scientist in GSK’s Statistics and Data Science
+Innovation Hub where she focuses on enabling users across R&D. A
+biostatistician by training, she has experience spanning over 15 years
+in the field of clinical research and specializes in developing R-based
+tools.","https://img.zuddl.com/d8920e52-8a8d-4a60-90cb-a485081b8f0b","https://www.linkedin.com/in/becca-krouse-b6ba8820/"
+"862b4361-9391-4139-b9cb-975dd0f8b168","e2a92817-4550-43ea-bb57-97c6a3643b3b","f536001c-d77f-46c6-bbb0-e475b6d842da","003e3916-5249-4804-8970-48820835311c",1,"Inger","Bergom","Inger Bergom","Harvard University",,,
+"862b4361-9391-4139-b9cb-975dd0f8b168","e2a92817-4550-43ea-bb57-97c6a3643b3b","cc723d7f-3fa7-4e56-a937-0ab5de576177","f754bb79-3d19-465a-9796-d5dd51ed32ac",1,"James","Blair","James Blair","Senior Product Manager, Posit","","https://img.zuddl.com/ac6938b3-7543-4118-bf69-26b935fda321",""
+"862b4361-9391-4139-b9cb-975dd0f8b168","e2a92817-4550-43ea-bb57-97c6a3643b3b","929d4311-26ff-491d-8bd3-d7f9e9a334be","3f70cf97-7e3d-42e5-a7b2-432e0f7890cf",1,"Sofia","Lendahl","Sofia Lendahl","NASA","","https://img.zuddl.com/d36acfd1-7e7a-4631-858a-93b09dc40b09","https://www.linkedin.com/in/sofia-lendahl/"
+"862b4361-9391-4139-b9cb-975dd0f8b168","e2a92817-4550-43ea-bb57-97c6a3643b3b","f23ae5d5-f6fc-4db6-a23c-e4467ae11b8a","b0f06f92-a91e-43eb-be4e-a364c68e90c0",1,"Subodh","Kumar","Subodh Kumar","Head of Partner Solutions Architect AI/ML, Data & Analytics, AWS","","https://img.zuddl.com/deb480b4-988f-4ef6-81db-f35a5c63bdd7",""
 "338ff4fe-7a1e-4dc7-a7af-7c5c82ab5c01","24651444-01fe-4c51-a590-11619fe6c83f","367a7157-c2cd-43e2-bb00-f10335d1b5a5","4c706703-d69f-4da4-8350-50b4b77abee5",1,"John Paul ","Helveston","John Paul  Helveston","Associate Professor, The George Washington University","John Paul (JP) is an Associate Professor at George Washington University
 in the Department of Engineering Management and Systems Engineering. His
 research focuses on understanding how consumer preferences, market
@@ -26,7 +124,13 @@ biostatistician by training, she has experience spanning over 15 years
 in the field of clinical research and specializes in developing R-based
 tools.","https://img.zuddl.com/d8920e52-8a8d-4a60-90cb-a485081b8f0b","https://www.linkedin.com/in/becca-krouse-b6ba8820/"
 "e3226f6f-bbc5-4722-bd4d-9544d6cd0d7b","8b6a06fc-35ee-4c73-99d3-cd30409d01f4","ad0f4554-21cd-4b56-96f0-f3259850d7ed","fcf63625-e01f-4183-9646-5cb958e5ffcd",1,"Brian","Lambert","Brian Lambert","Posit Software, PBC",,,
-"e3226f6f-bbc5-4722-bd4d-9544d6cd0d7b","8b6a06fc-35ee-4c73-99d3-cd30409d01f4","52d6b1e4-cc7b-4a50-85b7-da9ff27f2b84","c617604d-968d-4c39-b0e2-251e731c6b3d",1,"Julia","Silge","Julia Silge","Posit PBC",,,
+"e3226f6f-bbc5-4722-bd4d-9544d6cd0d7b","8b6a06fc-35ee-4c73-99d3-cd30409d01f4","52d6b1e4-cc7b-4a50-85b7-da9ff27f2b84","c617604d-968d-4c39-b0e2-251e731c6b3d",1,"Julia ","Silge ","Julia  Silge","Senior Engineering Manager, Posit PBC","Julia Silge is a data scientist by background, now an engineering
+manager at Posit PBC where she leads a team of developers building
+fluent, cohesive open source software for data science in Python and R.
+She is a tool builder, author, international keynote speaker, and
+real-world data science practitioner. She holds a PhD in astrophysics
+and has written books with her collaborators about text mining and
+machine learning.","https://img.zuddl.com/2346bc0b-4dad-402f-8ccc-63c61ffbff49","https://www.linkedin.com/in/juliasilge/"
 "7bf44d4c-ec98-46f9-a471-c51b4b27b034","3e42f2d1-7324-48fe-b907-b6cad22206f0","d5b3a7e4-4ea1-46ab-a4bd-8535076ef35d","4a0d27cf-20a5-4cb1-b2cc-956b9caa21bd",1,"Thomas","Lin Pedersen","Thomas Lin Pedersen","Posit",,,
 "b2c8ece5-c2ea-4f73-97bb-4a7c0283f76f","1ec0dd0d-c8d4-48dd-a923-b9a3de575ce6","f536001c-d77f-46c6-bbb0-e475b6d842da","003e3916-5249-4804-8970-48820835311c",1,"Inger","Bergom","Inger Bergom","Harvard University",,,
 "a81ebe06-2a42-4a4d-b02b-7b7149a7cd93","e341e281-d90c-4561-879d-2e1b23170022","95380fca-6523-4bc2-9e4a-1238659306ae","402eef78-a32c-437c-bcff-848e3d10b341",1,"Aliza","Samad","Aliza Samad","AI/ML Research Associate, NASA","Hi! I recently graduated from the University of California, Santa
@@ -63,6 +167,39 @@ complex (and occasionally esoteric) topics.","https://img.zuddl.com/6411c98a-037
 "ee11f76d-cd71-41bb-999e-5d1286dfb3bc","43d37c45-dfce-461b-a08b-76c8aa330788","ec8a1787-028b-4b60-adad-431e35c2cb7c","84f2a82a-8b55-4ac7-825b-7a99502bd0ca",1,"Jonathan","McPherson","Jonathan McPherson","Posit",,,
 "9acbcf63-04e7-418e-9c80-5df6f4eb5544","096dcf59-5ca2-44c5-944c-9ce50328a1ad","e0ddfb18-5dbc-452e-afda-4b6bbaee6c6a","56fc5c2b-0e35-407a-8624-cfd3a1da0ef3",1,"Bryce","Mecum","Bryce Mecum","Columnar",,,
 "9acbcf63-04e7-418e-9c80-5df6f4eb5544","096dcf59-5ca2-44c5-944c-9ce50328a1ad","74bb3aaf-c49c-424b-932e-64bf5955ea6a","2b246e07-abff-428c-bcd5-031ac174ba6d",1,"Ian","Cook","Ian Cook","Columnar",,,
+"b51c436f-ee65-4061-8bad-a86e577213e0","c4c79545-0600-4574-a56d-bad847aedcb8","26080888-130c-4b64-a99a-284842512b5c","a7342d55-f173-458b-b68d-f371807c28e3",1,"Barret","Schloerke","Barret Schloerke","Posit",,,
+"b51c436f-ee65-4061-8bad-a86e577213e0","c4c79545-0600-4574-a56d-bad847aedcb8","d007626a-0fe1-425c-94d8-d892064c1d97","832d93f7-1c6d-440d-b345-e66198e3430a",1,"Isabel","Glauss","Isabel Glauss","Senior Clinical Data Engineer, Boehringer Ingelheim","","https://img.zuddl.com/4b838009-8200-468c-81a7-bed86f275371",
+"b51c436f-ee65-4061-8bad-a86e577213e0","c4c79545-0600-4574-a56d-bad847aedcb8","6f5d748f-710d-4ac7-9731-f4e25ba75d17","b0d077cc-04c8-442c-85e1-c0087492c704",1,"Karan","Gathani","Karan Gathani","QA Engineer, Posit PBC","Karan is a Senior Quality Assurance Engineer at Posit, where he works on
+Shiny. He has worked with tech startups across the San Francisco Bay
+Area, helping them ship products efficiently without compromising on
+quality. In his spare time, he takes part in BioBlitzes around the Bay
+Area and contributes to this natural history blog.","https://img.zuddl.com/3ea00fcd-1931-433d-beed-a21a3f4cb647",
+"b51c436f-ee65-4061-8bad-a86e577213e0","c4c79545-0600-4574-a56d-bad847aedcb8","b8130e94-19aa-4e37-9981-14d9acc48dc8","0ce3a3da-70ed-4975-8f69-af961f392b43",1,"Libby ","McKenna","Libby  McKenna","Drinking Water Engineer, Brown and Caldwell","","https://img.zuddl.com/2c65d260-4bf3-4828-838c-f5864d1cb8d8","https://www.linkedin.com/in/libbydmckenna/"
+"2fbd9e8d-8562-43ce-a900-f420c26f8a53","360f73e3-f86c-48fb-acfa-0070bcb50ed6","35b922bb-a3ef-41e5-9b83-c7c4ac2a4b4f","f0c26d06-2d7a-4461-b5c5-edc2fa4d07cb",1,"Jeroen","Janssens","Jeroen Janssens","Head of Developer Relations, Posit","Jeroen Janssens, PhD, is Head of Developer Relations at Posit, PBC. His
+expertise lies in visualizing data, implementing machine learning
+models, and building solutions using Python, R, JavaScript, and Bash.
+He’s passionate about open source and sharing knowledge. He’s the author
+of Python Polars: The Definitive Guide (O’Reilly, 2025) and Data Science
+at the Command Line (O’Reilly, 2021). Jeroen holds a PhD in machine
+learning from Tilburg University and an MSc in artificial intelligence
+from Maastricht University. He lives with his wife and two kids in
+Rotterdam, the Netherlands.","https://img.zuddl.com/b889a959-56de-4f17-8af2-8d0bbd3deec3","https://www.linkedin.com/in/jeroenjanssens/"
+"2fbd9e8d-8562-43ce-a900-f420c26f8a53","360f73e3-f86c-48fb-acfa-0070bcb50ed6","ec8a1787-028b-4b60-adad-431e35c2cb7c","84f2a82a-8b55-4ac7-825b-7a99502bd0ca",1,"Jonathan","McPherson","Jonathan McPherson","Posit",,,
+"2fbd9e8d-8562-43ce-a900-f420c26f8a53","360f73e3-f86c-48fb-acfa-0070bcb50ed6","a6e28a29-f0e1-45e9-964c-b0b41d3082fc","b8b89d00-47ef-4732-9128-42b03bf94790",1,"Paula ","Lopez Casado","Paula  Lopez Casado","Lead Data Scientist, Cleo","Lead Data Scientist specializing in product analytics, experimentation
+and AI-driven decision making. Throughout her career at Apple, and now
+Cleo, she has helped product teams transform complex data into
+actionable business decisions.
+
+Beyond her day-to-day work, Paula is passionate about data
+communication. She writes the blog \*El Arte del Dato Bien Contado\*,
+where she explores practical techniques for designing visualizations
+that help stakeholders understand evidence and make confident decisions.
+
+At posit::conf 2026, she shares lessons learned from years of building
+analytical products for global technology companies, showing how Quarto
+can be used not only to create beautiful reports, but to influence
+decisions.","https://img.zuddl.com/b6596f6c-d9bd-4fe3-9961-668ce7c51b9b","https://www.linkedin.com/in/paulalc/"
+"2fbd9e8d-8562-43ce-a900-f420c26f8a53","360f73e3-f86c-48fb-acfa-0070bcb50ed6","e2930b15-d895-4908-bdb6-6511875456f1","db764114-dab6-43a7-94c2-99241cc4a185",1,"Tom","Shafer","Tom Shafer","Elder Research/MANTECH",,,
 "da7568ea-28e8-4046-9aad-03600b7eff24","7834ef16-8b40-46ac-bffc-f7a977ba03bc","73553e80-effb-4d8a-a158-becd4ac26162","fbba70da-587e-4b4d-a3d2-ec675100d729",1,"Allissa","Dillman","Allissa Dillman","Montgomery College/BioData Sage LLC",,,
 "da7568ea-28e8-4046-9aad-03600b7eff24","7834ef16-8b40-46ac-bffc-f7a977ba03bc","2e737efe-2d5e-4ba8-85ea-37c661a323c7","1710e5a9-38fe-4151-955e-812ec44829bd",1,"Padmashri","Saravanan","Padmashri Saravanan","BioData Sage",,,
 "1bc8ece1-fe9f-424a-a03e-e3b4e817b569","5d0d911b-aa4c-49c1-9ce0-b0775304c7d3","6f5d748f-710d-4ac7-9731-f4e25ba75d17","b0d077cc-04c8-442c-85e1-c0087492c704",1,"Karan","Gathani","Karan Gathani","QA Engineer, Posit PBC","Karan is a Senior Quality Assurance Engineer at Posit, where he works on
@@ -95,6 +232,29 @@ topics accessible through the power of learning communities, with the
 goal of empowering individuals to do great work.","https://img.zuddl.com/5f735cca-ca15-428e-a1a1-fabe200bf2da","https://www.linkedin.com/in/kristin-bott/"
 "8357f83c-cb33-4b8d-bb7a-a07127a6cf2a","bec2f8e9-ec6b-402f-bb5e-d690e5db245a","d007626a-0fe1-425c-94d8-d892064c1d97","832d93f7-1c6d-440d-b345-e66198e3430a",1,"Isabel","Glauss","Isabel Glauss","Senior Clinical Data Engineer, Boehringer Ingelheim","","https://img.zuddl.com/4b838009-8200-468c-81a7-bed86f275371",
 "bc0495dc-810d-4774-8210-c6fda4838180","d5043a43-3a86-45a1-b98c-9c4a58f6b0c0","6fcccd56-0bac-4f46-88e6-1ed5336b0360","e8a761fc-9bfa-471f-8a70-519c780da508",1,"Timothy","Keyes","Timothy Keyes","Senior Data Scientist, Stanford Health Care","","https://img.zuddl.com/083a5554-4769-4a10-9d4f-9eba4648ef13","https://www.linkedin.com/in/timothy-keyes/"
+"687b887e-339a-429a-bd72-aa60682abcd2","9d001917-4982-4e58-ad40-198d7429acb4","a7eb3f4d-2801-47a3-adfb-0419ab6abecd","9bd77bbf-15f9-4b2c-8523-a5ac127d5233",1,"Eric","Nantz","Eric Nantz","Eli Lilly",,,
+"687b887e-339a-429a-bd72-aa60682abcd2","9d001917-4982-4e58-ad40-198d7429acb4","45cffb24-8242-43fa-90f4-32d0395d6d86","da531841-eeeb-4b8b-945b-11f3ebe54bac",1,"Gergely","Daroczi","Gergely Daroczi","Spare Cores",,,
+"687b887e-339a-429a-bd72-aa60682abcd2","9d001917-4982-4e58-ad40-198d7429acb4","249a8bf1-e1ae-4a74-a2e1-aa7d49e92340","684dde48-a26d-4f02-b675-69dcdc2cd94a",1,"Imari ","Genias","Imari  Genias","Consultant II, Guidehouse","Imari Genias is currently a Consultant II for Guidehouse. Previously,
+she was a Rollins Epidemiology Fellow at DeKalb Public Health in
+Decatur, GA. In this role, she contributed to data analysis, with a
+specialty in geospatial analysis and mapping. Imari holds a Master of
+Public Health (MPH) in Global Epidemiology from Emory University. ","https://img.zuddl.com/57af4c45-84df-4129-aea0-2b57f0ac6893","https://www.linkedin.com/in/imari-genias/"
+"687b887e-339a-429a-bd72-aa60682abcd2","9d001917-4982-4e58-ad40-198d7429acb4","4fe9a121-6752-44e1-b452-12ed8b957170","5df099de-fc1e-4337-8e2c-e09893932951",1,"James","Clawson","James Clawson","",,,
+"687b887e-339a-429a-bd72-aa60682abcd2","9d001917-4982-4e58-ad40-198d7429acb4","9da6bed8-1ed4-4e24-aa57-0839e3b0ed74","0e44e852-8bed-43fe-ae45-2f960fdb5eb4",1,"Josh","Livingston","Josh Livingston","",,,
+"687b887e-339a-429a-bd72-aa60682abcd2","9d001917-4982-4e58-ad40-198d7429acb4","114dd581-dec3-4823-9412-3c53b3406777","83bd5d99-4dba-4a2a-8da6-a37b9c7b7b01",1,"Michael","Hausinger","Michael Hausinger","Dow","Michael is a scientist in Research and Development at Dow where he works
+to ensure other researchers have ready access to data about products
+they wish to improve and potential ingredients to use in a formulation.
+He also enjoys helping researchers speed up their data analysis, often
+via creation of Shiny apps that turn structured-but-non-tidy analytical
+instrument outputs into graphs and tidy tables. Outside of work he
+spends much of his time bicycling and playing Ultimate in the summer and
+curling in the winter.","https://img.zuddl.com/cb04230b-7c96-4ee4-a3c1-a18ed19cecb6",
+"687b887e-339a-429a-bd72-aa60682abcd2","9d001917-4982-4e58-ad40-198d7429acb4","38d58d99-52ae-45b5-bbf1-6a21359434ae","26a3cd47-3c0a-4fd7-a7b9-bd37002c6013",1,"Nicolas","Bennett","Nicolas Bennett","cynkra GmbH",,,
+"687b887e-339a-429a-bd72-aa60682abcd2","9d001917-4982-4e58-ad40-198d7429acb4","4f38a5f5-484a-4662-97a8-02ed6645ab91","795069f3-3422-49f8-b94e-7530446b47a1",1,"Richard","Iannone","Richard Iannone","Software Engineer, Posit, PBC","Richard Iannone is a software engineer at Posit, PBC. He focuses on
+building open-source tools that help people work more effectively with
+data. In R, he works on several packages including gt, pointblank, and
+blastula. In Python, his focus is on Great Tables (a port of gt) and
+Great Docs (documentation-site generator for Python libraries).","https://img.zuddl.com/a38645f9-fff4-4dfc-b61d-6cd9977d75de",
 "30b6efea-19cc-4ec2-88ee-49f1dcece04b","43b5b092-a29a-4820-b0ae-8cf1015e37db","e2930b15-d895-4908-bdb6-6511875456f1","db764114-dab6-43a7-94c2-99241cc4a185",1,"Tom","Shafer","Tom Shafer","Elder Research/MANTECH",,,
 "242be2a0-83d7-4eb4-b302-f395e749dc6d","a630e867-f319-45f1-a992-521f961e9c80","35b922bb-a3ef-41e5-9b83-c7c4ac2a4b4f","f0c26d06-2d7a-4461-b5c5-edc2fa4d07cb",1,"Jeroen","Janssens","Jeroen Janssens","Head of Developer Relations, Posit","Jeroen Janssens, PhD, is Head of Developer Relations at Posit, PBC. His
 expertise lies in visualizing data, implementing machine learning
@@ -106,9 +266,26 @@ learning from Tilburg University and an MSc in artificial intelligence
 from Maastricht University. He lives with his wife and two kids in
 Rotterdam, the Netherlands.","https://img.zuddl.com/b889a959-56de-4f17-8af2-8d0bbd3deec3","https://www.linkedin.com/in/jeroenjanssens/"
 "47a3e8b1-82b1-4403-935a-75b4c8412235","9cb21f80-8acc-481b-9717-07e7553931a9","353293ed-e28f-4693-b7cc-876221c96fdd","307e2c0f-6512-41a4-a1ea-0f2243b1e675",1,"Marc","Dotson","Marc Dotson","Utah State University",,,
+"65194b87-b67e-44d7-b511-1df9db33bc7a","5c29a877-e940-4df6-8961-909757f83285","4636ae17-83b9-4946-a76d-dd6b3529bdfc","06f82120-709f-425e-90ae-54d885633e92",1,"Brendan","Broderick","Brendan Broderick","Principal Data Science Analyst, Mayo Clinic","","https://img.zuddl.com/93e3cfb8-4864-42b8-8f77-dbeeabbbb514",
+"65194b87-b67e-44d7-b511-1df9db33bc7a","5c29a877-e940-4df6-8961-909757f83285","ad0f4554-21cd-4b56-96f0-f3259850d7ed","fcf63625-e01f-4183-9646-5cb958e5ffcd",1,"Brian","Lambert","Brian Lambert","Posit Software, PBC",,,
+"65194b87-b67e-44d7-b511-1df9db33bc7a","5c29a877-e940-4df6-8961-909757f83285","e0ddfb18-5dbc-452e-afda-4b6bbaee6c6a","56fc5c2b-0e35-407a-8624-cfd3a1da0ef3",1,"Bryce","Mecum","Bryce Mecum","Columnar",,,
+"65194b87-b67e-44d7-b511-1df9db33bc7a","5c29a877-e940-4df6-8961-909757f83285","74bb3aaf-c49c-424b-932e-64bf5955ea6a","2b246e07-abff-428c-bcd5-031ac174ba6d",1,"Ian","Cook","Ian Cook","Columnar",,,
+"65194b87-b67e-44d7-b511-1df9db33bc7a","5c29a877-e940-4df6-8961-909757f83285","52d6b1e4-cc7b-4a50-85b7-da9ff27f2b84","c617604d-968d-4c39-b0e2-251e731c6b3d",1,"Julia ","Silge ","Julia  Silge","Senior Engineering Manager, Posit PBC","Julia Silge is a data scientist by background, now an engineering
+manager at Posit PBC where she leads a team of developers building
+fluent, cohesive open source software for data science in Python and R.
+She is a tool builder, author, international keynote speaker, and
+real-world data science practitioner. She holds a PhD in astrophysics
+and has written books with her collaborators about text mining and
+machine learning.","https://img.zuddl.com/2346bc0b-4dad-402f-8ccc-63c61ffbff49","https://www.linkedin.com/in/juliasilge/"
+"65194b87-b67e-44d7-b511-1df9db33bc7a","5c29a877-e940-4df6-8961-909757f83285","d5b3a7e4-4ea1-46ab-a4bd-8535076ef35d","4a0d27cf-20a5-4cb1-b2cc-956b9caa21bd",1,"Thomas","Lin Pedersen","Thomas Lin Pedersen","Posit",,,
 "ed4ee729-2aa3-4c6a-9d36-eded24711f58","1db94cdc-f6dd-4ec6-b87b-e9fb90be13e4","5028abf1-8025-42ea-906a-b859182c0000","8d505744-6f01-4d70-a2f6-d0270a24336c",1,"Erica","Chio","Erica Chio","",,,
 "ed4ee729-2aa3-4c6a-9d36-eded24711f58","1db94cdc-f6dd-4ec6-b87b-e9fb90be13e4","8e9d3dc7-e3c6-4d96-8b92-0c990185be05","78cdb7e0-c3c7-4884-bdda-e4f009b2110a",1,"Nick","Giangreco","Nick Giangreco","Regeneron Pharmaceuticals",,,
 "885ba1fc-48f9-4f94-93f2-6e6bacf7f7aa","23d2a7d9-330f-4c67-bbeb-0fe0a6d5a657","f42afed1-f4b4-43e3-83a8-b14e4191d553","26b22194-30d1-477a-825b-85dbfb0992bd",1,"Ran","Li","Ran Li","Drexel University",,,
+"15f0fd29-df88-47d7-8018-ca7aeb96b354","59aa2a5a-0cb8-42ff-af1f-4cb8f37afc06","88a0da5f-6d8b-4769-8217-fc39fb432a4f","3a545211-f6bf-4920-99d6-3e6a10185202",1,"Aditya ","Gadkari","Aditya  Gadkari","Technical Manager, ECOnorthwest","","https://img.zuddl.com/fa9c0178-67cb-4fec-a8db-56a7885a8419","https://www.linkedin.com/in/aditya-gadkari/"
+"15f0fd29-df88-47d7-8018-ca7aeb96b354","59aa2a5a-0cb8-42ff-af1f-4cb8f37afc06","5028abf1-8025-42ea-906a-b859182c0000","8d505744-6f01-4d70-a2f6-d0270a24336c",1,"Erica","Chio","Erica Chio","",,,
+"15f0fd29-df88-47d7-8018-ca7aeb96b354","59aa2a5a-0cb8-42ff-af1f-4cb8f37afc06","8e035abe-d3bc-45eb-84ff-b5063f3ca0fe","c250eb73-68fa-4ecd-ac71-67bc46651c18",1,"Kelsey","Chalmers","Kelsey Chalmers","The Lown Institute",,,
+"15f0fd29-df88-47d7-8018-ca7aeb96b354","59aa2a5a-0cb8-42ff-af1f-4cb8f37afc06","8e9d3dc7-e3c6-4d96-8b92-0c990185be05","78cdb7e0-c3c7-4884-bdda-e4f009b2110a",1,"Nick","Giangreco","Nick Giangreco","Regeneron Pharmaceuticals",,,
+"15f0fd29-df88-47d7-8018-ca7aeb96b354","59aa2a5a-0cb8-42ff-af1f-4cb8f37afc06","f42afed1-f4b4-43e3-83a8-b14e4191d553","26b22194-30d1-477a-825b-85dbfb0992bd",1,"Ran","Li","Ran Li","Drexel University",,,
 "55591410-5d9c-40f2-89d2-4ab036f0a8e9","0d95ac5d-041e-406e-bfb5-e11e51a5855c","88d2f703-1321-468f-8950-dc7e80367af5","a16e8588-415f-4c4b-ac5a-755c6f2d307f",1,"Derrick ","Cogburn","Derrick  Cogburn","Professor and Executive Director, American University","Derrick L. Cogburn is a Full Professor at American University's School
 of International Service (SIS), where he is housed in the Department of
 Environment, Development & Health. Dr. Cogburn holds a joint appointment
@@ -168,8 +345,25 @@ Sailor.","https://img.zuddl.com/f8e3ad9d-7d17-42c0-b782-b7e7ad136816","https://w
 "ad13aa9a-c370-42de-b8c5-a27827be28aa","76cebf97-437e-46fb-94f6-914c045ed2b0","5a60041b-f589-4639-b6bb-73fa1adf2d1e","eceb7eb1-fc4f-4614-b696-77935909855f",1,"Joe","Roberts","Joe Roberts","Posit",,,
 "ad13aa9a-c370-42de-b8c5-a27827be28aa","76cebf97-437e-46fb-94f6-914c045ed2b0","487c816a-43a5-4ce1-a4e2-3916f925cd7e","d3f150e9-9ce5-4e09-8bea-6ec8dae04693",1,"Kelly","O'Briant","Kelly O'Briant","Product Manager, Posit","","",
 "ad13aa9a-c370-42de-b8c5-a27827be28aa","76cebf97-437e-46fb-94f6-914c045ed2b0","eabc8ce1-727e-4221-a3e0-4094f3d0db9b","3108cb37-799f-4fc5-be58-032172e4c528",1,"Matt","Leary","Matt Leary","Posit",,,
-"ad13aa9a-c370-42de-b8c5-a27827be28aa","76cebf97-437e-46fb-94f6-914c045ed2b0","45f629f7-161c-471f-90a3-0588954a1f75","55a5ad39-209a-4896-8382-377f99344a64",1,"Tom","Mock","Tom Mock","Posit",,,
+"ad13aa9a-c370-42de-b8c5-a27827be28aa","76cebf97-437e-46fb-94f6-914c045ed2b0","45f629f7-161c-471f-90a3-0588954a1f75","55a5ad39-209a-4896-8382-377f99344a64",1,"Tom","Mock","Tom Mock","Senior Product Manager, Posit Software, PBC","Tom is a Senior Product Manager at Posit, overseeing the Posit
+Workbench, Positron, and RStudio teams. He fell in love with ata science
+through his graduate research, using R and RStudio to wrangle, analyze,
+model, and visualize my data. He became passionate about growing the
+open-source data science community and founded \#TidyTuesday to help
+newcomers and seasoned vets improve their data cleaning and
+visualization skills.","","https://www.linkedin.com/in/jthomasmock/"
 "e61c42c5-eb16-4b72-ae4c-0a9981c591b1","bf5c2cd1-e852-4091-a353-5f2734e12e82","7398d970-b801-4a01-b5c8-c190ee9d2cff","618bf387-495c-4780-ad5d-ae83f1b82f76",1,"Winston","Chang","Winston Chang","Posit",,,
+"1508d146-73a1-420a-937d-4ee180916eea","4296c5f7-b36d-490a-be08-6a63fd28ba3d","73553e80-effb-4d8a-a158-becd4ac26162","fbba70da-587e-4b4d-a3d2-ec675100d729",1,"Allissa","Dillman","Allissa Dillman","Montgomery College/BioData Sage LLC",,,
+"1508d146-73a1-420a-937d-4ee180916eea","4296c5f7-b36d-490a-be08-6a63fd28ba3d","6bd09276-2919-484e-9270-901a2a643f57","9580e881-7af4-44f6-831e-066de62885dd",1,"Kristin ","Bott","Kristin  Bott","Manager, Academy Apprenticeships, Posit, PBC","Kristin Bott manages the Posit Academy Apprenticeship program, which is
+focused on building both coding and collaboration skills in working
+professionals. Kristin brings a background in natural science,
+organizing, teaching, and research, and spent 10 years in higher ed
+before joining Posit in 2021. She is passionate about making technical
+topics accessible through the power of learning communities, with the
+goal of empowering individuals to do great work.","https://img.zuddl.com/5f735cca-ca15-428e-a1a1-fabe200bf2da","https://www.linkedin.com/in/kristin-bott/"
+"1508d146-73a1-420a-937d-4ee180916eea","4296c5f7-b36d-490a-be08-6a63fd28ba3d","2e737efe-2d5e-4ba8-85ea-37c661a323c7","1710e5a9-38fe-4151-955e-812ec44829bd",1,"Padmashri","Saravanan","Padmashri Saravanan","BioData Sage",,,
+"1508d146-73a1-420a-937d-4ee180916eea","4296c5f7-b36d-490a-be08-6a63fd28ba3d","fa287056-4771-42d8-b3f1-22eea0f64690","a956a0e7-6b16-4225-9f22-3831eff62c16",1,"Tanya","Cashorali","Tanya Cashorali","CEO & Founder, TCB Analytics","","https://img.zuddl.com/c720e40c-e572-4acc-9fe3-a093784252fc",
+"1508d146-73a1-420a-937d-4ee180916eea","4296c5f7-b36d-490a-be08-6a63fd28ba3d","6fcccd56-0bac-4f46-88e6-1ed5336b0360","e8a761fc-9bfa-471f-8a70-519c780da508",1,"Timothy","Keyes","Timothy Keyes","Senior Data Scientist, Stanford Health Care","","https://img.zuddl.com/083a5554-4769-4a10-9d4f-9eba4648ef13","https://www.linkedin.com/in/timothy-keyes/"
 "f08cbc1e-125d-410f-8764-702807c5da30","30c98377-d6ce-42b2-a1f9-c6db99ae9d46","4f38a5f5-484a-4662-97a8-02ed6645ab91","795069f3-3422-49f8-b94e-7530446b47a1",1,"Richard","Iannone","Richard Iannone","Software Engineer, Posit, PBC","Richard Iannone is a software engineer at Posit, PBC. He focuses on
 building open-source tools that help people work more effectively with
 data. In R, he works on several packages including gt, pointblank, and
@@ -207,11 +401,28 @@ LLMs. He blogs about his work at simonpcouch.com.","https://img.zuddl.com/7566aa
 "4d60ef8e-1cd0-4985-9175-3f790cfe016a","b23a3a9e-b2f9-442e-8ca1-57f4309f5424","cc723d7f-3fa7-4e56-a937-0ab5de576177","f754bb79-3d19-465a-9796-d5dd51ed32ac",1,"James","Blair","James Blair","Senior Product Manager, Posit","","https://img.zuddl.com/ac6938b3-7543-4118-bf69-26b935fda321",""
 "4d60ef8e-1cd0-4985-9175-3f790cfe016a","b23a3a9e-b2f9-442e-8ca1-57f4309f5424","f23ae5d5-f6fc-4db6-a23c-e4467ae11b8a","b0f06f92-a91e-43eb-be4e-a364c68e90c0",1,"Subodh","Kumar","Subodh Kumar","Head of Partner Solutions Architect AI/ML, Data & Analytics, AWS","","https://img.zuddl.com/deb480b4-988f-4ef6-81db-f35a5c63bdd7",""
 "e21dba88-51d6-4e7d-99ad-7620c548d17a","9e4881df-1efb-4b83-8a1e-31ff05c681f1","a58044d0-8c84-48f6-a844-972059739c19","22cea50e-9428-4a9f-9f43-4fa512e4d4bd",1,"Chandra","Nayak","Chandra Nayak","Snowflake Principal Partner Engineer , Snowflake","","https://img.zuddl.com/7aae3f08-475c-4b53-be71-9d448094cfa7",""
+"66be6e95-f78d-4527-98c2-d1e85800483a","7bdf8b92-4238-4894-b839-d7f704720c4f","49ae5243-7d9a-479d-8407-d44d6ddf2339","579c4204-98ac-400d-bcb0-13a87f91ab24",1,"Carson","Sievert","Carson Sievert","Principal Software Engineer, Posit","",,""
+"66be6e95-f78d-4527-98c2-d1e85800483a","7bdf8b92-4238-4894-b839-d7f704720c4f","8f954722-8990-4b46-9d8a-bc4e9056ccc9","50a3c461-0a99-4c1b-a9af-28d1218d16f3",1,"Elliot","Murphy","Elliot Murphy","Vice President, Engineering, Posit Software, PBC","Elliot is a lifelong entrepeneur and software developer, currently
+working as an engineering leader at Posit. Previously, he held
+leadership roles at MySQL, Canonical, a behavioral healthcare startup,
+and founded a cloud security consulting firm. A hands-on developer and
+open-source contributor, Elliot brings a practical, humans-first
+perspective to building software and helping teams work effectively with
+emerging technology.","https://img.zuddl.com/590b35f9-e3be-4d06-8e15-d5b1a53dca6d","https://www.linkedin.com/in/emurphy/"
+"66be6e95-f78d-4527-98c2-d1e85800483a","7bdf8b92-4238-4894-b839-d7f704720c4f","638fa87c-1b6d-45cc-938f-6af1e9503a93","a95ce8b6-4cdc-494a-9610-d09702c8a412",1,"Garrick","Aden-Buie","Garrick Aden-Buie","Posit",,,
+"66be6e95-f78d-4527-98c2-d1e85800483a","7bdf8b92-4238-4894-b839-d7f704720c4f","782d198f-c726-48ec-90d1-fce9057898b2","f12e2780-3a6c-423c-830e-437c57637e8b",1,"Hadley","Wickham","Hadley Wickham","Posit",,,
+"66be6e95-f78d-4527-98c2-d1e85800483a","7bdf8b92-4238-4894-b839-d7f704720c4f","549bbd78-291c-4d87-96bf-5e98cb6e57e1","fc5701f1-4c5f-4a62-803f-30e7c81e7c6f",1,"Joe","Cheng","Joe Cheng","CTO, Posit","",,""
 "e6a1282c-eaa6-47a3-ae6d-ab4c5e540469","4f07df25-21e1-45b0-a9a9-d0bca9b3a92f","782d198f-c726-48ec-90d1-fce9057898b2","f12e2780-3a6c-423c-830e-437c57637e8b",1,"Hadley","Wickham","Hadley Wickham","Posit",,,
 "412a4001-b1bc-4903-99b0-3f7c1494f716","94529b20-42e4-482f-8ec8-1eaf57105e3b","49ae5243-7d9a-479d-8407-d44d6ddf2339","579c4204-98ac-400d-bcb0-13a87f91ab24",1,"Carson","Sievert","Carson Sievert","Principal Software Engineer, Posit","",,""
 "412a4001-b1bc-4903-99b0-3f7c1494f716","94529b20-42e4-482f-8ec8-1eaf57105e3b","638fa87c-1b6d-45cc-938f-6af1e9503a93","a95ce8b6-4cdc-494a-9610-d09702c8a412",1,"Garrick","Aden-Buie","Garrick Aden-Buie","Posit",,,
 "f1eed246-0b04-464e-9156-395084c5ce6f","20c217be-1474-4c94-a11f-1d98aafcabe0","549bbd78-291c-4d87-96bf-5e98cb6e57e1","fc5701f1-4c5f-4a62-803f-30e7c81e7c6f",1,"Joe","Cheng","Joe Cheng","CTO, Posit","",,""
-"d6c9a20f-1789-47b3-93bb-bd09b211a99e","84bc571b-d3d7-4fea-ae69-9a811ab24930","8f954722-8990-4b46-9d8a-bc4e9056ccc9","50a3c461-0a99-4c1b-a9af-28d1218d16f3",1,"Elliot","Murphy","Elliot Murphy","Vice President, Engineering, Posit","",,""
+"d6c9a20f-1789-47b3-93bb-bd09b211a99e","84bc571b-d3d7-4fea-ae69-9a811ab24930","8f954722-8990-4b46-9d8a-bc4e9056ccc9","50a3c461-0a99-4c1b-a9af-28d1218d16f3",1,"Elliot","Murphy","Elliot Murphy","Vice President, Engineering, Posit Software, PBC","Elliot is a lifelong entrepeneur and software developer, currently
+working as an engineering leader at Posit. Previously, he held
+leadership roles at MySQL, Canonical, a behavioral healthcare startup,
+and founded a cloud security consulting firm. A hands-on developer and
+open-source contributor, Elliot brings a practical, humans-first
+perspective to building software and helping teams work effectively with
+emerging technology.","https://img.zuddl.com/590b35f9-e3be-4d06-8e15-d5b1a53dca6d","https://www.linkedin.com/in/emurphy/"
 "39f6c8e4-ed13-46f9-9fcc-3d8dcee577f5","52de90f1-dbe1-47a6-8eb2-462056d3663c","1179033a-618f-44fa-90ca-e06c8ca4feb6","7a6284ef-7ea1-40af-845d-5a879b01119f",1,"Francois","Michonneau","Francois Michonneau","Posit",,,
 "75895239-3b97-422d-92cb-ffd0672b4890","294d8cb4-7c42-44d3-8ad4-8797ce918c4d","412f26d4-8f34-4614-9bdd-1e743bea641c","d77c1e41-cd8a-40f5-aecd-3ddcc4402a65",1,"Garrett","Grolemund","Garrett Grolemund","Posit",,,
 "4d34751e-3039-44af-919f-8e99d798ec1d","871f67cc-5d34-434d-9a0d-43fc1f5f011b","e14a2b81-b88d-4417-8bae-d04cdc952220","3fbeefba-0c77-4253-83b7-cf15540c9aad",1,"Casey","Johnson","Casey Johnson","Manager Platform Engineer, Pfizer Inc.","Casey Johnson is a Platform Manager at Pfizer, where he oversees the
@@ -344,7 +555,14 @@ science. She co-authors the Posit AI newsletter with Simon Couch.
 Previously, she helped build Posit Academy and taught data science and R
 at Stanford.","https://img.zuddl.com/9cd41f48-133c-48c1-8c66-d87d3de2d7cc","https://www.linkedin.com/in/sarakaltman/"
 "72438d92-1e76-4b20-84a9-329422a25a68","810f3dac-a0f6-44d4-92ca-6d030114be1e","412f26d4-8f34-4614-9bdd-1e743bea641c","d77c1e41-cd8a-40f5-aecd-3ddcc4402a65",1,"Garrett","Grolemund","Garrett Grolemund","Posit",,,
-"8318c228-cd16-457e-8d71-0d7c6b4c63f4","5d3bca06-5433-4ca0-812c-ab38af83b8c3","07329fb6-2cac-4a52-b15e-7dba0c491bd7","a937fae2-c78a-46ba-bfdb-815b5f8584a2",1,"Allie","Warren","Allie Warren","Washington State Department of Health",,,
+"8318c228-cd16-457e-8d71-0d7c6b4c63f4","5d3bca06-5433-4ca0-812c-ab38af83b8c3","07329fb6-2cac-4a52-b15e-7dba0c491bd7","a937fae2-c78a-46ba-bfdb-815b5f8584a2",1,"Allie","Warren","Allie Warren","Data Science and Informatics Specialist, Washington State Department of Health","Allie Warren is a data science and informatics specialist in the
+Analytics Informatics Modernization group at the Washington State
+Department of Health, where she supports disease modeling and analytics
+and develops automated processing pipelines and data visualizations. She
+also facilitates the PubHealthAI Collaborative Network, a national
+network of public health practitioners discussing the use of AI in
+public health, and creates training materials and leads coding workshops
+for epidemiologists at local health jurisdictions learning R.","https://img.zuddl.com/a1f4da16-a741-4b3c-a400-202c04b93518","https://www.linkedin.com/in/alliewarren/"
 "8318c228-cd16-457e-8d71-0d7c6b4c63f4","5d3bca06-5433-4ca0-812c-ab38af83b8c3","b12c479d-3ccb-4f39-9cc6-d7f02519fb18","88d04c34-c19a-4c81-afd5-a840b5a2093a",1,"Kaitlyn ","Housel","Kaitlyn  Housel","Clinical Data Specialist, University of Pennsylvania ","Kaitlyn is a clinical data professional with a decade-long career arc
 spanning athletic training, clinical research coordination, and applied
 data science in academic medical settings. She currently works as a Data
@@ -437,7 +655,12 @@ I'm as comfortable whiteboarding architecture as I am writing the code.
 I'm drawn to challenges at the intersection of AI engineering and data
 science, places where the problems are hard and the team wants to build
 things right.","https://img.zuddl.com/ba01a9a9-8c32-4705-a8e4-5f5736c69af2","https://www.linkedin.com/in/keatonwilson/"
-"a23c442f-9572-42cb-af6c-19cd68e243db","c52a1d1e-c37d-4900-8553-06b4865a0950","b34b704c-43bb-404d-be84-51936b7a7388","d8338acc-8015-495d-9b35-882740884b0d",1,"Michael","Thomas","Michael Thomas","Ketchbrook Analytics",,,
+"a23c442f-9572-42cb-af6c-19cd68e243db","c52a1d1e-c37d-4900-8553-06b4865a0950","b34b704c-43bb-404d-be84-51936b7a7388","d8338acc-8015-495d-9b35-882740884b0d",1,"Michael","Thomas","Michael Thomas","Chief Data Scientist, Ketchbrook Analytics","Michael is the Chief Data Scientist at Ketchbrook Analytics, an
+international data science consulting firm with expertise in R, Python,
+SQL and Docker. He is the author of multiple open source R and Python
+packages, and co-hosts the RWeekly Highlights podcast with Eric Nantz.
+Michael is passionate about bringing software engineering best practices
+into data science.","https://img.zuddl.com/aa2d9f68-ad0d-435d-adc0-dc8efc752fa0","https://www.linkedin.com/in/michaeljthomas2/"
 "f8601629-a4a0-4ff6-82ac-e4174c0aa5fe","04ba3bf5-bc4f-40c4-a7b1-d31ee60b9bcc","f61f1185-d602-4508-8757-9eaede63efdc","dbe8c788-40a0-43b3-8c3a-5a23c4cfe371",1,"Cynthia ","Huang","Cynthia  Huang","Post-Doctoral Researcher, LMU Munich","Cynthia Huang is a Post-Doctoral Research Fellow at LMU Munich. Her
 research focuses on formalisations and frameworks for leveraging
 generative AI and LLMs for data preparation and data visualisation. She
@@ -456,6 +679,65 @@ commercial strategy.","https://img.zuddl.com/deb2f164-aadd-450c-947e-b9f39e60719
 "450ce6f9-ea15-4fc0-a91a-24f21ae1c2be","d0d4661f-0803-4fbb-8fa0-1a1ac4e3de12","d4f78b83-0e3f-4773-bf46-cef4841145c3","19b91623-46fc-445d-adeb-756f6576dd1c",1,"Carlos","Scheidegger","Carlos Scheidegger","Posit",,,
 "1f22a475-9d55-40b5-97fa-2013d7263a95","937a9ec8-369b-4127-814f-1abafd15a183","946d2f14-2519-497e-b634-008fea3f106a","c1bebbf6-9ff6-48e5-aa12-22dbcdbc26fc",1,"Aaron","Bogan","Aaron Bogan","",,,
 "64b4df19-8916-460f-9e2e-70b57b27cc18","39d865f5-8b2f-4251-8bf8-02a56f41298e","ff5f6c46-73ce-4e42-a0de-e11ad72d3ec3","51a9879b-e96e-4fe7-bf25-888cda7f8732",1,"Michael","Mullarkey","Michael Mullarkey","Teamworks",,,
+"a5c47db3-8d17-4e2c-b80f-1b71734440fc","856de661-4b44-4159-9fbc-0c4787f79e3f","c54df8d9-7dec-4fb7-b046-a376f77709ac","76676dc8-a2bc-418b-9787-685aaff390ad",1,"Kelli ","Goggans","Kelli  Goggans","Data Scientist, National Institutes of Health","Kelli Goggans is a Data Scientist at the National Institutes of Health
+(NIH), evaluating biomedical research policies and programs through
+quantitative and qualitative analysis. Her work centers on data
+integrity at scale — developing protocols to clean and reconcile large
+datasets, establishing internal database access with full documentation,
+and building dashboards that give leadership a trustworthy, data-driven
+view for decision-making.
+
+Kelli holds a Ph.D. in Biochemistry and Molecular Biology from the
+University of Alabama at Birmingham, where she designed and led
+experimental studies requiring multi-factorial statistical analysis.
+That grounding in experimental rigor now informs her approach to
+building trustworthy data pipelines and reporting systems.","https://img.zuddl.com/8b3f15da-6bb2-445e-a0f3-740c6f6796df","https://www.linkedin.com/in/kelli-goggans-9903a7166/"
+"a5c47db3-8d17-4e2c-b80f-1b71734440fc","856de661-4b44-4159-9fbc-0c4787f79e3f","38dc3f2c-127c-4f6a-9e63-2cac773b7b6e","e022da56-5f71-406e-95c5-139addcf3746",1,"Leslie","Emery","Leslie Emery","Senior Principal Data Scientist, Bristol Myers Squibb","Leslie Emery, PhD, is a Senior Principal Data Scientist in the Knowledge
+Science Research team at Bristol Myers Squibb working on research for
+cancer treatments. She works with a team of translational data
+scientists to design and deploy innovative analysis-ready data products
+for exploratory research. These data products include custom data
+transformation, visualization, & quality tracking apps in R Shiny and
+curated & standardized data sets for analysis. She has particular
+expertise in harmonizing data from many disparate sources into combined
+data sets that enable cross-study or cross-disease analysis. Leslie
+works closely with stakeholders from Informatics & Predictive Sciences
+and Translational Medicine to define their data and visualization
+requirements and deliver them in elegant and efficient ways. Her work
+makes it easy for scientists doing drug development research to answer
+their scientific questions.
+
+Leslie completed her PhD in genome sciences at the University of
+Washington studying the patterns that evolution and population history
+have left in current human genetic variation. She then worked as a
+Research Scientist at UW Biostatistics on NIH consortium projects
+identifying the genetic variants that contribute to common human
+diseases. She co-led a team that designed a reproducible python + R
+pipeline and SQL database for harmonizing health measurement data for
+the TOPMed whole genome sequencing project.
+
+Leslie's many hobbies include knitting, crochet, reading sci-fi, and
+tracking and analyzing her hobby data.","https://img.zuddl.com/19d82f43-1f77-4a69-9883-82a1fa64fee8","https://www.linkedin.com/in/leslie-emery/"
+"a5c47db3-8d17-4e2c-b80f-1b71734440fc","856de661-4b44-4159-9fbc-0c4787f79e3f","0e9b62cb-ca51-4774-b9ac-7653ddd5f3c2","5a06339e-1767-4982-a932-bf3d6658dd53",1,"Mirian ","Lima","Mirian  Lima","United Nations","Mirian Lima is a research methodologist working with economic
+development data — she packages methods for a living. At the UN Office
+of the Special Adviser on Africa, she builds tools that let
+non-technical policy analysts run their own code-based analyses — on
+numbers they can trust and results they can reproduce. Her work sits at
+the seam between rigorous social research methods and modern
+computational tooling, exploring how expert judgment can be packaged
+into systems that analysts and AI agents can both use well.","https://img.zuddl.com/62c81fae-3714-4b04-8183-04c3bb245be6","https://www.linkedin.com/in/spencerlima/"
+"a5c47db3-8d17-4e2c-b80f-1b71734440fc","856de661-4b44-4159-9fbc-0c4787f79e3f","c69c4496-e572-4faf-b452-6e74436f351f","496430af-b2c8-4ba1-872b-aa6266897f55",1,"Yasha","Kaushal","Yasha Kaushal","Senior Data Scientist, CCS Fundraising","Hi, I’m Yasha Kaushal, a Senior Data Scientist at CCS Fundraising with a
+background of PhD in Physics. I help nonprofits turn complex data into
+actionable fundraising insights. My work spans predictive modeling,
+process automation, and interactive applications that make analytics
+more accessible to colleagues and clients. I’m particularly interested
+in combining reproducible workflows with human judgment to solve
+real-world data challenges.","https://img.zuddl.com/5ce02a55-a1af-4cb4-a783-53d3d49ce976","https://www.linkedin.com/in/yasha-kaushal-phd-3b212aa0/"
+"20fe528e-4c66-4c12-8dcb-701b75a1698d","286bb6e8-e41d-41de-aeaf-b4b34770c404","d208b725-2b62-4108-8381-0ea7c8eaedab","9d60078b-ecac-4c2c-8880-aebc83d5baab",1,"Hamid ","Shafiezadeh","Hamid  Shafiezadeh","Sr. Analyst, FNBO","Quantitative analyst working at the intersection of banking, economics,
+and data science.","https://img.zuddl.com/0a3cc4f3-6b0d-4622-9be1-a428924e7c0a","https://www.linkedin.com/in/hamidshafiezadeh"
+"20fe528e-4c66-4c12-8dcb-701b75a1698d","286bb6e8-e41d-41de-aeaf-b4b34770c404","b6227302-b07c-4b3b-bfcf-1a12284e76ff","68d1ec1b-7d81-496c-9a03-8981ef9f99d6",1,"Jon","Harmon","Jon Harmon","Atorus Research",,,
+"20fe528e-4c66-4c12-8dcb-701b75a1698d","286bb6e8-e41d-41de-aeaf-b4b34770c404","83d0591f-224d-4ddc-98f0-9e969558ae4d","7c7be9c4-e847-475e-95c6-a6f89ff9139b",1,"Meghan","Harris","Meghan Harris","Memorial Sloan Kettering",,,
+"20fe528e-4c66-4c12-8dcb-701b75a1698d","286bb6e8-e41d-41de-aeaf-b4b34770c404","02bf53f1-7691-464b-a50f-10d2a3b1210d","bdb945a5-a62b-48d3-a6b4-8441f1b1da72",1,"Sierra","Johnson","Sierra Johnson","Brown and Caldwell",,,
 "8881610b-d3a0-41fa-9a3c-73f14466be49","e1969c4b-3220-4207-90bc-1a2daea2b7bf","b6227302-b07c-4b3b-bfcf-1a12284e76ff","68d1ec1b-7d81-496c-9a03-8981ef9f99d6",1,"Jon","Harmon","Jon Harmon","Atorus Research",,,
 "06420326-1cc5-4601-9895-464de0b7ebad","fc88d9e0-1465-4470-80d3-1401c390e901","c54df8d9-7dec-4fb7-b046-a376f77709ac","76676dc8-a2bc-418b-9787-685aaff390ad",1,"Kelli ","Goggans","Kelli  Goggans","Data Scientist, National Institutes of Health","Kelli Goggans is a Data Scientist at the National Institutes of Health
 (NIH), evaluating biomedical research policies and programs through
@@ -476,13 +758,77 @@ building trustworthy data pipelines and reporting systems.","https://img.zuddl.c
 "cdb66090-8b4f-420f-8e49-ae6acce08b92","ed2f5b41-dce9-4f77-acd6-f2fb2fb20bcf","0aad25db-511b-4cab-beef-a13360cedd6c","e16ecbf2-d63e-458a-8601-dc8bfbb9f88c",1,"Ben ","Arancibia","Ben  Arancibia","Director of Data Science, GSK","I like R and open source technologies with a strong interest in the use
 of R in Pharma.","https://img.zuddl.com/5312de50-ae38-433d-a31e-0e514266b516","https://www.linkedin.com/in/bcarancibia/"
 "6583b4a9-4693-4a15-b480-0f940004e0f3","b292b53b-de5c-4f55-aad1-73b745e18592","0bcbfd42-625d-43b0-80cd-4e2d4bcb108b","a8363b62-6098-4f39-8ef4-ad782befd50d",1,"Felippe","Lazar Neto","Felippe Lazar Neto","Sociedade Brasileira de Oncologia Clínica (SBOC)",,,
+"ac97c371-bc0c-4553-90e1-2b1427690f6c","311a9e7c-c8bf-4434-99a0-98fb65aa3477","0bcbfd42-625d-43b0-80cd-4e2d4bcb108b","a8363b62-6098-4f39-8ef4-ad782befd50d",1,"Felippe","Lazar Neto","Felippe Lazar Neto","Sociedade Brasileira de Oncologia Clínica (SBOC)",,,
+"ac97c371-bc0c-4553-90e1-2b1427690f6c","311a9e7c-c8bf-4434-99a0-98fb65aa3477","f0dd863f-1f26-4388-8249-4a140a548641","78899278-93bb-4ea4-9fcc-249734fa035e",1,"Gabriel ","Morrison","Gabriel  Morrison","Open Source Routing Analysis at Scale, The Urban Institute","Gabriel Morrison is a senior data scientist on the Technology and Data
+Science team at the Urban Institute. His work focuses on researching and
+building tools to address equity-related issues in cities and counties,
+often with spatial data. Morrison holds a BA in geographical sciences
+and an MS in computational analysis and public policy from the
+University of Chicago.","","https://www.linkedin.com/in/gabriel-morrison-68463a161/"
+"ac97c371-bc0c-4553-90e1-2b1427690f6c","311a9e7c-c8bf-4434-99a0-98fb65aa3477","dc6877e2-ff46-45ec-8dd7-792a254d04eb","17b824e5-554c-45bc-baf7-0104bb2ded05",1,"Jay","Westreich","Jay Westreich","",,,
+"ac97c371-bc0c-4553-90e1-2b1427690f6c","311a9e7c-c8bf-4434-99a0-98fb65aa3477","6c532d0a-cd45-4d9e-8132-fb874b2fb5d7","e12da0c6-4575-48a3-aeac-369da70a9dd8",1,"Keaton","Wilson","Keaton Wilson","AI Engineer, CHG Healthcare","I build AI-powered tools and data systems that solve real problems -
+production things that people actually use, not prototypes.
+
+My background is unusual: a decade in academic research (PhD, 750+
+citations) gave me rigorous experimental and analytical training, and
+the last several years have been spent applying that to full-stack AI
+and data engineering. I've shipped chatbots, automation pipelines,
+interactive dashboards, and internal platforms across market research,
+environmental consulting, and government sectors - working with everyone
+from Fortune 500 companies to federal agencies.
+
+My technical core is R, Python, and JavaScript, with deep experience in
+Shiny, APIs and deployment infrastructure. I care about documentation,
+reproducibility, and knowledge transfer as much as shipping features.
+
+I present at Posit::conf and similar venues. I mentor junior developers.
+I'm as comfortable whiteboarding architecture as I am writing the code.
+
+I'm drawn to challenges at the intersection of AI engineering and data
+science, places where the problems are hard and the team wants to build
+things right.","https://img.zuddl.com/ba01a9a9-8c32-4705-a8e4-5f5736c69af2","https://www.linkedin.com/in/keatonwilson/"
+"ac97c371-bc0c-4553-90e1-2b1427690f6c","311a9e7c-c8bf-4434-99a0-98fb65aa3477","b34b704c-43bb-404d-be84-51936b7a7388","d8338acc-8015-495d-9b35-882740884b0d",1,"Michael","Thomas","Michael Thomas","Chief Data Scientist, Ketchbrook Analytics","Michael is the Chief Data Scientist at Ketchbrook Analytics, an
+international data science consulting firm with expertise in R, Python,
+SQL and Docker. He is the author of multiple open source R and Python
+packages, and co-hosts the RWeekly Highlights podcast with Eric Nantz.
+Michael is passionate about bringing software engineering best practices
+into data science.","https://img.zuddl.com/aa2d9f68-ad0d-435d-adc0-dc8efc752fa0","https://www.linkedin.com/in/michaeljthomas2/"
 "898aca18-6bee-4985-98f5-6ac5ecfa29a5","d0ae5387-1551-44d1-9de4-3f20056fece8","f0dd863f-1f26-4388-8249-4a140a548641","78899278-93bb-4ea4-9fcc-249734fa035e",1,"Gabriel ","Morrison","Gabriel  Morrison","Open Source Routing Analysis at Scale, The Urban Institute","Gabriel Morrison is a senior data scientist on the Technology and Data
 Science team at the Urban Institute. His work focuses on researching and
 building tools to address equity-related issues in cities and counties,
 often with spatial data. Morrison holds a BA in geographical sciences
 and an MS in computational analysis and public policy from the
 University of Chicago.","","https://www.linkedin.com/in/gabriel-morrison-68463a161/"
+"88f6a456-439a-4993-ad2a-2d8fe164af55","7d15863c-c3ab-4906-8072-38f963427271","09c6d3e0-8793-4e90-b96f-4829dac8e4ea","b218ecc2-e78b-4e2b-b785-2e86345ee723",1,"Kelly","Bodwin","Kelly Bodwin","California Polytechnic State University",,,
+"88f6a456-439a-4993-ad2a-2d8fe164af55","7d15863c-c3ab-4906-8072-38f963427271","18c39ab8-fd8d-4dc4-85b6-dbdd78415768","7308efa4-a149-4c5d-b2f0-223d0c99e84b",1,"Luis D. ","Verde Arregoitia","Luis D.  Verde Arregoitia","Biodiversity Scientist, Instituto de Ecología A.C. INECOL","Mammals, biodiversity, open science, R","https://img.zuddl.com/01f953b8-358b-4e58-b936-ac8b18a0b273","https://www.linkedin.com/in/luis-d-verde-arregoitia-a20339209/"
+"88f6a456-439a-4993-ad2a-2d8fe164af55","7d15863c-c3ab-4906-8072-38f963427271","ff5f6c46-73ce-4e42-a0de-e11ad72d3ec3","51a9879b-e96e-4fe7-bf25-888cda7f8732",1,"Michael","Mullarkey","Michael Mullarkey","Teamworks",,,
+"88f6a456-439a-4993-ad2a-2d8fe164af55","7d15863c-c3ab-4906-8072-38f963427271","953d6ac6-fc60-480b-890d-ebe34ecb8f82","4c8fd73e-5539-4b68-830d-e11662546c1e",1,"Tiger","Tang","Tiger Tang","CARFAX",,,
+"7b663f9a-23ac-4ffb-96c1-7de9770aae7f","3fd5f6f4-66a6-4287-a08d-026aad72dc50","946d2f14-2519-497e-b634-008fea3f106a","c1bebbf6-9ff6-48e5-aa12-22dbcdbc26fc",1,"Aaron","Bogan","Aaron Bogan","",,,
+"7b663f9a-23ac-4ffb-96c1-7de9770aae7f","3fd5f6f4-66a6-4287-a08d-026aad72dc50","ff1581d7-f658-4b59-a60d-c1acc61d37ec","3d5c87ee-2d7c-4616-9356-87516b2cd820",1,"Anatoliy","Sokolov","Anatoliy Sokolov","Dow Chemical",,,
+"7b663f9a-23ac-4ffb-96c1-7de9770aae7f","3fd5f6f4-66a6-4287-a08d-026aad72dc50","0aad25db-511b-4cab-beef-a13360cedd6c","e16ecbf2-d63e-458a-8601-dc8bfbb9f88c",1,"Ben ","Arancibia","Ben  Arancibia","Director of Data Science, GSK","I like R and open source technologies with a strong interest in the use
+of R in Pharma.","https://img.zuddl.com/5312de50-ae38-433d-a31e-0e514266b516","https://www.linkedin.com/in/bcarancibia/"
+"7b663f9a-23ac-4ffb-96c1-7de9770aae7f","3fd5f6f4-66a6-4287-a08d-026aad72dc50","3372201c-a4e2-401b-842d-cc823b798736","88f152ee-9b07-4879-b8a0-635712ae048a",1,"Morten","Dall","Morten Dall","University of Copenhagen",,,
+"cd0fba8d-6bda-4348-a36a-2b56c8bc7688","50ebf971-47df-4e59-a999-56b64e080d91","38658c87-ea5b-4480-bfef-33c5cc2dd74f","07d3ca3e-1edc-4004-9037-eb7ec1ef61f1",1,"Andy","Teucher","Andy Teucher","Openscapes","Andy Teucher is a core Openscapes team member and develops software and
+cloud infrastructure. He is a biologist turned data scientist and R
+developer, specializing in helping people and organizations build
+maintainable, reproducible data workflows. Andy is a strong open data
+and open code advocate, and believes in the value of using and
+contributing to open-source software.","https://img.zuddl.com/2a53beab-b80f-49c8-a07c-1318c6beb128","https://www.linkedin.com/in/andy-teucher/"
+"cd0fba8d-6bda-4348-a36a-2b56c8bc7688","50ebf971-47df-4e59-a999-56b64e080d91","d4f78b83-0e3f-4773-bf46-cef4841145c3","19b91623-46fc-445d-adeb-756f6576dd1c",1,"Carlos","Scheidegger","Carlos Scheidegger","Posit",,,
+"cd0fba8d-6bda-4348-a36a-2b56c8bc7688","50ebf971-47df-4e59-a999-56b64e080d91","bd0437fa-af47-428a-b70b-1da48b0d6d9e","94de0953-905c-411e-9c09-7b0ae4ad6382",1,"Charlotte","Wickham","Charlotte Wickham","Posit",,,
+"cd0fba8d-6bda-4348-a36a-2b56c8bc7688","50ebf971-47df-4e59-a999-56b64e080d91","2d42a2b9-d0b6-4e58-947c-4b141c422482","c753226e-fc81-4e33-8d2c-82742ba2bafd",1,"Emil","Hvitfeldt","Emil Hvitfeldt","Senior Software Engineer, Posit","Emil Hvitfeldt is a software engineer at Posit and part of the
+tidymodels team’s effort to improve R’s modeling capabilities. He
+maintains several packages within the realms of modeling, text analysis,
+and color palettes. Trying to make slidecrafting a well respecting verb.
+He co-authored the book Supervised Machine Learning for Text Analysis in
+R with Julia Silge. Working on book Feature Engineering A-Z.","https://img.zuddl.com/fd4fcbce-67cd-4c7b-a5fe-612c07715a12","https://www.linkedin.com/in/emilhvitfeldt/"
 "539a2a57-5a0d-44a0-99a2-df6cfe6e246e","eb96b25e-e1cd-47ef-b910-7a5fd52742d3","bd0437fa-af47-428a-b70b-1da48b0d6d9e","94de0953-905c-411e-9c09-7b0ae4ad6382",1,"Charlotte","Wickham","Charlotte Wickham","Posit",,,
+"93e6b196-f7e9-4423-a9ae-080e9da40c79","013e97bf-b931-468f-a963-492ded2936a0","b9407795-6516-4891-9975-492a1d889f14","136dcda5-1fa4-4baf-9d93-e87bd03d5391",1,"Eric","Thompson","Eric Thompson","Senior Data Engineer, Juul Labs","Eric is a data engineer, analyst, and scientist with over a decade of
+experience spanning hardware, mobile apps, cryptocurrency, and
+commercial strategy.","https://img.zuddl.com/deb2f164-aadd-450c-947e-b9f39e60719d","https://www.linkedin.com/in/eric-ian-thompson/"
+"93e6b196-f7e9-4423-a9ae-080e9da40c79","013e97bf-b931-468f-a963-492ded2936a0","7937400f-4302-4bd3-bad5-981f6ee07f63","00669b5b-a966-4542-bf4f-add697e9c94c",1,"Isabel","Zimmerman","Isabel Zimmerman","Senior Software Engineer, Posit, PBC","Building the Positron IDE and various Python packages.","https://img.zuddl.com/6d8767ca-9339-4eb8-8a1a-bb1bf8b77d88",
+"93e6b196-f7e9-4423-a9ae-080e9da40c79","013e97bf-b931-468f-a963-492ded2936a0","27fa002f-1bdd-40f1-9b17-24c4ac9aa3f3","871c3516-099d-4394-b3a9-1fcd1917861a",1,"Tyler ","Riccio","Tyler  Riccio","VP Analytic Platforms, Citizens Bank","","","https://www.linkedin.com/in/tyler-riccio-40a44419b/"
+"93e6b196-f7e9-4423-a9ae-080e9da40c79","013e97bf-b931-468f-a963-492ded2936a0","9306d8c4-5808-473a-a9ff-4ec455ccf142","51f1da77-0065-48dd-b1c3-a874e93dfbe7",1,"Wojciech","Gajewski","Wojciech Gajewski","","",,""
 "be897090-615d-4879-acbc-69c8b24032c9","27b71261-d43d-4172-ad41-00fed6d65e81","18c39ab8-fd8d-4dc4-85b6-dbdd78415768","7308efa4-a149-4c5d-b2f0-223d0c99e84b",1,"Luis D. ","Verde Arregoitia","Luis D.  Verde Arregoitia","Biodiversity Scientist, Instituto de Ecología A.C. INECOL","Mammals, biodiversity, open science, R","https://img.zuddl.com/01f953b8-358b-4e58-b936-ac8b18a0b273","https://www.linkedin.com/in/luis-d-verde-arregoitia-a20339209/"
 "b2093157-ab01-40ea-9d02-c75a09e733b5","f8295fdc-1ed4-4e3c-b7bc-185390db0a4a","25a1860d-aea1-4b17-a692-11776203228a","6f3effe1-2a7b-4620-bd61-994a45c18514",1,"Cory ","Adkins","Cory  Adkins","Legal Data Analyst, Consilio","Cory is a data scientist on a mission to bring reproducibility and
 transparency to the legal industry. He uses R and Python to build
@@ -522,12 +868,33 @@ the TOPMed whole genome sequencing project.
 Leslie's many hobbies include knitting, crochet, reading sci-fi, and
 tracking and analyzing her hobby data.","https://img.zuddl.com/19d82f43-1f77-4a69-9883-82a1fa64fee8","https://www.linkedin.com/in/leslie-emery/"
 "ec2bb444-d553-494c-bed9-9791add32677","f35f3fdf-81c9-43fc-be03-4b9b082d8ff8","9306d8c4-5808-473a-a9ff-4ec455ccf142","51f1da77-0065-48dd-b1c3-a874e93dfbe7",1,"Wojciech","Gajewski","Wojciech Gajewski","","",,""
+"76769bde-5382-436f-92e5-f3134bcaf729","a6722b88-32c1-445c-9f6a-3a99b5678f97","f61f1185-d602-4508-8757-9eaede63efdc","dbe8c788-40a0-43b3-8c3a-5a23c4cfe371",1,"Cynthia ","Huang","Cynthia  Huang","Post-Doctoral Researcher, LMU Munich","Cynthia Huang is a Post-Doctoral Research Fellow at LMU Munich. Her
+research focuses on formalisations and frameworks for leveraging
+generative AI and LLMs for data preparation and data visualisation. She
+is particularly interested how to harness and validate human-AI
+collaboration in exploratory data analysis, and ensuring trustworthy and
+interpretable data science when leveraging AI-assistance.","https://img.zuddl.com/30840112-4d5b-41dd-af62-ad918e7de767",
+"76769bde-5382-436f-92e5-f3134bcaf729","a6722b88-32c1-445c-9f6a-3a99b5678f97","ba49bbc1-fcad-4131-9cfc-b98d608c008b","2046f29d-4541-4e7b-b6c6-6b9ee9bb0583",1,"Dylan","Wootton","Dylan Wootton","MIT",,,
+"76769bde-5382-436f-92e5-f3134bcaf729","a6722b88-32c1-445c-9f6a-3a99b5678f97","ee887f0c-724b-4ac0-8bda-71abbadc885b","05fc9eac-ff20-411b-94b8-85aa83942791",1,"Ryan","Yen","Ryan Yen","MIT",,,
+"76769bde-5382-436f-92e5-f3134bcaf729","a6722b88-32c1-445c-9f6a-3a99b5678f97","470d8ccf-3e9b-45f6-828a-fc576278f6a8","ee822ca4-9abe-4b6c-8285-e175ea8d08ac",1,"Shelby","Level","Shelby Level","Senior Health Research Analyst, The Ohio State University","","https://img.zuddl.com/597faef3-ca3e-4094-8bca-280ca3361e78","https://www.linkedin.com/in/shelby-level/"
+"76769bde-5382-436f-92e5-f3134bcaf729","a6722b88-32c1-445c-9f6a-3a99b5678f97","54df68df-1ca3-437b-b20b-a28c9f30e8d6","ec1e1c59-e4d5-4361-a015-2d9cbb8626fc",1,"Zan","Armstrong","Zan Armstrong","Independant Data Viz Specialist","Zan creates charts and graphs which change how people look at their data
+(literally). Her focus on data viz for analysis leads to better decision
+making, data driven questions, deeper understanding, and new
+discoveries.","https://img.zuddl.com/d634f698-0688-4f3b-af28-83bcebc4a52f","https://www.linkedin.com/in/zanstrong/"
 "74dc9c74-ecbd-467a-963f-5ead9ff883ef","3fceb44a-b48e-4cfb-911a-7d58939ef798","38658c87-ea5b-4480-bfef-33c5cc2dd74f","07d3ca3e-1edc-4004-9037-eb7ec1ef61f1",1,"Andy","Teucher","Andy Teucher","Openscapes","Andy Teucher is a core Openscapes team member and develops software and
 cloud infrastructure. He is a biologist turned data scientist and R
 developer, specializing in helping people and organizations build
 maintainable, reproducible data workflows. Andy is a strong open data
 and open code advocate, and believes in the value of using and
 contributing to open-source software.","https://img.zuddl.com/2a53beab-b80f-49c8-a07c-1318c6beb128","https://www.linkedin.com/in/andy-teucher/"
+"8c81ded3-483c-476d-a78f-532fd71a7cb3","faaa0376-91d2-4a59-8869-6710ed1feb6f","5d218d1b-d004-443a-aea6-fd53b3f0cfc3","988cedc5-f40f-47ff-8aa3-f6a94fd427d5",1,"Charlie","Gao","Charlie Gao","Posit Software, PBC",,,
+"8c81ded3-483c-476d-a78f-532fd71a7cb3","faaa0376-91d2-4a59-8869-6710ed1feb6f","25a1860d-aea1-4b17-a692-11776203228a","6f3effe1-2a7b-4620-bd61-994a45c18514",1,"Cory ","Adkins","Cory  Adkins","Legal Data Analyst, Consilio","Cory is a data scientist on a mission to bring reproducibility and
+transparency to the legal industry. He uses R and Python to build
+pipelines that analyze legal documents, eDiscovery workflows, and court
+decisions. When he isn’t busy replacing ad-hoc processes with code-first
+workflows, he’s usually hanging out with his three beloved cats.","https://img.zuddl.com/4641ef59-f417-462d-a49d-748b226e98f3","https://www.linkedin.com/in/corykadkins/"
+"8c81ded3-483c-476d-a78f-532fd71a7cb3","faaa0376-91d2-4a59-8869-6710ed1feb6f","bd5b8bf1-5a3d-471f-bfcc-22e3f28398e5","85f4b2d2-8f06-4674-b775-c4dc2631394f",1,"Edgar","Ruiz","Edgar Ruiz","Posit",,,
+"8c81ded3-483c-476d-a78f-532fd71a7cb3","faaa0376-91d2-4a59-8869-6710ed1feb6f","f50a863c-9c7b-49b9-a2f3-ed27e53ee693","139f7503-98f6-4144-94a1-ea06fd2663d3",1,"Travis","Gerke","Travis Gerke","PCCTC",,,
 "4d933bef-132b-4dd6-ad0e-e90f65969904","d341191a-2f8c-4a12-9499-5dbdd96b3921","470d8ccf-3e9b-45f6-828a-fc576278f6a8","ee822ca4-9abe-4b6c-8285-e175ea8d08ac",1,"Shelby","Level","Shelby Level","Senior Health Research Analyst, The Ohio State University","","https://img.zuddl.com/597faef3-ca3e-4094-8bca-280ca3361e78","https://www.linkedin.com/in/shelby-level/"
 "df3787d8-70be-4509-9f14-3c702acebd7f","c349f78c-0ff8-4646-82b2-c64de547ca05","5d218d1b-d004-443a-aea6-fd53b3f0cfc3","988cedc5-f40f-47ff-8aa3-f6a94fd427d5",1,"Charlie","Gao","Charlie Gao","Posit Software, PBC",,,
 "3885a65e-0b5f-4a01-9f6c-f35fd5f03e34","0bfc677d-f141-4036-9747-2da0eaa0496f","1d3963ec-9cc2-42f8-83a7-9fa2adc021c2","36cd4697-8da4-454c-ad1e-2bbb0715cdf8",1,"Tyson","Barrett","Tyson Barrett","Utah State University",,,
@@ -538,6 +905,9 @@ process automation, and interactive applications that make analytics
 more accessible to colleagues and clients. I’m particularly interested
 in combining reproducible workflows with human judgment to solve
 real-world data challenges.","https://img.zuddl.com/5ce02a55-a1af-4cb4-a783-53d3d49ce976","https://www.linkedin.com/in/yasha-kaushal-phd-3b212aa0/"
+"a726c5fc-fae4-4f82-9d5d-bc88d8ec4892","4c9f033c-c65d-4c6e-b6a6-9b83aa3852d5","8fb8df6d-cdbc-42bd-9a38-735c8183121f","42bb64db-67f7-404b-a72a-25ef348b1790",1,"Florian","Mayr","Florian Mayr","Veterans Affairs Pittsburgh Healthcare System",,,
+"a726c5fc-fae4-4f82-9d5d-bc88d8ec4892","4c9f033c-c65d-4c6e-b6a6-9b83aa3852d5","962e4543-da0d-425f-964c-9099efcd1bb0","dda57f4c-8656-4b8d-8f0f-14122761fe52",1,"Neil","Rosenbaum","Neil Rosenbaum","Houston Methodist Hospital",,,
+"a726c5fc-fae4-4f82-9d5d-bc88d8ec4892","4c9f033c-c65d-4c6e-b6a6-9b83aa3852d5","8c9ed5e3-cb0a-47ca-b1a8-7bbbe019ee2e","e5985dcd-b644-4be2-85ee-7e12bcb8059c",1,"Rebecca","Wardrop","Rebecca Wardrop","Michigan Medicine",,,
 "ae0fd9f3-1d7b-46f8-8f3a-23031b0c6f01","0873949c-8863-4e9b-adaa-70ef04a87460","0e9b62cb-ca51-4774-b9ac-7653ddd5f3c2","5a06339e-1767-4982-a932-bf3d6658dd53",1,"Mirian ","Lima","Mirian  Lima","United Nations","Mirian Lima is a research methodologist working with economic
 development data — she packages methods for a living. At the UN Office
 of the Special Adviser on Africa, she builds tools that let
@@ -549,8 +919,40 @@ into systems that analysts and AI agents can both use well.","https://img.zuddl.
 "481d7baa-1262-46c4-91f2-e3404a6f10b5","8b3685c0-e503-4d0c-8bbe-90886b1d463d","ba49bbc1-fcad-4131-9cfc-b98d608c008b","2046f29d-4541-4e7b-b6c6-6b9ee9bb0583",1,"Dylan","Wootton","Dylan Wootton","MIT",,,
 "481d7baa-1262-46c4-91f2-e3404a6f10b5","8b3685c0-e503-4d0c-8bbe-90886b1d463d","ee887f0c-724b-4ac0-8bda-71abbadc885b","05fc9eac-ff20-411b-94b8-85aa83942791",1,"Ryan","Yen","Ryan Yen","MIT",,,
 "593aeb2c-02fd-429b-831e-2a375e8406c2","0ba25946-848f-46e2-a3fd-ab1a2b2202bb","02bf53f1-7691-464b-a50f-10d2a3b1210d","bdb945a5-a62b-48d3-a6b4-8441f1b1da72",1,"Sierra","Johnson","Sierra Johnson","Brown and Caldwell",,,
+"cd09f003-bc1b-4d60-b562-530bcc1362bf","84001369-ee1a-4fc5-9b16-300fe92cf402","2958d536-cac7-4670-89cf-f10a986cacce","45d524d3-a493-4660-a122-3f4b5e4235d5",1,"Ben","Haffly","Ben Haffly","Senior Power Analyst, Seattle City Light","","https://img.zuddl.com/29907287-4518-4f9b-84b9-33ab247c8b86","https://www.linkedin.com/in/benjamin-haffly-102293133/"
+"cd09f003-bc1b-4d60-b562-530bcc1362bf","84001369-ee1a-4fc5-9b16-300fe92cf402","88f6a9eb-a9ce-4448-a09c-4204332c83f8","459353de-e9ad-4180-a0c5-9fb2fb0d33b5",1,"Kelly","Pisane","Kelly Pisane","Senior Data Scientist , Booking.com","","https://img.zuddl.com/a14091d6-81e7-4a72-92be-be991a3dd58f","https://www.linkedin.com/in/kellypisane/"
+"cd09f003-bc1b-4d60-b562-530bcc1362bf","84001369-ee1a-4fc5-9b16-300fe92cf402","c52cb354-c4f6-439e-9059-438abe301cc2","4b978c9d-2f19-427e-99d4-d3140a72f4e0",1,"Morgana","Kinlan","Morgana Kinlan","Sr. Strategic Services Analyst, DeepSeas","I'm a strategic data scientist who helps teams make sense of messy,
+complex data. My current role focuses on defining metrics, building
+reporting pipelines, and identifying the right measures to track
+organizational goals and highlight team impact, turning ambiguity into
+clear, actionable insight leadership can act on.
+
+I enjoy partnering across organizations, delivering training, and
+developing fun (to me anyway!) visualizations and tools. Outside of
+work, I'm passionate about organizational systems, reading science
+fiction, and running outdoors.
+
+If you're working on something interesting or just want to connect, feel
+free to reach out!","https://img.zuddl.com/3e0157d2-5540-42b3-a0f4-289a308b665f","https://www.linkedin.com/in/morgana-kinlan"
+"cd09f003-bc1b-4d60-b562-530bcc1362bf","84001369-ee1a-4fc5-9b16-300fe92cf402","c2182c91-084b-41b9-b87f-72374f2f95ca","652d693d-fb34-4db9-8a6a-39ba38303d01",1,"Nate","Mockler","Nate Mockler","Biogen",,,
 "b7f77e83-90fe-42a5-bade-598231c4705c","f9eab383-35f3-45c6-9359-1e01a452dde0","2958d536-cac7-4670-89cf-f10a986cacce","45d524d3-a493-4660-a122-3f4b5e4235d5",1,"Ben","Haffly","Ben Haffly","Senior Power Analyst, Seattle City Light","","https://img.zuddl.com/29907287-4518-4f9b-84b9-33ab247c8b86","https://www.linkedin.com/in/benjamin-haffly-102293133/"
 "72792723-123d-45ac-b00d-dca19d9e2b2b","9a24e9f7-e61d-461a-a56d-b7b8c3acb2ba","bd5b8bf1-5a3d-471f-bfcc-22e3f28398e5","85f4b2d2-8f06-4674-b775-c4dc2631394f",1,"Edgar","Ruiz","Edgar Ruiz","Posit",,,
+"ddc73127-82d0-4f60-a5fc-a83680ae11aa","feeaccfd-3fc3-4122-a3e6-54d557b63b05","a75f612e-73ae-48dc-98f2-bc0c452fd151","44aac4fa-2397-4915-a23d-820d35a3886b",1,"Max","Kuhn","Max Kuhn","Posit",,,
+"ddc73127-82d0-4f60-a5fc-a83680ae11aa","feeaccfd-3fc3-4122-a3e6-54d557b63b05","d32466a1-9b90-480e-b4e3-0d98e6bac5e6","207a2824-f657-4290-b5ea-11a783a6de86",1,"Nicky","Bell","Nicky Bell","Powered Analysis",,,
+"ddc73127-82d0-4f60-a5fc-a83680ae11aa","feeaccfd-3fc3-4122-a3e6-54d557b63b05","d0f8bf13-ddf2-428f-a968-65ab114cb5cf","5d50d7f1-9821-4b5f-8893-b5b7fc8cdad1",1,"Sam","Clark","Sam Clark","Software Engineer, Posit, PBC","Sam builds user-first features for the Positron IDE. He may be writing
+in TypeScript and Rust now, but deep down, he has a Python soul. 
+
+At Posit, he spent several months helping lay the groundwork for AI
+integration within Positron before transitioning to more
+database-focused workflows and integrations. Before that, he built
+control interfaces and data analysis tools for the Relativistic Heavy
+Ion Collider at Brookhaven National Laboratory. 
+
+When he isn't reflecting on the evolution of AI tools for data science,
+he’s usually cooking, snapping landscapes on his Sony a6400
+(rollerblades optional, but encouraged), or spending time with his cats,
+Missy and Mabel.","https://img.zuddl.com/66b13cea-e1ba-4bf4-8b3d-2a973a3be3d8","https://www.linkedin.com/in/sam-clark-a25075115/"
+"ddc73127-82d0-4f60-a5fc-a83680ae11aa","feeaccfd-3fc3-4122-a3e6-54d557b63b05","1d3963ec-9cc2-42f8-83a7-9fa2adc021c2","36cd4697-8da4-454c-ad1e-2bbb0715cdf8",1,"Tyson","Barrett","Tyson Barrett","Utah State University",,,
 "f6b0dc87-c729-4b58-b3d2-fbae280a296a","2d031032-51e4-4890-af3c-15d133a2b6c4","c2182c91-084b-41b9-b87f-72374f2f95ca","652d693d-fb34-4db9-8a6a-39ba38303d01",1,"Nate","Mockler","Nate Mockler","Biogen",,,
 "e332d236-ea31-4b0f-b54f-897bcc42654c","cc5e1917-f8f6-4432-8025-e14529576ef4","a75f612e-73ae-48dc-98f2-bc0c452fd151","44aac4fa-2397-4915-a23d-820d35a3886b",1,"Max","Kuhn","Max Kuhn","Posit",,,
 "b0784d43-ef8a-4927-9382-6a4050b3f633","b0f7dd94-2268-44ed-9809-e5580116d967","83d0591f-224d-4ddc-98f0-9e969558ae4d","7c7be9c4-e847-475e-95c6-a6f89ff9139b",1,"Meghan","Harris","Meghan Harris","Memorial Sloan Kettering",,,
@@ -590,9 +992,8 @@ fiction, and running outdoors.
 If you're working on something interesting or just want to connect, feel
 free to reach out!","https://img.zuddl.com/3e0157d2-5540-42b3-a0f4-289a308b665f","https://www.linkedin.com/in/morgana-kinlan"
 "8791807f-c8d8-4dfc-b633-2c586a759bd7","f80733aa-789b-4d89-b207-e07a9eaf9809","88f6a9eb-a9ce-4448-a09c-4204332c83f8","459353de-e9ad-4180-a0c5-9fb2fb0d33b5",1,"Kelly","Pisane","Kelly Pisane","Senior Data Scientist , Booking.com","","https://img.zuddl.com/a14091d6-81e7-4a72-92be-be991a3dd58f","https://www.linkedin.com/in/kellypisane/"
-"b1449964-9238-4c83-b76f-1ad3d846d505","608fdcf5-360e-42e9-b4c8-4f07dda69546","d208b725-2b62-4108-8381-0ea7c8eaedab","9d60078b-ecac-4c2c-8880-aebc83d5baab",1,"Hamid ","Shafiezadeh","Hamid  Shafiezadeh","Sr. Analyst, Decision Sciences, FNBO","Quantitative analyst in banking with a background in economics and data
-science, passionate about using open-source tools to communicate complex
-ideas clearly.","","https://www.linkedin.com/in/hamidshafiezadeh"
+"b1449964-9238-4c83-b76f-1ad3d846d505","608fdcf5-360e-42e9-b4c8-4f07dda69546","d208b725-2b62-4108-8381-0ea7c8eaedab","9d60078b-ecac-4c2c-8880-aebc83d5baab",1,"Hamid ","Shafiezadeh","Hamid  Shafiezadeh","Sr. Analyst, FNBO","Quantitative analyst working at the intersection of banking, economics,
+and data science.","https://img.zuddl.com/0a3cc4f3-6b0d-4622-9be1-a428924e7c0a","https://www.linkedin.com/in/hamidshafiezadeh"
 "1f8a9dce-55d8-4dc1-8da0-de0e3ee38918","58a6f348-b84f-4128-adf4-6aabb765201d","c1374230-cf85-486c-a4d3-00355a96915e","ab783f2b-bc43-49c3-8963-de1b4a68c314",1,"Alan","Pan","Alan Pan","Houston Methodist Research Institute",,,
 "b0512f3f-0c7c-431a-acf4-91fc2963cbc8","ba3b8a9c-6f9e-4322-89b4-2ef0c88c0da5","ba65fbab-a9d7-4987-8dcd-ef1f3abc46b1","b62f2b17-ff2b-496a-b764-0cc51faf8972",1,"Emily","Riederer","Emily Riederer","Senior Manager of Data Science, Capital One","Emily Riederer is a data scientist at Capital One where she leads the
 development of specialty underwriting models and serves as a Model Risk

@@ -4,8 +4,8 @@ library(chromote)
 library(httr2)
 library(jsonlite)
 library(digest)
-library(dplyr)
-library(purrr)
+library(dplyr, warn.conflicts = FALSE)
+library(purrr, warn.conflicts = FALSE)
 library(tidyr)
 
 sessions_url <- "https://conf.posit.co/2026/sessions/"

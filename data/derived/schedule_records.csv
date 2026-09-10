@@ -1,5 +1,15 @@
 "record_id","session_id","parent_session_id","title","abstract","start_time_utc","end_time_utc","start_time_event_local","end_time_event_local","session_type","session_format","venue","sub_venue","location_name","location_id","status"
-"5a180dca-1066-447a-8cf1-cb0f4283de98","8f5f8944-1162-403c-a1db-630773982de4",,"Agents, context, MCP","",2026-09-15 18:00:00,2026-09-15 19:20:00,"2026-09-15 13:00:00 CDT","2026-09-15 14:20:00 CDT","Virtual","HYBRID","STAGE","Lanier Ballroom A-F","Ballroom A-F","a94f5251-3484-4b8e-90df-fbc15b0cf375","UPCOMING"
+"5a180dca-1066-447a-8cf1-cb0f4283de98","8f5f8944-1162-403c-a1db-630773982de4",,"Agents, context, MCP","There are 4 20-minute talks in this session:
+
+1:00 - 1:20PM CT \| What context do your AI agents actually need \|
+Sharon Wang
+
+1:20 - 1:40PM CT \| AI Agents Deserve R \| James Wade
+
+1:40 - 2:00PM CT \| MCP, or not MCP \| Neal Richardson
+
+2:00 - 2:20PM CT \| Everything you wanted to know about agents\* (\*but
+were afraid to ask) \| Winston Chang",2026-09-15 18:00:00,2026-09-15 19:20:00,"2026-09-15 13:00:00 CDT","2026-09-15 14:20:00 CDT","Virtual","HYBRID","STAGE","Lanier Ballroom A-F","Ballroom A-F","a94f5251-3484-4b8e-90df-fbc15b0cf375","UPCOMING"
 "7f15b16a-b04f-47fa-9b10-5f03de306506","90cce9cc-a61e-489e-bb26-d937b7190e46","6e2e84ec-d307-483d-ab7a-e68b54ec2abb","Another one writes the code","Generative AI can now write code across the data science lifecycle and
 produce plausible interpretations, challenging core assumptions about
 what beginners should learn and how they should be assessed. This talk
@@ -10,7 +20,19 @@ AI, such as integrating just-in-time feedback in the IDE. I will discuss
 what changed, what failed, what improved, and how student
 feedback—ranging from enthusiasm to skepticism—is shaping an evolving
 approach to teaching data science in the age of generative AI.",2026-09-15 18:00:00,2026-09-15 18:20:00,"2026-09-15 13:00:00 CDT","2026-09-15 13:20:00 CDT","Virtual","HYBRID","SCHEDULE",,"Ballroom H & K","0522ae00-7c31-4f8c-ab7a-b668a7ee0a59","UPCOMING"
-"f1b1ef68-462d-46bc-8979-3054a16ced11","6e2e84ec-d307-483d-ab7a-e68b54ec2abb",,"Teaching at the frontier","",2026-09-15 18:00:00,2026-09-15 19:20:00,"2026-09-15 13:00:00 CDT","2026-09-15 14:20:00 CDT","Virtual","HYBRID","STAGE","Lanier Ballroom H&K","Ballroom H & K","0522ae00-7c31-4f8c-ab7a-b668a7ee0a59","UPCOMING"
+"f1b1ef68-462d-46bc-8979-3054a16ced11","6e2e84ec-d307-483d-ab7a-e68b54ec2abb",,"Teaching at the frontier","There are 4 20-minute talks in this session:
+
+1:00 - 1:20PM CT \| Another one writes the code \| Mine Cetinkaya-Rundel
+
+1:20 - 1:40PM CT \| Positron and the Three Bears: Teaching Python with
+Positron \| Marc Dotson
+
+1:40 - 2:00PM CT \| From Programming Alone to Programming and Prompting:
+Teaching Bilingual AI-Enabled Data Science with Positron and Quarto \|
+Derrick Cogburn
+
+2:00PM - 2:20PM CT \| Designing Reproducible Learning Ecosystems with R
+and Quarto \| Christian Martinez",2026-09-15 18:00:00,2026-09-15 19:20:00,"2026-09-15 13:00:00 CDT","2026-09-15 14:20:00 CDT","Virtual","HYBRID","STAGE","Lanier Ballroom H&K","Ballroom H & K","0522ae00-7c31-4f8c-ab7a-b668a7ee0a59","UPCOMING"
 "13c1ac15-5244-4a96-88e5-dde436468f8b","f5d9b2d2-09d7-4d56-9cb2-2025daaca4f4","8f5f8944-1162-403c-a1db-630773982de4","What context do your AI agents actually need?","Context window! AGENTS.md! Custom instructions! Agent skills! Max
 tokens?? If you use AI agents in your data science work, you've probably
 heard tips about these things and already use some of them. But does it
@@ -66,8 +88,31 @@ system based on three principles: structured data entry, automated
 validation, and recorded updates. This talk shares the before-and-after
 architecture and practical lessons for teams ready to outgrow
 spreadsheets and design sustainable workflows.",2026-09-15 19:00:00,2026-09-15 19:20:00,"2026-09-15 14:00:00 CDT","2026-09-15 14:20:00 CDT","Virtual","HYBRID","SCHEDULE",,"Ballroom G & J","a73dc105-039e-467b-9047-b8f37bb0f1ba","UPCOMING"
-"4c2f7f68-a78e-4be4-98ec-d30fe9bc3571","e6a9a754-554b-40b3-bc07-8832232817ac",,"Dashboards","",2026-09-15 19:40:00,2026-09-15 21:00:00,"2026-09-15 14:40:00 CDT","2026-09-15 16:00:00 CDT","Virtual","HYBRID","STAGE","Lanier Ballroom H&K","Ballroom H & K","0522ae00-7c31-4f8c-ab7a-b668a7ee0a59","UPCOMING"
-"862b4361-9391-4139-b9cb-975dd0f8b168","e2a92817-4550-43ea-bb57-97c6a3643b3b",,"Organization-wide goodies","",2026-09-15 19:40:00,2026-09-15 21:00:00,"2026-09-15 14:40:00 CDT","2026-09-15 16:00:00 CDT","Virtual","HYBRID","STAGE","Lanier Ballroom G&J","Ballroom G & J","a73dc105-039e-467b-9047-b8f37bb0f1ba","UPCOMING"
+"4c2f7f68-a78e-4be4-98ec-d30fe9bc3571","e6a9a754-554b-40b3-bc07-8832232817ac",,"Dashboards","There are 4 20-minute talks in this session:
+
+2:40 - 3:00PM CT \| The Unreasonable Effectiveness of Quarto \| John
+Paul Helveston
+
+3:00 - 3:20PM CT \| The Tableau Plateau: From Dashboards to AI-Ready
+Data Products \| Blake Abbenante
+
+3:20 - 3:40PM CT \| Bridging the Gap: Custom Catalogs to Connect End
+Users with Data Products \| Malosree Maitra
+
+3:40 - 4:00PM CT \| Scaling Reports: Template \> Package \> App \| Jadey
+Ryan & Tanya Shapiro",2026-09-15 19:40:00,2026-09-15 21:00:00,"2026-09-15 14:40:00 CDT","2026-09-15 16:00:00 CDT","Virtual","HYBRID","STAGE","Lanier Ballroom H&K","Ballroom H & K","0522ae00-7c31-4f8c-ab7a-b668a7ee0a59","UPCOMING"
+"862b4361-9391-4139-b9cb-975dd0f8b168","e2a92817-4550-43ea-bb57-97c6a3643b3b",,"Organization-wide goodies","There are 4 20-minute talks in this session:
+
+2:40 - 3:00PM CT \| Say Yes to the Request - From Helping One to
+Empowering Many \| Becca Krouse
+
+3:00 - 3:20PM CT \| One Report, Many Audiences: Role‑Based Views in
+Posit Connect \| Inger Bergom
+
+3:20 - 3:40PM CT \| Quarto Wiki Chatbot \| Aliza Samad & Sofia Lendahl
+
+3:40 - 4:00PM CT \| Positron for Everyone: Organization-Wide Posit
+Tooling on Amazon SageMaker \| James Blair & Subodh Kumar",2026-09-15 19:40:00,2026-09-15 21:00:00,"2026-09-15 14:40:00 CDT","2026-09-15 16:00:00 CDT","Virtual","HYBRID","STAGE","Lanier Ballroom G&J","Ballroom G & J","a73dc105-039e-467b-9047-b8f37bb0f1ba","UPCOMING"
 "338ff4fe-7a1e-4dc7-a7af-7c5c82ab5c01","24651444-01fe-4c51-a590-11619fe6c83f","e6a9a754-554b-40b3-bc07-8832232817ac","The Unreasonable Effectiveness of Quarto","Quarto markets itself as a publishing framework. But at its core, Quarto
 is an abstraction layer separating \*content\* from \*format\* — a
 distinction that turns out to be remarkably powerful in the era of AI
@@ -209,8 +254,31 @@ which works with R, Python, and other languages and is coming to dbplyr.
 I’ll give an intro to Arrow and ADBC, and show how to use a new command
 line tool, dbc, along with dbplyr, for fast, larger-than-memory database
 access that works seamlessly across R and Python.",2026-09-15 20:40:00,2026-09-15 21:00:00,"2026-09-15 15:40:00 CDT","2026-09-15 16:00:00 CDT","Virtual","HYBRID","SCHEDULE",,"Ballroom L & I","28e89ca6-8a47-43a9-b4ae-a3ee04e71a58","UPCOMING"
-"b51c436f-ee65-4061-8bad-a86e577213e0","c4c79545-0600-4574-a56d-bad847aedcb8",,"Shiny in Pieces","",2026-09-15 15:20:00,2026-09-15 16:40:00,"2026-09-15 10:20:00 CDT","2026-09-15 11:40:00 CDT","Virtual","HYBRID","STAGE","Lanier Ballroom H&K","Ballroom H & K","0522ae00-7c31-4f8c-ab7a-b668a7ee0a59","UPCOMING"
-"2fbd9e8d-8562-43ce-a900-f420c26f8a53","360f73e3-f86c-48fb-acfa-0070bcb50ed6",,"The Notebook","",2026-09-15 15:20:00,2026-09-15 16:40:00,"2026-09-15 10:20:00 CDT","2026-09-15 11:40:00 CDT","Virtual","HYBRID","STAGE","Lanier Ballroom G&J","Ballroom G & J","a73dc105-039e-467b-9047-b8f37bb0f1ba","UPCOMING"
+"b51c436f-ee65-4061-8bad-a86e577213e0","c4c79545-0600-4574-a56d-bad847aedcb8",,"Shiny in Pieces","There are 4 20-minute talks in this session:
+
+10:20 - 10:40AM CT \| Beyond Bootstrap: Building Custom Shiny UI
+Packages with AI \| Barret Schloerke
+
+10:40 - 11:00AM CT \| High Quality R/Shiny Apps at Scale: Lessons from
+DaVinci’s Modular Framework \| Isabel Glauss
+
+11:00 - 11:20AM CT \| Shiny design: Where humans and AI disagree \|
+Karan Gathani
+
+11:20 - 11:40AM CT \| Repotting and propagating my Shiny houseplant \|
+Libby McKenna",2026-09-15 15:20:00,2026-09-15 16:40:00,"2026-09-15 10:20:00 CDT","2026-09-15 11:40:00 CDT","Virtual","HYBRID","STAGE","Lanier Ballroom H&K","Ballroom H & K","0522ae00-7c31-4f8c-ab7a-b668a7ee0a59","UPCOMING"
+"2fbd9e8d-8562-43ce-a900-f420c26f8a53","360f73e3-f86c-48fb-acfa-0070bcb50ed6",,"The Notebook","There are 4 20-minute talks in this session:
+
+10:20 - 10:40AM CT \| The modern tool builder: CLIs, agents, and PEP 723
+\| Jeroen Janssens
+
+10:40 - 11:00AM CT \| Quarto Notebooks and Literate Programming in
+Positron \| Jonathan McPherson
+
+11:00 - 11:20AM CT \| Better Python Notebooks with Marimo \| Tom Shafer
+
+11:20 - 11:40AM CT \| Influence with Quarto: Designing Reports That
+Drive Decisions \| Paula Lopez Casado",2026-09-15 15:20:00,2026-09-15 16:40:00,"2026-09-15 10:20:00 CDT","2026-09-15 11:40:00 CDT","Virtual","HYBRID","STAGE","Lanier Ballroom G&J","Ballroom G & J","a73dc105-039e-467b-9047-b8f37bb0f1ba","UPCOMING"
 "da7568ea-28e8-4046-9aad-03600b7eff24","7834ef16-8b40-46ac-bffc-f7a977ba03bc","4296c5f7-b36d-490a-be08-6a63fd28ba3d","Yes And...AI in Your IDE","Large language models are now embedded in our IDEs, shaping how we code.
 Research suggests assistants don’t respond “neutrally”: how you ask and
 even cues about who is asking can shift what the model says. In this
@@ -293,7 +361,29 @@ clinical notes into a structured summary—we'll walk through four levels
 of LLM system design: chats, workflows, agents, and multi-agent systems.
 You'll leave with a better understanding of agentic design patterns and
 how to try them out for yourself.",2026-09-15 15:20:00,2026-09-15 15:40:00,"2026-09-15 10:20:00 CDT","2026-09-15 10:40:00 CDT","Virtual","HYBRID","SCHEDULE",,"Ballroom A-F","a94f5251-3484-4b8e-90df-fbc15b0cf375","UPCOMING"
-"687b887e-339a-429a-bd72-aa60682abcd2","9d001917-4982-4e58-ad40-198d7429acb4",,"Lightning Talks","",2026-09-15 18:00:00,2026-09-15 19:05:00,"2026-09-15 13:00:00 CDT","2026-09-15 14:05:00 CDT","Virtual","HYBRID","STAGE","Lanier Ballroom L&I","Ballroom L & I","28e89ca6-8a47-43a9-b4ae-a3ee04e71a58","UPCOMING"
+"687b887e-339a-429a-bd72-aa60682abcd2","9d001917-4982-4e58-ad40-198d7429acb4",,"Lightning Talks","There are 8 lightning talks in this session:
+
+Great Docs: Beautiful Documentation Sites for Python Packages - Rich
+Iannone
+
+Less to decide, more to reuse: the block in blockr - Nicolas Bennett 
+
+For the community, by the community: The 10-year journey of R Weekly
+powered by open-source - Eric Nantz
+
+Interdependent Filters in Shiny Made Simple - Josh Livingston 
+
+Debugging Is a Nightmare: Meaningful Metaphors for Data Science
+Education - James Clawson 
+
+Finding Common Language between Data Scientists and Non Data
+Scientists - Michael Hausinger 
+
+SELECT instance FROM cloud WHERE workload = ? ORDER BY cost_efficiency -
+Gergely Daroczi 
+
+Finding Care Fast: An R Shiny App for Infectious Disease Exposure
+Response - Imari Genias",2026-09-15 18:00:00,2026-09-15 19:05:00,"2026-09-15 13:00:00 CDT","2026-09-15 14:05:00 CDT","Virtual","HYBRID","STAGE","Lanier Ballroom L&I","Ballroom L & I","28e89ca6-8a47-43a9-b4ae-a3ee04e71a58","UPCOMING"
 "30b6efea-19cc-4ec2-88ee-49f1dcece04b","43b5b092-a29a-4820-b0ae-8cf1015e37db","360f73e3-f86c-48fb-acfa-0070bcb50ed6","Better Python Notebooks with Marimo","Interactive notebooks are foundational to applied data science, but
 notebook-based workflows can be plagued by out-of-order execution,
 difficult storage formats, and unwanted input-output mixing. Marimo is a
@@ -331,7 +421,18 @@ environments 2. Creating GitHub-friendly notebook workflows 3. Accessing
 scalable compute resources I hope my experience with Positron can help
 other attendees in their professional and personal efforts as
 instructors and mentors.",2026-09-15 18:20:00,2026-09-15 18:40:00,"2026-09-15 13:20:00 CDT","2026-09-15 13:40:00 CDT","Virtual","HYBRID","SCHEDULE",,"Ballroom H & K","0522ae00-7c31-4f8c-ab7a-b668a7ee0a59","UPCOMING"
-"65194b87-b67e-44d7-b511-1df9db33bc7a","5c29a877-e940-4df6-8961-909757f83285",,"The Modern Data Science Stack... still SQL","",2026-09-15 19:40:00,2026-09-15 21:00:00,"2026-09-15 14:40:00 CDT","2026-09-15 16:00:00 CDT","Virtual","HYBRID","STAGE","Lanier Ballroom L&I","Ballroom L & I","28e89ca6-8a47-43a9-b4ae-a3ee04e71a58","UPCOMING"
+"65194b87-b67e-44d7-b511-1df9db33bc7a","5c29a877-e940-4df6-8961-909757f83285",,"The Modern Data Science Stack... still SQL","There are 4 20-minute talks in this session:
+
+2:40 - 3:00PM CT \| SQL as a first-class language in your data science
+IDE \| Julia Silge & Brian Lambert
+
+3:00 - 3:20PM CT \| A Grammar of Graphics for SQL \| Thomas Lin Pedersen
+
+3:20 - 3:40PM CT \| SQL Without Writing SQL: dbplyr for Serious Shiny
+Apps \| Brendan Broderick
+
+3:40 - 4:00PM CT \| ADBC: A Faster Foundation for Database Connectivity
+in R, Python, and Beyond \| Ian Cook & Bryce Mecum",2026-09-15 19:40:00,2026-09-15 21:00:00,"2026-09-15 14:40:00 CDT","2026-09-15 16:00:00 CDT","Virtual","HYBRID","STAGE","Lanier Ballroom L&I","Ballroom L & I","28e89ca6-8a47-43a9-b4ae-a3ee04e71a58","UPCOMING"
 "ed4ee729-2aa3-4c6a-9d36-eded24711f58","1db94cdc-f6dd-4ec6-b87b-e9fb90be13e4","59aa2a5a-0cb8-42ff-af1f-4cb8f37afc06","Delivering Automations at Scale: {rtemplate} for High‑Throughput Biomarker Analytics","Supporting hundreds of biomarker focused clinical and exploratory
 studies requires fast, standardized, and reproducible early stage
 analyses in the biopharma industry. After exploring approaches and needs
@@ -356,7 +457,19 @@ shipping model-ready data fast. This code-first stack is ready for
 what's next: agentic AI. Attendees leave with a playbook for a
 lightweight data stack resource-constrained teams can adopt
 incrementally.",2026-09-15 18:00:00,2026-09-15 18:20:00,"2026-09-15 13:00:00 CDT","2026-09-15 13:20:00 CDT","Virtual","HYBRID","SCHEDULE",,"Ballroom G & J","a73dc105-039e-467b-9047-b8f37bb0f1ba","UPCOMING"
-"15f0fd29-df88-47d7-8018-ca7aeb96b354","59aa2a5a-0cb8-42ff-af1f-4cb8f37afc06",,"Small Team Doing Big Things","",2026-09-15 18:00:00,2026-09-15 19:20:00,"2026-09-15 13:00:00 CDT","2026-09-15 14:20:00 CDT","Virtual","HYBRID","STAGE","Lanier Ballroom G&J","Ballroom G & J","a73dc105-039e-467b-9047-b8f37bb0f1ba","UPCOMING"
+"15f0fd29-df88-47d7-8018-ca7aeb96b354","59aa2a5a-0cb8-42ff-af1f-4cb8f37afc06",,"Small Team Doing Big Things","There are 4 20-minute talks in this session:
+
+1:00 - 1:20PM CT \| Making the Impossible Possible: A Software-First
+Stack for Resource-Constrained Research \| Ran Li
+
+1:20 - 1:40PM CT \| Public Policy in the Age of Demographic Uncertainty
+\| Aditya Gadkari
+
+1:40 - 2:00PM CT \| Delivering Automations at Scale: {rtemplate} for
+High‑Throughput Biomarker Analytics \| Nick Giangreco & Erica Chio
+
+2:00 - 2:20PM CT \| Outgrowing Spreadsheets: Rebuilding Research Data
+Collection with Shiny and Posit Connect \| Kelsey Chalmers",2026-09-15 18:00:00,2026-09-15 19:20:00,"2026-09-15 13:00:00 CDT","2026-09-15 14:20:00 CDT","Virtual","HYBRID","STAGE","Lanier Ballroom G&J","Ballroom G & J","a73dc105-039e-467b-9047-b8f37bb0f1ba","UPCOMING"
 "55591410-5d9c-40f2-89d2-4ab036f0a8e9","0d95ac5d-041e-406e-bfb5-e11e51a5855c","6e2e84ec-d307-483d-ab7a-e68b54ec2abb","From Programming Alone to Programming and Prompting: Teaching Bilingual AI-Enabled Data Science with Positron and Quarto","Most courses teach R or Python. I teach both—in the same Quarto
 documents, using Positron. Students start with parallel tracks
 (bag-of-words, NLP in both languages), then shift mid-semester to
@@ -521,7 +634,19 @@ mind, I’ll talk about: - What is an agent? - How do they work? - What
 are they good at, and what are they bad at? - How is software
 development different from data science? - How can you maximize your
 trust in agent’s work?",2026-09-15 19:00:00,2026-09-15 19:20:00,"2026-09-15 14:00:00 CDT","2026-09-15 14:20:00 CDT","Virtual","HYBRID","SCHEDULE",,"Ballroom A-F","a94f5251-3484-4b8e-90df-fbc15b0cf375","UPCOMING"
-"1508d146-73a1-420a-937d-4ee180916eea","4296c5f7-b36d-490a-be08-6a63fd28ba3d",,"Being an informed and savvy AI user","",2026-09-15 15:20:00,2026-09-15 16:40:00,"2026-09-15 10:20:00 CDT","2026-09-15 11:40:00 CDT","Virtual","HYBRID","STAGE","Lanier Ballroom A-F","Ballroom A-F","a94f5251-3484-4b8e-90df-fbc15b0cf375","UPCOMING"
+"1508d146-73a1-420a-937d-4ee180916eea","4296c5f7-b36d-490a-be08-6a63fd28ba3d",,"Being an informed and savvy AI user","There are 4 20-minute talks in this session:
+
+10:20 - 10:40AM CT \| From chats to workflows to “agents”: Demystifying
+LLM jargon by example \| Timothy Keyes
+
+10:40 - 11:00AM CT \| Yes And...AI in Your IDE \| Allissa Dillman &
+Padmashri Saravanan
+
+11:00 - 11:20AM CT \| Hello, robot: Introducing humans to LLM’s \|
+Kristin Bott
+
+11:20 - 11:40AM CT \| From Tribal Knowledge to Trusted AI in Pharma \|
+Tanya Cashorali",2026-09-15 15:20:00,2026-09-15 16:40:00,"2026-09-15 10:20:00 CDT","2026-09-15 11:40:00 CDT","Virtual","HYBRID","STAGE","Lanier Ballroom A-F","Ballroom A-F","a94f5251-3484-4b8e-90df-fbc15b0cf375","UPCOMING"
 "f08cbc1e-125d-410f-8764-702807c5da30","30c98377-d6ce-42b2-a1f9-c6db99ae9d46","9d001917-4982-4e58-ad40-198d7429acb4","Great Docs: Beautiful Documentation Sites for Python Packages","Documentation is one of the most impactful things you can do for your
 Python package (and one of the most tedious to set up). Between manually
 cataloging your API, wrestling with configuration, and keeping
@@ -651,7 +776,19 @@ to your team's stack.
   Snowflake data pipelines.
 - Best practices for managing features and registering models with
   **Posit and Snowflake**",2026-09-15 16:45:00,2026-09-15 17:45:00,"2026-09-15 11:45:00 CDT","2026-09-15 12:45:00 CDT","In-person","IN_PERSON","IN_PERSON",,"Room 335","947e110f-829a-4f3b-acc8-fdbf2b5720ee","UPCOMING"
-"66be6e95-f78d-4527-98c2-d1e85800483a","7bdf8b92-4238-4894-b839-d7f704720c4f",,"No bad vibes: Building agents you can trust","",2026-09-15 19:40:00,2026-09-15 21:00:00,"2026-09-15 14:40:00 CDT","2026-09-15 16:00:00 CDT","Virtual","HYBRID","STAGE","Lanier Ballroom A-F","Ballroom A-F","a94f5251-3484-4b8e-90df-fbc15b0cf375","UPCOMING"
+"66be6e95-f78d-4527-98c2-d1e85800483a","7bdf8b92-4238-4894-b839-d7f704720c4f",,"No bad vibes: Building agents you can trust","There are 4 20-minute talks in this session:
+
+2:40 - 3:00PM CT \| data-dict & data-diff: two tools supporting AI-human
+data science collaboration \| Hadley Wickham
+
+3:00 - 3:20PM CT \| The Shiny AI Stack: shinychat, querychat, and the
+LLM Plumbing Beneath \| Garrick Aden-Buie & Carson Sievert
+
+3:20 - 3:40PM CT \| AI Agents for Data Science: Posit Assistant,
+Commons, and Beyond \| Joe Cheng
+
+3:40 - 4:00PM CT \| AI Governance in Posit Team: getting trustworthy
+results from agentic helpers \| Elliot Murphy",2026-09-15 19:40:00,2026-09-15 21:00:00,"2026-09-15 14:40:00 CDT","2026-09-15 16:00:00 CDT","Virtual","HYBRID","STAGE","Lanier Ballroom A-F","Ballroom A-F","a94f5251-3484-4b8e-90df-fbc15b0cf375","UPCOMING"
 "e6a1282c-eaa6-47a3-ae6d-ab4c5e540469","4f07df25-21e1-45b0-a9a9-d0bca9b3a92f","7bdf8b92-4238-4894-b839-d7f704720c4f","data-dict & data-diff: two tools supporting AI-human data science collaboration","Abstract coming soon!",2026-09-15 19:40:00,2026-09-15 20:00:00,"2026-09-15 14:40:00 CDT","2026-09-15 15:00:00 CDT","Virtual","HYBRID","SCHEDULE",,"Ballroom A-F","a94f5251-3484-4b8e-90df-fbc15b0cf375","UPCOMING"
 "412a4001-b1bc-4903-99b0-3f7c1494f716","94529b20-42e4-482f-8ec8-1eaf57105e3b","7bdf8b92-4238-4894-b839-d7f704720c4f","The Shiny AI Stack: shinychat, querychat, and the LLM Plumbing Beneath","LLM-powered chat is becoming a core pattern in modern Shiny apps, but
 building a good chat experience (i.e., streaming, history, file
@@ -692,7 +829,7 @@ Risk and Compliance, and take a tour through emerging governance
 capabilities including open source desktop agentic tools, Posit.AI Pass
 Zero Data Retention access to curated models, and upcoming Posit Team
 features for putting supervision and guardrails around your agents.",2026-09-15 20:40:00,2026-09-15 21:00:00,"2026-09-15 15:40:00 CDT","2026-09-15 16:00:00 CDT","Virtual","HYBRID","SCHEDULE",,"Ballroom A-F","a94f5251-3484-4b8e-90df-fbc15b0cf375","UPCOMING"
-"39f6c8e4-ed13-46f9-9fcc-3d8dcee577f5","52de90f1-dbe1-47a6-8eb2-462056d3663c",,"Getting Started with Positron: An AI-Ready Polyglot Workflow for Data Science","This virtual three hour workshop provides a quick start for R and Python
+"39f6c8e4-ed13-46f9-9fcc-3d8dcee577f5","52de90f1-dbe1-47a6-8eb2-462056d3663c",,"VIRTUAL WORKSHOP: Getting Started with Positron: An AI-Ready Polyglot Workflow for Data Science","This virtual three hour workshop provides a quick start for R and Python
 users who are curious about Positron, Posit’s new AI-ready polyglot code
 editor for data science. Here, you will learn how to use Positron’s time
 saving features to do a typical end-to-end data science task. Along the
@@ -712,7 +849,7 @@ This workshop will be a good fit for you as long as you have a basic
 familiarity with at least one of R or Python. No installation is
 necessary. Posit will provide a cloud environment equipped with both
 Positron and the LLMs we will use during class.",2026-09-14 08:00:00,2026-09-14 11:00:00,"2026-09-14 03:00:00 CDT","2026-09-14 06:00:00 CDT","Virtual","VIRTUAL",,,,,"UPCOMING"
-"75895239-3b97-422d-92cb-ffd0672b4890","294d8cb4-7c42-44d3-8ad4-8797ce918c4d",,"Getting Started with Positron: An AI-Ready Polyglot Workflow for Data Science","This virtual three hour workshop provides a quick start for R and Python
+"75895239-3b97-422d-92cb-ffd0672b4890","294d8cb4-7c42-44d3-8ad4-8797ce918c4d",,"VIRTUAL WORKSHOP: Getting Started with Positron: An AI-Ready Polyglot Workflow for Data Science","This virtual three hour workshop provides a quick start for R and Python
 users who are curious about Positron, Posit’s new AI-ready polyglot code
 editor for data science. Here, you will learn how to use Positron’s time
 saving features to do a typical end-to-end data science task. Along the
@@ -885,7 +1022,7 @@ agentic workflows. Attendees will gain hands-on experience through
 guided exercises, providing the confidence to start their LLM journey.
 As a dual-language workshop, attendees can choose hands-on practice in R
 or Python.",2026-09-14 14:00:00,2026-09-14 22:00:00,"2026-09-14 09:00:00 CDT","2026-09-14 17:00:00 CDT","In-person","IN_PERSON","IN_PERSON",,"Lanier I","17d028ea-92f1-4911-baf7-a45706a0df23","UPCOMING"
-"72438d92-1e76-4b20-84a9-329422a25a68","810f3dac-a0f6-44d4-92ca-6d030114be1e",,"Getting Started with Positron: An AI-Ready Polyglot Workflow for Data Science","This virtual three hour workshop provides a quick start for R and Python
+"72438d92-1e76-4b20-84a9-329422a25a68","810f3dac-a0f6-44d4-92ca-6d030114be1e",,"VIRTUAL WORKSHOP: Getting Started with Positron: An AI-Ready Polyglot Workflow for Data Science","This virtual three hour workshop provides a quick start for R and Python
 users who are curious about Positron, Posit’s new AI-ready polyglot code
 editor for data science. Here, you will learn how to use Positron’s time
 saving features to do a typical end-to-end data science task. Along the
@@ -1220,8 +1357,31 @@ where LLMs steer learners in a helpful direction. The best version of
 these packages involves co-evolution with the community. I’m excited to
 figure out together how this active learning can support other open
 source resources.",2026-09-16 16:20:00,2026-09-16 16:40:00,"2026-09-16 11:20:00 CDT","2026-09-16 11:40:00 CDT","Virtual","HYBRID","SCHEDULE",,"Ballroom H & K","0522ae00-7c31-4f8c-ab7a-b668a7ee0a59","UPCOMING"
-"a5c47db3-8d17-4e2c-b80f-1b71734440fc","856de661-4b44-4159-9fbc-0c4787f79e3f",,"Taming Messes with AI","",2026-09-16 18:00:00,2026-09-16 19:20:00,"2026-09-16 13:00:00 CDT","2026-09-16 14:20:00 CDT","Virtual","HYBRID","STAGE","Lanier Ballroom A-F","Ballroom A-F","a94f5251-3484-4b8e-90df-fbc15b0cf375","UPCOMING"
-"20fe528e-4c66-4c12-8dcb-701b75a1698d","286bb6e8-e41d-41de-aeaf-b4b34770c404",,"R Nerds","",2026-09-16 19:40:00,2026-09-16 21:00:00,"2026-09-16 14:40:00 CDT","2026-09-16 16:00:00 CDT","Virtual","HYBRID","STAGE","Lanier Ballroom H&K","Ballroom H & K","0522ae00-7c31-4f8c-ab7a-b668a7ee0a59","UPCOMING"
+"a5c47db3-8d17-4e2c-b80f-1b71734440fc","856de661-4b44-4159-9fbc-0c4787f79e3f",,"Taming Messes with AI","There are 4 2-minute talks in this session:
+
+1:00 - 1:20PM CT \| Clinical data harmonization with LLMs \| Leslie
+Emery
+
+1:20 - 1:40PM CT \| Package Your Judgment, Keep Your Intent \| Mirian
+Lima
+
+1:40 - 2:00PM CT \| When the data doesn’t fit the question \| Kelli
+Goggans
+
+2:00 - 2:20PM CT \| LLM-Powered Data Workflows: Structuring Inputs and
+Accelerating Insight \| Yasha Kaushal, PhD",2026-09-16 18:00:00,2026-09-16 19:20:00,"2026-09-16 13:00:00 CDT","2026-09-16 14:20:00 CDT","Virtual","HYBRID","STAGE","Lanier Ballroom A-F","Ballroom A-F","a94f5251-3484-4b8e-90df-fbc15b0cf375","UPCOMING"
+"20fe528e-4c66-4c12-8dcb-701b75a1698d","286bb6e8-e41d-41de-aeaf-b4b34770c404",,"R Nerds","There are 4 2-minute talks in this session:
+
+2:40 - 3:00PM CT \| Crying, Caching, and Compiling: The Five Stages of R
+Optimization \| Sierra Johnson
+
+3:00 - 3:20PM CT \| Fake it Til' You Make It: Mocking Reality So Your
+Tests Can Run \| Meghan Harris
+
+3:20 - 3:40PM CT \| When English Is Second, R Comes First \| Hamid
+Shafiezadeh
+
+3:40 - 4:00PM CT \| The Design of Everyday R Functions \| Jon Harmon",2026-09-16 19:40:00,2026-09-16 21:00:00,"2026-09-16 14:40:00 CDT","2026-09-16 16:00:00 CDT","Virtual","HYBRID","STAGE","Lanier Ballroom H&K","Ballroom H & K","0522ae00-7c31-4f8c-ab7a-b668a7ee0a59","UPCOMING"
 "8881610b-d3a0-41fa-9a3c-73f14466be49","e1969c4b-3220-4207-90bc-1a2daea2b7bf","286bb6e8-e41d-41de-aeaf-b4b34770c404","The Design of Everyday R Functions","You might think ""design"" only applies to physical objects or visual
 interfaces like Shiny apps. But as Don Norman noted in The Design of
 Everyday Things, ""all artificial things are designed."" If users struggle
@@ -1296,7 +1456,20 @@ which are validated before integration. This project has partnered with
 the Brazilian Society of Clinical Oncology since Nov. 2025 and had 4,030
 visits from 220 Brazilian cities. User feedback resulted in 34/57
 updated status incorporated in the database.",2026-09-16 18:00:00,2026-09-16 18:20:00,"2026-09-16 13:00:00 CDT","2026-09-16 13:20:00 CDT","Virtual","HYBRID","SCHEDULE",,"Ballroom L & I","28e89ca6-8a47-43a9-b4ae-a3ee04e71a58","UPCOMING"
-"ac97c371-bc0c-4553-90e1-2b1427690f6c","311a9e7c-c8bf-4434-99a0-98fb65aa3477",,"Shining Stars","",2026-09-16 18:00:00,2026-09-16 19:20:00,"2026-09-16 13:00:00 CDT","2026-09-16 14:20:00 CDT","Virtual","HYBRID","STAGE","Lanier Ballroom L&I","Ballroom L & I","28e89ca6-8a47-43a9-b4ae-a3ee04e71a58","UPCOMING"
+"ac97c371-bc0c-4553-90e1-2b1427690f6c","311a9e7c-c8bf-4434-99a0-98fb65aa3477",,"Shining Stars","There are 4 20-minute talks in this session:
+
+1:00 - 1:20PM CT \| CancerTrialsBR: Improving Access to Cancer Clinical
+Trials in Brazil with R, Shiny and Large Language Models \| Felippe
+Lazar Neto
+
+1:20 - 1:40PM CT \| Building a Custom Version of GeoGuessr in R \| Jay
+Westreich
+
+1:40 - 2:00PM CT \| ORCA: a collaboratively-built AI-powered Shiny app
+built on Posit Team \| Keaton Wilson & Michael Thomas
+
+2:00 - 2:20PM CT \| Open Source Routing Analysis at Scale \| Gabriel
+Morrison and Aaron R. Williams",2026-09-16 18:00:00,2026-09-16 19:20:00,"2026-09-16 13:00:00 CDT","2026-09-16 14:20:00 CDT","Virtual","HYBRID","STAGE","Lanier Ballroom L&I","Ballroom L & I","28e89ca6-8a47-43a9-b4ae-a3ee04e71a58","UPCOMING"
 "898aca18-6bee-4985-98f5-6ac5ecfa29a5","d0ae5387-1551-44d1-9de4-3f20056fece8","311a9e7c-c8bf-4434-99a0-98fb65aa3477","Open Source Routing Analysis at Scale","Routing analysis is critical for understanding access to government
 services. My colleagues and I researched how access to Social Security
 Administration offices might change if some offices were to close, which
@@ -1307,9 +1480,43 @@ only. In this talk, we'll share how we used R, bash, and Docker to
 deploy a local OSRM server for nationwide routing analysis, present our
 findings on office closures, and explain how we're leveraging this
 infrastructure to enable future research on service accessibility.",2026-09-16 19:00:00,2026-09-16 19:20:00,"2026-09-16 14:00:00 CDT","2026-09-16 14:20:00 CDT","Virtual","HYBRID","SCHEDULE",,"Ballroom L & I","28e89ca6-8a47-43a9-b4ae-a3ee04e71a58","UPCOMING"
-"88f6a456-439a-4993-ad2a-2d8fe164af55","7d15863c-c3ab-4906-8072-38f963427271",,"Lowering Barriers to Learning","",2026-09-16 15:20:00,2026-09-16 16:40:00,"2026-09-16 10:20:00 CDT","2026-09-16 11:40:00 CDT","Virtual","HYBRID","STAGE","Lanier Ballroom H&K","Ballroom H & K","0522ae00-7c31-4f8c-ab7a-b668a7ee0a59","UPCOMING"
-"7b663f9a-23ac-4ffb-96c1-7de9770aae7f","3fd5f6f4-66a6-4287-a08d-026aad72dc50",,"No Good Deed Goes Unscaled","",2026-09-16 15:20:00,2026-09-16 16:40:00,"2026-09-16 10:20:00 CDT","2026-09-16 11:40:00 CDT","Virtual","HYBRID","STAGE","Lanier Ballroom G&J","Ballroom G & J","a73dc105-039e-467b-9047-b8f37bb0f1ba","UPCOMING"
-"cd0fba8d-6bda-4348-a36a-2b56c8bc7688","50ebf971-47df-4e59-a999-56b64e080d91",,"Quarto, Connected","",2026-09-16 15:20:00,2026-09-16 16:40:00,"2026-09-16 10:20:00 CDT","2026-09-16 11:40:00 CDT","Virtual","HYBRID","STAGE","Lanier Ballroom L&I","Ballroom L & I","28e89ca6-8a47-43a9-b4ae-a3ee04e71a58","UPCOMING"
+"88f6a456-439a-4993-ad2a-2d8fe164af55","7d15863c-c3ab-4906-8072-38f963427271",,"Lowering Barriers to Learning","There are 4 20-minute talks in this session:
+
+10:20 - 10:40AM CT \| Life after R4DS: How to take your R skills to the
+next level \| Kelly Bodwin
+
+10:40 - 11:00AM CT \| Can I offer you a nice IDE in this trying time? \|
+Luis D. Verde Arregoitia
+
+11:00 - 11:20AM CT \| From ABC to AI: Applying Language Acquisition to R
+and Technical Mastery \| Tiger Tang
+
+11:20 - 11:40AM CT \| Instant Feedback, Robust Evals: Agentic AI
+Tutoring in R and Python \| Michael Mullarkey",2026-09-16 15:20:00,2026-09-16 16:40:00,"2026-09-16 10:20:00 CDT","2026-09-16 11:40:00 CDT","Virtual","HYBRID","STAGE","Lanier Ballroom H&K","Ballroom H & K","0522ae00-7c31-4f8c-ab7a-b668a7ee0a59","UPCOMING"
+"7b663f9a-23ac-4ffb-96c1-7de9770aae7f","3fd5f6f4-66a6-4287-a08d-026aad72dc50",,"No Good Deed Goes Unscaled","There are 4 20-minute talks in this session:
+
+10:20 - 10:40AM CT \| From internal scripts to public portfolios:
+building an open source program at Dow \| Anatoliy Sokolov
+
+10:40 - 11:00AM CT \| Flipping the Switch \| Ben Arancibia
+
+11:00 - 11:20AM CT \| How Shiny changed data analysis at the Metabolism
+Center \| Morten Dall
+
+11:20 - 11:40AM CT \| From, ""Can you Just Make Us a Dashboard"" to
+Enterprise Systems in R \| Aaron Bogan",2026-09-16 15:20:00,2026-09-16 16:40:00,"2026-09-16 10:20:00 CDT","2026-09-16 11:40:00 CDT","Virtual","HYBRID","STAGE","Lanier Ballroom G&J","Ballroom G & J","a73dc105-039e-467b-9047-b8f37bb0f1ba","UPCOMING"
+"cd0fba8d-6bda-4348-a36a-2b56c8bc7688","50ebf971-47df-4e59-a999-56b64e080d91",,"Quarto, Connected","There are 4 20-minute talks in this session:
+
+10:20 - 10:40AM CT \| Quarto + Accessibility + You \| Charlotte Wickham
+
+10:40 - 11:00AM CT \| Slideware Is Dead - Long Live Quarto \| Emil
+Hvitfeldt
+
+11:00 - 11:20AM CT \| Quarto Hub: Collaboratively edit, create, and
+share documents \| Carlos Scheidegger
+
+11:20 - 11:40AM CT \| The NASA Earthdata Cloud Cookbook: A Quarto
+Collaboration Story \| Andy Teucher",2026-09-16 15:20:00,2026-09-16 16:40:00,"2026-09-16 10:20:00 CDT","2026-09-16 11:40:00 CDT","Virtual","HYBRID","STAGE","Lanier Ballroom L&I","Ballroom L & I","28e89ca6-8a47-43a9-b4ae-a3ee04e71a58","UPCOMING"
 "539a2a57-5a0d-44a0-99a2-df6cfe6e246e","eb96b25e-e1cd-47ef-b910-7a5fd52742d3","50ebf971-47df-4e59-a999-56b64e080d91","Quarto + Accessibility + You","New accessibility requirements from your organization might feel like a
 barrier between you and the tools you rely on. The irony? Accessibility
 is about removing barriers between your work and the people who need it.
@@ -1318,7 +1525,18 @@ this talk, I'll share what's new in Quarto and related tools that make
 producing accessible documents easier than ever. You'll learn what you
 need to know as a Quarto user to ensure your work reaches everyone who
 needs it.",2026-09-16 15:20:00,2026-09-16 15:40:00,"2026-09-16 10:20:00 CDT","2026-09-16 10:40:00 CDT","Virtual","HYBRID","SCHEDULE",,"Ballroom L & I","28e89ca6-8a47-43a9-b4ae-a3ee04e71a58","UPCOMING"
-"93e6b196-f7e9-4423-a9ae-080e9da40c79","013e97bf-b931-468f-a963-492ded2936a0",,"The Evolving Craft of Data Science","",2026-09-16 15:20:00,2026-09-16 16:40:00,"2026-09-16 10:20:00 CDT","2026-09-16 11:40:00 CDT","Virtual","HYBRID","STAGE","Lanier Ballroom A-F","Ballroom A-F","a94f5251-3484-4b8e-90df-fbc15b0cf375","UPCOMING"
+"93e6b196-f7e9-4423-a9ae-080e9da40c79","013e97bf-b931-468f-a963-492ded2936a0",,"The Evolving Craft of Data Science","There are 4 20-minute talks in this session:
+
+10:20 - 10:40AM CT \| From Dplyr to Polars: Migrating Tools & Languages
+While Maintaining the Tidy Model \| Tyler Riccio
+
+10:40 - 11:00AM CT \| Cairn: From notebooks to logbooks \| Eric Thompson
+
+11:00 - 11:20AM CT \| Positron Everywhere All At Once \| Isabel
+Zimmerman
+
+11:20 - 11:40AM CT \| Running a software department in times of agents
+\| Wojciech Gajewski",2026-09-16 15:20:00,2026-09-16 16:40:00,"2026-09-16 10:20:00 CDT","2026-09-16 11:40:00 CDT","Virtual","HYBRID","STAGE","Lanier Ballroom A-F","Ballroom A-F","a94f5251-3484-4b8e-90df-fbc15b0cf375","UPCOMING"
 "be897090-615d-4879-acbc-69c8b24032c9","27b71261-d43d-4172-ad41-00fed6d65e81","7d15863c-c3ab-4906-8072-38f963427271","Can I offer you a nice IDE in this trying time?","Adopting new tools means overcoming a learning curve, motivated by
 familiarity with added benefits or by new and worthwhile capabilities.
 This happens with IDE use in research and education, where RStudio can
@@ -1373,7 +1591,19 @@ fraud attempts, and build complex-packages-specialized AI agents. The
 audience will have the opportunity to hear my experiences on how AI
 works on scale, from the front-line perspective of a company for which
 leveraging AI properly is an existential challenge.",2026-09-16 16:20:00,2026-09-16 16:40:00,"2026-09-16 11:20:00 CDT","2026-09-16 11:40:00 CDT","Virtual","HYBRID","SCHEDULE",,"Ballroom A-F","a94f5251-3484-4b8e-90df-fbc15b0cf375","UPCOMING"
-"76769bde-5382-436f-92e5-f3134bcaf729","a6722b88-32c1-445c-9f6a-3a99b5678f97",,"Pretty Useful Data Viz","",2026-09-16 18:00:00,2026-09-16 19:20:00,"2026-09-16 13:00:00 CDT","2026-09-16 14:20:00 CDT","Virtual","HYBRID","STAGE","Lanier Ballroom G&J","Ballroom G & J","a73dc105-039e-467b-9047-b8f37bb0f1ba","UPCOMING"
+"76769bde-5382-436f-92e5-f3134bcaf729","a6722b88-32c1-445c-9f6a-3a99b5678f97",,"Pretty Useful Data Viz","There are 4 20-minute talks in this session:
+
+1:00 - 1:20PM CT \| First Impressions Matter: Styling Data Products That
+People Actually Want to Use \| Shelby Level
+
+1:20 - 1:40PM CT \| Principles for Effective Interactive Visualizations
+\| Ryan Yen & Dylan Wootton
+
+1:40 - 2:00PM CT \| Do This Instead: 4 Alternatives to Common Charts \|
+Zan Armstrong
+
+2:00 - 2:20PM CT \| Reusing 'ggplot2' code: how to design better plot
+helper functions \| Cynthia Huang",2026-09-16 18:00:00,2026-09-16 19:20:00,"2026-09-16 13:00:00 CDT","2026-09-16 14:20:00 CDT","Virtual","HYBRID","STAGE","Lanier Ballroom G&J","Ballroom G & J","a73dc105-039e-467b-9047-b8f37bb0f1ba","UPCOMING"
 "74dc9c74-ecbd-467a-963f-5ead9ff883ef","3fceb44a-b48e-4cfb-911a-7d58939ef798","50ebf971-47df-4e59-a999-56b64e080d91","The NASA Earthdata Cloud Cookbook: A Quarto Collaboration Story","A shared problem can help unite people to work together for a common
 solution, which they can then adapt to address further needs. NASA
 Earthdata staff manage over 100 petabytes of data and create tutorials
@@ -1385,7 +1615,19 @@ practices across a government agency. We'll share how over 5 years of
 Cookbook collaboration and governance have shaped these mentors'
 workflows, letting them focus on what matters: helping scientists work
 with NASA Earthdata efficiently.",2026-09-16 16:20:00,2026-09-16 16:40:00,"2026-09-16 11:20:00 CDT","2026-09-16 11:40:00 CDT","Virtual","HYBRID","SCHEDULE",,"Ballroom L & I","28e89ca6-8a47-43a9-b4ae-a3ee04e71a58","UPCOMING"
-"8c81ded3-483c-476d-a78f-532fd71a7cb3","faaa0376-91d2-4a59-8869-6710ed1feb6f",,"From laptop to cluster","",2026-09-16 18:00:00,2026-09-16 19:20:00,"2026-09-16 13:00:00 CDT","2026-09-16 14:20:00 CDT","Virtual","HYBRID","STAGE","Lanier Ballroom H&K","Ballroom H & K","0522ae00-7c31-4f8c-ab7a-b668a7ee0a59","UPCOMING"
+"8c81ded3-483c-476d-a78f-532fd71a7cb3","faaa0376-91d2-4a59-8869-6710ed1feb6f",,"From laptop to cluster","There are 4 20-minute talks in this session:
+
+1:00 - 1:20PM CT \| Never Block, Never Copy: mirai + mori from Shiny to
+the Cluster \| Charlie Gao
+
+1:20 - 1:40PM CT \| Friends till the End(-to-end): Moving R and Python
+Projects into Pipelines with targets and Hamilton \| Cory Adkins
+
+1:40 - 2:00PM CT \| Quack to the Future: Building Traceable Data
+Lakehouses with DuckLake in R \| Travis Gerke
+
+2:00 - 2:20PM CT \| Prepare locally, run remotely: Easily scale
+Tidymodels on Databricks with sparklyr \| Edgar Ruiz",2026-09-16 18:00:00,2026-09-16 19:20:00,"2026-09-16 13:00:00 CDT","2026-09-16 14:20:00 CDT","Virtual","HYBRID","STAGE","Lanier Ballroom H&K","Ballroom H & K","0522ae00-7c31-4f8c-ab7a-b668a7ee0a59","UPCOMING"
 "4d933bef-132b-4dd6-ad0e-e90f65969904","d341191a-2f8c-4a12-9499-5dbdd96b3921","a6722b88-32c1-445c-9f6a-3a99b5678f97","First Impressions Matter: Styling Data Products That People Actually Want to Use","Professional styling isn't a luxury for data products—it determines
 whether users engage with our insights or click away. But for data
 scientists already managing complex code, mastering CSS to achieve
@@ -1443,7 +1685,17 @@ standardizes unpredictable raw datasets for downstream automation, and
 another that transforms structured survey data into executive-ready
 narratives and interactive insights. Together, they illustrate how LLMs
 can enable scalable, decision-ready data workflows across the lifecycle.",2026-09-16 19:00:00,2026-09-16 19:20:00,"2026-09-16 14:00:00 CDT","2026-09-16 14:20:00 CDT","Virtual","HYBRID","SCHEDULE",,"Ballroom A-F","a94f5251-3484-4b8e-90df-fbc15b0cf375","UPCOMING"
-"a726c5fc-fae4-4f82-9d5d-bc88d8ec4892","4c9f033c-c65d-4c6e-b6a6-9b83aa3852d5",,"Clinical Data Science","",2026-09-16 19:40:00,2026-09-16 21:00:00,"2026-09-16 14:40:00 CDT","2026-09-16 16:00:00 CDT","Virtual","HYBRID","STAGE","Lanier Ballroom G&J","Ballroom G & J","a73dc105-039e-467b-9047-b8f37bb0f1ba","UPCOMING"
+"a726c5fc-fae4-4f82-9d5d-bc88d8ec4892","4c9f033c-c65d-4c6e-b6a6-9b83aa3852d5",,"Clinical Data Science","There are 3 20-minute talks in this session:
+
+2:40 - 3:00PM CT \| Environmental Stressors and Healthcare: How a
+Posit/R Powered Pipeline Reveals Environmental Drivers of Emergency
+Department Strain \| Neil Rosenbaum
+
+3:00 - 3:20PM CT \| Lowering Cesarean Rates - Using Quarto to Create
+Scalable Performance Reports \| Rebecca Wardrop
+
+3:20 - 3:40PM CT \| Operationalizing Quality: Building an ICU Dashboard
+at the VA with Shiny \| Florian Mayr",2026-09-16 19:40:00,2026-09-16 21:00:00,"2026-09-16 14:40:00 CDT","2026-09-16 16:00:00 CDT","Virtual","HYBRID","STAGE","Lanier Ballroom G&J","Ballroom G & J","a73dc105-039e-467b-9047-b8f37bb0f1ba","UPCOMING"
 "ae0fd9f3-1d7b-46f8-8f3a-23031b0c6f01","0873949c-8863-4e9b-adaa-70ef04a87460","856de661-4b44-4159-9fbc-0c4787f79e3f","Package Your Judgment, Keep Your Intent","Judgment is the capacity; your creative process is its observable trace.
 Every conversation with your agent is exactly that — a trace. You're
 already sharing your expertise, every day, with an audience of one. The
@@ -1477,7 +1729,18 @@ will guide non-programmers through speeding up their R code ranging from
 simple programming principles to incorporating Rust. Using examples from
 optimizing our tidywater package, you’ll learn to make code faster
 without sacrificing readability (too much).",2026-09-16 19:40:00,2026-09-16 20:00:00,"2026-09-16 14:40:00 CDT","2026-09-16 15:00:00 CDT","Virtual","HYBRID","SCHEDULE",,"Ballroom H & K","0522ae00-7c31-4f8c-ab7a-b668a7ee0a59","UPCOMING"
-"cd09f003-bc1b-4d60-b562-530bcc1362bf","84001369-ee1a-4fc5-9b16-300fe92cf402",,"Developing the developer","",2026-09-16 19:40:00,2026-09-16 21:00:00,"2026-09-16 14:40:00 CDT","2026-09-16 16:00:00 CDT","Virtual","HYBRID","STAGE","Lanier Ballroom L&I","Ballroom L & I","28e89ca6-8a47-43a9-b4ae-a3ee04e71a58","UPCOMING"
+"cd09f003-bc1b-4d60-b562-530bcc1362bf","84001369-ee1a-4fc5-9b16-300fe92cf402",,"Developing the developer","There are 4 20-minute talks in this session:
+
+2:40 - 3:00PM CT \| It Worked Great Until I Left \| Ben Haffly
+
+3:00 - 3:20PM CT \| How I Automated My Job, Cashed Out and Developed
+6-Pack Abs Using AI! \| Nate Mockler
+
+3:20 - 3:40PM CT \| Building Confidence, Not Bugs: Internal Packages for
+Empowered Data Teams \| Kelly Pisane
+
+3:40 - 4:00PM CT \| Staying Organized Across Machines: Practical
+Workflows for Data Scientists with Busy Brains \| Morgana Kinlan",2026-09-16 19:40:00,2026-09-16 21:00:00,"2026-09-16 14:40:00 CDT","2026-09-16 16:00:00 CDT","Virtual","HYBRID","STAGE","Lanier Ballroom L&I","Ballroom L & I","28e89ca6-8a47-43a9-b4ae-a3ee04e71a58","UPCOMING"
 "b7f77e83-90fe-42a5-bade-598231c4705c","f9eab383-35f3-45c6-9359-1e01a452dde0","84001369-ee1a-4fc5-9b16-300fe92cf402","It Worked Great Until I Left","Recently I completed a project that I was really proud of. It worked
 great, and stakeholders were happy. Then I went on paternity leave, and
 the process I had built proved to be too complex to be handed off:
@@ -1500,7 +1763,19 @@ Databricks. Using the exact same Tidymodels objects, sparklyr
 automatically performs model evaluation in a parallel and distributed
 manner. Practitioners can now easily accelerate large grid searches at
 scale without refactoring.",2026-09-16 19:00:00,2026-09-16 19:20:00,"2026-09-16 14:00:00 CDT","2026-09-16 14:20:00 CDT","Virtual","HYBRID","SCHEDULE",,"Ballroom H & K","0522ae00-7c31-4f8c-ab7a-b668a7ee0a59","UPCOMING"
-"ddc73127-82d0-4f60-a5fc-a83680ae11aa","feeaccfd-3fc3-4122-a3e6-54d557b63b05",,"AI in Data Science","",2026-09-16 19:40:00,2026-09-16 21:00:00,"2026-09-16 14:40:00 CDT","2026-09-16 16:00:00 CDT","Virtual","HYBRID","STAGE","Lanier Ballroom A-F","Ballroom A-F","a94f5251-3484-4b8e-90df-fbc15b0cf375","UPCOMING"
+"ddc73127-82d0-4f60-a5fc-a83680ae11aa","feeaccfd-3fc3-4122-a3e6-54d557b63b05",,"AI in Data Science","There are 4 20-minute talks in this session:
+
+2:40 - 3:00PM CT \| Roll for Wisdom: What AI Gets Wrong About Data
+Analysis \| Max Kuhn
+
+3:00 - 3:20PM CT \| Three Agents, Two Mistakes, or Designing for
+LLM-Assisted Data Analysis \| Sam Clark
+
+3:20 - 3:40PM CT \| Between Code and Conclusions: An Evaluation Layer
+for LLM-Generated Analysis \| Nicky Bell
+
+3:40 - 4:00PM CT \| Teach Once, Use Often: Building AI Skills for Data
+Analysis \| Tyson Barrett",2026-09-16 19:40:00,2026-09-16 21:00:00,"2026-09-16 14:40:00 CDT","2026-09-16 16:00:00 CDT","Virtual","HYBRID","STAGE","Lanier Ballroom A-F","Ballroom A-F","a94f5251-3484-4b8e-90df-fbc15b0cf375","UPCOMING"
 "f6b0dc87-c729-4b58-b3d2-fbae280a296a","2d031032-51e4-4890-af3c-15d133a2b6c4","84001369-ee1a-4fc5-9b16-300fe92cf402","How I Automated My Job, Cashed Out and Developed 6-Pack Abs Using AI!","It's hard to balance the skepticism that comes from the assault of
 social media-based AI hype with the fear of missing out and becoming
 obsolete. Am I falling behind? Can AI do all my coding better than I

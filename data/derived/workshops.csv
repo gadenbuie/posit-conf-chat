@@ -1,5 +1,5 @@
 "record_id","session_id","title","abstract","start_time_utc","end_time_utc","start_time_event_local","end_time_event_local","session_type","session_format","effective_location_name"
-"39f6c8e4-ed13-46f9-9fcc-3d8dcee577f5","52de90f1-dbe1-47a6-8eb2-462056d3663c","Getting Started with Positron: An AI-Ready Polyglot Workflow for Data Science","This virtual three hour workshop provides a quick start for R and Python
+"39f6c8e4-ed13-46f9-9fcc-3d8dcee577f5","52de90f1-dbe1-47a6-8eb2-462056d3663c","VIRTUAL WORKSHOP: Getting Started with Positron: An AI-Ready Polyglot Workflow for Data Science","This virtual three hour workshop provides a quick start for R and Python
 users who are curious about Positron, Posit’s new AI-ready polyglot code
 editor for data science. Here, you will learn how to use Positron’s time
 saving features to do a typical end-to-end data science task. Along the
@@ -19,7 +19,7 @@ This workshop will be a good fit for you as long as you have a basic
 familiarity with at least one of R or Python. No installation is
 necessary. Posit will provide a cloud environment equipped with both
 Positron and the LLMs we will use during class.",2026-09-14 08:00:00,2026-09-14 11:00:00,"2026-09-14 03:00:00 CDT","2026-09-14 06:00:00 CDT","Virtual","VIRTUAL",
-"75895239-3b97-422d-92cb-ffd0672b4890","294d8cb4-7c42-44d3-8ad4-8797ce918c4d","Getting Started with Positron: An AI-Ready Polyglot Workflow for Data Science","This virtual three hour workshop provides a quick start for R and Python
+"75895239-3b97-422d-92cb-ffd0672b4890","294d8cb4-7c42-44d3-8ad4-8797ce918c4d","VIRTUAL WORKSHOP: Getting Started with Positron: An AI-Ready Polyglot Workflow for Data Science","This virtual three hour workshop provides a quick start for R and Python
 users who are curious about Positron, Posit’s new AI-ready polyglot code
 editor for data science. Here, you will learn how to use Positron’s time
 saving features to do a typical end-to-end data science task. Along the
@@ -192,7 +192,7 @@ agentic workflows. Attendees will gain hands-on experience through
 guided exercises, providing the confidence to start their LLM journey.
 As a dual-language workshop, attendees can choose hands-on practice in R
 or Python.",2026-09-14 14:00:00,2026-09-14 22:00:00,"2026-09-14 09:00:00 CDT","2026-09-14 17:00:00 CDT","In-person","IN_PERSON","Lanier I"
-"72438d92-1e76-4b20-84a9-329422a25a68","810f3dac-a0f6-44d4-92ca-6d030114be1e","Getting Started with Positron: An AI-Ready Polyglot Workflow for Data Science","This virtual three hour workshop provides a quick start for R and Python
+"72438d92-1e76-4b20-84a9-329422a25a68","810f3dac-a0f6-44d4-92ca-6d030114be1e","VIRTUAL WORKSHOP: Getting Started with Positron: An AI-Ready Polyglot Workflow for Data Science","This virtual three hour workshop provides a quick start for R and Python
 users who are curious about Positron, Posit’s new AI-ready polyglot code
 editor for data science. Here, you will learn how to use Positron’s time
 saving features to do a typical end-to-end data science task. Along the

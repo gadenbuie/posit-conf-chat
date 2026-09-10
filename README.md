@@ -76,8 +76,10 @@ Zuddl widget on the [Sessions page](https://conf.posit.co/2026/sessions/) and
 derives the CSV tables and the search store lives in [data/](data/) — see
 [data/README.md](data/README.md) for the schema.
 
-To update the data, run from the project root — first download and derive
-the schedule, then rebuild the search store:
+To update the data, run `make preflight` from the project root — it fetches
+the latest schedule, rebuilds the search store, and regenerates the deployment
+manifest. Each step is also a standalone target (`make schedule`,
+`make ragnar`, `make manifest`), or can be run from R:
 
 ```r
 source("data/get_schedule_zuddl.R")
