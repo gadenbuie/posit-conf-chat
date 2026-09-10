@@ -168,7 +168,7 @@ card_date <- function(date) {
   if (!nzchar(date)) {
     return("")
   }
-  trimws(format(as.Date(date), "%A, %B %e"))
+  trimws(format(as.Date(date), "%a, %b %e"))
 }
 
 conf_icon <- function(paths) {
