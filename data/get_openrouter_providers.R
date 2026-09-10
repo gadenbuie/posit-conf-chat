@@ -18,6 +18,11 @@ if (!nzchar(model_slug)) {
 # point extra speed isn't worth paying for and price decides.
 SPEED_GOOD_ENOUGH <- 1.5
 
+# Cheaper-but-slower providers are fine for chat only while latency and TPS
+# stay responsive; past this it feels broken no matter the price.
+CHAT_LATENCY_MAX_S <- 2.5
+CHAT_TPS_MIN <- 30
+
 page_url <- paste0("https://openrouter.ai/", model_slug)
 endpoints_url <- paste0(
   "https://openrouter.ai/api/v1/models/",
@@ -146,23 +151,61 @@ for (i in seq_len(nrow(providers))) {
   ))
 }
 
+slug <- function(x) gsub("[^a-z0-9]", "", tolower(x))
+
+api_args <- function(order_slugs, effort) {
+  args <- list(
+    provider = list(
+      order = as.list(order_slugs),
+      data_collection = "deny"
+    )
+  )
+  if (grepl("^z-ai/glm", model_slug)) {
+    args$reasoning <- list(effort = effort)
+  }
+  args
+}
+
+print_config <- function(label, order_slugs, effort) {
+  order_slugs <- head(order_slugs, 5)
+  cat("\nRecommended private providers (", label, "):\n", sep = "")
+  cat("  \"order\": [", paste0('"', order_slugs, '"', collapse = ", "), "]\n")
+  cat(
+    "  ",
+    label,
+    "='",
+    toJSON(api_args(order_slugs, effort), auto_unbox = TRUE),
+    "'\n",
+    sep = ""
+  )
+}
+
 private <- providers[
   providers$privacy == "Private" & !is.na(providers$price_out),
 ]
-adequate <- private[private$speed <= SPEED_GOOD_ENOUGH, ]
-if (nrow(adequate) == 0) {
-  adequate <- private[private$speed == min(private$speed), ]
+
+# The greeting renders before the user sees anything, so speed decides and
+# price only breaks ties. The chat config can wait, so price decides.
+fast <- private[private$speed <= SPEED_GOOD_ENOUGH, ]
+if (nrow(fast) == 0) {
+  fast <- private[private$speed == min(private$speed), ]
 }
-recommend <- adequate[order(adequate$price_out, adequate$speed), ]
+greeting_recommend <- fast[order(fast$price_out, fast$speed), ]
+print_config(
+  "POSIT_CONF_GREETING_API_ARGS",
+  slug(greeting_recommend$provider),
+  "low"
+)
 
-slug <- function(x) gsub("[^a-z0-9]", "", tolower(x))
-order_slugs <- slug(recommend$provider)
-
-cat("\nRecommended private providers (good-enough speed, then cheapest):\n")
-cat('  "order": [', paste0('"', order_slugs, '"', collapse = ", "), "]\n")
-cat(
-  '  POSIT_CONF_API_ARGS=\'{"provider":{"order":[',
-  paste0('"', order_slugs, '"', collapse = ", "),
-  '],"data_collection":"deny"}}\'\n',
-  sep = ""
+usable <- private[
+  private$latency_s <= CHAT_LATENCY_MAX_S & private$tps >= CHAT_TPS_MIN,
+]
+if (nrow(usable) == 0) {
+  usable <- fast
+}
+chat_recommend <- usable[order(usable$price_out, usable$speed), ]
+print_config(
+  "POSIT_CONF_API_ARGS",
+  slug(chat_recommend$provider),
+  "high"
 )
