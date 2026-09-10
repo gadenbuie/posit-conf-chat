@@ -119,7 +119,7 @@ ui <- function(req) {
     ),
     history = history_options(store = "memory"),
     greeting = if (!greeting_dynamic) static_greeting(),
-    show_thinking_after_s = 5
+    show_thinking_after_s = 2
   )
 }
 
