@@ -95,7 +95,7 @@ item_citation_aside <- function(id) {
   speakers <- speakers[!is.na(speakers) & nzchar(speakers)]
   when <- paste(
     c(
-      sched_date(item$start_time_event_local),
+      format(as.Date(sched_date(item$start_time_event_local)), "%a"),
       if (nzchar(clock12(sched_clock(item$end_time_event_local)))) {
         paste0(
           clock12(sched_clock(item$start_time_event_local)),
