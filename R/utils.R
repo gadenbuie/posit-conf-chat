@@ -91,21 +91,28 @@ item_citation_aside <- function(id) {
   if (!nzchar(label)) {
     return(NULL)
   }
-  meta <- sched_summary_line_md(list(
-    kind = res$kind,
-    date = sched_date(item$start_time_event_local),
-    start = sched_clock(item$start_time_event_local),
-    end = sched_clock(item$end_time_event_local),
-    location = item$effective_location_name,
-    speakers = dplyr::pull(res$speakers, full_name),
-    track = item$track_title
-  ))
-  abstract <- collapse_spaces(excerpt_text(card_value(item$abstract), 280))
-  body <- paste(
-    c(paste0("**", label, "**"), meta, abstract),
+  speakers <- dplyr::pull(res$speakers, full_name)
+  speakers <- speakers[!is.na(speakers) & nzchar(speakers)]
+  when <- paste(
+    c(
+      sched_date(item$start_time_event_local),
+      if (nzchar(clock12(sched_clock(item$end_time_event_local)))) {
+        paste0(
+          clock12(sched_clock(item$start_time_event_local)),
+          "\u2013",
+          clock12(sched_clock(item$end_time_event_local))
+        )
+      } else {
+        clock12(sched_clock(item$start_time_event_local))
+      }
+    ),
+    collapse = " "
+  )
+  meta <- paste(
+    c(when, card_value(item$effective_location_name), speakers),
     collapse = " \u00b7 "
   )
-  body <- collapse_spaces(body)
+  body <- collapse_spaces(paste0("**", label, "** \u00b7 ", meta))
   sprintf(
     '<shiny-aside label="%s">%s</shiny-aside>',
     htmltools::htmlEscape(label, attribute = TRUE),
@@ -115,22 +122,6 @@ item_citation_aside <- function(id) {
 
 collapse_spaces <- function(x) {
   gsub("\\s+", " ", x)
-}
-
-excerpt_text <- function(x, max_chars) {
-  if (!nzchar(x)) {
-    return("")
-  }
-  if (nchar(x) <= max_chars) {
-    return(x)
-  }
-  cut <- substr(x, 1, max_chars)
-  spaces <- gregexpr(" ", cut, fixed = TRUE)[[1]]
-  spaces <- spaces[spaces > 0]
-  if (length(spaces) && spaces[length(spaces)] > max_chars / 2) {
-    cut <- substr(cut, 1, spaces[length(spaces)] - 1)
-  }
-  paste0(cut, "\u2026")
 }
 
 df_to_markdown_table <- function(df) {
