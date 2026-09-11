@@ -112,7 +112,7 @@ item_citation_aside <- function(id) {
     c(when, card_value(item$effective_location_name), speakers),
     collapse = " \u00b7 "
   )
-  body <- collapse_spaces(paste0("**", label, "** \u00b7 ", meta))
+  body <- collapse_spaces(meta)
   sprintf(
     '<shiny-aside label="%s">%s</shiny-aside>',
     htmltools::htmlEscape(label, attribute = TRUE),
