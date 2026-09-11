@@ -3241,7 +3241,7 @@
   },
   "files": {
     "_brand.yml": {
-      "checksum": "47ee7500af73b8ed84cff5d9c68650b2"
+      "checksum": "9c38525115123a7d88d8a9fb72f0c705"
     },
     ".posit/publish/deployments/deployment-8UGH.toml": {
       "checksum": "588e07de91a0bb9c449d39705b392784"
@@ -3250,7 +3250,7 @@
       "checksum": "db0043aa3bdb1e851a4a2c34e1d86d77"
     },
     "app.R": {
-      "checksum": "bd826d1c9a1bc552155c1339471dba05"
+      "checksum": "32c4d3c13dd634f3578882a95caf150f"
     },
     "assets/agenda.js": {
       "checksum": "d848f355ed938349ebd42028eec52b3c"
@@ -3259,7 +3259,7 @@
       "checksum": "37032734a22d403c0398432d24149196"
     },
     "assets/custom.css": {
-      "checksum": "62062fca9359afc3f1ddfa8a785fb913"
+      "checksum": "5797e4044b45c06f7dd9dec1fd158f86"
     },
     "assets/generate-pixel-fade.py": {
       "checksum": "9e66e5b6d020015a19df03ee2c65e0a9"
@@ -3283,16 +3283,16 @@
       "checksum": "f0dd06d196cc029e4512022b7cf61eda"
     },
     "data/derived/schedule_records.csv": {
-      "checksum": "65f4824e967e47e66973cb9349d7a176"
+      "checksum": "417f739e72e6a346aa4a5d7d0998d195"
     },
     "data/derived/speakers.csv": {
-      "checksum": "c93b77fed9e1a720d53396714ee87009"
+      "checksum": "043e1ac43042c3d663e66e288f4c3ab5"
     },
     "data/derived/talk_sessions.csv": {
       "checksum": "d60eaaf01d0214e802f45a74b31920ba"
     },
     "data/derived/talks.csv": {
-      "checksum": "c8f76303ea866b6b08da1091bb18d433"
+      "checksum": "d24c2bc6f8df76d14a58e7831b1f5897"
     },
     "data/derived/workshops.csv": {
       "checksum": "1b7f71a8315587ba499dc642a1484eb3"
@@ -3301,7 +3301,7 @@
       "checksum": "79e378e5899920c0bb764b9d15321877"
     },
     "prompts/greeting.md": {
-      "checksum": "7e5685250794971af7df16a6ffd57f25"
+      "checksum": "637b3a6b0ab3cf6397b286258b356f26"
     },
     "prompts/style-concise.md": {
       "checksum": "046c6e0886b7736086534d2ec875858f"

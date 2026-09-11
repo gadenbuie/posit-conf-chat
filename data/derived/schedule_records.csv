@@ -357,10 +357,10 @@ sounds precise but isn't—and when every technology is branded as an
 about. So, let's fix that. In this gentle, no-experience-required
 introduction to LLM systems, I'll demystify the jargon by building up
 from first principles. Using a single running example—turning messy
-clinical notes into a structured summary—we'll walk through four levels
-of LLM system design: chats, workflows, agents, and multi-agent systems.
-You'll leave with a better understanding of agentic design patterns and
-how to try them out for yourself.",2026-09-15 15:20:00,2026-09-15 15:40:00,"2026-09-15 10:20:00 CDT","2026-09-15 10:40:00 CDT","Virtual","HYBRID","SCHEDULE",,"Ballroom A-F","a94f5251-3484-4b8e-90df-fbc15b0cf375","UPCOMING"
+clinical notes into a structured summary—we'll walk through three levels
+of LLM system design: conversations, workflows, and agents. You'll leave
+with a better understanding of agentic design patterns and how to try
+them out for yourself.",2026-09-15 15:20:00,2026-09-15 15:40:00,"2026-09-15 10:20:00 CDT","2026-09-15 10:40:00 CDT","Virtual","HYBRID","SCHEDULE",,"Ballroom A-F","a94f5251-3484-4b8e-90df-fbc15b0cf375","UPCOMING"
 "687b887e-339a-429a-bd72-aa60682abcd2","9d001917-4982-4e58-ad40-198d7429acb4",,"Lightning Talks","There are 8 lightning talks in this session:
 
 Great Docs: Beautiful Documentation Sites for Python Packages - Rich
