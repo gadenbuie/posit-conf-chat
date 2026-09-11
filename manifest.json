@@ -3250,7 +3250,7 @@
       "checksum": "db0043aa3bdb1e851a4a2c34e1d86d77"
     },
     "app.R": {
-      "checksum": "469e778822222e6c86e17e5f88db211c"
+      "checksum": "bd826d1c9a1bc552155c1339471dba05"
     },
     "assets/agenda.js": {
       "checksum": "d848f355ed938349ebd42028eec52b3c"
@@ -3283,19 +3283,19 @@
       "checksum": "f0dd06d196cc029e4512022b7cf61eda"
     },
     "data/derived/schedule_records.csv": {
-      "checksum": "00ea6986d0cc5f2fafd8b01d51824244"
+      "checksum": "65f4824e967e47e66973cb9349d7a176"
     },
     "data/derived/speakers.csv": {
-      "checksum": "6ad4ec0f54e48c8f7b50bfa44eb6f7b7"
+      "checksum": "c93b77fed9e1a720d53396714ee87009"
     },
     "data/derived/talk_sessions.csv": {
-      "checksum": "a105d338e487b46a24f5c9b1dcf62f6f"
+      "checksum": "d60eaaf01d0214e802f45a74b31920ba"
     },
     "data/derived/talks.csv": {
-      "checksum": "e2c42beaedcbb229eda7e0835a07f29c"
+      "checksum": "c8f76303ea866b6b08da1091bb18d433"
     },
     "data/derived/workshops.csv": {
-      "checksum": "1f8e05070c94406f798d0a705573a390"
+      "checksum": "1b7f71a8315587ba499dc642a1484eb3"
     },
     "prompts/greeting-static.md": {
       "checksum": "79e378e5899920c0bb764b9d15321877"

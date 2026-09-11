@@ -787,8 +787,8 @@ LLM Plumbing Beneath \| Garrick Aden-Buie & Carson Sievert
 3:20 - 3:40PM CT \| AI Agents for Data Science: Posit Assistant,
 Commons, and Beyond \| Joe Cheng
 
-3:40 - 4:00PM CT \| AI Governance in Posit Team: getting trustworthy
-results from agentic helpers \| Elliot Murphy",2026-09-15 19:40:00,2026-09-15 21:00:00,"2026-09-15 14:40:00 CDT","2026-09-15 16:00:00 CDT","Virtual","HYBRID","STAGE","Lanier Ballroom A-F","Ballroom A-F","a94f5251-3484-4b8e-90df-fbc15b0cf375","UPCOMING"
+3:40 - 4:00PM CT \| AI Governance in Posit Team: getting better results
+from agentic helpers \| Elliot Murphy",2026-09-15 19:40:00,2026-09-15 21:00:00,"2026-09-15 14:40:00 CDT","2026-09-15 16:00:00 CDT","Virtual","HYBRID","STAGE","Lanier Ballroom A-F","Ballroom A-F","a94f5251-3484-4b8e-90df-fbc15b0cf375","UPCOMING"
 "e6a1282c-eaa6-47a3-ae6d-ab4c5e540469","4f07df25-21e1-45b0-a9a9-d0bca9b3a92f","7bdf8b92-4238-4894-b839-d7f704720c4f","data-dict & data-diff: two tools supporting AI-human data science collaboration","Abstract coming soon!",2026-09-15 19:40:00,2026-09-15 20:00:00,"2026-09-15 14:40:00 CDT","2026-09-15 15:00:00 CDT","Virtual","HYBRID","SCHEDULE",,"Ballroom A-F","a94f5251-3484-4b8e-90df-fbc15b0cf375","UPCOMING"
 "412a4001-b1bc-4903-99b0-3f7c1494f716","94529b20-42e4-482f-8ec8-1eaf57105e3b","7bdf8b92-4238-4894-b839-d7f704720c4f","The Shiny AI Stack: shinychat, querychat, and the LLM Plumbing Beneath","LLM-powered chat is becoming a core pattern in modern Shiny apps, but
 building a good chat experience (i.e., streaming, history, file
@@ -820,7 +820,7 @@ possible, even for non-experts.
 
 And finally, I’ll give you a sneak peek at \[REDACTED\], our most
 AI-forward data science tool yet.",2026-09-15 20:20:00,2026-09-15 20:40:00,"2026-09-15 15:20:00 CDT","2026-09-15 15:40:00 CDT","Virtual","HYBRID","SCHEDULE",,"Ballroom A-F","a94f5251-3484-4b8e-90df-fbc15b0cf375","UPCOMING"
-"d6c9a20f-1789-47b3-93bb-bd09b211a99e","84bc571b-d3d7-4fea-ae69-9a811ab24930","7bdf8b92-4238-4894-b839-d7f704720c4f","AI Governance in Posit Team: getting trustworthy results from agentic helpers","AI agents like Posit Assistant, pi, Claude Code, and Codex are here to
+"d6c9a20f-1789-47b3-93bb-bd09b211a99e","84bc571b-d3d7-4fea-ae69-9a811ab24930","7bdf8b92-4238-4894-b839-d7f704720c4f","AI Governance in Posit Team: getting better results from agentic helpers","AI agents like Posit Assistant, pi, Claude Code, and Codex are here to
 stay. Ensuring the results you deliver are trustworthy when agents do
 some of the work can be daunting. In this talk, we’ll explore how
 Governance done well is not bureaucracy but is empowering for the
@@ -848,7 +848,11 @@ way, you will learn how to:
 This workshop will be a good fit for you as long as you have a basic
 familiarity with at least one of R or Python. No installation is
 necessary. Posit will provide a cloud environment equipped with both
-Positron and the LLMs we will use during class.",2026-09-14 08:00:00,2026-09-14 11:00:00,"2026-09-14 03:00:00 CDT","2026-09-14 06:00:00 CDT","Virtual","VIRTUAL",,,,,"UPCOMING"
+Positron and the LLMs we will use during class.
+
+*Please note: this virtual workshop requires a separate virtual workshop
+pass to attend, which must be purchased before September 11, 2026. This
+workshop is not included with a virtual conference pass.*",2026-09-14 08:00:00,2026-09-14 11:00:00,"2026-09-14 03:00:00 CDT","2026-09-14 06:00:00 CDT","Virtual","VIRTUAL",,,,,"UPCOMING"
 "75895239-3b97-422d-92cb-ffd0672b4890","294d8cb4-7c42-44d3-8ad4-8797ce918c4d",,"VIRTUAL WORKSHOP: Getting Started with Positron: An AI-Ready Polyglot Workflow for Data Science","This virtual three hour workshop provides a quick start for R and Python
 users who are curious about Positron, Posit’s new AI-ready polyglot code
 editor for data science. Here, you will learn how to use Positron’s time
@@ -868,7 +872,11 @@ way, you will learn how to:
 This workshop will be a good fit for you as long as you have a basic
 familiarity with at least one of R or Python. No installation is
 necessary. Posit will provide a cloud environment equipped with both
-Positron and the LLMs we will use during class.",2026-09-14 13:00:00,2026-09-14 16:00:00,"2026-09-14 08:00:00 CDT","2026-09-14 11:00:00 CDT","Virtual","VIRTUAL",,,,,"UPCOMING"
+Positron and the LLMs we will use during class.
+
+*Please note: this virtual workshop requires a separate virtual workshop
+pass to attend, which must be purchased before September 11, 2026. This
+workshop is not included with a virtual conference pass.*",2026-09-14 13:00:00,2026-09-14 16:00:00,"2026-09-14 08:00:00 CDT","2026-09-14 11:00:00 CDT","Virtual","VIRTUAL",,,,,"UPCOMING"
 "4d34751e-3039-44af-919f-8e99d798ec1d","871f67cc-5d34-434d-9a0d-43fc1f5f011b",,"Administering and Orchestrating Next-Gen Statistical Environments for AI and Open Source Enabled Infrastructure for Regulated Use Cases","This workshop will explore practical approaches to building
 reproducible, well-governed R environments for regulated pharmaceutical
 work. We will discuss package management, risk-based package validation,
@@ -1041,7 +1049,11 @@ way, you will learn how to:
 This workshop will be a good fit for you as long as you have a basic
 familiarity with at least one of R or Python. No installation is
 necessary. Posit will provide a cloud environment equipped with both
-Positron and the LLMs we will use during class.",2026-09-14 21:00:00,2026-09-15,"2026-09-14 16:00:00 CDT","2026-09-14 19:00:00 CDT","Virtual","VIRTUAL",,,,,"UPCOMING"
+Positron and the LLMs we will use during class.
+
+*Please note: this virtual workshop requires a separate virtual workshop
+pass to attend, which must be purchased before September 11, 2026. This
+workshop is not included with a virtual conference pass.*",2026-09-14 21:00:00,2026-09-15,"2026-09-14 16:00:00 CDT","2026-09-14 19:00:00 CDT","Virtual","VIRTUAL",,,,,"UPCOMING"
 "a5a39584-a466-413e-94f0-2c82a33ddf62","7cba9f3e-bf6a-4200-875f-354ed2326832",,"Welcome Reception","",2026-09-14 22:00:00,2026-09-15,"2026-09-14 17:00:00 CDT","2026-09-14 19:00:00 CDT","In-person","IN_PERSON","IN_PERSON",,"Level 4 Foyer","1af83929-b960-47bd-b127-895efc934a55","UPCOMING"
 "8318c228-cd16-457e-8d71-0d7c6b4c63f4","5d3bca06-5433-4ca0-812c-ab38af83b8c3",,"Virtual Session: Modeling","This virtual session will have 4 20-minute talks!
 
