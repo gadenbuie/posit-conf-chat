@@ -43,6 +43,13 @@ shiny::addResourcePath("assets", "assets")
 
 default_theme <- Sys.getenv("APP_THEME", "conf")
 
+# Seconds to wait before showing the thinking indicator. Env var is a
+# character value and is converted to integer here.
+show_thinking_after_s <- as.integer(env_var(
+  "SHOW_THINKING_AFTER_S",
+  default = "2"
+))
+
 ui <- function(req) {
   query <- shiny::parseQueryString(req$QUERY_STRING)
   theme <- ifelse(
@@ -122,7 +129,7 @@ ui <- function(req) {
     ),
     history = history_options(store = "memory"),
     greeting = if (!greeting_dynamic) static_greeting(),
-    show_thinking_after_s = 2
+    show_thinking_after_s = show_thinking_after_s
   )
 }
 
