@@ -134,6 +134,33 @@ ui <- function(req) {
         # Reuse Shiny's pulse class: show it while chat waits or runs tools, but
         # hide it while response chunks visibly stream into the conversation.
         # This should eventually be a shinychat lifecycle feature.
+        tags$style(HTML(
+          "\
+          html[data-shiny-busy-pulse].shiny-chat-streaming:not(.shiny-chat-receiving-chunk)::after {
+            --_shiny-pulse-background: var(
+              --shiny-pulse-background,
+              linear-gradient(
+                120deg,
+                transparent,
+                var(--bs-indigo, #4b00c1),
+                var(--bs-purple, #74149c),
+                var(--bs-pink, #bf007f),
+                transparent
+              )
+            );
+            --_shiny-pulse-height: var(--shiny-pulse-height, 3px);
+            --_shiny-pulse-speed: var(--shiny-pulse-speed, 1.2s);
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: var(--_shiny-pulse-height);
+            background: var(--_shiny-pulse-background);
+            z-index: 9999;
+            animation: busy-page-pulse var(--_shiny-pulse-speed) ease-in-out infinite alternate;
+            content: \"\";
+          }
+        "
+        )),
         tags$script(HTML(
           "\
           const root = document.documentElement;
@@ -142,6 +169,8 @@ ui <- function(req) {
           let receivingChunk = false;
 
           function updateBusyState() {
+            root.classList.toggle('shiny-chat-streaming', chatStreaming);
+            root.classList.toggle('shiny-chat-receiving-chunk', receivingChunk);
             root.classList.toggle(
               'shiny-busy',
               shinyBusy || (chatStreaming && !receivingChunk)
