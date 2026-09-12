@@ -26,8 +26,11 @@ conf_now <- function() {
   now
 }
 
+# Bounds of the in-person conference; virtual workshops run outside them
+# (some start very early CDT to suit other time zones).
 conf_bounds <- function() {
   items <- sched_items()
+  items <- items[!(items$kind == "workshop" & grepl("^VIRTUAL", items$title)), ]
   parse <- function(x) {
     as.POSIXct(substr(x, 1, 16), format = "%Y-%m-%d %H:%M", tz = conf_tz)
   }
@@ -35,6 +38,15 @@ conf_bounds <- function() {
     start = min(parse(paste(items$date, items$start))),
     end = max(parse(paste(items$date, items$end)))
   )
+}
+
+virtual_bounds <- function() {
+  items <- sched_items("workshops")
+  items <- items[grepl("^VIRTUAL", items$title), ]
+  parse <- function(x) {
+    as.POSIXct(substr(x, 1, 16), format = "%Y-%m-%d %H:%M", tz = conf_tz)
+  }
+  list(start = min(parse(paste(items$date, items$start))))
 }
 
 # Talks, workshops, and events (not track sessions) happening at `now`,
@@ -126,16 +138,56 @@ schedule_next_change <- function(now = conf_now()) {
 on_now_json <- function(status = schedule_status(), bounds = conf_bounds()) {
   note <- NULL
   if (status$now < bounds$start) {
-    note <- paste(
-      "The conference has not started yet; it begins",
-      format(bounds$start, "%A, %B %e at %H:%M %Z.")
+    first_virtual <- NULL
+    if (status$now < virtual_bounds()$start) {
+      first_virtual <- format(
+        virtual_bounds()$start,
+        "%A, %B %e at %I:%M %p %Z"
+      )
+    }
+    note <- paste0(
+      "The in-person conference has not started yet; it begins ",
+      format(bounds$start, "%A, %B %e at %I:%M %p %Z"),
+      " with in-person workshops and registration. ",
+      if (!is.null(first_virtual)) {
+        paste0("Virtual workshops start earlier, from ", first_virtual, ". ")
+      }
     )
   } else if (status$now > bounds$end) {
     note <- "The conference has ended."
   } else if (!nrow(status$on_now)) {
-    note <- "Nothing is scheduled at this exact moment."
+    if (nrow(status$up_next)) {
+      note <- paste0(
+        "Nothing is scheduled at this exact moment; next up at ",
+        clock12(status$up_next$start[1]),
+        "."
+      )
+    } else {
+      # Day's program is over; find when the conference resumes, if at all
+      resume <- sched_items() |>
+        dplyr::filter(date > format(status$now, "%Y-%m-%d")) |>
+        dplyr::arrange(date, start) |>
+        utils::head(1)
+      note <- if (nrow(resume)) {
+        paste0(
+          "Today's program has ended; the conference resumes ",
+          format(
+            as.POSIXct(
+              substr(paste(resume$date, resume$start), 1, 16),
+              format = "%Y-%m-%d %H:%M",
+              tz = conf_tz
+            ),
+            "%A, %B %e at %I:%M %p %Z"
+          ),
+          "."
+        )
+      } else {
+        "Today's program has ended."
+      }
+    }
   }
 
+  note <- if (is.null(note)) note else trimws(note)
   jsonlite::toJSON(
     list(
       now = format(status$now, "%Y-%m-%d %H:%M %Z"),
