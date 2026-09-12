@@ -3286,7 +3286,7 @@
       "checksum": "417f739e72e6a346aa4a5d7d0998d195"
     },
     "data/derived/speakers.csv": {
-      "checksum": "043e1ac43042c3d663e66e288f4c3ab5"
+      "checksum": "53b0ce24e9188b972170f1b6c1c19fd9"
     },
     "data/derived/talk_sessions.csv": {
       "checksum": "d60eaaf01d0214e802f45a74b31920ba"
@@ -3301,7 +3301,7 @@
       "checksum": "79e378e5899920c0bb764b9d15321877"
     },
     "prompts/greeting.md": {
-      "checksum": "637b3a6b0ab3cf6397b286258b356f26"
+      "checksum": "1dba376f5a272cbb174e2182e4e6b176"
     },
     "prompts/style-concise.md": {
       "checksum": "046c6e0886b7736086534d2ec875858f"
@@ -3322,7 +3322,7 @@
       "checksum": "e820ad503c995f9a2541e232005d5a53"
     },
     "prompts/system.md": {
-      "checksum": "2e0d1a3c98ec43d9415f69213c280a5d"
+      "checksum": "104320eddcc2d266c6b44d2fd2ad6a6a"
     },
     "R/aaa.R": {
       "checksum": "85cf34df98b909bd6efcf3e08dc207dc"
@@ -3355,7 +3355,7 @@
       "checksum": "407c56a486cf79c37701722971555ec2"
     },
     "R/schedule.R": {
-      "checksum": "f0bf016b63548d09758479c315b14488"
+      "checksum": "13a875ef5bfb2b98987760f1980332c2"
     },
     "R/skills.R": {
       "checksum": "673856f51082beccb4af4236674c6a68"
@@ -3376,7 +3376,7 @@
       "checksum": "32b01e18f4604e1b6fcaf52bd0da4a34"
     },
     "R/utils.R": {
-      "checksum": "242da23fae2a7dc159b4f2dfa23525c3"
+      "checksum": "e4b3832f4f2e3e6bac4418f30102159a"
     },
     "README.md": {
       "checksum": "27078a630c4fc38f0a9324983437323f"
