@@ -131,6 +131,58 @@ ui <- function(req) {
     footer = tagList(
       useBusyIndicators(),
       tags$head(
+        # Reuse Shiny's pulse class: show it while chat waits or runs tools, but
+        # hide it while response chunks visibly stream into the conversation.
+        # This should eventually be a shinychat lifecycle feature.
+        tags$script(HTML(
+          "\
+          const root = document.documentElement;
+          let shinyBusy = false;
+          let chatStreaming = false;
+          let receivingChunk = false;
+
+          function updateBusyState() {
+            root.classList.toggle(
+              'shiny-busy',
+              shinyBusy || (chatStreaming && !receivingChunk)
+            );
+          }
+
+          $(document).on('shiny:busy', function() {
+            shinyBusy = true;
+            updateBusyState();
+          });
+
+          $(document).on('shiny:idle', function() {
+            shinyBusy = false;
+            updateBusyState();
+          });
+
+          Shiny.addCustomMessageHandler('chat_streaming', function(streaming) {
+            chatStreaming = streaming;
+            if (!streaming) receivingChunk = false;
+            updateBusyState();
+          });
+
+          $(document).on('shiny:message', function(event) {
+            const envelope = event.message?.custom?.shinyChatMessage;
+            if (envelope?.id !== 'chat') return;
+
+            switch (envelope.action?.type) {
+              case 'chunk':
+                receivingChunk = Boolean(envelope.action.content);
+                break;
+              case 'block_insert':
+              case 'chunk_end':
+                receivingChunk = false;
+                break;
+              default:
+                return;
+            }
+            updateBusyState();
+          });
+        "
+        )),
         tags$script(src = "assets/agenda.js"),
         tags$script(src = "assets/prompt-style.js"),
         tags$script(src = "assets/collapsible-abstract.js"),
@@ -328,10 +380,9 @@ server <- function(input, output, session) {
   })
 
   observe({
-    session$sendCustomMessage(
-      "prompt_style_disabled",
-      chat$status() == "streaming"
-    )
+    streaming <- chat$status() == "streaming"
+    session$sendCustomMessage("chat_streaming", streaming)
+    session$sendCustomMessage("prompt_style_disabled", streaming)
   })
 
   chat$history$on_save(function(values) {
