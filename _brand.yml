@@ -85,6 +85,80 @@ defaults:
           --chat-bg-image: url("pixel-fade.svg");
         }
 
+        :root
+          shiny-chat-container
+          .shiny-chat-suggestion-list
+          .shiny-chat-suggestion-list-item {
+          background-color: var(--brand-faq-card, var(--bs-gray-100));
+          border: 1px solid transparent;
+          border-radius: 0.375rem;
+          color: var(--brand-navy, var(--bs-dark, #212529));
+          font-family: "Open Sans", sans-serif;
+          font-weight: 600;
+        }
+        :root
+          shiny-chat-container
+          .shiny-chat-suggestion-list
+          .shiny-chat-suggestion-list-item-body {
+          color: inherit;
+          font-weight: inherit;
+        }
+        :root
+          shiny-chat-container
+          .shiny-chat-suggestion-list
+          .shiny-chat-suggestion-list-item:hover,
+        :root
+          shiny-chat-container
+          .shiny-chat-suggestion-list
+          .shiny-chat-suggestion-list-item:focus-visible {
+          background-color: var(--brand-navy, var(--bs-dark, #212529));
+          color: var(--brand-white, var(--bs-white));
+          border-color: var(--brand-navy, var(--bs-dark, #212529));
+        }
+        :root
+          shiny-chat-container
+          .shiny-chat-suggestion-list
+          .shiny-chat-suggestion-list-item:hover
+          *,
+        :root
+          shiny-chat-container
+          .shiny-chat-suggestion-list
+          .shiny-chat-suggestion-list-item:focus-visible
+          * {
+          color: inherit;
+        }
+        :root
+          shiny-chat-container
+          .shiny-chat-suggestion-list
+          .shiny-chat-suggestion-list-item:hover::after,
+        :root
+          shiny-chat-container
+          .shiny-chat-suggestion-list
+          .shiny-chat-suggestion-list-item:focus-visible::after {
+          color: var(--brand-lime, #ffc107);
+          fill: var(--brand-lime, #ffc107);
+        }
+        :root
+          shiny-chat-container
+          .shiny-chat-suggestion-list
+          .shiny-chat-suggestion-list-item[data-last-clicked] {
+          background-color: var(--brand-navy, var(--bs-dark, #212529));
+          color: var(--brand-lime, #ffc107);
+          border-color: var(--brand-navy, var(--bs-dark, #212529));
+        }
+        .shiny-chat-page-sidebar {
+          background-color: var(--brand-faq-card, var(--bs-gray-100));
+          color: var(--brand-navy, var(--bs-dark, #212529));
+        }
+        nav .shiny-chat-page-nav-link[aria-current="page"] {
+          color: var(--brand-white, var(--bs-white));
+        }
+        nav .shiny-chat-page-nav-link:hover:not([aria-current="page"]) {
+          background-color: var(--brand-nav-link-hover-bg, transparent);
+          color: var(--brand-white, inherit);
+        }
+
+
         shiny-chat-container {
           --shiny-chat-btn-send-bg: var(--brand-lime, #ffc107);
           --shiny-chat-btn-send-color: var(--brand-navy, var(--bs-dark, #212529));
