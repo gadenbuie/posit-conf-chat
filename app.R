@@ -50,6 +50,14 @@ show_thinking_after_s <- as.integer(env_var(
   default = "2"
 ))
 
+# Chat history backend: "file" enables the file-backed store.
+history_store <- if (Sys.getenv("FILE_HISTORY", "no") == "yes") {
+  "file"
+} else {
+  "memory"
+}
+history_is_file <- history_store == "file"
+
 ui <- function(req) {
   query <- shiny::parseQueryString(req$QUERY_STRING)
   theme <- ifelse(
@@ -90,11 +98,13 @@ ui <- function(req) {
     ),
     sidebar = chat_sidebar(
       open = FALSE,
-      p(
-        class = "mt-auto border-top pt-3 small",
-        "We don't keep your conversation history between sessions.",
-        "Your agenda is saved in your browser."
-      )
+      if (!history_is_file) {
+        p(
+          class = "mt-auto border-top pt-3 small",
+          "We don't keep your conversation history between sessions.",
+          "Your agenda is saved in your browser."
+        )
+      }
     ),
     pages_navbar = list(
       nav_panel(
@@ -127,7 +137,7 @@ ui <- function(req) {
         tags$link(rel = "stylesheet", href = "assets/custom.css")
       )
     ),
-    history = history_options(store = "memory"),
+    history = history_options(store = history_store),
     greeting = if (!greeting_dynamic) static_greeting(),
     show_thinking_after_s = show_thinking_after_s
   )
