@@ -5,6 +5,12 @@ greeting_header <- paste0(
 
 new_chat_client <- function(spec, system_prompt, api_args = NULL) {
   api_args <- api_args %||% env_json("POSIT_CONF_API_ARGS") %||% list()
+  order <- api_args$provider$order
+  if (!is.null(order)) {
+    # as.list() keeps a single-element order as a JSON array; auto-unboxing
+    # would collapse it to a string, which OpenRouter rejects.
+    api_args$provider$order <- as.list(order)
+  }
   ellmer::chat(spec$name, system_prompt = system_prompt, api_args = api_args)
 }
 
