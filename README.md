@@ -54,8 +54,8 @@ See [R/env.R](R/env.R) for the resolution order.
 GREETING_DYNAMIC=yes
 POSIT_CONF_PROVIDER=openrouter
 POSIT_CONF_MODEL=z-ai/glm-5.3-flash
-POSIT_CONF_API_ARGS='{"provider":{"order":["relace","makora","baseten","together","fireworks"],"data_collection":"deny"},"reasoning":{"effort":"high"}}'
-POSIT_CONF_GREETING_API_ARGS='{"provider":{"order":["baseten"],"data_collection":"deny"},"reasoning":{"effort":"low"}}'
+POSIT_CONF_API_ARGS='{"provider":{"order":["relace","baseten","makora","coreweave","fireworks"],"data_collection":"deny"},"reasoning":{"effort":"high"}}'
+POSIT_CONF_GREETING_API_ARGS='{"provider":{"order":["baseten","makora"],"data_collection":"deny"},"reasoning":{"effort":"low"}}'
 OPENROUTER_API_KEY=...
 ```
 
