@@ -5,6 +5,7 @@
 
 library(httr2)
 library(jsonlite, warn.conflicts = FALSE)
+library(cli)
 
 model_slug <- commandArgs(trailingOnly = TRUE)[1]
 if (is.na(model_slug) || !nzchar(model_slug)) {
@@ -35,6 +36,12 @@ html <- request(page_url) |>
   resp_body_string()
 
 rows <- strsplit(html, '<tr class="or-table__row', fixed = TRUE)[[1]][-1]
+if (length(rows) == 0) {
+  stop(
+    "OpenRouter served the model page without the provider table; ",
+    "this is intermittent on their end -- try again shortly."
+  )
+}
 
 first_match <- function(x, pattern) {
   m <- regmatches(x, regexec(pattern, x))[[1]]
@@ -123,33 +130,81 @@ providers <- providers[
   ),
 ]
 
-cat(sprintf(
-  "%-15s %-9s %8s %8s %7s %6s %7s %6s  %-6s\n",
-  "provider",
-  "privacy",
-  "in$/M",
-  "out$/M",
-  "lat_s",
-  "tps",
-  "uptime",
-  "speed",
-  "quant"
-))
-for (i in seq_len(nrow(providers))) {
+private <- providers[
+  providers$privacy == "Private" & !is.na(providers$price_out),
+]
+
+# The greeting renders before the user sees anything, so speed decides and
+# price only breaks ties. The chat config can wait, so price decides.
+fast <- private[which(private$speed <= SPEED_GOOD_ENOUGH), ]
+if (nrow(fast) == 0) {
+  fast <- private[private$speed == min(private$speed), ]
+}
+greeting_recommend <- fast[order(fast$price_out, fast$speed), ]
+
+usable <- private[
+  which(
+    private$latency_s <= CHAT_LATENCY_MAX_S & private$tps >= CHAT_TPS_MIN
+  ),
+]
+if (nrow(usable) == 0) {
+  usable <- fast
+}
+chat_recommend <- usable[order(usable$price_out, usable$speed), ]
+
+fmt_row <- function(i) {
   p <- providers[i, ]
-  cat(sprintf(
-    "%-15s %-9s %8.4f %8.4f %7.2f %6.0f %7.1f%% %6.2f  %-6s\n",
+  c(
     p$provider,
     p$privacy,
-    p$price_in,
-    p$price_out,
-    p$latency_s,
-    p$tps,
-    p$uptime_pct,
-    p$speed,
-    p$quantization
-  ))
+    sprintf("%0.4f", p$price_in),
+    sprintf("%0.4f", p$price_out),
+    sprintf("%0.2f", p$latency_s),
+    sprintf("%0.0f", p$tps),
+    sprintf("%0.1f%%", p$uptime_pct),
+    sprintf("%0.2f", p$speed),
+    ifelse(is.na(p$quantization), "-", p$quantization)
+  )
 }
+
+tbl <- rbind(
+  c(
+    "provider",
+    "privacy",
+    "in$/M",
+    "out$/M",
+    "lat_s",
+    "tps",
+    "uptime",
+    "speed",
+    "quant"
+  ),
+  t(vapply(seq_len(nrow(providers)), fmt_row, character(9)))
+)
+tbl[1, ] <- vapply(tbl[1, ], cli::style_bold, character(1))
+
+aligns <- c(
+  "left",
+  "left",
+  "right",
+  "right",
+  "right",
+  "right",
+  "right",
+  "right",
+  "left"
+)
+widths <- vapply(
+  seq_len(ncol(tbl)),
+  \(j) max(cli::ansi_nchar(tbl[, j])),
+  numeric(1)
+)
+for (j in seq_along(widths)) {
+  tbl[, j] <- cli::ansi_align(tbl[, j], width = widths[j], align = aligns[j])
+}
+
+cli::cli_h2("OpenRouter providers for {.emph {model_slug}}")
+cli::cli_verbatim(apply(tbl, 1, paste, collapse = " "))
 
 slug <- function(x) gsub("[^a-z0-9]", "", tolower(x))
 
@@ -166,46 +221,37 @@ api_args <- function(order_slugs, effort) {
   args
 }
 
-print_config <- function(label, order_slugs, effort) {
-  order_slugs <- head(order_slugs, 5)
-  cat("\nRecommended private providers (", label, "):\n", sep = "")
-  cat("  \"order\": [", paste0('"', order_slugs, '"', collapse = ", "), "]\n")
-  cat(
-    "  ",
-    label,
-    "='",
-    toJSON(api_args(order_slugs, effort), auto_unbox = TRUE),
-    "'\n",
-    sep = ""
-  )
+print_config <- function(label, recommend, effort) {
+  order_slugs <- head(slug(recommend$provider), 5)
+  cli::cli_h2(label)
+  cli::cli_verbatim(c(
+    paste0(
+      "  \"order\": [",
+      paste0('"', order_slugs, '"', collapse = ", "),
+      "]"
+    ),
+    paste0(
+      "  ",
+      label,
+      "='",
+      toJSON(api_args(order_slugs, effort), auto_unbox = TRUE),
+      "'"
+    )
+  ))
+  name_w <- max(cli::ansi_nchar(recommend$provider)) + 2
+  for (i in seq_along(order_slugs)) {
+    p <- recommend[i, ]
+    cli::cli_verbatim(paste0(
+      "  ",
+      cli::ansi_align(p$provider, name_w),
+      cli::col_magenta(sprintf("%0.4f $/M in  ", p$price_in)),
+      cli::col_magenta(sprintf("%0.4f $/M out  ", p$price_out)),
+      cli::col_cyan(sprintf("%0.2fs  ", p$latency_s)),
+      cli::col_cyan(sprintf("%0.0f tps  ", p$tps)),
+      cli::col_cyan(sprintf("speed %0.2f", p$speed))
+    ))
+  }
 }
 
-private <- providers[
-  providers$privacy == "Private" & !is.na(providers$price_out),
-]
-
-# The greeting renders before the user sees anything, so speed decides and
-# price only breaks ties. The chat config can wait, so price decides.
-fast <- private[private$speed <= SPEED_GOOD_ENOUGH, ]
-if (nrow(fast) == 0) {
-  fast <- private[private$speed == min(private$speed), ]
-}
-greeting_recommend <- fast[order(fast$price_out, fast$speed), ]
-print_config(
-  "POSIT_CONF_GREETING_API_ARGS",
-  slug(greeting_recommend$provider),
-  "low"
-)
-
-usable <- private[
-  private$latency_s <= CHAT_LATENCY_MAX_S & private$tps >= CHAT_TPS_MIN,
-]
-if (nrow(usable) == 0) {
-  usable <- fast
-}
-chat_recommend <- usable[order(usable$price_out, usable$speed), ]
-print_config(
-  "POSIT_CONF_API_ARGS",
-  slug(chat_recommend$provider),
-  "high"
-)
+print_config("POSIT_CONF_GREETING_API_ARGS", greeting_recommend, "low")
+print_config("POSIT_CONF_API_ARGS", chat_recommend, "high")
