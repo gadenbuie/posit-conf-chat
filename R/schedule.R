@@ -182,6 +182,13 @@ speaker_result <- function(sp) {
   )
 }
 
+is_record_id_like <- function(x) {
+  grepl(
+    "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$",
+    x
+  )
+}
+
 resolve_item <- function(id) {
   d <- schedule_data()
   sources <- list(
@@ -199,6 +206,14 @@ resolve_item <- function(id) {
   sp <- dplyr::filter(d$speakers, speaker_id == .env$id)
   if (nrow(sp)) {
     return(speaker_result(dplyr::slice(sp, 1)))
+  }
+
+  if (is_record_id_like(id)) {
+    stop(
+      "No schedule item has record_id '",
+      id,
+      "'. Use a record_id exactly as returned by the schedule search tools."
+    )
   }
 
   candidates <- dplyr::bind_rows(
