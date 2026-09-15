@@ -54,6 +54,12 @@ about_offcanvas <- function() {
       "Documentation, articles, and support resources",
       icon = "question-circle"
     ),
+    about_link(
+      "https://github.com/gadenbuie/posit-conf-chat",
+      "Source code",
+      "View the source for this app on GitHub",
+      icon = "github"
+    ),
     h6(class = "mt-4 mb-2", "How this app is built"),
     tags$p(
       class = "small",
