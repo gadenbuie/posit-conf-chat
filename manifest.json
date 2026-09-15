@@ -3283,16 +3283,16 @@
       "checksum": "f0dd06d196cc029e4512022b7cf61eda"
     },
     "data/derived/schedule_records.csv": {
-      "checksum": "23728f5879bfec7d86f29139a0dce1b7"
+      "checksum": "d2d97b5bf820221d44d076c94209f4ca"
     },
     "data/derived/speakers.csv": {
-      "checksum": "fc735875bdb66fa57a03f6b71912a862"
+      "checksum": "b8e49dd75d4c335582f691e293b88cf8"
     },
     "data/derived/talk_sessions.csv": {
-      "checksum": "a704c1db0ab69636c627d45d3a85ac54"
+      "checksum": "5f1d65203d4c929a03728e5e808b96b7"
     },
     "data/derived/talks.csv": {
-      "checksum": "1b3030f25c30c22db473b14ef6e61c20"
+      "checksum": "604e396e8af318d67ee7ea90967acaa5"
     },
     "data/derived/workshops.csv": {
       "checksum": "e5215313e06462af026afc259cbdf6e2"
