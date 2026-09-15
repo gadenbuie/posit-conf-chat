@@ -372,17 +372,14 @@ Lakehouses with DuckLake in R \| Travis Gerke
 
 2:00 - 2:20PM CT \| Prepare locally, run remotely: Easily scale
 Tidymodels on Databricks with sparklyr \| Edgar Ruiz",2026-09-16 18:00:00,2026-09-16 19:20:00,"2026-09-16 13:00:00 CDT","2026-09-16 14:20:00 CDT","HYBRID","STAGE","Lanier Ballroom H&K","Ballroom H & K",4
-"a726c5fc-fae4-4f82-9d5d-bc88d8ec4892","4c9f033c-c65d-4c6e-b6a6-9b83aa3852d5","Clinical Data Science","There are 3 20-minute talks in this session:
+"a726c5fc-fae4-4f82-9d5d-bc88d8ec4892","4c9f033c-c65d-4c6e-b6a6-9b83aa3852d5","Clinical Data Science","There are 2 20-minute talks in this session:
 
-2:40 - 3:00PM CT \| Environmental Stressors and Healthcare: How a
-Posit/R Powered Pipeline Reveals Environmental Drivers of Emergency
-Department Strain \| Neil Rosenbaum
+2:40 - 3:00PM CT \| Environmental Stressors and Healthcare: Lessons from
+Scaling a Posit/R Pipeline That Connects Environmental Data to Emergency
+Department Visits \| Neil Rosenbaum
 
 3:00 - 3:20PM CT \| Lowering Cesarean Rates - Using Quarto to Create
-Scalable Performance Reports \| Rebecca Wardrop
-
-3:20 - 3:40PM CT \| Operationalizing Quality: Building an ICU Dashboard
-at the VA with Shiny \| Florian Mayr",2026-09-16 19:40:00,2026-09-16 21:00:00,"2026-09-16 14:40:00 CDT","2026-09-16 16:00:00 CDT","HYBRID","STAGE","Lanier Ballroom G&J","Ballroom G & J",4
+Scalable Performance Reports \| Rebecca Wardrop",2026-09-16 19:40:00,2026-09-16 21:00:00,"2026-09-16 14:40:00 CDT","2026-09-16 16:00:00 CDT","HYBRID","STAGE","Lanier Ballroom G&J","Ballroom G & J",4
 "cd09f003-bc1b-4d60-b562-530bcc1362bf","84001369-ee1a-4fc5-9b16-300fe92cf402","Developing the developer","There are 4 20-minute talks in this session:
 
 2:40 - 3:00PM CT \| It Worked Great Until I Left \| Ben Haffly

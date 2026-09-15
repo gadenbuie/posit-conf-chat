@@ -852,7 +852,7 @@ Positron and the LLMs we will use during class.
 
 *Please note: this virtual workshop requires a separate virtual workshop
 pass to attend, which must be purchased before September 11, 2026. This
-workshop is not included with a virtual conference pass.*",2026-09-14 08:00:00,2026-09-14 11:00:00,"2026-09-14 03:00:00 CDT","2026-09-14 06:00:00 CDT","Virtual","VIRTUAL",,,,,"UPCOMING"
+workshop is not included with a virtual conference pass.*",2026-09-14 08:00:00,2026-09-14 11:00:00,"2026-09-14 03:00:00 CDT","2026-09-14 06:00:00 CDT","Virtual","VIRTUAL",,,,,"COMPLETED"
 "75895239-3b97-422d-92cb-ffd0672b4890","294d8cb4-7c42-44d3-8ad4-8797ce918c4d",,"VIRTUAL WORKSHOP: Getting Started with Positron: An AI-Ready Polyglot Workflow for Data Science","This virtual three hour workshop provides a quick start for R and Python
 users who are curious about Positron, Posit’s new AI-ready polyglot code
 editor for data science. Here, you will learn how to use Positron’s time
@@ -876,7 +876,7 @@ Positron and the LLMs we will use during class.
 
 *Please note: this virtual workshop requires a separate virtual workshop
 pass to attend, which must be purchased before September 11, 2026. This
-workshop is not included with a virtual conference pass.*",2026-09-14 13:00:00,2026-09-14 16:00:00,"2026-09-14 08:00:00 CDT","2026-09-14 11:00:00 CDT","Virtual","VIRTUAL",,,,,"UPCOMING"
+workshop is not included with a virtual conference pass.*",2026-09-14 13:00:00,2026-09-14 16:00:00,"2026-09-14 08:00:00 CDT","2026-09-14 11:00:00 CDT","Virtual","VIRTUAL",,,,,"COMPLETED"
 "4d34751e-3039-44af-919f-8e99d798ec1d","871f67cc-5d34-434d-9a0d-43fc1f5f011b",,"Administering and Orchestrating Next-Gen Statistical Environments for AI and Open Source Enabled Infrastructure for Regulated Use Cases","This workshop will explore practical approaches to building
 reproducible, well-governed R environments for regulated pharmaceutical
 work. We will discuss package management, risk-based package validation,
@@ -885,7 +885,7 @@ controls needed to support traceability, change management, and
 production readiness. Through interactive discussion, participants will
 consider what a minimum viable approach looks like for administering R
 environments across research, development, and GxP use cases. We’ll also
-look at the impact of AI on regulated environments.",2026-09-14 14:00:00,2026-09-14 22:00:00,"2026-09-14 09:00:00 CDT","2026-09-14 17:00:00 CDT","In-person","IN_PERSON","IN_PERSON",,"Lanier G","6e892bc5-0333-48c4-92be-6640e425720f","UPCOMING"
+look at the impact of AI on regulated environments.",2026-09-14 14:00:00,2026-09-14 22:00:00,"2026-09-14 09:00:00 CDT","2026-09-14 17:00:00 CDT","In-person","IN_PERSON","IN_PERSON",,"Lanier G","6e892bc5-0333-48c4-92be-6640e425720f","COMPLETED"
 "438a99b2-f727-4361-913a-5d103356addf","8f6109ce-4370-4ec3-afe0-8a71947b7363",,"AI-Powered Clinical Reporting in R with the Pharmaverse","Modern clinical reporting workflows are evolving fast, and this workshop
 helps you keep pace with a practical, end-to-end approach in R. You’ll
 learn how to move from raw data to analysis deliverables using
@@ -896,7 +896,7 @@ Datasets (ARDs). You’ll also see where AI-assisted tooling can fit
 naturally into the workflow to support faster iteration and reduce
 manual rework, without sacrificing transparency, reproducibility, or
 reviewability. Leave with a modular, reusable playbook for applying R to
-every stage of clinical reporting across your team.",2026-09-14 14:00:00,2026-09-14 22:00:00,"2026-09-14 09:00:00 CDT","2026-09-14 17:00:00 CDT","In-person","IN_PERSON","IN_PERSON",,"Lanier J","f2dd13fc-7dca-40f2-a401-2123f671b5d8","UPCOMING"
+every stage of clinical reporting across your team.",2026-09-14 14:00:00,2026-09-14 22:00:00,"2026-09-14 09:00:00 CDT","2026-09-14 17:00:00 CDT","In-person","IN_PERSON","IN_PERSON",,"Lanier J","f2dd13fc-7dca-40f2-a401-2123f671b5d8","COMPLETED"
 "96e23f23-cdcf-4c3e-84a0-561968461df0","a84848c9-f8fb-40f3-88aa-a443c52b64d4",,"Modern Data Science in Python","As the data science landscape evolves, many practitioners are looking to
 expand their toolkit to include Python. Led by Jeroen Janssens, author
 of the book *Python Polars: The Definitive Guide* and Rich Iannone,
@@ -922,7 +922,7 @@ repository of code examples to apply to future projects. 
 
 This workshop is a great fit for those getting started with data science
 as well as R users who want to get their feet wet with Python for doing
-data science.",2026-09-14 14:00:00,2026-09-14 22:00:00,"2026-09-14 09:00:00 CDT","2026-09-14 17:00:00 CDT","In-person","IN_PERSON","IN_PERSON",,"Lanier K","d62369d0-1fd9-494e-ac79-109a2d07d1ac","UPCOMING"
+data science.",2026-09-14 14:00:00,2026-09-14 22:00:00,"2026-09-14 09:00:00 CDT","2026-09-14 17:00:00 CDT","In-person","IN_PERSON","IN_PERSON",,"Lanier K","d62369d0-1fd9-494e-ac79-109a2d07d1ac","COMPLETED"
 "60cbec55-d561-4967-a7b3-784c27455bd2","67f792e2-7e20-419a-915c-e852dcaf2d69",,"Our Modern R Workflow (ft. Positron and AI)","This workshop is designed for data scientists who are comfortable with
 using R for data analysis and ready to level up their software
 engineering skills. Led by Hadley Wickham and Jenny Bryan, you’ll learn
@@ -951,7 +951,7 @@ tidyverse). You should have written a few functions before, but don’t
 need any experience with package development, AI coding tools, or
 Positron. If you have taken a package development workshop before,
 you’ll learn what’s changed in our workflows, especially how we’re using
-AI and Positron effectively.",2026-09-14 14:00:00,2026-09-14 22:00:00,"2026-09-14 09:00:00 CDT","2026-09-14 17:00:00 CDT","In-person","IN_PERSON","IN_PERSON",,"Room 335","947e110f-829a-4f3b-acc8-fdbf2b5720ee","UPCOMING"
+AI and Positron effectively.",2026-09-14 14:00:00,2026-09-14 22:00:00,"2026-09-14 09:00:00 CDT","2026-09-14 17:00:00 CDT","In-person","IN_PERSON","IN_PERSON",,"Room 335","947e110f-829a-4f3b-acc8-fdbf2b5720ee","COMPLETED"
 "6e742d58-9325-4bd5-bea1-3cd37592b238","21f53821-965e-4e1f-8a5c-4b4d687ea6da",,"Practical Machine Learning with tidymodels","Learn how to successfully develop Machine Learning using R. tidymodels
 is a complete framework that implements modeling best practices using
 tidyverse principles. The tidymodels framework is a collection of
@@ -972,7 +972,7 @@ This workshop is for you if you:
 
 While the workshop will teach some terminology and modeling philosophy,
 it is primarily focused on showing users how to effectively develop,
-iterate, and validate a machine learning model. ",2026-09-14 14:00:00,2026-09-14 22:00:00,"2026-09-14 09:00:00 CDT","2026-09-14 17:00:00 CDT","In-person","IN_PERSON","IN_PERSON",,"Lanier H","5a58bff9-9d76-4ea0-97e6-73566abc0a0a","UPCOMING"
+iterate, and validate a machine learning model. ",2026-09-14 14:00:00,2026-09-14 22:00:00,"2026-09-14 09:00:00 CDT","2026-09-14 17:00:00 CDT","In-person","IN_PERSON","IN_PERSON",,"Lanier H","5a58bff9-9d76-4ea0-97e6-73566abc0a0a","COMPLETED"
 "0086f71f-e70d-405b-90c6-45bdc7ccd091","0b192684-c20b-4475-a2e9-4694e0c6bfe7",,"Practical Quarto: Patterns, Templates, and Tooling","This workshop is designed for Quarto users who want to update and extend
 their Quarto mastery. Led by Charlotte Wickham and Mine
 Çetinkaya-Rundel, this workshop will introduce new features of Quarto as
@@ -1006,7 +1006,7 @@ By the end of the workshop, you’ll have a curated set of Quarto recipes
 and a mental model for how the pieces fit together. You’ll leave the
 workshop equipped to create more polished documents, scale your
 workflows across projects and teams, and make deliberate, informed
-choices about tools, formats, and authoring strategies.",2026-09-14 14:00:00,2026-09-14 22:00:00,"2026-09-14 09:00:00 CDT","2026-09-14 17:00:00 CDT","In-person","IN_PERSON","IN_PERSON",,"Lanier L","ae32d1d0-43cb-49c2-821c-d145c84c5a94","UPCOMING"
+choices about tools, formats, and authoring strategies.",2026-09-14 14:00:00,2026-09-14 22:00:00,"2026-09-14 09:00:00 CDT","2026-09-14 17:00:00 CDT","In-person","IN_PERSON","IN_PERSON",,"Lanier L","ae32d1d0-43cb-49c2-821c-d145c84c5a94","COMPLETED"
 "1fba18c2-7156-463f-979e-bc2bad27eebd","d8620962-5c2a-42be-a98c-595a558b37f4",,"Programming with LLMs in R and Python","Large Language Models (LLMs) offer developers unprecedented programmatic
 capabilities. Led by Garrick Aden-Buie and Sara Altman, this workshop
 will introduce ellmer (R) and chatlas (Python), Posit packages that
@@ -1029,7 +1029,7 @@ topics like dynamic information retrieval, context engineering, and
 agentic workflows. Attendees will gain hands-on experience through
 guided exercises, providing the confidence to start their LLM journey.
 As a dual-language workshop, attendees can choose hands-on practice in R
-or Python.",2026-09-14 14:00:00,2026-09-14 22:00:00,"2026-09-14 09:00:00 CDT","2026-09-14 17:00:00 CDT","In-person","IN_PERSON","IN_PERSON",,"Lanier I","17d028ea-92f1-4911-baf7-a45706a0df23","UPCOMING"
+or Python.",2026-09-14 14:00:00,2026-09-14 22:00:00,"2026-09-14 09:00:00 CDT","2026-09-14 17:00:00 CDT","In-person","IN_PERSON","IN_PERSON",,"Lanier I","17d028ea-92f1-4911-baf7-a45706a0df23","COMPLETED"
 "72438d92-1e76-4b20-84a9-329422a25a68","810f3dac-a0f6-44d4-92ca-6d030114be1e",,"VIRTUAL WORKSHOP: Getting Started with Positron: An AI-Ready Polyglot Workflow for Data Science","This virtual three hour workshop provides a quick start for R and Python
 users who are curious about Positron, Posit’s new AI-ready polyglot code
 editor for data science. Here, you will learn how to use Positron’s time
@@ -1053,8 +1053,8 @@ Positron and the LLMs we will use during class.
 
 *Please note: this virtual workshop requires a separate virtual workshop
 pass to attend, which must be purchased before September 11, 2026. This
-workshop is not included with a virtual conference pass.*",2026-09-14 21:00:00,2026-09-15,"2026-09-14 16:00:00 CDT","2026-09-14 19:00:00 CDT","Virtual","VIRTUAL",,,,,"UPCOMING"
-"a5a39584-a466-413e-94f0-2c82a33ddf62","7cba9f3e-bf6a-4200-875f-354ed2326832",,"Welcome Reception","",2026-09-14 22:00:00,2026-09-15,"2026-09-14 17:00:00 CDT","2026-09-14 19:00:00 CDT","In-person","IN_PERSON","IN_PERSON",,"Level 4 Foyer","1af83929-b960-47bd-b127-895efc934a55","UPCOMING"
+workshop is not included with a virtual conference pass.*",2026-09-14 21:00:00,2026-09-15,"2026-09-14 16:00:00 CDT","2026-09-14 19:00:00 CDT","Virtual","VIRTUAL",,,,,"COMPLETED"
+"a5a39584-a466-413e-94f0-2c82a33ddf62","7cba9f3e-bf6a-4200-875f-354ed2326832",,"Welcome Reception","",2026-09-14 22:00:00,2026-09-15,"2026-09-14 17:00:00 CDT","2026-09-14 19:00:00 CDT","In-person","IN_PERSON","IN_PERSON",,"Level 4 Foyer","1af83929-b960-47bd-b127-895efc934a55","COMPLETED"
 "8318c228-cd16-457e-8d71-0d7c6b4c63f4","5d3bca06-5433-4ca0-812c-ab38af83b8c3",,"Virtual Session: Modeling","This virtual session will have 4 20-minute talks!
 
 - **AI/ML SOS IDK \| Olivia Hebner and Kathryn Cronquist \| Summit**\
@@ -1108,21 +1108,24 @@ workshop is not included with a virtual conference pass.*",2026-09-14 21:00:00,2
   auditability, combining sparse text features with domain feature
   engineering. Attendees will learn a practical approach for modeling
   clinical text and strategies for augmenting statistical models with
-  rule-based logic.",2026-09-14 18:00:00,2026-09-14 19:40:00,"2026-09-14 13:00:00 CDT","2026-09-14 14:40:00 CDT","Virtual","VIRTUAL","STAGE","Virtual Day (Sept 14)",,,"UPCOMING"
+  rule-based logic.",2026-09-14 18:00:00,2026-09-14 19:40:00,"2026-09-14 13:00:00 CDT","2026-09-14 14:40:00 CDT","Virtual","VIRTUAL","STAGE","Virtual Day (Sept 14)",,,"COMPLETED"
 "4ab3d5b8-3730-4d22-8967-18e7e45d0a53","2a02dcc4-1558-4fdd-8b22-cab617386953",,"Virtual Session: Practical Workflows","There are 3 20-minute talks in this session!
 
-- **Let Your LLM Surprise You: Inbox Insights with ellmer and Posit
-  Connect \| Konstantinos Ntentes \| Posit**\
-  What if your team received a fresh, data-backed marketing insight
-  every morning—without anyone writing it? In this talk, I’ll walk
-  through how ellmer connects our enterprise LLM to sales-and-marketing
-  funnel views, and how Posit Connect and blastula turn that output into
-  actionable, inbox-ready insights with a supporting gt table and
-  reproducible code chunk. I’ll also share how we balance analysis
-  guardrails with creative freedom, maintain variety across runs, why
-  misses are still useful, and how this work fits into our team’s
-  roadmap toward trustworthy natural-language access to complex
-  analytics for non-coder stakeholders.
+- **Inbox Insights with ellmer and Posit Connect \| Konstantinos Ntentes
+  \| Posit**\
+  A demonstration of how to build a reliable workflow for automated
+  metric reporting using AI agents when you don't have access to a
+  formal context management system. The talk details a system designed
+  to prevent AI analysis errors by providing the agent with a context
+  archive, including data dictionaries, business logic through
+  prewritten 'house recipe' functions, and an MCP REPL for safe,
+  unsupervised code execution. Included is a walkthrough of the complete
+  lifecycle: generating an automated report via R Markdown, utilizing a
+  feedback app to correct AI interpretations of data, and providing
+  stakeholders with a Shiny-based chat application for deeper
+  investigation. The entire workflow is orchestrated and scheduled using
+  Posit Connect to ensure consistent delivery of business-critical
+  insights.
 - **An R app for generating appraisals reports \| Michael Morales \|
   INTUS**\
   Where I work, one of the teams used to write property appraisal
@@ -1150,7 +1153,7 @@ workshop is not included with a virtual conference pass.*",2026-09-14 21:00:00,2
   interactive data explorer and kernel-aware AI assistant live right
   inside your notebook workflow. We'll demo the full loop live:
   exploring data, visualizing it, and sharing results out to
-  stakeholders.",2026-09-14 19:50:00,2026-09-14 21:00:00,"2026-09-14 14:50:00 CDT","2026-09-14 16:00:00 CDT","Virtual","VIRTUAL","STAGE","Virtual Day (Sept 14)",,,"UPCOMING"
+  stakeholders.",2026-09-14 19:50:00,2026-09-14 21:00:00,"2026-09-14 14:50:00 CDT","2026-09-14 16:00:00 CDT","Virtual","VIRTUAL","STAGE","Virtual Day (Sept 14)",,,"COMPLETED"
 "0cc5ef54-9cb6-4fa0-b15f-c5321d37ee73","3f25102c-9320-4b12-a20f-8aead576b6ba",,"Virtual Session: Quarto, R + Python","This virtual session will have 4 20-minute talks!
 
 - **I Didn't Abandon R—I Added Python: My Story of Growing Without
@@ -1209,7 +1212,7 @@ workshop is not included with a virtual conference pass.*",2026-09-14 21:00:00,2
   intersection, bringing the literate program and the interactive
   notebook together in one environment.\
   I hope this talk gives you a new way to think about the tools you use
-  every day, and the confidence to try the ones you don't.",2026-09-14 15:30:00,2026-09-14 17:00:00,"2026-09-14 10:30:00 CDT","2026-09-14 12:00:00 CDT","Virtual","VIRTUAL","STAGE","Virtual Day (Sept 14)",,,"UPCOMING"
+  every day, and the confidence to try the ones you don't.",2026-09-14 15:30:00,2026-09-14 17:00:00,"2026-09-14 10:30:00 CDT","2026-09-14 12:00:00 CDT","Virtual","VIRTUAL","STAGE","Virtual Day (Sept 14)",,,"COMPLETED"
 "e829d8fd-7b30-4df0-b9a1-18010dee499c","7f3a8575-439f-440e-9424-ea158c9499a3","a6722b88-32c1-445c-9f6a-3a99b5678f97","Do This Instead: 4 Alternatives to Common Charts","Even in “good” charts, it’s easy to miss or misinterpret key patterns in
 the data. Common best practices — continuous color scales, equally
 spaced gridlines, month-level aggregation, etc — leave critical leaps
@@ -1320,15 +1323,15 @@ common academic deployment scenarios and a clearer sense of where
 Positron fits today.",2026-09-16 16:00:00,2026-09-16 16:20:00,"2026-09-16 11:00:00 CDT","2026-09-16 11:20:00 CDT","Virtual","HYBRID","SCHEDULE",,"Ballroom A-F","a94f5251-3484-4b8e-90df-fbc15b0cf375","UPCOMING"
 "76a2dfe8-73bc-43b0-8a05-0f548af8f57f","e18b1dc7-63e7-47e3-85e9-83aabce07c71","7d15863c-c3ab-4906-8072-38f963427271","From ABC to AI: Applying Language Acquisition to R and Technical Mastery","The world’s most spoken language isn’t Python. It is English. As a
 second language learner who struggled before later teaching English and
-authoring a book on R, I learned that fluency comes from internalizing
-structure. In the age of AI, if models can generate code instantly, does
-learning R still matter? This talk introduces a Three Layer Model of
-Technical Mastery: Syntax, the vocabulary that AI accelerates;
-Structure, the grammar of tidyverse, Quarto, and Shiny workflows;
-Thinking, the human skills of framing problems and making judgments. By
-mapping language learning to the evolution of a data scientist, this
-talk offers a practical framework for building durable skills in an AI
-assisted world.",2026-09-16 16:00:00,2026-09-16 16:20:00,"2026-09-16 11:00:00 CDT","2026-09-16 11:20:00 CDT","Virtual","HYBRID","SCHEDULE",,"Ballroom H & K","0522ae00-7c31-4f8c-ab7a-b668a7ee0a59","UPCOMING"
+authoring a book on R, I discovered that learning both followed a
+surprisingly similar path: imitate, internalize, transfer. In the age of
+AI, when models can generate code instantly, how should we use AI if
+mastery is the goal? This talk explores how AI can play a different role
+at each stage: providing patterns to imitate, creating practice that
+makes us think, and generating new challenges that require us to
+transfer what we know. By connecting language acquisition, R, and
+AI-assisted learning, this talk offers a practical framework for
+building technical mastery.",2026-09-16 16:00:00,2026-09-16 16:20:00,"2026-09-16 11:00:00 CDT","2026-09-16 11:20:00 CDT","Virtual","HYBRID","SCHEDULE",,"Ballroom H & K","0522ae00-7c31-4f8c-ab7a-b668a7ee0a59","UPCOMING"
 "103bf836-3c17-4696-8e2a-d8a9375f9914","094cbb36-1e71-4651-aa1e-11f9ddb6f21c","3fd5f6f4-66a6-4287-a08d-026aad72dc50","How Shiny changed data analysis at the Metabolism Center","Scientists in metabolic research increasingly rely on technologies
 measuring thousands of targets simultaneously, but many are still
 limited to analyses in spreadsheets Introducing Shiny transformed how
@@ -1415,17 +1418,19 @@ assessed the data integrity of these databases using R and the
 tidyverse. I developed techniques for defining limitations, identifying
 standards, and refining analysis to ensure these databases are reviewed
 with integrity and used to their fullest potential.",2026-09-16 18:40:00,2026-09-16 19:00:00,"2026-09-16 13:40:00 CDT","2026-09-16 14:00:00 CDT","Virtual","HYBRID","SCHEDULE",,"Ballroom A-F","a94f5251-3484-4b8e-90df-fbc15b0cf375","UPCOMING"
-"e931446d-4847-42b4-98b5-bf7b7af7d599","62b69b86-5c71-4830-817b-a00e33aaa3a0","4c9f033c-c65d-4c6e-b6a6-9b83aa3852d5","Environmental Stressors and Healthcare: How a Posit/R Powered Pipeline Reveals Environmental Drivers of Emergency Department Strain","Extreme heat and poor air quality strain Emergency Department (ED)
-operations. We scaled a Baytown pilot across Houston Methodist (HM) and
-packaged it for Texas Medical Center (TMC) partners using an end-to-end
-Posit stack. We integrate Epic/Clarity with EPA Air Quality System and
-NOAA Climate Data Online, model ED counts with tidymodels, and build
-spatial visualizations of ED demand across the HM service area with
-environmental hazard/amenity overlays (refineries, green space). We
-deliver Quarto reports for managers and a Shiny dashboard for leaders.
-Protected Health Information stays in database; artifacts are versioned
-(pins), served (vetiver), orchestrated (targets), and hosted on-network.
-A template repo enables sharing across TMC.",2026-09-16 19:40:00,2026-09-16 20:00:00,"2026-09-16 14:40:00 CDT","2026-09-16 15:00:00 CDT","Virtual","HYBRID","SCHEDULE",,"Ballroom G & J","a73dc105-039e-467b-9047-b8f37bb0f1ba","UPCOMING"
+"e931446d-4847-42b4-98b5-bf7b7af7d599","62b69b86-5c71-4830-817b-a00e33aaa3a0","4c9f033c-c65d-4c6e-b6a6-9b83aa3852d5","Environmental Stressors and Healthcare: Lessons from Scaling a Posit/R Pipeline That Connects Environmental Data to Emergency Department Visits","Emergency departments see the downstream effects of environmental stress
+like heat, humidity, and poor air quality, but the data describing those
+exposures lives outside the hospital in public feeds the health system
+doesn't own. At Houston Methodist, what began as a single-hospital pilot
+connecting emergency department visits to environmental data from EPA
+and NOAA has grown into an R pipeline running across 19 facilities.
+Scaling it up is where the real work showed up, and almost all of it was
+in the outside data: sources that publish on their own schedule and
+format, and that were never built to match hospital records. This talk
+shares the lessons from that scale-up, centered on what it takes to work
+reliably with data you don't control. Attendees will leave with
+practical strategies for bringing external environmental data into a
+clinical dataset.",2026-09-16 19:40:00,2026-09-16 20:00:00,"2026-09-16 14:40:00 CDT","2026-09-16 15:00:00 CDT","Virtual","HYBRID","SCHEDULE",,"Ballroom G & J","a73dc105-039e-467b-9047-b8f37bb0f1ba","UPCOMING"
 "490ba1a5-0ab0-42e7-8995-22958113b991","199abb37-85ab-4299-8625-0b5fdaea14bb","4c9f033c-c65d-4c6e-b6a6-9b83aa3852d5","Lowering Cesarean Rates  - Using Quarto to Create Scalable Performance Reports","Cesarean births can be lifesaving, but overuse carries health risks and
 financial costs. At the Obstetrics Initiative, we partner with 65+
 Michigan hospitals to reduce unnecessary cesareans and improve maternal
@@ -1594,13 +1599,16 @@ for combined analysis. Our LLM prompts, data model, configuration files,
 and pipeline code are all version controlled and reproducible.",2026-09-16 18:00:00,2026-09-16 18:20:00,"2026-09-16 13:00:00 CDT","2026-09-16 13:20:00 CDT","Virtual","HYBRID","SCHEDULE",,"Ballroom A-F","a94f5251-3484-4b8e-90df-fbc15b0cf375","UPCOMING"
 "ec2bb444-d553-494c-bed9-9791add32677","f35f3fdf-81c9-43fc-be03-4b9b082d8ff8","013e97bf-b931-468f-a963-492ded2936a0","Running a software department in times of agents","This abstract might be written by some LLM tool. The majority of the
 work we used to do is different right now. The challenges my team faces
-in February might be quite different in September. I'm the Head of
-Technology at Appsilon, which means that I take care of around 40 R and
-Python devs across dozens of projects. My daily work is heavily affected
-by the AI revolution: I advise on the best tools, react to the
-expectations that ""vibe-coding"" will do the job, handle recruitment
-fraud attempts, and build complex-packages-specialized AI agents. The
-audience will have the opportunity to hear my experiences on how AI
+in February might be quite different in September.\
+\
+I'm the Head of Delivery at Appsilon, which means that I take care of a
+team including Delivery Managers, R and Python devs across dozens of
+projects. My daily work is heavily affected by the AI revolution: I
+react to the expectations that ""vibe-coding"" will do the job, handle
+recruitment fraud attempts, and oversee building
+complex-packages-specialized AI agents.\
+\
+The audience will have the opportunity to hear my experiences on how AI
 works on scale, from the front-line perspective of a company for which
 leveraging AI properly is an existential challenge.",2026-09-16 16:20:00,2026-09-16 16:40:00,"2026-09-16 11:20:00 CDT","2026-09-16 11:40:00 CDT","Virtual","HYBRID","SCHEDULE",,"Ballroom A-F","a94f5251-3484-4b8e-90df-fbc15b0cf375","UPCOMING"
 "76769bde-5382-436f-92e5-f3134bcaf729","a6722b88-32c1-445c-9f6a-3a99b5678f97",,"Pretty Useful Data Viz","There are 4 20-minute talks in this session:
@@ -1697,17 +1705,14 @@ standardizes unpredictable raw datasets for downstream automation, and
 another that transforms structured survey data into executive-ready
 narratives and interactive insights. Together, they illustrate how LLMs
 can enable scalable, decision-ready data workflows across the lifecycle.",2026-09-16 19:00:00,2026-09-16 19:20:00,"2026-09-16 14:00:00 CDT","2026-09-16 14:20:00 CDT","Virtual","HYBRID","SCHEDULE",,"Ballroom A-F","a94f5251-3484-4b8e-90df-fbc15b0cf375","UPCOMING"
-"a726c5fc-fae4-4f82-9d5d-bc88d8ec4892","4c9f033c-c65d-4c6e-b6a6-9b83aa3852d5",,"Clinical Data Science","There are 3 20-minute talks in this session:
+"a726c5fc-fae4-4f82-9d5d-bc88d8ec4892","4c9f033c-c65d-4c6e-b6a6-9b83aa3852d5",,"Clinical Data Science","There are 2 20-minute talks in this session:
 
-2:40 - 3:00PM CT \| Environmental Stressors and Healthcare: How a
-Posit/R Powered Pipeline Reveals Environmental Drivers of Emergency
-Department Strain \| Neil Rosenbaum
+2:40 - 3:00PM CT \| Environmental Stressors and Healthcare: Lessons from
+Scaling a Posit/R Pipeline That Connects Environmental Data to Emergency
+Department Visits \| Neil Rosenbaum
 
 3:00 - 3:20PM CT \| Lowering Cesarean Rates - Using Quarto to Create
-Scalable Performance Reports \| Rebecca Wardrop
-
-3:20 - 3:40PM CT \| Operationalizing Quality: Building an ICU Dashboard
-at the VA with Shiny \| Florian Mayr",2026-09-16 19:40:00,2026-09-16 21:00:00,"2026-09-16 14:40:00 CDT","2026-09-16 16:00:00 CDT","Virtual","HYBRID","STAGE","Lanier Ballroom G&J","Ballroom G & J","a73dc105-039e-467b-9047-b8f37bb0f1ba","UPCOMING"
+Scalable Performance Reports \| Rebecca Wardrop",2026-09-16 19:40:00,2026-09-16 21:00:00,"2026-09-16 14:40:00 CDT","2026-09-16 16:00:00 CDT","Virtual","HYBRID","STAGE","Lanier Ballroom G&J","Ballroom G & J","a73dc105-039e-467b-9047-b8f37bb0f1ba","UPCOMING"
 "ae0fd9f3-1d7b-46f8-8f3a-23031b0c6f01","0873949c-8863-4e9b-adaa-70ef04a87460","856de661-4b44-4159-9fbc-0c4787f79e3f","Package Your Judgment, Keep Your Intent","Judgment is the capacity; your creative process is its observable trace.
 Every conversation with your agent is exactly that — a trace. You're
 already sharing your expertise, every day, with an audience of one. The

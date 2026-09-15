@@ -637,15 +637,15 @@ common academic deployment scenarios and a clearer sense of where
 Positron fits today.",2026-09-16 16:00:00,2026-09-16 16:20:00,"2026-09-16 11:00:00 CDT","2026-09-16 11:20:00 CDT","Virtual","HYBRID","SCHEDULE",,"Ballroom A-F","a94f5251-3484-4b8e-90df-fbc15b0cf375","UPCOMING","The Evolving Craft of Data Science",2026-09-16 15:20:00,2026-09-16 16:40:00,"2026-09-16 10:20:00 CDT","2026-09-16 11:40:00 CDT","HYBRID","STAGE","Lanier Ballroom A-F","a94f5251-3484-4b8e-90df-fbc15b0cf375","Ballroom A-F","Ballroom A-F","HYBRID","talk"
 "76a2dfe8-73bc-43b0-8a05-0f548af8f57f","e18b1dc7-63e7-47e3-85e9-83aabce07c71","7d15863c-c3ab-4906-8072-38f963427271","From ABC to AI: Applying Language Acquisition to R and Technical Mastery","The world’s most spoken language isn’t Python. It is English. As a
 second language learner who struggled before later teaching English and
-authoring a book on R, I learned that fluency comes from internalizing
-structure. In the age of AI, if models can generate code instantly, does
-learning R still matter? This talk introduces a Three Layer Model of
-Technical Mastery: Syntax, the vocabulary that AI accelerates;
-Structure, the grammar of tidyverse, Quarto, and Shiny workflows;
-Thinking, the human skills of framing problems and making judgments. By
-mapping language learning to the evolution of a data scientist, this
-talk offers a practical framework for building durable skills in an AI
-assisted world.",2026-09-16 16:00:00,2026-09-16 16:20:00,"2026-09-16 11:00:00 CDT","2026-09-16 11:20:00 CDT","Virtual","HYBRID","SCHEDULE",,"Ballroom H & K","0522ae00-7c31-4f8c-ab7a-b668a7ee0a59","UPCOMING","Lowering Barriers to Learning",2026-09-16 15:20:00,2026-09-16 16:40:00,"2026-09-16 10:20:00 CDT","2026-09-16 11:40:00 CDT","HYBRID","STAGE","Lanier Ballroom H&K","0522ae00-7c31-4f8c-ab7a-b668a7ee0a59","Ballroom H & K","Ballroom H & K","HYBRID","talk"
+authoring a book on R, I discovered that learning both followed a
+surprisingly similar path: imitate, internalize, transfer. In the age of
+AI, when models can generate code instantly, how should we use AI if
+mastery is the goal? This talk explores how AI can play a different role
+at each stage: providing patterns to imitate, creating practice that
+makes us think, and generating new challenges that require us to
+transfer what we know. By connecting language acquisition, R, and
+AI-assisted learning, this talk offers a practical framework for
+building technical mastery.",2026-09-16 16:00:00,2026-09-16 16:20:00,"2026-09-16 11:00:00 CDT","2026-09-16 11:20:00 CDT","Virtual","HYBRID","SCHEDULE",,"Ballroom H & K","0522ae00-7c31-4f8c-ab7a-b668a7ee0a59","UPCOMING","Lowering Barriers to Learning",2026-09-16 15:20:00,2026-09-16 16:40:00,"2026-09-16 10:20:00 CDT","2026-09-16 11:40:00 CDT","HYBRID","STAGE","Lanier Ballroom H&K","0522ae00-7c31-4f8c-ab7a-b668a7ee0a59","Ballroom H & K","Ballroom H & K","HYBRID","talk"
 "103bf836-3c17-4696-8e2a-d8a9375f9914","094cbb36-1e71-4651-aa1e-11f9ddb6f21c","3fd5f6f4-66a6-4287-a08d-026aad72dc50","How Shiny changed data analysis at the Metabolism Center","Scientists in metabolic research increasingly rely on technologies
 measuring thousands of targets simultaneously, but many are still
 limited to analyses in spreadsheets Introducing Shiny transformed how
@@ -707,17 +707,19 @@ assessed the data integrity of these databases using R and the
 tidyverse. I developed techniques for defining limitations, identifying
 standards, and refining analysis to ensure these databases are reviewed
 with integrity and used to their fullest potential.",2026-09-16 18:40:00,2026-09-16 19:00:00,"2026-09-16 13:40:00 CDT","2026-09-16 14:00:00 CDT","Virtual","HYBRID","SCHEDULE",,"Ballroom A-F","a94f5251-3484-4b8e-90df-fbc15b0cf375","UPCOMING","Taming Messes with AI",2026-09-16 18:00:00,2026-09-16 19:20:00,"2026-09-16 13:00:00 CDT","2026-09-16 14:20:00 CDT","HYBRID","STAGE","Lanier Ballroom A-F","a94f5251-3484-4b8e-90df-fbc15b0cf375","Ballroom A-F","Ballroom A-F","HYBRID","talk"
-"e931446d-4847-42b4-98b5-bf7b7af7d599","62b69b86-5c71-4830-817b-a00e33aaa3a0","4c9f033c-c65d-4c6e-b6a6-9b83aa3852d5","Environmental Stressors and Healthcare: How a Posit/R Powered Pipeline Reveals Environmental Drivers of Emergency Department Strain","Extreme heat and poor air quality strain Emergency Department (ED)
-operations. We scaled a Baytown pilot across Houston Methodist (HM) and
-packaged it for Texas Medical Center (TMC) partners using an end-to-end
-Posit stack. We integrate Epic/Clarity with EPA Air Quality System and
-NOAA Climate Data Online, model ED counts with tidymodels, and build
-spatial visualizations of ED demand across the HM service area with
-environmental hazard/amenity overlays (refineries, green space). We
-deliver Quarto reports for managers and a Shiny dashboard for leaders.
-Protected Health Information stays in database; artifacts are versioned
-(pins), served (vetiver), orchestrated (targets), and hosted on-network.
-A template repo enables sharing across TMC.",2026-09-16 19:40:00,2026-09-16 20:00:00,"2026-09-16 14:40:00 CDT","2026-09-16 15:00:00 CDT","Virtual","HYBRID","SCHEDULE",,"Ballroom G & J","a73dc105-039e-467b-9047-b8f37bb0f1ba","UPCOMING","Clinical Data Science",2026-09-16 19:40:00,2026-09-16 21:00:00,"2026-09-16 14:40:00 CDT","2026-09-16 16:00:00 CDT","HYBRID","STAGE","Lanier Ballroom G&J","a73dc105-039e-467b-9047-b8f37bb0f1ba","Ballroom G & J","Ballroom G & J","HYBRID","talk"
+"e931446d-4847-42b4-98b5-bf7b7af7d599","62b69b86-5c71-4830-817b-a00e33aaa3a0","4c9f033c-c65d-4c6e-b6a6-9b83aa3852d5","Environmental Stressors and Healthcare: Lessons from Scaling a Posit/R Pipeline That Connects Environmental Data to Emergency Department Visits","Emergency departments see the downstream effects of environmental stress
+like heat, humidity, and poor air quality, but the data describing those
+exposures lives outside the hospital in public feeds the health system
+doesn't own. At Houston Methodist, what began as a single-hospital pilot
+connecting emergency department visits to environmental data from EPA
+and NOAA has grown into an R pipeline running across 19 facilities.
+Scaling it up is where the real work showed up, and almost all of it was
+in the outside data: sources that publish on their own schedule and
+format, and that were never built to match hospital records. This talk
+shares the lessons from that scale-up, centered on what it takes to work
+reliably with data you don't control. Attendees will leave with
+practical strategies for bringing external environmental data into a
+clinical dataset.",2026-09-16 19:40:00,2026-09-16 20:00:00,"2026-09-16 14:40:00 CDT","2026-09-16 15:00:00 CDT","Virtual","HYBRID","SCHEDULE",,"Ballroom G & J","a73dc105-039e-467b-9047-b8f37bb0f1ba","UPCOMING","Clinical Data Science",2026-09-16 19:40:00,2026-09-16 21:00:00,"2026-09-16 14:40:00 CDT","2026-09-16 16:00:00 CDT","HYBRID","STAGE","Lanier Ballroom G&J","a73dc105-039e-467b-9047-b8f37bb0f1ba","Ballroom G & J","Ballroom G & J","HYBRID","talk"
 "490ba1a5-0ab0-42e7-8995-22958113b991","199abb37-85ab-4299-8625-0b5fdaea14bb","4c9f033c-c65d-4c6e-b6a6-9b83aa3852d5","Lowering Cesarean Rates  - Using Quarto to Create Scalable Performance Reports","Cesarean births can be lifesaving, but overuse carries health risks and
 financial costs. At the Obstetrics Initiative, we partner with 65+
 Michigan hospitals to reduce unnecessary cesareans and improve maternal
@@ -823,13 +825,16 @@ for combined analysis. Our LLM prompts, data model, configuration files,
 and pipeline code are all version controlled and reproducible.",2026-09-16 18:00:00,2026-09-16 18:20:00,"2026-09-16 13:00:00 CDT","2026-09-16 13:20:00 CDT","Virtual","HYBRID","SCHEDULE",,"Ballroom A-F","a94f5251-3484-4b8e-90df-fbc15b0cf375","UPCOMING","Taming Messes with AI",2026-09-16 18:00:00,2026-09-16 19:20:00,"2026-09-16 13:00:00 CDT","2026-09-16 14:20:00 CDT","HYBRID","STAGE","Lanier Ballroom A-F","a94f5251-3484-4b8e-90df-fbc15b0cf375","Ballroom A-F","Ballroom A-F","HYBRID","talk"
 "ec2bb444-d553-494c-bed9-9791add32677","f35f3fdf-81c9-43fc-be03-4b9b082d8ff8","013e97bf-b931-468f-a963-492ded2936a0","Running a software department in times of agents","This abstract might be written by some LLM tool. The majority of the
 work we used to do is different right now. The challenges my team faces
-in February might be quite different in September. I'm the Head of
-Technology at Appsilon, which means that I take care of around 40 R and
-Python devs across dozens of projects. My daily work is heavily affected
-by the AI revolution: I advise on the best tools, react to the
-expectations that ""vibe-coding"" will do the job, handle recruitment
-fraud attempts, and build complex-packages-specialized AI agents. The
-audience will have the opportunity to hear my experiences on how AI
+in February might be quite different in September.\
+\
+I'm the Head of Delivery at Appsilon, which means that I take care of a
+team including Delivery Managers, R and Python devs across dozens of
+projects. My daily work is heavily affected by the AI revolution: I
+react to the expectations that ""vibe-coding"" will do the job, handle
+recruitment fraud attempts, and oversee building
+complex-packages-specialized AI agents.\
+\
+The audience will have the opportunity to hear my experiences on how AI
 works on scale, from the front-line perspective of a company for which
 leveraging AI properly is an existential challenge.",2026-09-16 16:20:00,2026-09-16 16:40:00,"2026-09-16 11:20:00 CDT","2026-09-16 11:40:00 CDT","Virtual","HYBRID","SCHEDULE",,"Ballroom A-F","a94f5251-3484-4b8e-90df-fbc15b0cf375","UPCOMING","The Evolving Craft of Data Science",2026-09-16 15:20:00,2026-09-16 16:40:00,"2026-09-16 10:20:00 CDT","2026-09-16 11:40:00 CDT","HYBRID","STAGE","Lanier Ballroom A-F","a94f5251-3484-4b8e-90df-fbc15b0cf375","Ballroom A-F","Ballroom A-F","HYBRID","talk"
 "74dc9c74-ecbd-467a-963f-5ead9ff883ef","3fceb44a-b48e-4cfb-911a-7d58939ef798","50ebf971-47df-4e59-a999-56b64e080d91","The NASA Earthdata Cloud Cookbook: A Quarto Collaboration Story","A shared problem can help unite people to work together for a common

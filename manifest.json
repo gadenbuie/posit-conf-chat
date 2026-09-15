@@ -3250,7 +3250,7 @@
       "checksum": "db0043aa3bdb1e851a4a2c34e1d86d77"
     },
     "app.R": {
-      "checksum": "32c4d3c13dd634f3578882a95caf150f"
+      "checksum": "a5e33b211fb33fef0782219926490df4"
     },
     "assets/agenda.js": {
       "checksum": "d848f355ed938349ebd42028eec52b3c"
@@ -3283,19 +3283,19 @@
       "checksum": "f0dd06d196cc029e4512022b7cf61eda"
     },
     "data/derived/schedule_records.csv": {
-      "checksum": "417f739e72e6a346aa4a5d7d0998d195"
+      "checksum": "23728f5879bfec7d86f29139a0dce1b7"
     },
     "data/derived/speakers.csv": {
-      "checksum": "53b0ce24e9188b972170f1b6c1c19fd9"
+      "checksum": "fc735875bdb66fa57a03f6b71912a862"
     },
     "data/derived/talk_sessions.csv": {
-      "checksum": "d60eaaf01d0214e802f45a74b31920ba"
+      "checksum": "a704c1db0ab69636c627d45d3a85ac54"
     },
     "data/derived/talks.csv": {
-      "checksum": "d24c2bc6f8df76d14a58e7831b1f5897"
+      "checksum": "1b3030f25c30c22db473b14ef6e61c20"
     },
     "data/derived/workshops.csv": {
-      "checksum": "1b7f71a8315587ba499dc642a1484eb3"
+      "checksum": "e5215313e06462af026afc259cbdf6e2"
     },
     "prompts/greeting-static.md": {
       "checksum": "79e378e5899920c0bb764b9d15321877"
@@ -3334,7 +3334,7 @@
       "checksum": "b1cd63ae6edd4d12085cbc2c42610a86"
     },
     "R/client.R": {
-      "checksum": "4732a50f377bab62e673acf77c3a465e"
+      "checksum": "783e2a6a6cd2d7be47bb73a13a49075c"
     },
     "R/drawer.R": {
       "checksum": "a12a925819db4e5ae7ff9ae08bfd9a9c"
@@ -3346,7 +3346,7 @@
       "checksum": "28d3ee84dc902dc347174aab42f32fe6"
     },
     "R/on-now.R": {
-      "checksum": "1946e5ea697f7951a2b2f6b2ab1ad5d9"
+      "checksum": "ef85511d8c11522e760e97f298e0840f"
     },
     "R/prompt-style.R": {
       "checksum": "20a08e0ba2a228fd1e71171a2c8b3db6"
@@ -3379,7 +3379,7 @@
       "checksum": "e4b3832f4f2e3e6bac4418f30102159a"
     },
     "README.md": {
-      "checksum": "27078a630c4fc38f0a9324983437323f"
+      "checksum": "0393481f5b39a4110f471aef6551ff45"
     },
     "renv.lock": {
       "checksum": "d9803847345e3940541c0940c417ffc1"
